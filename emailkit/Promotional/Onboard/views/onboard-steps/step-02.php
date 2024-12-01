@@ -2,7 +2,7 @@
     <div class="emailkit-onboard-step-2-content">
         <div class="emailkit-onboard-main-header">
             <h1 class="emailkit-onboard-main-header--title"><strong><?php echo esc_html__('The Best Email Builder Plugin for WordPress.', 'emailkit'); ?></strong></h1>
-            <p class="emailkit-onboard-main-header--description"><?php echo esc_html__('Sign Up to Join a Big Community of Marketers, Developers, and Think Tankers', 'emailkit'); ?></p>
+            <p class="emailkit-onboard-main-header--description"><?php echo esc_html__('Sign Up and Join a Thriving Community of Top Marketers, Developers, and Creators! ✨', 'emailkit'); ?></p>
         </div>
         <div class="emailkit-onboard-signup">
             <label for="signup"><i class="icon xs-onboard-mail"></i></label>

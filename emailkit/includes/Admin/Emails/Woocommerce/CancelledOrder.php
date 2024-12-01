@@ -54,7 +54,6 @@ class CancelledOrder
 		if (isset($query->posts[0])) {
 			$html  = get_post_meta($query->posts[0]->ID, 'emailkit_template_content_html', true);
 
-			$woocommerce_currency_settings = get_woocommerce_currency_symbol();
 			$replacements = [];
 			foreach ($order->get_items() as $item_id => $item) {
 				$product = $item->get_product();
@@ -64,14 +63,11 @@ class CancelledOrder
 				$item_total = $item['total'];
 				$product_price = $product->get_price() * $item_qty;
 
-				// Use the currency symbol from the WooCommerce settings
-				$currency_symbol = $woocommerce_currency_settings;
-
 				// Format the product price with the currency symbol
-				$formatted_product_price = $currency_symbol . number_format($product_price, 2);
+				$formatted_product_price = wc_price($product_price);
 
 				// Format the item total with the currency symbol
-				$formatted_item_total = $currency_symbol . number_format($item_total, 2);
+				$formatted_item_total = wc_price($item_total);
 
 				$replacements[] = [$product_name, $item_qty, $formatted_item_total, $formatted_product_price];
 
@@ -81,60 +77,22 @@ class CancelledOrder
 
 			$order = wc_get_order($order_id);
 
-			$shipping_first_name = $order->get_shipping_first_name();
-			$shipping_last_name = $order->get_shipping_last_name();
-			$shipping_full_name = $shipping_first_name . ' ' . $shipping_last_name;
-
-			
-			$billing_country_code = $order->get_billing_country();
-			$billing_country_full_name = WC()->countries->countries[ $billing_country_code ];
-			$billing_state_code = $order->get_billing_state();
-			$billing_state_full_name = WC()->countries->get_states( $billing_country_code )[ $billing_state_code ];
-			$shipping_country_code = $order->get_shipping_country();
-			$shipping_country_full_name = WC()->countries->countries[ $shipping_country_code ];
-			$shipping_full_state_name = WC()->countries->get_states( $shipping_country_code )[ $order->get_shipping_state() ];
-
-			$details = [
-				"{{order_id}}" =>  $order->get_id(),
-				"{{order_number}}" => $order->get_order_number(),
-				"{{order_status}}" => $order->get_status(),
-				"{{order_currency}}" => $order->get_currency(),
-				"{{billing_name}}"   => $order->get_formatted_billing_full_name(),
-				"{{billing_phone}}" => $order->get_billing_phone(),
-				"{{shipping_total}}" => wc_price( $order->get_shipping_total() ),
-				"{{order_subtotal}}" => wc_price( $order->get_subtotal()),
-				"{{shipping_tax_total}}" => wc_format_decimal($order->get_shipping_tax(), 2),
-				"{{order_date}}" => gmdate('Y-m-d H:i:s', strtotime(get_post($order->get_id())->post_date)),
-				"{{shipping_method}}" => $order->get_shipping_method(),
-				"{{payment_method}}" => $order->get_payment_method_title(),
-				"{{total}}" => wc_price($order->get_total(), 2),
-				"{{billing_first_name}}" => $order->get_billing_first_name(),
-				"{{billing_last_name}}" =>  $order->get_billing_last_name(),
-				"{{billing_company}}" => $order->get_billing_company(),
-				"{{billing_address_1}}" => $order->get_billing_address_1(),
-				"{{billing_address_2}}" => $order->get_billing_address_2(),
-				"{{billing_city}}" => $order->get_billing_city(),
-				"{{billing_state}}" => $billing_state_full_name,
-				"{{billing_postcode}}" => $order->get_billing_postcode(),
-				"{{billing_country}}" => $billing_country_full_name,
-				"{{billing_email}}"    => $order->get_billing_email(),
-				"{{shipping_name}}" => $shipping_full_name,
-				"{{shipping_company}}" => $order->get_shipping_company(),
-				"{{shipping_address_1}}" => $order->get_shipping_address_1(),
-				"{{shipping_address_2}}" => $order->get_shipping_address_2(),
-				"{{shipping_city}}" => $order->get_shipping_city(),
-				"{{shipping_state}}" => $shipping_full_state_name,
-				"{{shipping_postcode}}" => $order->get_shipping_postcode(),
-				"{{shipping_country}}" => $shipping_country_full_name,
-				"{{shipping_phone}}" => $order->get_shipping_phone(),
-				"{{customer_note}}" => $order->get_customer_note(),
-				"{{download_permissions}}" => $order->is_download_permitted() ? $order->is_download_permitted() : 0,
-				"{{shipping_first_name}}" => $shipping_first_name,
-				"{{shipping_last_name}}" => $shipping_last_name,
-				"{{product_name}}"        => $product_name,
-			];
+			// Order details array for email
+			$details = Utils::woocommerce_order_email_contents($order);
 
 			$message  = str_replace(array_keys($details), array_values($details), apply_filters('emailkit_shortcode_filter', $html));
+
+			$currency_symbol_position = get_option('woocommerce_currency_pos');
+			if($currency_symbol_position == 'left') {
+
+				$message = Utils::adjust_price_structure($message);
+				
+			} else if($currency_symbol_position == 'left_space') {
+		
+				$message = Utils::adjust_left_space_price_structure($message);
+				
+			}
+			
       		$email_settings = get_option('woocommerce_cancelled_order_settings', []);
       		$to = !empty($email_settings['recipient']) ? explode(',', $email_settings['recipient']) : [get_option('admin_email')];
       		$to = array_map('trim', $to);

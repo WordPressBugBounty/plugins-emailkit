@@ -60,23 +60,8 @@ class NoStock {
 			$rows = '';
 			$html = str_replace($row, $rows, $html);
 
-
-			$details = [
-
-				"{{stock_status}}"  	=>  $product->get_stock_status(),
-				"{{product_name}}"     	=>  $product->get_name(),
-				"{{stock_quantity}}"	=>  $product->get_stock_quantity(),
-				"{{status}}"        	=>  $product->get_status(),
-				"{{product_id}}"    	=>  $product->get_id(),
-				"{{short_description}}" => 	$product->get_short_description(),
-				"{{product_price}}"     => 	$product->get_price(),
-				"{{manage_stock}}"      => 	$product->get_manage_stock(),
-				"{{sku}}"               => 	$product->get_sku(),
-				"{{low_stock_amount}}"  => 	$product->get_low_stock_amount(),
-				"{{backorders}}"        => 	$product->get_backorders(),
-				"{{site_name}}"         => 	get_bloginfo('name'),
-
-			];
+			// Stock details array for email
+			$details = Utils::woocommerce_stock_email_contents($product);
 
 			$message  = str_replace(array_keys($details), array_values($details), apply_filters('emailkit_shortcode_filter', $html));
 			$to      = get_option('admin_email');

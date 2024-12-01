@@ -235,7 +235,7 @@ class Utils
     public static function mail_shortcode_filter(string $input) : string {
         
         // find the shortcode
-        $pattern = '/<span data-shortcode="{{([^<>]+)}}">([^<>]+)<\/span>/';
+        $pattern = '/<span data-shortcode="{{([^<>]+)}}">([\s\S]*?)<\/span>/';
 
         //  getting all shortcode matches from mail content 
         preg_match_all($pattern, $input, $matches, PREG_SET_ORDER);
@@ -251,6 +251,36 @@ class Utils
         }
         
         return  $input;
+    }
+
+    /**
+    * Adjust the price structure for left or left_space currency symbol positions.
+    *
+    * @param string $message The HTML message content to process.
+    * @return string The updated message with corrected price structure.
+    */
+    public static function adjust_price_structure($message) {
+        return preg_replace_callback(
+            '/<span class="woocommerce-Price-currencySymbol">(.*?)<\/span>([\d.,]+)<\/bdi><\/span><\/span>\s*(\d{1,3}(?:,\d{3})*(?:\.\d{2})?)<\/bdi><\/span><\/span>/',
+            function ($matches) {
+                // Rebuild the correct price structure
+                return '<span class="woocommerce-Price-currencySymbol">' 
+                    . $matches[1] . '</span>' 
+                    . $matches[2] . '</bdi></span>';
+            },
+            $message
+        );
+    } 
+
+    public static function adjust_left_space_price_structure($message) {
+        return preg_replace_callback(
+            '/<span><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">([^<]+)<\/span>&nbsp;([\d.,]+)<\/bdi><\/span><\/span>&nbsp;[\d.,]+<\/bdi><\/span><\/span>/',
+            function ($matches) {
+                return '<span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">'
+                    . $matches[1] . '</span>&nbsp;' . $matches[2] . '</bdi></span>';
+            },
+            $message
+        );
     }
 
     public static function order_items_replace(string $document, array $replacements ){
@@ -297,5 +327,124 @@ class Utils
             $transformed_details[$new_key] = $value;
         }
         return $transformed_details;
+    }
+
+    public static function woocommerce_order_email_contents($order){
+
+        // Check if WooCommerce is active
+        if (!function_exists('wc_get_order')) {
+            return []; // Return empty array if WooCommerce is not active
+        }
+    
+        $customer_note = $order->get_customer_note();
+        $shipping_first_name = $order->get_shipping_first_name();
+        $shipping_last_name = $order->get_shipping_last_name();
+        $shipping_full_name = $shipping_first_name . ' ' . $shipping_last_name;
+
+
+        
+        $billing_country_code = $order->get_billing_country();
+        $billing_country_full_name = WC()->countries->countries[ $billing_country_code ];
+        $billing_state_code = $order->get_billing_state();
+        $billing_state_full_name = WC()->countries->get_states( $billing_country_code )[ $billing_state_code ];
+        $shipping_country_code = $order->get_shipping_country();
+        $shipping_country_full_name = WC()->countries->countries[ $shipping_country_code ];
+        $shipping_full_state_name = WC()->countries->get_states( $shipping_country_code )[ $order->get_shipping_state() ];
+
+        $subtotal = $order->get_subtotal();
+        $total_refunded = $order->get_total_refunded();
+        $total = $order->get_total();
+        
+        // Determine the formatted total using a ternary operator
+        $formatted_total = ($total_refunded == $total) 
+            ? '<del aria-hidden="true">' . wc_price($total_refunded) . '</del> ' . '<ins>' . wc_price($total - $total_refunded) . '</ins>'  // Fully refunded
+            : ($total_refunded > 0 
+                ? '<del aria-hidden="true">' . wc_price($subtotal) . '</del> ' . '<u>' . wc_price($subtotal - $total_refunded) . '</u>'   // Partially refunded
+                : wc_price($total, 2));
+        
+        $total_order_quantity = 0;
+        foreach ($order->get_items() as $item) {
+            $total_order_quantity += $item->get_quantity();
+            $product_names[] = $item->get_name();
+        }
+
+        $product_names_string = implode(', ', $product_names);
+
+        $details = [
+            "{{order_id}}" =>  $order->get_id(),
+            "{{order_number}}" => $order->get_order_number(),
+            "{{order_status}}" => $order->get_status(),
+            "{{customer_note}}" => $customer_note,
+            "{{shipping_total}}" => wc_price( $order->get_shipping_total() ),
+            "{{order_subtotal}}" => wc_price( $order->get_subtotal()),
+            "{{order_currency}}" => $order->get_currency(),
+            "{{order_fully_refunded}}" => '-'.wc_price($order->get_total_refunded(), 2),
+            "{{partial_refund_amount}}" =>  '-'.  wc_price($order->get_total_refunded(), 2),
+            "{{remaining_refund_amount}}" => '-'.$order->get_remaining_refund_amount(),
+            "{{billing_phone}}" => $order->get_billing_phone(),
+            "{{shipping_tax_total}}" => wc_format_decimal($order->get_shipping_tax(), 2),
+            "{{order_date}}" => gmdate('Y-m-d H:i:s', strtotime(get_post($order->get_id())->post_date)),
+            "{{shipping_method}}" => $order->get_shipping_method(),
+            "{{payment_method}}" => $order->get_payment_method_title(),
+            "{{total}}" => $formatted_total,
+            "{{billing_name}}"   => $order->get_formatted_billing_full_name(),
+            "{{billing_first_name}}" => $order->get_billing_first_name(),
+            "{{billing_last_name}}" =>  $order->get_billing_last_name(),
+            "{{billing_company}}" => $order->get_billing_company(),
+            "{{billing_address_1}}" => $order->get_billing_address_1(),
+            "{{billing_address_2}}" => $order->get_billing_address_2(),
+            "{{billing_city}}" => $order->get_billing_city(),
+            "{{billing_state}}" => $billing_state_full_name,
+            "{{billing_postcode}}" => $order->get_billing_postcode(),
+            "{{billing_country}}" => $billing_country_full_name,
+            "{{billing_email}}"    => $order->get_billing_email(),
+            "{{shipping_name}}" => $shipping_full_name,
+            "{{shipping_first_name}}" => $shipping_first_name,
+            "{{shipping_last_name}}" => $shipping_last_name,
+            "{{shipping_company}}" => $order->get_shipping_company(),
+            "{{shipping_address_1}}" => $order->get_shipping_address_1(),
+            "{{shipping_address_2}}" => $order->get_shipping_address_2(),
+            "{{shipping_city}}" => $order->get_shipping_city(),
+            "{{shipping_state}}" => $shipping_full_state_name,
+            "{{shipping_postcode}}" => $order->get_shipping_postcode(),
+            "{{shipping_country}}" => $shipping_country_full_name,
+            "{{shipping_phone}}" => $order->get_shipping_phone(),
+            "{{customer_note}}" => $order->get_customer_note(),
+            "{{download_permissions}}" => $order->is_download_permitted() ? $order->is_download_permitted() : 0,
+            "{{quantity}}"             => $total_order_quantity,
+            "{{product_name}}"        => $product_names_string,
+            "{{site_name}}" => get_bloginfo('name'),
+            "{{site_url}}" => get_bloginfo('url'),	
+        ];
+
+        return $details;
+    }
+
+    public static function woocommerce_stock_email_contents($product) {
+
+        // Check if WooCommerce is active
+        if (!function_exists('wc_get_product')) {
+            return []; // Return empty array if WooCommerce is not active
+        }
+
+        $details = [
+
+            "{{stock_status}}"  	=>  $product->get_stock_status(),
+			"{{product_name}}"     	=>  $product->get_name(),
+			"{{stock_quantity}}"	=>  $product->get_stock_quantity(),
+			"{{status}}"        	=>  $product->get_status(),
+			"{{product_id}}"    	=>  $product->get_id(),
+			"{{short_description}}" => 	$product->get_short_description(),
+			"{{product_price}}"     => 	$product->get_price(),
+			"{{manage_stock}}"      => 	$product->get_manage_stock(),
+			"{{sku}}"               => 	$product->get_sku(),
+			"{{low_stock_amount}}"  => 	$product->get_low_stock_amount(),
+			"{{backorders}}"        => 	$product->get_backorders(),
+			"{{site_name}}"         => 	get_bloginfo('name'),
+            "{{display_name}}"      =>  wp_get_current_user()->display_name,
+            
+        ];
+
+        return $details;
     }
 }

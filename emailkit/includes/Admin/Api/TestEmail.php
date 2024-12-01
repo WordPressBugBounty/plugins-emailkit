@@ -56,7 +56,7 @@ class TestEmail {
        
         if(!$sent){
             $error_message = error_get_last();
-            $error_message = str_contains($error_message['message'], 'Failed to connect to mailserver')? __( 'Failed to connect to mailserver', 'emailkit' ) : __( 'Failed to send the test email.', 'emailkit' );
+            $error_message = str_contains($error_message['message'] ?? '', 'Failed to connect to mailserver')? __( 'Failed to connect to mailserver', 'emailkit' ) : __( 'Failed to send the test email.', 'emailkit' );
        }
         
 

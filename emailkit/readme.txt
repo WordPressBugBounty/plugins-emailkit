@@ -2,9 +2,9 @@
 
 Contributors: Ataurr, XpeedStudio
 Tags: Email Template, WordPress Email Builder, WordPress email customizer, WooCommerce email customizer, WooCommerce email template customizer, Email Customizer
-Tested up to: 6.6
+Tested up to: 6.7
 Requires at least: 5.0
-Stable tag: 1.5.6
+Stable tag: 1.5.7
 Requires PHP: 7.4
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -13,18 +13,20 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 EmailKit is a powerful WordPress and WooCommerce email customizer tool, free for everyone! It allows users to customize and design templates that show their unique brand identity for various important actions and events.
 
-We believe in an effortless and intuitive user experience, that’s why **EmailKit facilitates a drag-and-drop dashboard**. Using it, WooCommerce users can easily create appealing and personalized email templates within a few minutes. EmailKit is also packed with several useful pre-made templates and advanced features like adding your company logo or social links to the email templates.
- 
+We believe in an effortless and intuitive user experience, that’s why **[EmailKit](https://wpmet.com/plugin/emailkit/) facilitates a drag-and-drop dashboard**. Using it, WooCommerce users can easily create appealing and personalized email templates within a few minutes. EmailKit is also packed with several useful pre-made templates and advanced features like adding your company logo or social links to the email templates.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Fz_1M-s_Faw?si=H4Vayw49i1l-q-3Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
+
 Your custom transactional templates for different stages of orders placed on your WooCommerce site will increase customer loyalty. These include **new order templates, orders in progress, canceled and returned products, product stock updates, customer invoices,** etc.  
 
-On the design front, you have **23+ email builder elements** to create stylish and engaging templates. Such as Shipping Address, Billing Address, Order Item, and Custom Note. Besides, basic ones like Heading, Text, Image, Container, Column, Spacer, Divider Button, Video, and social icons are bundled with EmailKit. Plus, elements for Account Registration and Password Reset are available too.
+On the design front, you have **26+ email builder elements** to create stylish and engaging custom WooCommerce email templates. Such as Shipping Address, Billing Address, Order Item, and Custom Note. Besides, basic ones like Heading, Text, Image, Container, Column, Spacer, Divider Button, Video, and social icons are bundled with EmailKit. Plus, elements for Account Registration and Password Reset are available too.
 
 Overall, EmailKit empowers you to create a cohesive and branded communication experience with your customers, enhancing engagement and fostering a professional image for your online store.
 
 ## 💪 Advanced features:
 
 ### ✅ Drag & Drop Email Template Builder
-With a simple drag-and-drop interface, effortlessly create professionally designed custom email templates in minutes. Add, delete, and move elements such as images, text blocks, buttons, and social media icons within an intuitive interface.
+With a simple drag-and-drop interface of this WordPress custom email plugin, effortlessly create professionally designed custom email templates in minutes. Add, delete, and move elements such as images, text blocks, buttons, and social media icons within an intuitive interface.
 
 ### ✅ Complete Design Control
 EmailKit WordPress and WooCommerce email customizer provide a comprehensive design framework with full control over every detail from header to footer and everything in between. You can edit text, change button style, and modify the layout with container, column, and divider layout. Every aspect of each element is customizable, including fonts, color, margin, and padding.
@@ -42,13 +44,13 @@ Customize your WooCommerce template from a visual editor. This email builder pro
 Easily understand how your email appears in the recipient's inbox. And, you don’t have to leave the editor screen to send a test email. Just check email from another tab in your browser and for any adjustments switch to the EmailKit tab. So, this step won’t consume much of your time.
 
 ### ✅ Undo/Redo
-You can easily undo any unwanted actions and redo an old edit.
+You can easily undo any unwanted actions and redo an old edit with this customize WooCommerce email plugin.
 
 ### ✅ Responsive Editing
 Design mobile-responsive WooCommerce email templates with EmailKit's device-specific views in the editor dashboard.
 
 ### ✅ Shortcodes
-EmailKit offers a vast collection of template-centered shortcodes. You can insert them to automate and configure various aspects of email messaging.
+EmailKit- an email template customizer for WooCommerce, offers a vast collection of template-centered shortcodes. You can insert them to automate and configure various aspects of email messaging.
 
 ### ✅Compatibility
 The majority of WooCommerce plugins and functionalities are fully compatible with the EmailKit WooCommerce email template customizer plugin.  
@@ -65,7 +67,7 @@ With EmailKit you can design **17 different types of email for different stages 
 
 ### WooCommerce Templates
 
-1. **New Order:** Greet the customers with a captivating customized email. When users place a new order in your WooCommerce store, they will receive this email.
+1. **New Order:** Greet the customers with a captivating WooCommerce customized email. When users place a new order in your WooCommerce store, they will receive this email.
 
 2. **Customer Invoice:** Email to send the invoice to the customers when they complete their payment.
 
@@ -77,9 +79,9 @@ With EmailKit you can design **17 different types of email for different stages 
 
 6. **Failed Order:** With EmailKit, create Failed Order WooCommerce email template and inform the customers when the order has failed to be delivered.
 
-7. **Order on Hold:** Create a template for order on hold Wocommerce email to inform the customers if their order is postponed temporarily.
+7. **Order on Hold:** Create a customize WooCommerce email template for order on hold Wocommerce email to inform the customers if their order is postponed temporarily.
 
-8. **Refunded Order:** Email template when you send a refund for an order on your WooCommerce store.
+8. **Refunded Order:** Design custom order email WooCommerce template when you send a refund for an order on your WooCommerce store.
 
 9. **Customer Note:** Send a note to the customer to send additional information. Use the Customer Note email template to send the note.
 
@@ -91,12 +93,12 @@ With EmailKit you can design **17 different types of email for different stages 
 
 13. **Reset Password:** Reset Password email template, an email sent when a user forgets the password and wants to set it.
 
-14. **Product on Back Order:** An email to be sent when users add an out-of-stock product to their wishlist.
+14. **Product on Back Order:** Customize WooCoomerce order emails to be sent when users add an out-of-stock product to their wishlist.
 
 15. **Partial Refund:** This email template is sent when a store owner issues a partial refund due to an insufficient quantity of items or other tax-related reasons.
 
 ## EMAILKIT ELEMENTS:
-EmailKit comes with 23+ drag-and-drop elements that help you enhance your customer experience and increase conversions.
+EmailKit - email customizer for WooCommerce, comes with **26+** drag-and-drop elements that help you enhance your customer experience and increase conversions.
 
 ### WooCommerce Elements
 🔸 Shipping Address  
@@ -111,7 +113,8 @@ EmailKit comes with 23+ drag-and-drop elements that help you enhance your custom
 🔸 Low Stock
 
 ### Basic Elements
-🔸 Heading  
+🔸 Heading
+🔸 Footer  
 🔸 Subtitle  
 🔸 Text  
 🔸 Button  
@@ -122,6 +125,8 @@ EmailKit comes with 23+ drag-and-drop elements that help you enhance your custom
 🔸 Divider  
 🔸 Space  
 🔸 Social Icons
+🔸 HTML
+🔸 Image Box
 
 ### Other Elements
 🔸Account Registration  
@@ -151,11 +156,15 @@ EmailKit WooCommerce email customizer is brought to you by Wpmet, a name trusted
 
 If you like using EmailKit WooCommerce Builder, then consider checking out our other plugins:
 
+[GutenKit](https://wpmet.com/plugin/gutenkit/) – Build websites **10x Faster** with ZERO coding in the Gutenberg Block Editor.
+
 [ElementsKit](https://wpmet.com/plugin/elementskit/) – All-in-one Addons for Elementor featuring 85+ widgets.
 
 [MetForm](https://wpmet.com/plugin/metform/) – The most flexible and easy-to-use form builder.
 
 [ShopEngine](https://wpmet.com/plugin/shopengine/) – The most complete WooCommerce solution for Elementor.
+
+[GetGenie Ai](https://getgenie.ai/) - An advanced Ai assistant for SEO-friendly content.
 
 [Wp Social](https://wpmet.com/plugin/wp-social/) – Leverage Wp Social to add Social Login, Social Counter, and Social Login to your website.
 
@@ -163,9 +172,25 @@ If you like using EmailKit WooCommerce Builder, then consider checking out our o
 
 [Wp Ultimate Review](https://products.wpmet.com/review/) – Manage customer reviews with the Wp Ultimate Review plugin.
 
+[PopupKit](https://wordpress.org/plugins/popup-builder-block/) – Build exceptional popup for diverse needs within the WordPress block editor.
+
+[TableKit](https://wordpress.org/plugins/table-builder-block/) – Make fully-customizable multipurpose table & generate data table within Gutenberg block editor.
+
+
 Visit [Wpmet](https://wpmet.com/) to learn more about how to get the best of WordPress with [Tutorials, Tips & Tricks](https://wpmet.com/blog)!
 
 == Changelog ==
+
+Version 1.5.7 -	01/12/2024
+Improved: Image uploading control of Image widget.
+Improved: Onboarding experience.
+Improved: Image box widget.
+Fixed: Email template design replacing issue when editing the template.
+Fixed: Currency symbol position issue of total and subtotal shortcode variable.
+Fixed: Button widget box shadow issue.
+Fixed: Text widget controls issue.
+Fixed: Order item widget data warning issue.
+Fixed: Container widget issue.
 
 Version 1.5.6 -	03/09/2024
 Added: HTML code editor widget.
@@ -303,5 +328,11 @@ The best way to customize WooCommerce email templates will be to select an Email
 = Can I save my customized WooCommerce email template? =
 Yes! After completing your WooCommerce email template customization, you can save it for later use.
 
-= What are the Required Plugins to Use EmailKit? =
+= What are the required plugins for EmailKit? =
 EmailKit email customizer requires the WooCommerce plugin to be installed in WordPress.
+
+= Can I edit the content of premade EmailKit templates? =
+Yes! You can edit and change every content of EmailKit premade template elements.
+
+= Does EmailKit Offer a Pro Version? =
+Yes! EmailKit has a pro version with several extended features. [Check Here](https://wpmet.com/plugin/emailkit/pricing/)

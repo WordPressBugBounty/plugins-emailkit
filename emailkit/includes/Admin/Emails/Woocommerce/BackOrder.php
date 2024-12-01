@@ -56,22 +56,9 @@ class BackOrder {
 			$rows = '';
 			$html = str_replace($row, $rows, $html);
 
-			$details = [
-
-				"{{stock_status}}"   	=>  $product['product']->get_stock_status(),
-				"{{product_name}}"      =>  $product['product']->get_name(),
-				"{{stock_quantity}}" 	=>  $product['product']->get_stock_quantity(),
-				"{{status}}"         	=>  $product['product']->get_status(),
-				"{{product_id}}"     	=>  $product['product']->get_id(),
-				"{{short_description}}" => 	$product['product']->get_short_description(),
-				"{{product_price}}"     => 	$product['product']->get_price(),
-				"{{manage_stock}}"      => 	$product['product']->get_manage_stock(),
-				"{{sku}}"               => 	$product['product']->get_sku(),
-				"{{backorders}}"        => 	$product['product']->get_backorders(),
-				"{{site_name}}"         => 	get_bloginfo('name'),
-				"{{display_name}}"      =>  wp_get_current_user()->display_name,
-
-			];
+			// Stock details array for email
+			$details = Utils::woocommerce_stock_email_contents($product['product']);
+			
 			$message  	= str_replace(array_keys($details), array_values($details), apply_filters('emailkit_shortcode_filter', $html));
 			$to      	= get_option('admin_email');
 

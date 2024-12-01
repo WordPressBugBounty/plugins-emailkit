@@ -82,10 +82,16 @@ class OrderItem {
                 $billing_country_code = $order->get_billing_country();
                 $billing_country_full_name = WC()->countries->countries[ $billing_country_code ];
                 $billing_state_code = $order->get_billing_state();
-                $billing_state_full_name = WC()->countries->get_states( $billing_country_code )[ $billing_state_code ];
+                $billing_states = WC()->countries->get_states($billing_country_code);
+
+                $billing_state_full_name = is_array($billing_states) && isset($billing_states[$billing_state_code]) ? $billing_states[$billing_state_code] : $billing_state_code;
                 $shipping_country_code = $order->get_shipping_country();
                 $shipping_country_full_name = WC()->countries->countries[ $shipping_country_code ];
-                $shipping_full_state_name = WC()->countries->get_states( $shipping_country_code )[ $order->get_shipping_state() ];
+
+                $shipping_states = WC()->countries->get_states($shipping_country_code);
+                $shipping_state_code = $order->get_shipping_state();
+                
+                $shipping_full_state_name = is_array($shipping_states) && isset($shipping_states[$shipping_state_code]) ? $shipping_states[$shipping_state_code] : $shipping_state_code;
 
                 $item_data = [
                     'order_id' => $last_order_id,

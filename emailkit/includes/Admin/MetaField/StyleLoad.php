@@ -64,7 +64,9 @@ class StyleLoad
 		// 		}
 		// 	} 
 		// }
-
+		
+		wp_enqueue_media();
+		wp_enqueue_style('media');
 		wp_enqueue_script("emailkit-js", EMAILKIT_URL . 'dist/app.js', ['wp-plugins', 'wp-edit-post', 'wp-i18n', 'wp-element', 'wp-dom', 'wp-data'], EMAILKIT_VERSION, true);
 		wp_enqueue_style("emailkit-css", EMAILKIT_URL . 'dist/app.css', [], EMAILKIT_VERSION);
 		if (is_admin()) {
