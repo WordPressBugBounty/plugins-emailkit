@@ -7,6 +7,7 @@ class EmailLists {
     const NEW_ORDER = "new_order";
     const CANCELLED_ORDER = "cancelled_order";
     const FAILED_ORDER = "failed_order";
+    const FAILED_ORDER_CUSTOMER = "customer_failed_order";
     const ORDER_ON_HOLD = "customer_on_hold_order";
     const PROCESSING_ORDER = "customer_processing_order";
     const COMPLETED_ORDER = "customer_completed_order";
@@ -33,7 +34,8 @@ class EmailLists {
             'Select Template'                         =>  esc_html__('Select Template', 'emailkit'),
             self::NEW_ORDER                           =>  esc_html__('New Order', 'emailkit'),
             self::CANCELLED_ORDER                     =>  esc_html__('Cancelled order', 'emailkit'),
-            self::FAILED_ORDER                        =>  esc_html__('Failed Order', 'emailkit'),
+            self::FAILED_ORDER                        =>  esc_html__('Failed Order - Admin', 'emailkit'),
+            self::FAILED_ORDER_CUSTOMER               =>  esc_html__('Failed Order - Customer', 'emailkit'),
             self::ORDER_ON_HOLD                       =>  esc_html__('Order On Hold', 'emailkit'),
             self::PROCESSING_ORDER                    =>  esc_html__('Processing Order', 'emailkit'),
             self::COMPLETED_ORDER                     =>  esc_html__('Completed Order', 'emailkit'),

@@ -285,26 +285,34 @@ class Utils
 
     public static function order_items_replace(string $document, array $replacements ){
 		
-		$pattern = '/<tr[^>]*class="order_items"[^>]*>.*?<\/tr>/s';
-		preg_match_all($pattern, $document, $matches);
-
-		if (!empty($matches[0])) {
-			$row = '';
-			// Iterate through each matched row
-			foreach ($matches[0] as $originalRow) {
-				// Duplicate the row $n times
-				$duplicatedRow = $originalRow;
-
-				// Replace placeholders in the duplicated row
-				$placeholders = ["{{product_name}}", "{{quantity}}", "{{total}}", "{{product_price}}"];
-				
-				// Replace placeholders in each duplicated row
-				foreach ($replacements as $replacement) {
-					$row .= str_replace($placeholders, $replacement, $duplicatedRow);
-				}
-			}
-			return  preg_replace($pattern, $row, $document);
-		}
+		// Patterns for different classes
+        $patterns = [
+            'order_items' => '/<tr[^>]*class="order_items"[^>]*>.*?<\/tr>/s',
+            'order_item_price' => '/<tr[^>]*class="order_item_price"[^>]*>.*?<\/tr>/s',
+            'order_quantity' => '/<tr[^>]*class="order_quantity"[^>]*>.*?<\/tr>/s',
+        ];
+    
+        foreach ($patterns as $key => $pattern) {
+            // Match rows with the specified class
+            preg_match_all($pattern, $document, $matches);
+    
+            if (!empty($matches[0])) {
+                $rows = '';
+    
+                // Iterate through each matched row
+                foreach ($matches[0] as $originalRow) {
+                    // Duplicate the row for each replacement
+                    foreach ($replacements as $replacement) {
+                        // Replace placeholders in the duplicated row
+                        $placeholders = ["{{product_name}}", "{{quantity}}", "{{total}}", "{{product_price}}", "{{product_image_url}}", "{{product_sku}}", "{{product_attributes}}"];
+                        $rows .= str_replace($placeholders, $replacement, $originalRow);
+                    }
+                }
+    
+                // Replace the matched rows in the document
+                $document = preg_replace($pattern, $rows, $document);
+            }
+        }
 
 		return $document;
 	}
@@ -348,8 +356,11 @@ class Utils
         $billing_state_code = $order->get_billing_state();
         $billing_state_full_name = WC()->countries->get_states( $billing_country_code )[ $billing_state_code ];
         $shipping_country_code = $order->get_shipping_country();
-        $shipping_country_full_name = WC()->countries->countries[ $shipping_country_code ];
-        $shipping_full_state_name = WC()->countries->get_states( $shipping_country_code )[ $order->get_shipping_state() ];
+        $shipping_country_full_name = (!empty($shipping_country_code) && isset(WC()->countries->countries[$shipping_country_code]))? WC()->countries->countries[$shipping_country_code]: '';
+        $shipping_states = WC()->countries->get_states($shipping_country_code);
+        $shipping_state_code = $order->get_shipping_state();
+                
+        $shipping_full_state_name = is_array($shipping_states) && isset($shipping_states[$shipping_state_code]) ? $shipping_states[$shipping_state_code] : $shipping_state_code;
 
         $subtotal = $order->get_subtotal();
         $total_refunded = $order->get_total_refunded();
@@ -370,6 +381,16 @@ class Utils
 
         $product_names_string = implode(', ', $product_names);
 
+        $order_date = $order->get_date_created()->format('Y-m-d H:i:s');
+        // Convert the order date to the site's local timezone
+        $localized_date = get_date_from_gmt($order_date);
+        // Get the site's date and time formats
+        $date_format = get_option('date_format');
+        $time_format = get_option('time_format');
+        // Format the date and time separately
+        $formatted_date = date_i18n($date_format, strtotime($localized_date));
+        $formatted_time = date_i18n($time_format, strtotime($localized_date));
+
         $details = [
             "{{order_id}}" =>  $order->get_id(),
             "{{order_number}}" => $order->get_order_number(),
@@ -383,7 +404,8 @@ class Utils
             "{{remaining_refund_amount}}" => '-'.$order->get_remaining_refund_amount(),
             "{{billing_phone}}" => $order->get_billing_phone(),
             "{{shipping_tax_total}}" => wc_format_decimal($order->get_shipping_tax(), 2),
-            "{{order_date}}" => gmdate('Y-m-d H:i:s', strtotime(get_post($order->get_id())->post_date)),
+            "{{order_date}}" => $formatted_date,
+            "{{order_time}}" => $formatted_time,
             "{{shipping_method}}" => $order->get_shipping_method(),
             "{{payment_method}}" => $order->get_payment_method_title(),
             "{{total}}" => $formatted_total,

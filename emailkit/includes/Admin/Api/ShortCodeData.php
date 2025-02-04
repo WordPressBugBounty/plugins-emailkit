@@ -101,7 +101,7 @@ class ShortCodeData {
                 $short_codes[] = ['key' => 'order_number', 'value' => method_exists($order, 'get_order_number') ? $order->get_order_number() : '1'];
                 $short_codes[] = ['key' => 'order_currency', 'value' => method_exists($order, 'get_currency') ? $order->get_currency() : '$'];
                 $short_codes[] = ['key' => 'order_subtotal', 'value' => method_exists($order, 'get_subtotal') ? wc_price($order->get_subtotal()) : '$0.00'];
-                $short_codes[] = ['key' => 'order_date', 'value' => method_exists($order, 'get_date_created') ? gmdate('Y-m-d H:i:s', strtotime($order->get_date_created()->format('Y-m-d H:i:s'))) : '2020-01-01 00:00:00'];
+                $short_codes[] = ['key' => 'order_date','value' => method_exists($order, 'get_date_created') ? date_i18n(get_option('date_format'), strtotime(get_date_from_gmt($order->get_date_created()->format('Y-m-d')))): date_i18n(get_option('date_format'), strtotime('2020-01-01')),];
                 $short_codes[] = ['key' => 'payment_method', 'value' => method_exists($order, 'get_payment_method_title') ? $order->get_payment_method_title() : 'Cash On Delivery'];
                 $short_codes[] = ['key' => 'total', 'value' => method_exists($order, 'get_total') ? wc_price($order->get_total(), 2) : '$0.00'];
                 $short_codes[] = ['key' => 'customer_note', 'value' => method_exists($order, 'get_customer_note') ? ( !empty($order->get_customer_note()) ? $order->get_customer_note()  : __('Happy to order', 'emailkit') ) : __('Happy to order', 'emailkit')];

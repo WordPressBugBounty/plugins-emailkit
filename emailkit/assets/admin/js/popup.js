@@ -394,7 +394,7 @@ jQuery(document).ready(function ($) {
        
         if (dropdownTemplateType.trim() === 'Select Template') {
             jQuery('.emailkit-template-loader-wrapper').hide();
-            jQuery('.emailkit-add-new-form-model-contents').css('overflow-y', 'scroll');
+            jQuery('.emailkit-add-new-form-model-contents').css('overflow', 'hidden');
             jQuery('.emailkit-select-template-type-msg').show();
             jQuery('.emailkit-templates-list').hide();
             emailkitTemplateLists.css('display', 'block');

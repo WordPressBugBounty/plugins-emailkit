@@ -22,14 +22,14 @@ class Hooks
     function custom_post_row_actions($actions, $post) {
    
          // Remove the Quick Edit link
-        if ($post->post_type === 'emailkit' && isset( $actions['inline hide-if-no-js'] ) ) {
+        if ($post->post_type === 'emailkit' && isset( $actions['inline hide-if-no-js'] ) && !class_exists('EmailKit_Essentials') ) {
             unset( $actions['inline hide-if-no-js'] );
         }
 
 
         if ($post->post_type === 'emailkit') {
             $edit_url = admin_url("post.php?post={$post->ID}&action=emailkit-builder");
-            $actions['emailkit-builder'] = "<a href='$edit_url'>Edit with Emailkit</a>";
+            $actions['emailkit-builder'] = sprintf("<a href='%s'>%s</a>",esc_url($edit_url),esc_html__('Edit with Emailkit', 'emailkit'));
             // unset($actions['edit']);
         }
         return $actions;
@@ -67,15 +67,24 @@ class Hooks
     {
 
         $date_column = $columns['date'];
+        $checkbox = $columns['cb'];
         unset($columns['title']);
         unset($columns['date']);
         unset($columns['author']);
+        unset($columns['cb']);
 
-        $columns['title'] = esc_html__('Template Title', 'emailkit');
-        $columns['type']     = esc_html__('Templates Type', 'emailkit');
-        $columns['status']   = esc_html__('Templates Status', 'emailkit');
-        $columns['author']   = esc_html__('Author', 'emailkit');
-        $columns['date']     = esc_html($date_column);
+        $columns = array_merge(
+            array(
+                'cb'     => esc_html($checkbox),
+                'title'  => esc_html__('Template Title', 'emailkit'),
+                'type'   => esc_html__('Templates Type', 'emailkit'),
+                'status' => esc_html__('Templates Status', 'emailkit'),
+                'author' => esc_html__('Author', 'emailkit'),
+                'date'   => esc_html($date_column),
+               
+            ),
+            $columns
+        );
 
         return $columns;
     }

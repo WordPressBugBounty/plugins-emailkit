@@ -105,10 +105,10 @@ input.change-status-btn:checked + .slider .slider-active-text::after {
 }
 
 .emailkit-open-new-form-editor-modal.emailkit-slider-loader::after{
-    left: 5px;
-    top: 34%;
+    position: relative;
+    margin-bottom: -2px;
     bottom: auto;
-    border: 3px solid #e4e4e4f1;
+    border: 3px solid #fff;
     border-top-color: transparent;
 }
 .emailkit-admin-template-switch-inactive,.emailkit-admin-template-switch-active{

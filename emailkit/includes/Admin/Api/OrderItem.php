@@ -61,13 +61,53 @@ class OrderItem {
             $last_order_id = reset($last_order)->get_id();
             $order = wc_get_order($last_order_id);
             $items = $order->get_items();
-        
+            $products_data = [];
             if (!empty($items)) {
-                $last_item = reset($items);
-                $product = wc_get_product($last_item->get_product_id());
-        
-                if ($product) {
-                    $product_price = $product->get_price();
+                foreach ($items as $item_id => $item) {
+                    $product = $item->get_product();
+                    $product_name = $item->get_name();
+                    $item_qty = $item->get_quantity();
+                    $item_total = $item->get_total();
+                    $product_id = $item->get_product_id();
+                    $variation_id = $item->get_variation_id();
+                    $product_sku = $product->get_sku();
+                    $product_price = $product->get_price() * $item_qty;
+            
+                    // Fetch product image URL
+                    $product_image_id = $product->get_image_id();
+                    $product_image_url = wp_get_attachment_url($product_image_id);
+            
+                    if (!$product_image_url) {
+                        $product_image_url = wc_placeholder_img_src();
+                    }
+
+                    $attributes = [];
+                    $meta_data = $item->get_meta_data();
+
+                    foreach ($meta_data as $meta) {
+                        // Check for product attribute (pa_ is the prefix for standard attributes)
+                        if (strpos($meta->key, 'pa_') === 0) {
+                            // Standard product attribute
+                            $formatted_name = ucwords(wc_attribute_label(str_replace('pa_', '', $meta->key), $product));
+                            $formatted_value = ucwords(strtolower($meta->value)); // Capitalize the value
+
+                            // Add the attribute to the list with HTML markup
+                            $attributes[] = esc_html($formatted_name) . ': ' . esc_html($formatted_value);
+
+                        } else {
+                            
+                            $formatted_name = ucwords(str_replace('_', ' ', strtolower($meta->key)));
+                            $formatted_value = ucwords(strtolower($meta->value)); 
+
+                            // Add the custom meta to the list with HTML markup
+                            $attributes[] = esc_html($formatted_name) . ':' . esc_html($formatted_value);
+
+                        }
+                    }
+
+                    $product_attributes = !empty($attributes) ? implode(', ', $attributes) : '';
+
+                    
                 }
         
                 $billing_name = $order->get_formatted_billing_full_name();
@@ -86,28 +126,42 @@ class OrderItem {
 
                 $billing_state_full_name = is_array($billing_states) && isset($billing_states[$billing_state_code]) ? $billing_states[$billing_state_code] : $billing_state_code;
                 $shipping_country_code = $order->get_shipping_country();
-                $shipping_country_full_name = WC()->countries->countries[ $shipping_country_code ];
+                $shipping_country_full_name = (!empty($shipping_country_code) && isset(WC()->countries->countries[$shipping_country_code]))
+                ? WC()->countries->countries[$shipping_country_code]
+                : '';
 
                 $shipping_states = WC()->countries->get_states($shipping_country_code);
                 $shipping_state_code = $order->get_shipping_state();
                 
                 $shipping_full_state_name = is_array($shipping_states) && isset($shipping_states[$shipping_state_code]) ? $shipping_states[$shipping_state_code] : $shipping_state_code;
 
+                $order_date = $order->get_date_created()->format('Y-m-d H:i:s');
+
+                // Convert the order date to the site's local timezone
+                $localized_date = get_date_from_gmt($order_date);
+
+                // Get the site's date and time formats
+                $date_format = get_option('date_format');
+                $time_format = get_option('time_format');
+
+                // Format the date and time separately
+                $formatted_date = date_i18n($date_format, strtotime($localized_date));
+                $formatted_time = date_i18n($time_format, strtotime($localized_date));
+
                 $item_data = [
                     'order_id' => $last_order_id,
-                    'product_name' => $last_item->get_name(),
                     'billing_name' => $billing_name,
                     'status' => $status,
-                    'product_price' => wc_price($product_price),
-                    'quantity' => $order->get_item_count(),
                     "order_number" => $order->get_order_number(),
-                    "order_fully_refunded" => $order->get_total_refunded(),
+                    "order_fully_refunded" =>  wc_price($order->get_total_refunded()),
+                    'partial_refund_amount' => '-'.wc_price($order->get_total() - $order->get_total_refunded()),
                     "order_currency" => $order->get_currency(),
                     "billing_phone" => $order->get_billing_phone(),
                     "shipping_total" => wc_price($order->get_shipping_total()),
                     "order_subtotal" => wc_price($order->get_subtotal()),
                     "shipping_tax_total" => wc_format_decimal($order->get_shipping_tax(), 2),
-                    "order_date" => gmdate('Y-m-d H:i:s', strtotime($order->get_date_created()->format('Y-m-d H:i:s'))),
+                    "order_date" => $formatted_date,
+                    'order_time' => $formatted_time,
                     "shipping_method" => $order->get_shipping_method(),
                     "payment_method" => $order->get_payment_method_title(),
                     "total" => wc_price($order->get_total(), 2),
@@ -131,7 +185,15 @@ class OrderItem {
                     "shipping_country" => $shipping_country_full_name,
                     "shipping_phone" => $order->get_shipping_phone(),
                     "customer_note" => $order->get_customer_note(),
+                    "product_name" => $product_name,
+                    "product_image_url" => $product_image_url,
+                    "product_price" => wc_price($product_price),
+                    "product_sku" => $product_sku,
+                    "product_attributes" => $product_attributes,
+                    "quantity" => $item_qty,
                 ];
+
+            
                 
                 return [
                     'status' => 'success',

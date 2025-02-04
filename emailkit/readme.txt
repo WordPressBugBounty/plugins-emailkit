@@ -4,7 +4,7 @@ Contributors: Ataurr, XpeedStudio
 Tags: Email Template, WordPress Email Builder, WordPress email customizer, WooCommerce email customizer, WooCommerce email template customizer, Email Customizer
 Tested up to: 6.7
 Requires at least: 5.0
-Stable tag: 1.5.7
+Stable tag: 1.5.8
 Requires PHP: 7.4
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -22,6 +22,11 @@ Your custom transactional templates for different stages of orders placed on you
 On the design front, you have **26+ email builder elements** to create stylish and engaging custom WooCommerce email templates. Such as Shipping Address, Billing Address, Order Item, and Custom Note. Besides, basic ones like Heading, Text, Image, Container, Column, Spacer, Divider Button, Video, and social icons are bundled with EmailKit. Plus, elements for Account Registration and Password Reset are available too.
 
 Overall, EmailKit empowers you to create a cohesive and branded communication experience with your customers, enhancing engagement and fostering a professional image for your online store.
+
+## USEFUL LINKS
+
+> [Explore the Features](https://wpmet.com/plugin/emailkit/#emailkit--features-section)|  [Need Support?](https://wpmet.com/support-ticket-form/)| [Check Documentation](https://wpmet.com/doc/emailkit/)| [Video Tutorials](https://www.youtube.com/@Wpmet)|   [Buy Pro](https://wpmet.com/plugin/emailkit/pricing/)|[Check Roadmap and Request a Feature](https://wpmet.com/plugin/emailkit/roadmaps/)
+
 
 ## 💪 Advanced features:
 
@@ -93,7 +98,7 @@ With EmailKit you can design **17 different types of email for different stages 
 
 13. **Reset Password:** Reset Password email template, an email sent when a user forgets the password and wants to set it.
 
-14. **Product on Back Order:** Customize WooCoomerce order emails to be sent when users add an out-of-stock product to their wishlist.
+14. **Product on Back Order:** Customize WooCommerce order emails to be sent when users add an out-of-stock product to their wishlist.
 
 15. **Partial Refund:** This email template is sent when a store owner issues a partial refund due to an insufficient quantity of items or other tax-related reasons.
 
@@ -132,25 +137,19 @@ EmailKit - email customizer for WooCommerce, comes with **26+** drag-and-drop el
 🔸Account Registration  
 🔸Password Reset
 
-🧿 Backed By a Trusted Team
 
-EmailKit WooCommerce email customizer is brought to you by Wpmet, a name trusted by 10,00,000+ satisfied users worldwide.
+### 😍 BACKED BY A TRUSTED TEAM
 
-### 👨‍💻 DOCUMENTATION AND SUPPORT
+EmailKit is brought to you by **Wpmet, a name trusted by 10,00,000+ satisfied users worldwide**.
 
-✅ [Contact Our Support](https://wpmet.com/support-ticket-form/)
+### » SOCIAL MEDIA SUPPORT
 
-🌐 [Join Our Facebook Community](https://www.facebook.com/groups/wpmet/)
-
-🟢 [Check Documentation](https://wpmet.com/doc/emailkit/)
-
-💹 [Browse Changelogs](https://wpmet.com/plugin/emailkit/roadmaps/#updates)
-
-### 💝 Love EmailKit?
-
-🧲 Stay Updated with our [Youtube Channel](https://www.youtube.com/c/Wpmet/videos)
-
-⭐️ Rate us on [WordPress](https://wordpress.org/support/plugin/emailkit/reviews/#new-post)
+  🙋🏼‍♂️ Join Our [Facebook Community](https://www.facebook.com/groups/wpmet/)
+  👍 Like our [Facebook Page](https://www.facebook.com/wpmetcom)
+🌐 Follow us on  [X (Twitter)](https://x.com/wpmetcom)
+🌐 Follow us on [Instagram](https://www.instagram.com/wpmetcom?igsh=MXBueWl2aGg1M2dmbQ==)
+🌐 Connect on [LinkedIn](https://www.linkedin.com/company/wpmet/)
+⭐️ Rate us on [WordPress](https://wordpress.org/support/plugin/metform/reviews/#new-post)
 
 ### ☂️ Our Other Plugins
 
@@ -164,7 +163,7 @@ If you like using EmailKit WooCommerce Builder, then consider checking out our o
 
 [ShopEngine](https://wpmet.com/plugin/shopengine/) – The most complete WooCommerce solution for Elementor.
 
-[GetGenie Ai](https://getgenie.ai/) - An advanced Ai assistant for SEO-friendly content.
+[GetGenie Ai](https://getgenie.ai/) - An advanced Ai assistant for SEO-friendly content. The tool also offers a chatbot called [GenieChat](https://getgenie.ai/geniechat/) and an AI image generator named [Genie Image](https://getgenie.ai/genie-image/).
 
 [Wp Social](https://wpmet.com/plugin/wp-social/) – Leverage Wp Social to add Social Login, Social Counter, and Social Login to your website.
 
@@ -174,12 +173,30 @@ If you like using EmailKit WooCommerce Builder, then consider checking out our o
 
 [PopupKit](https://wordpress.org/plugins/popup-builder-block/) – Build exceptional popup for diverse needs within the WordPress block editor.
 
+RoxSlider - It is a powerful tool for slider creation. You can design stunning sliders with ease.
+
 [TableKit](https://wordpress.org/plugins/table-builder-block/) – Make fully-customizable multipurpose table & generate data table within Gutenberg block editor.
 
 
 Visit [Wpmet](https://wpmet.com/) to learn more about how to get the best of WordPress with [Tutorials, Tips & Tricks](https://wpmet.com/blog)!
 
 == Changelog ==
+
+Version 1.5.8 -	04/02/2025
+Added: Translation process.
+Added: Order item widget new design options.
+Added: New template type for Woocommerce failed order email notification for customer.
+Added: Woocommerce variable product details support in email.
+Added: Date time control support in order item widget.
+Added: Icon picker.
+Improved: Widgets control design in the editor.
+Improved: Widget hierarchy navigator in the editor.
+Improved: New template creation popup modal.
+Improved: Social icon and video widget.
+Fixed: Shipping methods showing issues on the order item widget.
+Fixed: Translation warning issue with WordPress 6.7.
+Fixed: Image upload and container widget issue.
+Fixed: Image box widget and Column section widget design break issue after mail sending.
 
 Version 1.5.7 -	01/12/2024
 Improved: Image uploading control of Image widget.

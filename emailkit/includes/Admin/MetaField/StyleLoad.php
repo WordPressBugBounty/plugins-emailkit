@@ -4,10 +4,11 @@ namespace EmailKit\Admin\MetaField;
 
 defined('ABSPATH') || exit;
 
-use EmailKit;
+use WC_Shipping_Zones;
 
 class StyleLoad
 {
+	const EMAILKIT_ICON_BASE_URL = EMAILKIT_URL . "assets/Images/";
 	private $emailKit;
 
 	public function __construct()
@@ -72,6 +73,8 @@ class StyleLoad
 		if (is_admin()) {
 			wp_enqueue_style('emailkit-admin-style', EMAILKIT_URL . 'assets/dist/admin/styles/email-builder-navbar.css', [], EMAILKIT_VERSION);
 		}
+		
+		wp_set_script_translations('emailkit-js', 'emailkit', EMAILKIT_DIR . 'languages');
 	}
 
 	public function builder_data()
@@ -111,6 +114,7 @@ class StyleLoad
 		$_nonce = wp_create_nonce('wp_rest');
 		$post_id = isset($_GET['post']) ? sanitize_text_field(wp_unslash($_GET['post'])) : ''; //phpcs:ignore WordPress.Security.NonceVerification -- Nonce can't be added in CPT edit page URL
 		$is_emailkit_pro_active = is_plugin_active('emailkit-pro/emailkit-pro.php');
+		$is_shipping_zone_available = class_exists('WC_Shipping_Zones') ? !empty(WC_Shipping_Zones::get_zones()) : false;
         $config = [
             'version' => EMAILKIT_VERSION,
             'restNonce' => esc_attr($_nonce),
@@ -125,9 +129,10 @@ class StyleLoad
 			'template_type' => get_post_meta($post_id,'emailkit_template_type',true),
 			'email_type' => get_post_meta($post_id,'emailkit_email_type',true),
 			'is_emailkit_pro_active' => ($is_emailkit_pro_active ? true : false),
-			'isWoocommreceActivate' => is_plugin_active('woocommerce/woocommerce.php') ? 'active' : 'inactive'
+			'isWoocommreceActivate' => is_plugin_active('woocommerce/woocommerce.php') ? 'active' : 'inactive',
+			'isShippingZoneAvailable' => $is_shipping_zone_available ? 'active' : 'inactive',
+			'iconBaseUrl' => self::EMAILKIT_ICON_BASE_URL,
         ];
-
 
 		
 

@@ -64,25 +64,40 @@ class TemplateTypesData {
     
         $templates_data = [];
         foreach ($matching_templates as $matching_template) {
-
-            $json_content = file_get_contents($matching_template['file']);
+            // Check if the file path is empty and the package is 'pro'
+            if (empty($matching_template['file']) && $matching_template['package'] === 'pro') {
+                $template_data = array(
+                    'date'               => get_the_date('Y-m-d H:i:s', $matching_template['id']),
+                    'package'            => $matching_template['package'],
+                    'mail_type'          => $matching_template['mail_type'],
+                    'id'                 => $matching_template['id'],
+                    'template_title'     => $matching_template['title'],
+                    'object'             => '', // No template object since the file is empty
+                    'template_thumbnail' => $matching_template['preview-thumb'], // Only include the thumbnail
+                );
         
-            // Decode the JSON content
-            $template_object = json_decode($json_content, true);
-
-            $post_creation_date = get_the_date('Y-m-d H:i:s', $matching_template['id']);
-
-            $template_data = array(
-                'date'           => $post_creation_date,
-                'package'        => $matching_template['package'],
-                'mail_type'      => $matching_template['mail_type'],
-                'id'             => $matching_template['id'], 
-                'template_title' => $matching_template['title'], 
-                'object'         => $template_object,
-                'template_thumbnail' => $matching_template['preview-thumb'],
-            );
-
-            $templates_data[] = $template_data;
+                $templates_data[] = $template_data;
+                continue; // Skip further processing for this template
+            }
+        
+            // Continue processing templates with a valid file path
+            if (!empty($matching_template['file'])) {
+                $json_content = file_get_contents($matching_template['file']);
+                $template_string = stripslashes($json_content);
+                $template_object = json_decode($template_string, true);
+        
+                $template_data = array(
+                    'date'               => get_the_date('Y-m-d H:i:s', $matching_template['id']),
+                    'package'            => $matching_template['package'],
+                    'mail_type'          => $matching_template['mail_type'],
+                    'id'                 => $matching_template['id'],
+                    'template_title'     => $matching_template['title'],
+                    'object'             => $template_object,
+                    'template_thumbnail' => $matching_template['preview-thumb'],
+                );
+        
+                $templates_data[] = $template_data;
+            }
         }
     
         return [

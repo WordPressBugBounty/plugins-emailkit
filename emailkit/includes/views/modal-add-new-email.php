@@ -65,7 +65,7 @@
                     <div class="emailkit-template-alert-msg emailkit-select-template-type-msg">
                         <p>Please select a template.</p>
                     </div>
-                    <ul class="emailkit-templates-list" style="position: relative;">
+                    <ul class="emailkit-templates-list" style="position: relative;overflow-y: auto;height: 300px; overflow-x: hidden;">
                     <p class="emailkit-template-delete-success-notification" style="color: green; margin: auto; display: none;">Template Deleted Successfully.</p>
                         <div class="emailkit-template-loader-wrapper">
                             <div class="emailkit-template-loader"></div>

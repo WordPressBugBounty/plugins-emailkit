@@ -20,17 +20,17 @@ class MetaBox
     {
         $this->template_types = [
 
-            "New Order"                         =>  esc_html__('New Order - WC ', 'emailkit'),
-            "Cancelled order"                   =>  esc_html__('Cancelled order  - WC ', 'emailkit'),
-            "Failed Order"                      =>  esc_html__('Failed Order  - WC ', 'emailkit'),
-            "Order On Hold"                     =>  esc_html__('Order On Hold - WC ', 'emailkit'),
-            "Processing Order"                  =>  esc_html__('Processing Order - WC ', 'emailkit'),
-            "Completed Order"                   =>  esc_html__('Completed Order - WC ', 'emailkit'),
-            "Refunded Order"                    =>  esc_html__('Refunded Order - WC ', 'emailkit'),
-            "Customer Invoice" =>  esc_html__('Customer Invoice - WC ', 'emailkit'),
-            "Customer Note"                     =>  esc_html__('Customer Note - WC ', 'emailkit'),
-            "Reset Password"                    =>  esc_html__('Reset Password - WC ', 'emailkit'),
-            "New Account"                       =>  esc_html__('New Account - WC ', 'emailkit'),
+            "New Order"                         =>  'New Order - WC ',
+            "Cancelled order"                   => 'Cancelled order  - WC ',
+            "Failed Order"                      => 'Failed Order  - WC ',
+            "Order On Hold"                     =>  'Order On Hold - WC ',
+            "Processing Order"                  =>  'Processing Order - WC ',
+            "Completed Order"                   =>  'Completed Order - WC ',
+            "Refunded Order"                    =>  'Refunded Order - WC ',
+            "Customer Invoice"                  =>  'Customer Invoice - WC ',
+            "Customer Note"                     =>  'Customer Note - WC ',
+            "Reset Password"                    =>  'Reset Password - WC ',
+            "New Account"                       =>  'New Account - WC ',
         ];
 
         add_action('add_meta_boxes', [$this, 'add']);

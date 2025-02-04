@@ -91,84 +91,84 @@ class Promotional{
         
         Plugins::instance()->init('emailkit')                # @text_domain
         ->set_parent_menu_slug('emailkit-menu')                                      # @plugin_slug
-        ->set_submenu_name(esc_html__('Our Plugins', 'emailkit'))
-        ->set_section_title( esc_html__('Get More out of Your WordPress Website!', 'emailkit'))
-        ->set_section_description(esc_html__('Revamp your website with other top plugins from us. And guess what, they\'re absolutely free!', 'emailkit'))                         # @section_description (optional)
+        ->set_submenu_name('Our Plugins')
+        ->set_section_title('Get More out of Your WordPress Website!')
+        ->set_section_description('Revamp your website with other top plugins from us. And guess what, they\'re absolutely free!')                         # @section_description (optional)
         ->set_items_per_row(4)                                                      # @items_per_row (optional- default: 6)
         ->set_plugins(                                                              # @plugins
         [
             'elementskit-lite/elementskit-lite.php' => [
-                'name' => esc_html__('ElementsKit Elementor addons', 'emailkit'),
+                'name' => 'ElementsKit Elementor addons',
                 'url'  => 'https://wordpress.org/plugins/elementskit-lite/',
                 'icon' => 'https://ps.w.org/elementskit-lite/assets/icon-256x256.gif?rev=2518175',
-                'desc' => esc_html__('All-in-one Elementor addon trusted by 1 Million+ users, makes your website builder process easier with ultimate freedom.', 'emailkit'),
+                'desc' => 'All-in-one Elementor addon trusted by 1 Million+ users, makes your website builder process easier with ultimate freedom.',
                 'docs' => 'https://wpmet.com/docs/elementskit/',
             ],
             'getgenie/getgenie.php' => [
-                'name' => esc_html__('GetGenie', 'emailkit'),
+                'name' => 'GetGenie',
                 'url'  => 'https://wordpress.org/plugins/getgenie/',
                 'icon' => 'https://ps.w.org/getgenie/assets/icon-256x256.gif?rev=2798355',
-                'desc' => esc_html__('Your personal AI assistant for content and SEO. Write content that ranks on Google with NLP keywords and SERP analysis data.', 'emailkit'),
+                'desc' => 'Your personal AI assistant for content and SEO. Write content that ranks on Google with NLP keywords and SERP analysis data.',
                 'docs' => 'https://getgenie.ai/docs/',
             ],
             'gutenkit-blocks-addon/gutenkit-blocks-addon.php' => [
-                'name' => esc_html__('GutenKit', 'emailkit'),
+                'name' => 'GutenKit',
                 'url'  => 'https://wordpress.org/plugins/gutenkit-blocks-addon/',
-                'icon' => 'https://ps.w.org/gutenkit-blocks-addon/assets/icon-128x128.png?rev=3044956',
-                'desc' => esc_html__('Gutenberg blocks, patterns, and templates that extend the page-building experience using the WordPress block editor.', 'emailkit'),
+                'icon' => 'https://ps.w.org/gutenkit-blocks-addon/assets/icon-128x128.gif?rev=3116270',
+                'desc' => 'Gutenberg blocks, patterns, and templates that extend the page-building experience using the WordPress block editor.',
                 'docs' => 'https://wpmet.com/doc/gutenkit/',
             ],
             'shopengine/shopengine.php' => [
-                'name' => esc_html__('Shopengine', 'emailkit'),
+                'name' =>'Shopengine',
                 'url'  => 'https://wordpress.org/plugins/shopengine/',
                 'icon' => 'https://ps.w.org/shopengine/assets/icon-256x256.gif?rev=2505061',
-                'desc' => esc_html__('Complete WooCommerce solution for Elementor to fully customize any pages including cart, checkout, shop page, and so on.', 'emailkit'),
+                'desc' => 'Complete WooCommerce solution for Elementor to fully customize any pages including cart, checkout, shop page, and so on.',
                 'docs' => 'https://wpmet.com/doc/shopengine/',
             ],
             'metform/metform.php' => [
-                'name' => esc_html__('MetForm', 'emailkit'),
+                'name' => 'MetForm',
                 'url'  => 'https://wordpress.org/plugins/metform/',
                 'icon' => 'https://ps.w.org/metform/assets/icon-256x256.png',
-                'desc' => esc_html__('Drag & drop form builder for Elementor to create contact forms, multi-step forms, and more — smoother, faster, and better!', 'emailkit'),
+                'desc' => 'Drag & drop form builder for Elementor to create contact forms, multi-step forms, and more — smoother, faster, and better!',
                 'docs' => 'https://wpmet.com/doc/metform/',
             ],
 
             'wp-social/wp-social.php' => [
-                'name' => esc_html__('WP Social', 'emailkit'),
+                'name' => 'WP Social',
                 'url'  => 'https://wordpress.org/plugins/wp-social/',
                 'icon' => 'https://ps.w.org/wp-social/assets/icon-256x256.png?rev=2544214',
-                'desc' => esc_html__('Add social share, login, and engagement counter — unified solution for all social media with tons of different styles for your website.', 'emailkit'),
+                'desc' => 'Add social share, login, and engagement counter — unified solution for all social media with tons of different styles for your website.',
                 'docs' => 'https://wpmet.com/doc/wp-social/',
             ],
             
             'wp-ultimate-review/wp-ultimate-review.php' => [
-                'name' => esc_html__('WP Ultimate Review', 'emailkit'),
+                'name' => 'WP Ultimate Review',
                 'url'  => 'https://wordpress.org/plugins/wp-ultimate-review/',
                 'icon' => 'https://ps.w.org/wp-ultimate-review/assets/icon-256x256.png?rev=2544187',
-                'desc' => esc_html__('Collect and showcase reviews on your website to build brand credibility and social proof with the easiest solution.', 'emailkit'),
+                'desc' =>  'Collect and showcase reviews on your website to build brand credibility and social proof with the easiest solution.',
                 'docs' => 'https://wpmet.com/doc/wp-ultimate-review/',
             ],
 
             'wp-fundraising-donation/wp-fundraising.php' => [
-                'name' => esc_html__('FundEngine', 'emailkit'),
+                'name' =>  'FundEngine',
                 'url'  => 'https://wordpress.org/plugins/wp-fundraising-donation/',
                 'icon' => 'https://ps.w.org/wp-fundraising-donation/assets/icon-256x256.png?rev=2544150',
-                'desc' => esc_html__('Create fundraising, crowdfunding, and donation websites with PayPal and Stripe payment gateway integration.', 'emailkit'),
+                'desc' => 'Create fundraising, crowdfunding, and donation websites with PayPal and Stripe payment gateway integration.',
                 
                 'docs' => 'https://wpmet.com/doc/fundengine/',
             ],
             'blocks-for-shopengine/shopengine-gutenberg-addon.php' => [
-                'name' => esc_html__('Blocks for ShopEngine', 'emailkit'),
+                'name' => 'Blocks for ShopEngine',
                 'url'  => 'https://wordpress.org/plugins/blocks-for-shopengine/',
                 'icon' => 'https://ps.w.org/blocks-for-shopengine/assets/icon-256x256.gif?rev=2702483',
-                'desc' => esc_html__('All in one WooCommerce solution for Gutenberg! Build your WooCommerce pages in a block editor with full customization.', 'emailkit'),
+                'desc' => 'All in one WooCommerce solution for Gutenberg! Build your WooCommerce pages in a block editor with full customization.',
                 'docs' => 'https://wpmet.com/doc/shopengine/shopengine-gutenberg/',
             ],
             'genie-image-ai/genie-image-ai.php' => [
-                'name' => esc_html__('Genie Image', 'emailkit'),
+                'name' => 'Genie Image',
                 'url'  => 'https://wordpress.org/plugins/genie-image-ai/',
                 'icon' => 'https://ps.w.org/genie-image-ai/assets/icon-256x256.png?rev=2977297',
-                'desc' => esc_html__('AI-powered text-to-image generator for WordPress with OpenAI’s DALL-E 2 technology to generate high-quality images in one click.', 'emailkit'),
+                'desc' => 'AI-powered text-to-image generator for WordPress with OpenAI’s DALL-E 2 technology to generate high-quality images in one click.',
                 'docs' => 'https://getgenie.ai/docs/',
             ],
             
@@ -193,34 +193,34 @@ class Promotional{
             ->set_default_grid_thumbnail(EMAILKIT_URL . '/Promotional/ProAwareness/assets/images/support.png')
             ->set_page_grid([
                 'url' => 'https://wpmet.com/fb-group',
-                'title' => esc_html__('Join the Community', 'emailkit'),
+                'title' => 'Join the Community',
                 'thumbnail' => EMAILKIT_URL . '/Promotional/ProAwareness/assets/images/community.png',
-                'description' => esc_html__('Join our Facebook group to get 20% discount coupon on premium products. Follow us to get more exciting offers.', 'emailkit')
+                'description' => 'Join our Facebook group to get 20% discount coupon on premium products. Follow us to get more exciting offers.'
 
             ])
             ->set_page_grid([
                 'url' => 'https://www.youtube.com/watch?v=Fz_1M-s_Faw&list=PL3t2OjZ6gY8O0ul4d9KROcQMyoSaTad6N',
-                'title' => esc_html__('Video Tutorials', 'emailkit'),
+                'title' =>'Video Tutorials',
                 'thumbnail' => EMAILKIT_URL . '/Promotional/ProAwareness/assets/images/videos.png',
-                'description' => esc_html__('Learn the step by step process for developing your site easily from video tutorials.', 'emailkit')
+                'description' => 'Learn the step by step process for developing your site easily from video tutorials.'
             ])
             ->set_page_grid([
                 'url' => 'https://wpmet.com/plugin/emailkit/roadmaps#ideas',
-                'title' => esc_html__('Request a feature', 'emailkit'),
+                'title' =>'Request a feature',
                 'thumbnail' => EMAILKIT_URL . '/Promotional/ProAwareness/assets/images/request.png',
-                'description' => esc_html__('Have any special feature in mind? Let us know through the feature request.', 'emailkit')
+                'description' => 'Have any special feature in mind? Let us know through the feature request.'
             ])
             ->set_page_grid([
                     'url'       => 'https://wpmet.com/doc/emailkit/',
-                    'title'     => esc_html__('Documentation', 'emailkit'),
+                    'title'     =>  'Documentation',
                     'thumbnail' => EMAILKIT_URL . '/Promotional/ProAwareness/assets/images/documentation.png',
-                    'description' => esc_html__('Detailed documentation to help you understand the functionality of each feature.', 'emailkit')
+                    'description' => 'Detailed documentation to help you understand the functionality of each feature.'
             ])
             ->set_page_grid([
                     'url'       => 'https://wpmet.com/plugin/emailkit/roadmaps/',
-                    'title'     => esc_html__('Public Roadmap', 'emailkit'),
+                    'title'     => 'Public Roadmap',
                     'thumbnail' => EMAILKIT_URL . '/Promotional/ProAwareness/assets/images/roadmaps.png',
-                    'description' => esc_html__( 'Check our upcoming new features, detailed development stories and tasks', 'emailkit')
+                    'description' => 'Check our upcoming new features, detailed development stories and tasks'
             ])
 
             ->set_plugin_row_meta('Documentation', 'https://help.wpmet.com/docs-cat/emailkit/', ['target' => '_blank'])

@@ -69,7 +69,37 @@ class CancelledOrder
 				// Format the item total with the currency symbol
 				$formatted_item_total = wc_price($item_total);
 
-				$replacements[] = [$product_name, $item_qty, $formatted_item_total, $formatted_product_price];
+				$product_image_id = $product->get_image_id();
+				$product_image_url = $product_image_id ? wp_get_attachment_url($product_image_id) : wc_placeholder_img_src();
+
+				$product_sku = $product->get_sku();
+				$attributes = [];
+				$meta_data = $item->get_meta_data();
+
+				foreach ($meta_data as $meta) {
+					// Check for product attribute (pa_ is the prefix for standard attributes)
+					if (strpos($meta->key, 'pa_') === 0) {
+					// Standard product attribute
+					$formatted_name = ucwords(wc_attribute_label(str_replace('pa_', '', $meta->key), $product));
+					$formatted_value = ucwords(strtolower($meta->value)); // Capitalize the value
+
+					// Add the attribute to the list with HTML markup
+					$attributes[] = esc_html($formatted_name) . ': ' . esc_html($formatted_value);
+
+					} else {
+						
+					$formatted_name = ucwords(str_replace('_', ' ', strtolower($meta->key)));
+					$formatted_value = ucwords(strtolower($meta->value)); 
+
+					// Add the custom meta to the list with HTML markup
+					$attributes[] = esc_html($formatted_name) . ':' . esc_html($formatted_value);
+
+					}
+				}
+
+				$formatted_attributes = !empty($attributes) ? implode(', ', $attributes) : '';
+
+				$replacements[] = [$product_name, $item_qty, $formatted_item_total, $formatted_product_price, $product_image_url, $product_sku, $formatted_attributes];
 
 			}
 

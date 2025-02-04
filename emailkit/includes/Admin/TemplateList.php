@@ -2,16 +2,47 @@
 namespace EmailKit\Admin;
 
 use EmailKit\Admin\Emails\EmailLists;
+Use EmailKitPro\Admin\TemplateManager;
 defined( 'ABSPATH' ) || exit;
 
 Class TemplateList{
     const  EMAILKIT_URL_TEMAPLTE_DIR = EMAILKIT_DIR. "includes/";
     const EMAILKIT_URL_TEMAPLTE_URL = EMAILKIT_URL. "includes/";
+    const EMAILKIT_TEMAPLTE_DIR_PRO = EMAILKITPRO_DIR. "includes/";
+   
 
     public static function get_templates(){
     
         
-        $template_list = [
+        $template_list = array_merge(
+
+            self::get_new_order_template(),
+            self::get_cancelled_order_template(),
+            self::get_failed_order_template(),
+            self::get_failed_order_template_customer(),
+            self::get_completed_order_template(),
+            self::get_processing_order_template(),
+            self::get_refunded_order_template(),
+            self::get_order_on_hold_template(),
+            self::get_customer_invoice_order_details_template(),
+            self::get_customer_note_template(),
+            self::get_new_account_template(),
+            self::get_reset_password_template(),
+            self::get_low_stock_template(),
+            self::get_no_stock_template(),
+            self::get_back_order_template(),
+            self::get_partial_refund_template(),
+            self::get_wp_new_register_template(),
+            self::get_wp_reset_password_template(),
+
+        );
+
+        return apply_filters( 'emailkit/editor/templates', $template_list );
+    }
+
+    public static function get_new_order_template(){
+
+        return [
             'template-1' => [
                 'id' => 1,
                 'package' => 'free',
@@ -22,6 +53,16 @@ Class TemplateList{
                 'demo-url'  => 'https://wpmet.com/',
                 'file' => self::EMAILKIT_URL_TEMAPLTE_DIR . 'templates/new-order/1/content.json',
             ],
+
+        ];
+        
+       
+    }
+
+    public static function get_cancelled_order_template(){
+
+        return [
+
             'template-2' => [
                 'id' => 2,
                 'package' => 'free',
@@ -33,7 +74,64 @@ Class TemplateList{
                 'file' => self::EMAILKIT_URL_TEMAPLTE_DIR . 'templates/cancelled-order/1/content.json',
                 
             ],
-            'template-3' => [
+            'template-24' => [
+                'id' => 23,
+                'package' => 'pro',
+                'mail_type' => 'woocommerce',
+                'title' =>  EmailLists::CANCELLED_ORDER,
+                'template_title' => EmailLists::woocommerce_email(EmailLists::CANCELLED_ORDER),
+                'preview-thumb' => self::EMAILKIT_URL_TEMAPLTE_URL . 'templates/cancelled-order/thumbnail/style_01.png',
+                'demo-url'  => 'https://wpmet.com/',
+                'file' => is_plugin_active('emailkit-pro/emailkit-pro.php') ? self::EMAILKIT_TEMAPLTE_DIR_PRO . 'Templates/cancelled-order/1/content.json' :  ''
+            ],
+            'template-25' => [
+                'id' => 24,
+                'package' => 'pro',
+                'mail_type' => 'woocommerce',
+                'title' =>  EmailLists::CANCELLED_ORDER,
+                'template_title' => EmailLists::woocommerce_email(EmailLists::CANCELLED_ORDER),
+                'preview-thumb' => self::EMAILKIT_URL_TEMAPLTE_URL . 'templates/cancelled-order/thumbnail/style_02.png',
+                'demo-url'  => 'https://wpmet.com/',
+                'file' => is_plugin_active('emailkit-pro/emailkit-pro.php') ? self::EMAILKIT_TEMAPLTE_DIR_PRO . 'Templates/cancelled-order/2/content.json' :  ''
+            ],
+            'template-26' => [
+                'id' => 25,
+                'package' => 'pro',
+                'mail_type' => 'woocommerce',
+                'title' =>  EmailLists::CANCELLED_ORDER,
+                'template_title' => EmailLists::woocommerce_email(EmailLists::CANCELLED_ORDER),
+                'preview-thumb' => self::EMAILKIT_URL_TEMAPLTE_URL . 'templates/cancelled-order/thumbnail/style_03.png',
+                'demo-url'  => 'https://wpmet.com/',
+                'file' => is_plugin_active('emailkit-pro/emailkit-pro.php') ? self::EMAILKIT_TEMAPLTE_DIR_PRO . 'Templates/cancelled-order/3/content.json' :  ''
+            ],
+            'template-27' => [
+                'id' => 26,
+                'package' => 'pro',
+                'mail_type' => 'woocommerce',
+                'title' =>  EmailLists::CANCELLED_ORDER,
+                'template_title' => EmailLists::woocommerce_email(EmailLists::CANCELLED_ORDER),
+                'preview-thumb' => self::EMAILKIT_URL_TEMAPLTE_URL . 'templates/cancelled-order/thumbnail/style_04.png',
+                'demo-url'  => 'https://wpmet.com/',
+                'file' => is_plugin_active('emailkit-pro/emailkit-pro.php') ? self::EMAILKIT_TEMAPLTE_DIR_PRO . 'Templates/cancelled-order/4/content.json' :  ''
+            ],
+            'template-28' => [
+                'id' => 27,
+                'package' => 'pro',
+                'mail_type' => 'woocommerce',
+                'title' =>  EmailLists::CANCELLED_ORDER,
+                'template_title' => EmailLists::woocommerce_email(EmailLists::CANCELLED_ORDER),
+                'preview-thumb' => self::EMAILKIT_URL_TEMAPLTE_URL . 'templates/cancelled-order/thumbnail/style_05.png',
+                'demo-url'  => 'https://wpmet.com/',
+                'file' => is_plugin_active('emailkit-pro/emailkit-pro.php') ? self::EMAILKIT_TEMAPLTE_DIR_PRO . 'Templates/cancelled-order/5/content.json' :  ''
+            ],
+            
+        ];
+    }
+
+    public static function get_failed_order_template(){
+
+        return [ 
+                'template-3' => [
                 'id' => 3,
                 'package' => 'free',
                 'mail_type' => 'woocommerce',
@@ -43,26 +141,29 @@ Class TemplateList{
                 'demo-url'  => 'https://wpmet.com/',
                 'file' => self::EMAILKIT_URL_TEMAPLTE_DIR . 'templates/failed-order/1/content.json',
             ],
-            'template-4' => [
-                'id' => 4,
+        ];    
+    }
+
+    public static function get_failed_order_template_customer(){
+
+        return [ 
+                'template-39' => [
+                'id' => 38,
                 'package' => 'free',
                 'mail_type' => 'woocommerce',
-                'title' => EmailLists::ORDER_ON_HOLD,
-                'template_title' => EmailLists::woocommerce_email(EmailLists::ORDER_ON_HOLD),
-                'preview-thumb' => self::EMAILKIT_URL_TEMAPLTE_URL . 'templates/order-on-hold/1/preview-thumb.svg',
+                'title' => EmailLists::FAILED_ORDER_CUSTOMER,
+                'template_title' => EmailLists::woocommerce_email(EmailLists::FAILED_ORDER_CUSTOMER),
+                'preview-thumb' => self::EMAILKIT_URL_TEMAPLTE_URL . 'templates/failed-order-customer/1/preview-thumb.svg',
                 'demo-url'  => 'https://wpmet.com/',
-                'file' => self::EMAILKIT_URL_TEMAPLTE_DIR . 'templates/order-on-hold/1/content.json',
+                'file' => self::EMAILKIT_URL_TEMAPLTE_DIR . 'templates/failed-order-customer/1/content.json',
             ],
-            'template-5' => [
-                'id' => 5,
-                'package' => 'free',
-                'mail_type' => 'woocommerce',
-                'title' => EmailLists::PROCESSING_ORDER,
-                'template_title' => EmailLists::woocommerce_email(EmailLists::PROCESSING_ORDER),
-                'preview-thumb' => self::EMAILKIT_URL_TEMAPLTE_URL . 'templates/processing-order/1/preview-thumb.svg',
-                'demo-url'  => 'https://wpmet.com/',
-                'file' => self::EMAILKIT_URL_TEMAPLTE_DIR . 'templates/processing-order/1/content.json',
-            ],
+        ];
+    }
+
+    public static function get_completed_order_template(){
+
+        return [
+
             'template-6' => [
                 'id' => 6,
                 'package' => 'free',
@@ -73,6 +174,83 @@ Class TemplateList{
                 'demo-url'  => 'https://wpmet.com/',
                 'file' => self::EMAILKIT_URL_TEMAPLTE_DIR . 'templates/completed-order/1/content.json'
             ],
+                
+
+            
+        ];
+    }
+
+    public static function get_processing_order_template(){
+
+        return [
+            'template-5' => [
+                'id' => 5,
+                'package' => 'free',
+                'mail_type' => 'woocommerce',
+                'title' => EmailLists::PROCESSING_ORDER,
+                'template_title' => EmailLists::woocommerce_email(EmailLists::PROCESSING_ORDER),
+                'preview-thumb' => self::EMAILKIT_URL_TEMAPLTE_URL . 'templates/processing-order/1/preview-thumb.svg',
+                'demo-url'  => 'https://wpmet.com/',
+                'file' => self::EMAILKIT_URL_TEMAPLTE_DIR . 'templates/processing-order/1/content.json',
+            ],
+            'template-19' => [
+                'id' => 18,
+                'package' => 'pro',
+                'mail_type' => 'woocommerce',
+                'title' =>  EmailLists::PROCESSING_ORDER,
+                'template_title' => EmailLists::woocommerce_email(EmailLists::PROCESSING_ORDER),
+                'preview-thumb' => self::EMAILKIT_URL_TEMAPLTE_URL . 'templates/processing-order/thumbnail/style_01.png',
+                'demo-url'  => 'https://wpmet.com/',
+                'file' => is_plugin_active('emailkit-pro/emailkit-pro.php') ? self::EMAILKIT_TEMAPLTE_DIR_PRO . 'Templates/processing-order/1/content.json' :  ''
+            ],
+
+            'template-20' => [
+                'id' => 19,
+                'package' => 'pro',
+                'mail_type' => 'woocommerce',
+               'title' =>  EmailLists::PROCESSING_ORDER,
+                'template_title' => EmailLists::woocommerce_email(EmailLists::PROCESSING_ORDER),
+                'preview-thumb' => self::EMAILKIT_URL_TEMAPLTE_URL . 'templates/processing-order/thumbnail/style_02.png',
+                'demo-url'  => 'https://wpmet.com/',
+                'file' => is_plugin_active('emailkit-pro/emailkit-pro.php') ? self::EMAILKIT_TEMAPLTE_DIR_PRO . 'Templates/processing-order/2/content.json' :  ''
+            ],
+
+            'template-21' => [
+                'id' => 20,
+                'package' => 'pro',
+                'mail_type' => 'woocommerce',
+                'title' =>  EmailLists::PROCESSING_ORDER,
+                'template_title' => EmailLists::woocommerce_email(EmailLists::PROCESSING_ORDER),
+                'preview-thumb' => self::EMAILKIT_URL_TEMAPLTE_URL . 'templates/processing-order/thumbnail/style_03.png',
+                'demo-url'  => 'https://wpmet.com/',
+                'file' => is_plugin_active('emailkit-pro/emailkit-pro.php') ? self::EMAILKIT_TEMAPLTE_DIR_PRO . 'Templates/processing-order/3/content.json' :  ''
+            ],
+            'template-22' => [
+                'id' => 21,
+                'package' => 'pro',
+                'mail_type' => 'woocommerce',
+                'title' =>  EmailLists::PROCESSING_ORDER,
+                'template_title' => EmailLists::woocommerce_email(EmailLists::PROCESSING_ORDER),
+                'preview-thumb' => self::EMAILKIT_URL_TEMAPLTE_URL . 'templates/processing-order/thumbnail/style_04.png',
+                'demo-url'  => 'https://wpmet.com/',
+                'file' => is_plugin_active('emailkit-pro/emailkit-pro.php') ? self::EMAILKIT_TEMAPLTE_DIR_PRO . 'Templates/processing-order/4/content.json' :  ''
+            ],
+            'template-23' => [
+                'id' => 22,
+                'package' => 'pro',
+                'mail_type' => 'woocommerce',
+                'title' =>  EmailLists::PROCESSING_ORDER,
+                'template_title' => EmailLists::woocommerce_email(EmailLists::PROCESSING_ORDER),
+                'preview-thumb' => self::EMAILKIT_URL_TEMAPLTE_URL . 'templates/processing-order/thumbnail/style_05.png',
+                'demo-url'  => 'https://wpmet.com/',
+                'file' => is_plugin_active('emailkit-pro/emailkit-pro.php') ? self::EMAILKIT_TEMAPLTE_DIR_PRO . 'Templates/processing-order/5/content.json' :  ''
+            ],
+        ];
+    }
+
+    public static function get_refunded_order_template(){
+
+        return [
             'template-7' => [
                 'id' => 7,
                 'package' => 'free',
@@ -83,6 +261,31 @@ Class TemplateList{
                 'demo-url'  => 'https://wpmet.com/',
                 'file' => self::EMAILKIT_URL_TEMAPLTE_DIR . 'templates/refunded-order/1/content.json'
             ],
+        ];
+        
+    }
+
+    public static function get_order_on_hold_template(){
+
+        return [
+            'template-4' => [
+                'id' => 4,
+                'package' => 'free',
+                'mail_type' => 'woocommerce',
+                'title' => EmailLists::ORDER_ON_HOLD,
+                'template_title' => EmailLists::woocommerce_email(EmailLists::ORDER_ON_HOLD),
+                'preview-thumb' => self::EMAILKIT_URL_TEMAPLTE_URL . 'templates/order-on-hold/1/preview-thumb.svg',
+                'demo-url'  => 'https://wpmet.com/',
+                'file' => self::EMAILKIT_URL_TEMAPLTE_DIR . 'templates/order-on-hold/1/content.json',
+            ],
+
+        ];
+    }
+
+    public static function get_customer_invoice_order_details_template(){
+
+        return [
+
             'template-8' => [
                 'id' => 8,
                 'package' => 'free',
@@ -93,6 +296,15 @@ Class TemplateList{
                 'demo-url'  => '',
                 'file' => self::EMAILKIT_URL_TEMAPLTE_DIR . 'templates/customer-invoice/1/content.json'
             ],
+            
+        ];
+
+    }
+
+    public static function get_customer_note_template(){
+
+        return [
+
             'template-9' => [
                 'id' => 9,
                 'package' => 'free',
@@ -103,6 +315,13 @@ Class TemplateList{
                 'demo-url'  => 'https://wpmet.com/',
                 'file' => self::EMAILKIT_URL_TEMAPLTE_DIR . 'templates/customer-note/1/content.json'
             ],
+            
+        ];
+    }
+
+    public static function get_new_account_template(){
+
+        return [
             'template-10' => [
                 'id' => 10,
                 'package' => 'free',
@@ -113,7 +332,68 @@ Class TemplateList{
                 'demo-url'  => 'https://wpmet.com/',
                 'file' => self::EMAILKIT_URL_TEMAPLTE_DIR . 'templates/wc-new-account/1/content.json'
             ],
-           
+            'template-29' => [
+                'id' => 28,
+                'package' => 'pro',
+                'mail_type' => 'woocommerce',
+                'title' =>  EmailLists::NEW_ACCOUNT,
+                'template_title' => EmailLists::woocommerce_email(EmailLists::NEW_ACCOUNT),
+                'preview-thumb' =>  self::EMAILKIT_URL_TEMAPLTE_URL . 'templates/wc-new-account/thumbnail/style_01.png',
+                'demo-url'  => 'https://wpmet.com/',
+                'file' => is_plugin_active('emailkit-pro/emailkit-pro.php') ? self::EMAILKIT_TEMAPLTE_DIR_PRO . 'Templates/wc-new-account/1/content.json' :  ''
+            ],
+
+            'template-30' => [
+                'id' => 29,
+                'package' => 'pro',
+                'mail_type' => 'woocommerce',
+                'title' =>  EmailLists::NEW_ACCOUNT,
+                'template_title' => EmailLists::woocommerce_email(EmailLists::NEW_ACCOUNT),
+                'preview-thumb' =>  self::EMAILKIT_URL_TEMAPLTE_URL . 'templates/wc-new-account/thumbnail/style_02.png',
+                'demo-url'  => 'https://wpmet.com/',
+                'file' => is_plugin_active('emailkit-pro/emailkit-pro.php') ? self::EMAILKIT_TEMAPLTE_DIR_PRO . 'Templates/wc-new-account/2/content.json' :  ''
+            ],
+
+            'template-31' => [
+                'id' => 30,
+                'package' => 'pro',
+                'mail_type' => 'woocommerce',
+                'title' =>  EmailLists::NEW_ACCOUNT,
+                'template_title' => EmailLists::woocommerce_email(EmailLists::NEW_ACCOUNT),
+                'preview-thumb' =>  self::EMAILKIT_URL_TEMAPLTE_URL . 'templates/wc-new-account/thumbnail/style_03.png',
+                'demo-url'  => 'https://wpmet.com/',
+                'file' => is_plugin_active('emailkit-pro/emailkit-pro.php') ? self::EMAILKIT_TEMAPLTE_DIR_PRO . 'Templates/wc-new-account/3/content.json' :  ''
+            ],
+
+            'template-32' => [
+                'id' => 31,
+                'package' => 'pro',
+                'mail_type' => 'woocommerce',
+                'title' =>  EmailLists::NEW_ACCOUNT,
+                'template_title' => EmailLists::woocommerce_email(EmailLists::NEW_ACCOUNT),
+                'preview-thumb' =>  self::EMAILKIT_URL_TEMAPLTE_URL . 'templates/wc-new-account/thumbnail/style_04.png',
+                'demo-url'  => 'https://wpmet.com/',
+                'file' => is_plugin_active('emailkit-pro/emailkit-pro.php') ? self::EMAILKIT_TEMAPLTE_DIR_PRO . 'Templates/wc-new-account/4/content.json' :  ''
+            ],
+
+            'template-33' => [
+                'id' => 32,
+                'package' => 'pro',
+                'mail_type' => 'woocommerce',
+                'title' =>  EmailLists::NEW_ACCOUNT,
+                'template_title' => EmailLists::woocommerce_email(EmailLists::NEW_ACCOUNT),
+                'preview-thumb' =>  self::EMAILKIT_URL_TEMAPLTE_URL . 'templates/wc-new-account/thumbnail/style_05.png',
+                'demo-url'  => 'https://wpmet.com/',
+                'file' => is_plugin_active('emailkit-pro/emailkit-pro.php') ? self::EMAILKIT_TEMAPLTE_DIR_PRO . 'Templates/wc-new-account/5/content.json' :  ''
+            ],
+            
+        ];
+    }
+
+    public static function get_reset_password_template(){
+
+        return [
+
             'template-11' => [
                 'id' => 11,
                 'package' => 'free',
@@ -124,6 +404,13 @@ Class TemplateList{
                 'demo-url'  => 'https://wpmet.com/',
                 'file' => self::EMAILKIT_URL_TEMAPLTE_DIR . 'templates/wc-reset-password/1/content.json'
             ],
+            
+        ];
+    }
+
+    public static function get_low_stock_template(){
+
+        return [
             'template-12' => [
                 'id' => 12,
                 'package' => 'free',
@@ -134,6 +421,13 @@ Class TemplateList{
                 'demo-url'  => 'https://wpmet.com/',
                 'file' => self::EMAILKIT_URL_TEMAPLTE_DIR . 'templates/low-stock/1/content.json'
             ],
+            
+        ];
+    }
+
+    public static function get_no_stock_template(){
+
+        return [
             'template-13' => [
                 'id' => 13,
                 'package' => 'free',
@@ -144,6 +438,15 @@ Class TemplateList{
                 'demo-url'  => 'https://wpmet.com/',
                 'file' => self::EMAILKIT_URL_TEMAPLTE_DIR . 'templates/no-stock/1/content.json'
             ],
+            
+        ];
+
+    }
+
+    public static function get_back_order_template(){
+
+        return [
+
             'template-14' => [
                 'id' => 14,
                 'package' => 'free',
@@ -155,26 +458,12 @@ Class TemplateList{
                 'file' => self::EMAILKIT_URL_TEMAPLTE_DIR . 'templates/back-order/1/content.json'
             ],
             
-            'template-15' => [
-                'id' => 16,
-                'package' => 'free',
-                'mail_type' => 'wordpress',
-                'title' =>  EmailLists::WP_NEW_REGISTER,
-                'template_title' => EmailLists::wordpress_email(EmailLists::WP_NEW_REGISTER),
-                'preview-thumb' => self::EMAILKIT_URL_TEMAPLTE_URL . 'templates/wp-new-register/1/preview-thumb.svg',
-                'demo-url'  => 'https://wpmet.com/',
-                'file' =>  self::EMAILKIT_URL_TEMAPLTE_DIR . 'templates/wp-new-register/1/content.json' ,
-            ],
-            'template-17' => [
-                'id' => 102,
-                'package' => 'free',
-                'mail_type' => 'wordpress',
-                'title' =>  EmailLists::WP_RESET_PASSWORD,
-                'template_title' => EmailLists::wordpress_email(EmailLists::WP_RESET_PASSWORD),
-                'preview-thumb' => self::EMAILKIT_URL_TEMAPLTE_URL . 'templates/wp-reset-password/1/preview-thumb.svg',
-                'demo-url'  => 'https://wpmet.com/',
-                'file' => self::EMAILKIT_URL_TEMAPLTE_DIR . 'templates/wp-reset-password/1/content.json'
-            ],
+        ];
+    }
+
+    public static function get_partial_refund_template(){
+
+        return [
 
             'template-18' => [
                 'id' => 17,
@@ -186,13 +475,105 @@ Class TemplateList{
                 'demo-url'  => 'https://wpmet.com/',
                 'file' => self::EMAILKIT_URL_TEMAPLTE_DIR . 'templates/partial-refund/1/content.json'
             ],
-
-           
             
         ];
 
-        return apply_filters( 'emailkit/editor/templates', $template_list );
     }
+
+    public static function get_wp_new_register_template(){
+
+        return [
+
+            'template-15' => [
+                'id' => 16,
+                'package' => 'free',
+                'mail_type' => 'wordpress',
+                'title' =>  EmailLists::WP_NEW_REGISTER,
+                'template_title' => EmailLists::wordpress_email(EmailLists::WP_NEW_REGISTER),
+                'preview-thumb' => self::EMAILKIT_URL_TEMAPLTE_URL . 'templates/wp-new-register/1/preview-thumb.svg',
+                'demo-url'  => 'https://wpmet.com/',
+                'file' =>  self::EMAILKIT_URL_TEMAPLTE_DIR . 'templates/wp-new-register/1/content.json' ,
+            ],
+
+            'template-34' => [
+                'id' => 33,
+                'package' => 'pro',
+                'mail_type' => 'wordpress',
+                'title' =>  EmailLists::WP_NEW_REGISTER,
+                'template_title' =>  EmailLists::wordpress_email(EmailLists::WP_NEW_REGISTER),
+                'preview-thumb' =>  self::EMAILKIT_URL_TEMAPLTE_URL . 'templates/wp-new-register/thumbnail/style_01.png',
+                'demo-url'  => 'https://wpmet.com/',
+                'file' => is_plugin_active('emailkit-pro/emailkit-pro.php') ? self::EMAILKIT_TEMAPLTE_DIR_PRO . 'Templates/wp-new-register/1/content.json' :  ''
+            ],
+
+            'template-35' => [
+                'id' => 34,
+                'package' => 'pro',
+                'mail_type' => 'wordpress',
+                'title' =>  EmailLists::WP_NEW_REGISTER,
+                'template_title' =>  EmailLists::wordpress_email(EmailLists::WP_NEW_REGISTER),
+                'preview-thumb' =>  self::EMAILKIT_URL_TEMAPLTE_URL . 'templates/wp-new-register/thumbnail/style_02.png',
+                'demo-url'  => 'https://wpmet.com/',
+                'file' => is_plugin_active('emailkit-pro/emailkit-pro.php') ? self::EMAILKIT_TEMAPLTE_DIR_PRO . 'Templates/wp-new-register/2/content.json' :  ''
+            ],
+
+            'template-36' => [
+                'id' => 35,
+                'package' => 'pro',
+                'mail_type' => 'wordpress',
+                'title' =>  EmailLists::WP_NEW_REGISTER,
+                'template_title' =>  EmailLists::wordpress_email(EmailLists::WP_NEW_REGISTER),
+                'preview-thumb' =>  self::EMAILKIT_URL_TEMAPLTE_URL . 'templates/wp-new-register/thumbnail/style_03.png',
+                'demo-url'  => 'https://wpmet.com/',
+                'file' => is_plugin_active('emailkit-pro/emailkit-pro.php') ? self::EMAILKIT_TEMAPLTE_DIR_PRO . 'Templates/wp-new-register/3/content.json' :  ''
+            ],
+
+            'template-37' => [
+                'id' => 36,
+                'package' => 'pro',
+                'mail_type' => 'wordpress',
+                'title' =>  EmailLists::WP_NEW_REGISTER,
+                'template_title' =>  EmailLists::wordpress_email(EmailLists::WP_NEW_REGISTER),
+                'preview-thumb' =>  self::EMAILKIT_URL_TEMAPLTE_URL . 'templates/wp-new-register/thumbnail/style_04.png',
+                'demo-url'  => 'https://wpmet.com/',
+                'file' => is_plugin_active('emailkit-pro/emailkit-pro.php') ? self::EMAILKIT_TEMAPLTE_DIR_PRO . 'Templates/wp-new-register/4/content.json' :  ''
+            ],
+
+            'template-38' => [
+                'id' => 37,
+                'package' => 'pro',
+                'mail_type' => 'wordpress',
+                'title' =>  EmailLists::WP_NEW_REGISTER,
+                'template_title' =>  EmailLists::wordpress_email(EmailLists::WP_NEW_REGISTER),
+                'preview-thumb' =>  self::EMAILKIT_URL_TEMAPLTE_URL . 'templates/wp-new-register/thumbnail/style_05.png',
+                'demo-url'  => 'https://wpmet.com/',
+                'file' => is_plugin_active('emailkit-pro/emailkit-pro.php') ? self::EMAILKIT_TEMAPLTE_DIR_PRO . 'Templates/wp-new-register/5/content.json' :  ''
+            ],
+            
+        ];
+
+    }
+
+    public static function get_wp_reset_password_template(){
+
+        return [
+
+            'template-17' => [
+                'id' => 102,
+                'package' => 'free',
+                'mail_type' => 'wordpress',
+                'title' =>  EmailLists::WP_RESET_PASSWORD,
+                'template_title' => EmailLists::wordpress_email(EmailLists::WP_RESET_PASSWORD),
+                'preview-thumb' => self::EMAILKIT_URL_TEMAPLTE_URL . 'templates/wp-reset-password/1/preview-thumb.svg',
+                'demo-url'  => 'https://wpmet.com/',
+                'file' => self::EMAILKIT_URL_TEMAPLTE_DIR . 'templates/wp-reset-password/1/content.json'
+            ],
+            
+        ];
+    }
+
+
+
 
 
      public static function get(){

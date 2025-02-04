@@ -61,6 +61,7 @@ class Admin
         new Admin\Emails\Woocommerce\ProcessingOrder();
         new Admin\Emails\Woocommerce\CancelledOrder();
         new Admin\Emails\Woocommerce\FailedOrder();
+        new Admin\Emails\Woocommerce\FailedOrderCustomer();
         new Admin\Emails\Woocommerce\OrderOnHold();
         new Admin\Emails\Woocommerce\CompletedOrder();
         new Admin\Emails\Woocommerce\RefundOrder();
