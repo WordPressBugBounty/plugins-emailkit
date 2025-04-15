@@ -4,7 +4,7 @@ Contributors: Ataurr, XpeedStudio
 Tags: Email Template, WordPress Email Builder, WordPress email customizer, WooCommerce email customizer, WooCommerce email template customizer, Email Customizer
 Tested up to: 6.7
 Requires at least: 5.0
-Stable tag: 1.5.8
+Stable tag: 1.5.9
 Requires PHP: 7.4
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -181,6 +181,13 @@ RoxSlider - It is a powerful tool for slider creation. You can design stunning s
 Visit [Wpmet](https://wpmet.com/) to learn more about how to get the best of WordPress with [Tutorials, Tips & Tricks](https://wpmet.com/blog)!
 
 == Changelog ==
+
+Version 1.5.9 -	15/04/2025
+Fixed: Button widget URL issue.
+Fixed: Order number showing issue in order mail.
+Fixed: Order related email warning issue.
+Fixed: Tooltip issue.
+Fixed: Translation issue.
 
 Version 1.5.8 -	04/02/2025
 Added: Translation process.

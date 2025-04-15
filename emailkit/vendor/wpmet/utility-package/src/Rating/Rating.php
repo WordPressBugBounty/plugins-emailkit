@@ -349,7 +349,7 @@ class Rating {
 				->set_button(
 					array(
 						'url'   => get_current_screen()->id == 'toplevel_page_getgenie' ? '#write-for-me' : '#',
-						'text'  => 'I already did',
+						'text'  => 'Already did',
 						'class' => 'button-default',
 						'id'    => $this->text_domain . '_btn_already_did',
 						'icon'  => 'dashicons-before dashicons-smiley',
@@ -358,7 +358,7 @@ class Rating {
 				->set_button(
 					array(
 						'url'   => $this->support_url,
-						'text'  => 'I need support',
+						'text'  => 'Need support',
 						'class' => 'button-default',
 						'id'    => '#',
 						'icon'  => 'dashicons-before dashicons-sos',
@@ -375,7 +375,7 @@ class Rating {
 				->set_button(
 					array(
 						'url'   => get_current_screen()->id == 'toplevel_page_getgenie' ? '#write-for-me' : '#',
-						'text'  => 'No, not good enough',
+						'text'  => 'Not good',
 						'class' => 'button-default',
 						'id'    => $this->text_domain . '_btn_never_show',
 						'icon'  => 'dashicons-before dashicons-thumbs-down',

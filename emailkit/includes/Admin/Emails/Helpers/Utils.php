@@ -304,7 +304,7 @@ class Utils
                     // Duplicate the row for each replacement
                     foreach ($replacements as $replacement) {
                         // Replace placeholders in the duplicated row
-                        $placeholders = ["{{product_name}}", "{{quantity}}", "{{total}}", "{{product_price}}", "{{product_image_url}}", "{{product_sku}}", "{{product_attributes}}"];
+                        $placeholders = ["{{product_name}}", "{{quantity}}", "{{total}}", "{{product_price}}", "{{product_image_url}}", "{{product_sku}}", "{{product_attributes}}","{{related_products}}"];
                         $rows .= str_replace($placeholders, $replacement, $originalRow);
                     }
                 }
@@ -354,7 +354,10 @@ class Utils
         $billing_country_code = $order->get_billing_country();
         $billing_country_full_name = WC()->countries->countries[ $billing_country_code ];
         $billing_state_code = $order->get_billing_state();
-        $billing_state_full_name = WC()->countries->get_states( $billing_country_code )[ $billing_state_code ];
+        $billing_states = WC()->countries->get_states($billing_country_code);
+
+        $billing_state_full_name = is_array($billing_states) && isset($billing_states[$billing_state_code]) ? $billing_states[$billing_state_code] : $billing_state_code;
+        
         $shipping_country_code = $order->get_shipping_country();
         $shipping_country_full_name = (!empty($shipping_country_code) && isset(WC()->countries->countries[$shipping_country_code]))? WC()->countries->countries[$shipping_country_code]: '';
         $shipping_states = WC()->countries->get_states($shipping_country_code);

@@ -140,7 +140,7 @@ class Admin
       public function register_settings_contents__settings(){
         ?>
         <div class="wrap">
-          <h1 class="wp-heading-inline"> EmailKit Setings </h1>
+          <h1 class="wp-heading-inline"> EmailKit Settings </h1>
             <?php   do_action('emailkit-settings');  ?>
           <div class="clear"></div>
         </div>

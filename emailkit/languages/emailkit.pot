@@ -2,22 +2,22 @@
 # This file is distributed under the GPLv3.
 msgid ""
 msgstr ""
-"Project-Id-Version: EmailKit 1.5.7\n"
+"Project-Id-Version: EmailKit 1.5.8\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/emailkit\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-01-15T04:50:20+01:00\n"
+"POT-Creation-Date: 2025-02-05T06:43:26+01:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.10.0\n"
 "X-Domain: emailkit\n"
 
 #. Plugin Name of the plugin
 #: EmailKit.php
-#: includes/Admin.php:121
 #: includes/Admin.php:122
+#: includes/Admin.php:123
 #: Promotional/Onboard/views/onboard-steps/step-05.php:13
 msgid "EmailKit"
 msgstr ""
@@ -42,8 +42,8 @@ msgstr ""
 msgid "https://wpmet.com"
 msgstr ""
 
-#: includes/Admin.php:135
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: includes/Admin.php:136
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/Viewport/EditorSidebar/index.js:31
 msgid "Settings"
@@ -281,73 +281,77 @@ msgstr ""
 msgid "Failed to get template"
 msgstr ""
 
-#: includes/Admin/Emails/EmailLists.php:33
-#: includes/Admin/Emails/EmailLists.php:64
+#: includes/Admin/Emails/EmailLists.php:34
+#: includes/Admin/Emails/EmailLists.php:66
 msgid "Select Template"
 msgstr ""
 
-#: includes/Admin/Emails/EmailLists.php:34
+#: includes/Admin/Emails/EmailLists.php:35
 msgid "New Order"
 msgstr ""
 
-#: includes/Admin/Emails/EmailLists.php:35
+#: includes/Admin/Emails/EmailLists.php:36
 msgid "Cancelled order"
 msgstr ""
 
-#: includes/Admin/Emails/EmailLists.php:36
-msgid "Failed Order"
-msgstr ""
-
 #: includes/Admin/Emails/EmailLists.php:37
-msgid "Order On Hold"
+msgid "Failed Order - Admin"
 msgstr ""
 
 #: includes/Admin/Emails/EmailLists.php:38
-msgid "Processing Order"
+msgid "Failed Order - Customer"
 msgstr ""
 
 #: includes/Admin/Emails/EmailLists.php:39
-msgid "Completed Order"
+msgid "Order On Hold"
 msgstr ""
 
 #: includes/Admin/Emails/EmailLists.php:40
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
-#: dist/app.js:195
-#: src/components/editor/WidgetsContainer/wooCommerceToolBox.js:85
-#: src/components/selectors/Others/LowStock/index.js:107
-msgid "Low Stock"
+msgid "Processing Order"
 msgstr ""
 
 #: includes/Admin/Emails/EmailLists.php:41
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
-#: dist/app.js:195
-#: src/components/editor/WidgetsContainer/wooCommerceToolBox.js:77
-#: src/components/selectors/Others/NoStock/index.js:108
-msgid "No Stock"
+msgid "Completed Order"
 msgstr ""
 
 #: includes/Admin/Emails/EmailLists.php:42
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
-#: src/components/editor/WidgetsContainer/wooCommerceToolBox.js:69
-#: src/components/selectors/Others/BackOrder/index.js:105
-msgid "Back Order"
+#: src/components/editor/WidgetsContainer/wooCommerceToolBox.js:85
+#: src/components/selectors/Others/LowStock/index.js:108
+msgid "Low Stock"
 msgstr ""
 
 #: includes/Admin/Emails/EmailLists.php:43
-msgid "Refunded Order"
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
+#: dist/app.js:195
+#: src/components/editor/WidgetsContainer/wooCommerceToolBox.js:77
+#: src/components/selectors/Others/NoStock/index.js:110
+msgid "No Stock"
 msgstr ""
 
 #: includes/Admin/Emails/EmailLists.php:44
-msgid "Partial Refund"
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
+#: dist/app.js:195
+#: src/components/editor/WidgetsContainer/wooCommerceToolBox.js:69
+#: src/components/selectors/Others/BackOrder/index.js:106
+msgid "Back Order"
 msgstr ""
 
 #: includes/Admin/Emails/EmailLists.php:45
-msgid "Customer Invoice "
+msgid "Refunded Order"
 msgstr ""
 
 #: includes/Admin/Emails/EmailLists.php:46
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+msgid "Partial Refund"
+msgstr ""
+
+#: includes/Admin/Emails/EmailLists.php:47
+msgid "Customer Invoice "
+msgstr ""
+
+#: includes/Admin/Emails/EmailLists.php:48
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/WidgetsContainer/wooCommerceToolBox.js:51
 #: src/components/selectors/WoCommerce/CustomerNote/index.js:68
@@ -355,13 +359,13 @@ msgstr ""
 msgid "Customer Note"
 msgstr ""
 
-#: includes/Admin/Emails/EmailLists.php:47
-#: includes/Admin/Emails/EmailLists.php:65
+#: includes/Admin/Emails/EmailLists.php:49
+#: includes/Admin/Emails/EmailLists.php:67
 msgid "New Account"
 msgstr ""
 
-#: includes/Admin/Emails/EmailLists.php:48
-#: includes/Admin/Emails/EmailLists.php:66
+#: includes/Admin/Emails/EmailLists.php:50
+#: includes/Admin/Emails/EmailLists.php:68
 msgid "Reset Password"
 msgstr ""
 
@@ -397,15 +401,23 @@ msgid "Note added to your order on "
 msgstr ""
 
 #: includes/Admin/Emails/Woocommerce/CustomerNote.php:160
-#: includes/Admin/Emails/Woocommerce/FailedOrder.php:140
+#: includes/Admin/Emails/Woocommerce/FailedOrderCustomer.php:135
 msgid "on"
 msgstr ""
 
 #: includes/Admin/Emails/Woocommerce/FailedOrder.php:137
+msgid "Failed Order "
+msgstr ""
+
+#: includes/Admin/Emails/Woocommerce/FailedOrder.php:142
+msgid " has been failed."
+msgstr ""
+
+#: includes/Admin/Emails/Woocommerce/FailedOrderCustomer.php:132
 msgid "order has been failed. "
 msgstr ""
 
-#: includes/Admin/Emails/Woocommerce/FailedOrder.php:140
+#: includes/Admin/Emails/Woocommerce/FailedOrderCustomer.php:135
 msgid "your order has been failed. order# "
 msgstr ""
 
@@ -527,7 +539,7 @@ msgstr ""
 
 #: includes/Admin/MetaBox.php:57
 #: includes/views/modal-add-new-email.php:22
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/Viewport/EditorSidebar/GlobalSettings.js:106
 msgid "Email Subject"
@@ -553,12 +565,12 @@ msgstr ""
 msgid "Status(Active/Inactive):"
 msgstr ""
 
-#: includes/Admin/TemplateList.php:567
+#: includes/Admin/TemplateList.php:583
 #: includes/views/modal-add-new-email.php:32
 msgid "WordPress Email"
 msgstr ""
 
-#: includes/Admin/TemplateList.php:576
+#: includes/Admin/TemplateList.php:592
 msgid "Woocommerce email"
 msgstr ""
 
@@ -567,7 +579,7 @@ msgid "Create New Email"
 msgstr ""
 
 #: includes/views/modal-add-new-email.php:24
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/libs/common/EmailKitModalContent/SaveAsTemplateModalContent.js:39
 msgid "Enter template name"
@@ -591,7 +603,7 @@ msgstr ""
 
 #: includes/views/modal-add-new-email.php:114
 #: includes/views/modal-add-new-email.php:117
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/Viewport/Header.js:563
 msgid "Blank Template"
@@ -855,107 +867,107 @@ msgstr ""
 msgid "Show update & fix related important messages, essential tutorials and promotional images on WP Dashboard"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/libs/common/EmailKitModal.js:15
 #: src/libs/common/EmailKitModalContent/ModalContent.js:50
 msgid "Cancel"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/libs/common/EmailKitModal.js:16
 msgid "Ok"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/WidgetsContainer/index.js:65
-#: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:59
+#: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:62
 #: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:9
 msgid "General"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:11
 msgid "Site Url"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:12
 msgid "User Name"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:13
 msgid "User Email"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:14
 msgid "User Login"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:15
 msgid "Site Name"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:16
 msgid "Display Name"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:17
 msgid "Current User Email"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:18
 msgid "App Name"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/WidgetsContainer/index.js:22
 #: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:24
 msgid "WooCommerce"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:26
 msgid "Order Id"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:27
 msgid "Order Number"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:28
 msgid "Order Status"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:29
 msgid "Billing Name"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:37
 #: src/components/selectors/WoCommerce/OrderItem/style/Style2Settings.js:29
@@ -963,466 +975,466 @@ msgstr ""
 msgid "Quantity"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:31
 msgid "Order Currency"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:32
 msgid "Shipping Total"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:33
 msgid "Order Subtotal"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:34
 msgid "Shipping Tax Total"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:35
 msgid "Order Date"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:36
 msgid "Shipping Method"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:45
 #: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:37
 msgid "Payment Method"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:40
 #: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:38
 msgid "Total"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:39
 msgid "Billing First Name"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:40
 msgid "Billing Last name"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:41
 msgid "billing_company"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:42
 msgid "Billing Address 1"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:43
 msgid "Billing Address 2"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:44
 msgid "Billing City"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:45
 msgid "Billing State"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:46
 msgid "Billing Postcode"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:47
 msgid "Billing Country"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:48
 msgid "Billing Email"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:49
 msgid "Billing Phone Number"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:50
 msgid "Shipping First Name"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:51
 msgid "Shipping Last Name"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:52
 msgid "Shipping Company"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:53
 msgid "Shipping Phone Number"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:54
 msgid "Shipping Address 1"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:55
 msgid "Shipping Address 2"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:56
 msgid "Shipping City"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:57
 msgid "Shipping State"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:58
 msgid "Shipping Postcode"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:59
 msgid "Shipping Country"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:61
 msgid "Product Name"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/Viewport/Header.js:553
 #: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:142
 msgid "Shortcodes"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/RenderNode.js:174
 #: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:143
 msgid "Copy"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:144
 msgid "Copied"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:145
 msgid "No shortcode data found in this section"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/libs/common/EmailKitModalContent/ModalContent.js:38
 msgid "Email address for test."
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/libs/common/EmailKitModalContent/ModalContent.js:39
 msgid "Your alterations will not be saved."
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/libs/common/EmailKitModalContent/ModalContent.js:40
 msgid "Sending"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/libs/common/EmailKitModalContent/ModalContent.js:41
 msgid "Send Email"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/Viewport/Header.js:556
 #: src/libs/common/EmailKitModalContent/ModalContent.js:46
 msgid "Reset"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/libs/common/EmailKitModalContent/ModalContent.js:47
 msgid "Leave"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/libs/common/EmailKitModalContent/ModalContent.js:48
 msgid "Resetting"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/libs/common/EmailKitModalContent/ModalContent.js:49
 msgid "Replace"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/libs/common/EmailKitModalContent/SaveAsTemplateModalContent.js:33
 msgid "Library"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/libs/common/EmailKitModalContent/SaveAsTemplateModalContent.js:34
 msgid "Save Your Email to Library"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/libs/common/EmailKitModalContent/SaveAsTemplateModalContent.js:35
 msgid "Learn more about EmailKit Library"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/libs/common/EmailKitModalContent/SaveAsTemplateModalContent.js:36
 msgid "Click Here"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/Viewport/Header.js:557
 #: src/libs/common/EmailKitModalContent/SaveAsTemplateModalContent.js:37
 msgid "Saving"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/Viewport/Header.js:550
 #: src/libs/common/EmailKitModalContent/SaveAsTemplateModalContent.js:38
 msgid "Save"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/libs/common/EmailKitModalContent/ProModalContent.js:20
 msgid "Use Premium Features"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/libs/common/EmailKitModalContent/ProModalContent.js:21
 msgid "Design a custom email template that matches your brand"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/libs/common/EmailKitModalContent/ProModalContent.js:22
 msgid "Upgrade Now"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/RenderNode.js:173
 msgid "Delete"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/RenderNode.js:175
 msgid "Move"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/Viewport/Header.js:88
 #: src/components/editor/Viewport/Header.js:149
 msgid "Successfully saved"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/Viewport/Header.js:89
 #: src/components/editor/Viewport/Header.js:150
 msgid "Failed to save"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/Viewport/Header.js:546
 msgid "Active"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/Viewport/Header.js:549
 msgid "Preview"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/Viewport/Header.js:551
 msgid "Undo"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/Viewport/Header.js:552
 msgid "Redo"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/Viewport/Header.js:554
 msgid "Test Email"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/Viewport/Header.js:555
 msgid "Save as Templates"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/Viewport/Header.js:558
 msgid "Activate customized template"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/Viewport/Header.js:559
 msgid "Send Test Email"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/Viewport/Header.js:560
 msgid "Are you certain you wish to exit?"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/Viewport/Header.js:561
 msgid "Back to Dashboard"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/Viewport/Header.js:562
 msgid "Do you want to reset your template?"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/Viewport/Header.js:564
 msgid "View Pages"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/Viewport/Header.js:517
 msgid "Your template has been reset!"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/Viewport/Header.js:518
 msgid "Something went wrong!"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/Viewport/Sidebar/index.js:39
 msgid "Customize"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/Viewport/Sidebar/index.js:40
 msgid "Layers"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/Toolbar/Spacing/SpacingItem.js:15
 msgid "Top"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/Toolbar/Spacing/SpacingItem.js:16
 msgid "Right"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/Toolbar/Spacing/SpacingItem.js:17
 msgid "Bottom"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/Toolbar/Spacing/SpacingItem.js:18
 msgid "Left"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/CanvasContainer/index.js:36
 #: src/components/selectors/Others/AccountReg/AccountRegSettings.js:20
@@ -1434,41 +1446,41 @@ msgstr ""
 msgid "Body"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
-#: src/components/selectors/Basic/Container/ContainerSettings.js:26
+#: src/components/selectors/Basic/Container_v2/ContainerSettings.js:26
 #: src/components/selectors/Basic/EmailHeading/EmailHeadingSettings.js:34
 #: src/components/selectors/CanvasContainer/CanvasContainerSettings.js:12
 #: src/components/selectors/General/Divider/DividerSettings.js:15
-#: src/components/selectors/General/Row/ColumnSettings.js:21
-#: src/components/selectors/General/Row/RowSettings.js:23
+#: src/components/selectors/General/Row_v2/ColumnSettings.js:21
+#: src/components/selectors/General/Row_v2/RowSettings.js:23
 #: src/components/selectors/General/Space/SpaceSettings.js:13
 #: src/components/selectors/Others/NewUserRegWP/NewUserRegSettings.js:26
 #: src/components/selectors/Others/ResetPasswordWP/ResetPasswordWPSetting.js:35
 msgid "Appearance"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/Basic/Button/ButtonSettings.js:33
-#: src/components/selectors/Basic/Container/ContainerSettings.js:28
+#: src/components/selectors/Basic/Container_v2/ContainerSettings.js:28
 #: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:43
 #: src/components/selectors/Basic/ImageUpload/ImageUploadSettings.js:26
 #: src/components/selectors/Basic/Socials_v2/SocialActionCard.js:95
 #: src/components/selectors/CanvasContainer/CanvasContainerSettings.js:13
 #: src/components/selectors/General/Divider/DividerSettings.js:17
-#: src/components/selectors/General/Row/ColumnSettings.js:22
-#: src/components/selectors/General/Row/RowSettings.js:24
+#: src/components/selectors/General/Row_v2/ColumnSettings.js:22
+#: src/components/selectors/General/Row_v2/RowSettings.js:24
 #: src/components/selectors/General/Space/SpaceSettings.js:14
 msgid "Background"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/Basic/Button/ButtonSettings.js:36
-#: src/components/selectors/Basic/Container/ContainerSettings.js:31
+#: src/components/selectors/Basic/Container_v2/ContainerSettings.js:31
 #: src/components/selectors/Basic/EmailHeading/EmailHeadingSettings.js:32
-#: src/components/selectors/Basic/Footer/FooterSettings.js:37
+#: src/components/selectors/Basic/Footer/FooterSettings.js:39
 #: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:40
 #: src/components/selectors/Basic/ImageUpload/ImageUploadSettings.js:38
 #: src/components/selectors/Basic/Socials_v2/SocialSetting.js:45
@@ -1477,8 +1489,8 @@ msgstr ""
 #: src/components/selectors/Basic/VideoBlock/VideoBlockSettings.js:24
 #: src/components/selectors/CanvasContainer/CanvasContainerSettings.js:14
 #: src/components/selectors/CanvasContainer/CanvasContainerSettings.js:17
-#: src/components/selectors/General/Row/ColumnSettings.js:25
-#: src/components/selectors/General/Row/RowSettings.js:31
+#: src/components/selectors/General/Row_v2/ColumnSettings.js:25
+#: src/components/selectors/General/Row_v2/RowSettings.js:31
 #: src/components/selectors/Others/AccountReg/AccountRegSettings.js:27
 #: src/components/selectors/Others/BackOrder/BackOrderSettings.js:25
 #: src/components/selectors/Others/LowStock/LowStockSettings.js:26
@@ -1497,7 +1509,7 @@ msgstr ""
 msgid "Padding"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/WidgetsContainer/basicToolBox.js:38
 #: src/components/selectors/Basic/Button/ButtonSettings.js:38
@@ -1507,62 +1519,62 @@ msgstr ""
 msgid "Text"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
-#: src/components/selectors/Basic/Container/ContainerSettings.js:27
+#: src/components/selectors/Basic/Container_v2/ContainerSettings.js:27
 #: src/components/selectors/Basic/EmailHeading/EmailHeadingSettings.js:33
 #: src/components/selectors/Basic/ImageUpload/ImageUploadSettings.js:28
 #: src/components/selectors/Basic/Socials/SocialSetting.js:34
 #: src/components/selectors/CanvasContainer/CanvasContainerSettings.js:16
 #: src/components/selectors/General/Divider/DividerSettings.js:16
-#: src/components/selectors/General/Row/ColumnSettings.js:23
-#: src/components/selectors/General/Row/RowSettings.js:29
+#: src/components/selectors/General/Row_v2/ColumnSettings.js:23
+#: src/components/selectors/General/Row_v2/RowSettings.js:29
 #: src/components/selectors/Others/NewUserRegWP/NewUserRegSettings.js:29
 #: src/components/selectors/Others/ResetPasswordWP/ResetPasswordWPSetting.js:38
 msgid "Spacing"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/Toolbar/BorderControl/index.js:31
 msgid "Border Type"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/Toolbar/BorderControl/index.js:32
 #: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:57
 msgid "Border Color"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/Toolbar/BorderControl/index.js:33
 msgid "Border Width"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/Toolbar/BorderControl/index.js:34
-#: src/components/selectors/Basic/Container/ContainerSettings.js:40
+#: src/components/selectors/Basic/Container_v2/ContainerSettings.js:40
 #: src/components/selectors/Basic/ImageUpload/ImageUploadSettings.js:31
 #: src/components/selectors/Basic/VideoBlock/VideoBlockSettings.js:30
 msgid "Border Radius"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/Toolbar/Typography/index.js:25
-#: src/components/selectors/Basic/Container/ContainerSettings.js:25
+#: src/components/selectors/Basic/Container_v2/ContainerSettings.js:25
 #: src/components/selectors/Basic/EmailHeading/EmailHeadingSettings.js:25
 #: src/components/selectors/Others/NewUserRegWP/NewUserRegSettings.js:19
 msgid "Typography"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/Toolbar/Typography/index.js:26
-#: src/components/selectors/Basic/Container/ContainerSettings.js:41
+#: src/components/selectors/Basic/Container_v2/ContainerSettings.js:41
 #: src/components/selectors/Basic/EmailHeading/EmailHeadingSettings.js:26
 #: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:46
 #: src/components/selectors/Basic/SubTitle/SubTitleSettings.js:26
@@ -1572,7 +1584,7 @@ msgstr ""
 msgid "Font Family"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/Toolbar/Typography/index.js:27
 #: src/components/selectors/Basic/EmailHeading/EmailHeadingSettings.js:27
@@ -1583,7 +1595,7 @@ msgstr ""
 msgid "Font Size"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/Toolbar/Typography/index.js:28
 #: src/components/selectors/Basic/EmailHeading/EmailHeadingSettings.js:28
@@ -1594,7 +1606,7 @@ msgstr ""
 msgid "Font Weight"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/Toolbar/Typography/index.js:29
 #: src/components/selectors/Basic/EmailHeading/EmailHeadingSettings.js:30
@@ -1605,19 +1617,19 @@ msgstr ""
 msgid "Transform"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/Toolbar/Typography/index.js:30
 msgid "Line Height"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/Toolbar/Typography/index.js:31
 msgid "Font Style"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/WidgetsContainer/basicToolBox.js:26
 #: src/components/selectors/Basic/EmailHeading/EmailHeadingSettings.js:23
@@ -1626,11 +1638,11 @@ msgstr ""
 msgid "Heading"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/Basic/Button/ButtonSettings.js:28
 #: src/components/selectors/Basic/EmailHeading/EmailHeadingSettings.js:22
-#: src/components/selectors/Basic/Footer/FooterSettings.js:23
+#: src/components/selectors/Basic/Footer/FooterSettings.js:24
 #: src/components/selectors/Basic/HtmlCodeEditor/HtmlCodeEditorSettings.js:11
 #: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:29
 #: src/components/selectors/Basic/ImageUpload/ImageUploadSettings.js:32
@@ -1651,13 +1663,13 @@ msgstr ""
 msgid "Content"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/Basic/EmailHeading/EmailHeadingSettings.js:24
 msgid "This is heading"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/Basic/EmailHeading/EmailHeadingSettings.js:29
 #: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:49
@@ -1679,20 +1691,20 @@ msgstr ""
 msgid "Text Align"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/Basic/Button/ButtonSettings.js:35
-#: src/components/selectors/Basic/Container/ContainerSettings.js:30
+#: src/components/selectors/Basic/Container_v2/ContainerSettings.js:30
 #: src/components/selectors/Basic/EmailHeading/EmailHeadingSettings.js:31
-#: src/components/selectors/Basic/Footer/FooterSettings.js:36
+#: src/components/selectors/Basic/Footer/FooterSettings.js:38
 #: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:39
 #: src/components/selectors/Basic/ImageUpload/ImageUploadSettings.js:30
 #: src/components/selectors/Basic/SubTitle/SubTitleSettings.js:32
 #: src/components/selectors/Basic/Text/TextSettings.js:24
 #: src/components/selectors/Basic/VideoBlock/VideoBlockSettings.js:29
 #: src/components/selectors/General/Divider/DividerSettings.js:18
-#: src/components/selectors/General/Row/ColumnSettings.js:24
-#: src/components/selectors/General/Row/RowSettings.js:30
+#: src/components/selectors/General/Row_v2/ColumnSettings.js:24
+#: src/components/selectors/General/Row_v2/RowSettings.js:30
 #: src/components/selectors/Others/AccountReg/AccountRegSettings.js:28
 #: src/components/selectors/Others/BackOrder/BackOrderSettings.js:24
 #: src/components/selectors/Others/LowStock/LowStockSettings.js:25
@@ -1710,11 +1722,11 @@ msgstr ""
 msgid "Margin"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/Basic/EmailHeading/EmailHeadingSettings.js:35
-#: src/components/selectors/Basic/Footer/FooterSettings.js:29
-#: src/components/selectors/Basic/Footer/FooterSettings.js:40
+#: src/components/selectors/Basic/Footer/FooterSettings.js:31
+#: src/components/selectors/Basic/Footer/FooterSettings.js:42
 #: src/components/selectors/Basic/SubTitle/SubTitleSettings.js:24
 #: src/components/selectors/Basic/Text/TextSettings.js:23
 #: src/components/selectors/Basic/VideoBlock/VideoBlockSettings.js:23
@@ -1735,7 +1747,7 @@ msgstr ""
 msgid "Background Color"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/Basic/EmailHeading/EmailHeadingSettings.js:36
 #: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:45
@@ -1750,55 +1762,55 @@ msgstr ""
 msgid "Title Color"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
-#: src/components/selectors/Basic/Container/ContainerSettings.js:39
+#: src/components/selectors/Basic/Container_v2/ContainerSettings.js:39
 #: src/components/selectors/Basic/EmailHeading/EmailHeadingSettings.js:37
 #: src/components/selectors/Basic/ImageUpload/ImageUploadSettings.js:29
-#: src/components/selectors/General/Row/ColumnSettings.js:32
+#: src/components/selectors/General/Row_v2/ColumnSettings.js:32
 #: src/components/selectors/Others/ResetPasswordWP/ResetPasswordWPSetting.js:41
 msgid "Border Style"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/Basic/EmailHeading/EmailHeadingSettings.js:38
-#: src/components/selectors/Basic/Footer/FooterSettings.js:25
+#: src/components/selectors/Basic/Footer/FooterSettings.js:27
 msgid "Add Link"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/Basic/Button/ButtonSettings.js:29
 #: src/components/selectors/Basic/EmailHeading/EmailHeadingSettings.js:39
-#: src/components/selectors/Basic/Footer/FooterSettings.js:26
+#: src/components/selectors/Basic/Footer/FooterSettings.js:28
 #: src/components/selectors/Basic/ImageUpload/ImageUploadSettings.js:35
 #: src/components/selectors/Others/PasswordReset/PasswordResetSettings.js:23
 #: src/components/selectors/Others/ResetPasswordWP/ResetPasswordWPSetting.js:21
 msgid "Link"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/Toolbar/Dimension/index.js:10
 msgid "width"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/Toolbar/Dimension/index.js:11
 msgid "height"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/WidgetsContainer/basicToolBox.js:32
-#: src/components/selectors/Basic/SubTitle/index.js:80
+#: src/components/selectors/Basic/SubTitle/index.js:78
 #: src/components/selectors/Basic/SubTitle/SubTitleSettings.js:22
 msgid "Sub Title"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:44
 #: src/components/selectors/Basic/SubTitle/SubTitleSettings.js:20
@@ -1814,9 +1826,9 @@ msgstr ""
 msgid "Title"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
-#: src/components/selectors/Basic/Footer/FooterSettings.js:28
+#: src/components/selectors/Basic/Footer/FooterSettings.js:30
 #: src/components/selectors/Basic/ImageUpload/ImageUploadSettings.js:40
 #: src/components/selectors/Basic/SubTitle/SubTitleSettings.js:23
 #: src/components/selectors/Basic/Text/TextSettings.js:22
@@ -1830,10 +1842,10 @@ msgstr ""
 msgid "Wrapper"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/Basic/Button/ButtonSettings.js:34
-#: src/components/selectors/Basic/Footer/FooterSettings.js:39
+#: src/components/selectors/Basic/Footer/FooterSettings.js:41
 #: src/components/selectors/Basic/Socials_v2/SocialActionCard.js:94
 #: src/components/selectors/Basic/SubTitle/SubTitleSettings.js:25
 #: src/components/selectors/Others/BackOrder/BackOrderSettings.js:21
@@ -1847,525 +1859,543 @@ msgstr ""
 msgid "Color"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/Basic/SubTitle/SubTitleSettings.js:29
 msgid "SubTitle Color"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
-#: src/components/selectors/Basic/Container/ContainerSettings.js:42
+#: src/components/selectors/Basic/Container_v2/ContainerSettings.js:42
+#: src/components/selectors/Basic/Footer/FooterSettings.js:25
 #: src/components/selectors/Basic/Socials_v2/SocialSetting.js:39
 #: src/components/selectors/Basic/SubTitle/SubTitleSettings.js:30
-#: src/components/selectors/General/Row/RowSettings.js:32
+#: src/components/selectors/General/Row_v2/RowSettings.js:32
 msgid "Space Between"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/Toolbar/FileUpload/index.js:153
 msgid "Uploading..."
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/Toolbar/FileUpload/index.js:154
 msgid "No file chosen"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/Toolbar/FileUpload/index.js:155
 msgid "Choose file"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/Toolbar/FileUpload/index.js:156
 msgid "Are you sure want to delete this file?"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/Basic/ImageUpload/ImageUploadSettings.js:25
 #: src/components/selectors/Basic/ImageUpload/index.js:89
 msgid "Image Upload"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/Basic/ImageUpload/ImageUploadSettings.js:23
 #: src/components/selectors/Basic/Socials/SocialSetting.js:32
-#: src/components/selectors/General/Row/RowSettings.js:22
+#: src/components/selectors/General/Row_v2/RowSettings.js:22
 #: src/components/selectors/Others/ResetPasswordWP/ResetPasswordWPSetting.js:42
 msgid "Dimensions"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/Basic/ImageUpload/ImageUploadSettings.js:24
 #: src/components/selectors/Basic/VideoBlock/VideoBlockSettings.js:31
 msgid "External URL"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/Basic/Button/ButtonSettings.js:37
-#: src/components/selectors/Basic/Container/ContainerSettings.js:37
+#: src/components/selectors/Basic/Container_v2/ContainerSettings.js:37
 #: src/components/selectors/Basic/ImageUpload/ImageUploadSettings.js:27
 #: src/components/selectors/Basic/Socials/SocialSetting.js:35
 #: src/components/selectors/Basic/Socials_v2/SocialSetting.js:40
 #: src/components/selectors/General/Divider/DividerSettings.js:21
-#: src/components/selectors/General/Row/ColumnSettings.js:26
-#: src/components/selectors/General/Row/RowSettings.js:25
+#: src/components/selectors/General/Row_v2/ColumnSettings.js:26
+#: src/components/selectors/General/Row_v2/RowSettings.js:25
 msgid "Alignment"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/Basic/ImageUpload/ImageUploadSettings.js:33
 msgid "Select Image"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
+#: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:53
 #: src/components/selectors/Basic/ImageUpload/ImageUploadSettings.js:34
 #: src/components/selectors/Basic/Socials_v2/SocialActionCard.js:100
 msgid "Redirect URL"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/Basic/ImageUpload/ImageUploadSettings.js:36
 msgid "Alt Text"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/Basic/ImageUpload/ImageUploadSettings.js:37
 #: src/components/selectors/WoCommerce/OrderItem/style/Style2Settings.js:39
 msgid "Style"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:52
 #: src/components/selectors/Basic/ImageUpload/ImageUploadSettings.js:39
 msgid "Image"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/Basic/BackgroundImage/index.js:56
-#: src/components/selectors/Basic/Container/ContainerSettings.js:29
+#: src/components/selectors/Basic/Container_v2/ContainerSettings.js:29
 msgid "Background Image"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/Toolbar/IconPicker/UtilsComponents/IconsList.js:11
 msgid "Insert"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/Toolbar/IconPicker/index.js:20
 #: src/components/selectors/Basic/Socials_v2/SocialActionCard.js:99
 msgid "Select Icon"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/Toolbar/IconPicker/index.js:21
 msgid "Remove Icon"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/Toolbar/IconPicker/index.js:22
 msgid "Icon Picker"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
-#: src/components/editor/WidgetsContainer/basicToolBox.js:59
+#: src/components/editor/WidgetsContainer/basicToolBox.js:60
 #: src/components/selectors/Basic/VideoBlock/index.js:88
 msgid "Video"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/Basic/VideoBlock/VideoBlockSettings.js:25
 msgid "Video URL"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/Basic/VideoBlock/VideoBlockSettings.js:26
 msgid "Video Style"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:41
 #: src/components/selectors/Basic/VideoBlock/VideoBlockSettings.js:27
 msgid "Upload"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/Basic/VideoBlock/VideoBlockSettings.js:28
 msgid "Video Thumbnail"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/Basic/VideoBlock/VideoBlockSettings.js:32
 msgid "Upload Video"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/Basic/VideoBlock/VideoBlockSettings.js:33
 msgid "Icon"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/Basic/VideoBlock/VideoBlockSettings.js:34
 msgid "Size"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/Basic/VideoBlock/VideoBlockSettings.js:35
 msgid "Play Icon"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/Toolbar/BoxShadow/index.js:29
 msgid "Box Shadow"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/WidgetsContainer/basicToolBox.js:44
 #: src/components/selectors/Basic/Button/ButtonSettings.js:30
 #: src/components/selectors/Basic/Button/index.js:80
-#: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:60
+#: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:63
 msgid "Button"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/Basic/Button/ButtonSettings.js:31
 msgid "Full"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/Basic/Button/ButtonSettings.js:32
 #: src/components/selectors/Basic/Button/ButtonSettings.js:42
 msgid "Outline"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/Basic/Button/ButtonSettings.js:39
 msgid "Border"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/Basic/Button/ButtonSettings.js:40
 msgid "Use Width"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/Basic/Button/ButtonSettings.js:41
 msgid "Fill"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/Basic/Button/ButtonSettings.js:43
 #: src/components/selectors/General/Divider/DividerSettings.js:19
 msgid "Width"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/Basic/Socials/index.js:12
 #: src/components/selectors/Basic/Socials_v2/SocialActionCard.js:98
 msgid "Facebook"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/Basic/Socials/index.js:19
 msgid "Twitter"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/Basic/Socials/index.js:25
 msgid "Whats App"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/Basic/Socials/index.js:32
 msgid "YouTube"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/Basic/Socials/index.js:40
 msgid "Instagram"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
-#: src/components/editor/WidgetsContainer/basicToolBox.js:77
+#: src/components/editor/WidgetsContainer/basicToolBox.js:78
 #: src/components/selectors/Basic/Socials/index.js:103
 #: src/components/selectors/Basic/Socials_v2/index.js:93
 msgid "Social Icons"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/Basic/Socials/SocialSetting.js:31
 #: src/components/selectors/Basic/Socials_v2/SocialSetting.js:36
 msgid "Icons"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/Basic/Socials/SocialSetting.js:33
 #: src/components/selectors/Basic/Socials_v2/SocialSetting.js:38
 msgid "Icon Size"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
-#: src/components/selectors/Basic/Container/ContainerSettings.js:33
-#: src/components/selectors/Basic/Footer/FooterSettings.js:32
+#: src/components/selectors/Basic/Container_v2/ContainerSettings.js:33
+#: src/components/selectors/Basic/Footer/FooterSettings.js:34
 #: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:35
 #: src/components/selectors/Basic/Socials/SocialSetting.js:36
 #: src/components/selectors/Basic/Socials_v2/SocialSetting.js:41
-#: src/components/selectors/General/Row/ColumnSettings.js:28
-#: src/components/selectors/General/Row/index.js:49
-#: src/components/selectors/General/Row/RowSettings.js:27
+#: src/components/selectors/General/Row_v2/ColumnSettings.js:28
+#: src/components/selectors/General/Row_v2/index.js:73
+#: src/components/selectors/General/Row_v2/RowSettings.js:27
 msgid "Row"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
-#: src/components/selectors/Basic/Container/ContainerSettings.js:34
-#: src/components/selectors/Basic/Footer/FooterSettings.js:33
+#: src/components/selectors/Basic/Container_v2/ContainerSettings.js:34
+#: src/components/selectors/Basic/Footer/FooterSettings.js:35
 #: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:37
 #: src/components/selectors/Basic/Socials/SocialSetting.js:37
 #: src/components/selectors/Basic/Socials_v2/SocialSetting.js:42
 #: src/components/selectors/General/Columns/index.js:90
-#: src/components/selectors/General/Row/ColumnSettings.js:29
-#: src/components/selectors/General/Row/RowSettings.js:21
-#: src/components/selectors/General/Row/RowSettings.js:28
-#: src/components/selectors/General/Row/SingleColumn.js:52
+#: src/components/selectors/General/Row_v2/ColumnSettings.js:29
+#: src/components/selectors/General/Row_v2/RowSettings.js:21
+#: src/components/selectors/General/Row_v2/RowSettings.js:28
+#: src/components/selectors/General/Row_v2/SingleColumn.js:49
 msgid "Column"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
-#: src/components/selectors/Basic/Container/ContainerSettings.js:35
-#: src/components/selectors/Basic/Footer/FooterSettings.js:35
-#: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:57
+#: src/components/selectors/Basic/Container_v2/ContainerSettings.js:35
+#: src/components/selectors/Basic/Footer/FooterSettings.js:37
 #: src/components/selectors/Basic/Socials/SocialSetting.js:38
 #: src/components/selectors/Basic/Socials_v2/SocialSetting.js:43
-#: src/components/selectors/General/Row/ColumnSettings.js:30
+#: src/components/selectors/General/Row_v2/ColumnSettings.js:30
 msgid "Align"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
-#: src/components/selectors/Basic/Container/ContainerSettings.js:36
-#: src/components/selectors/Basic/Footer/FooterSettings.js:34
+#: src/components/selectors/Basic/Container_v2/ContainerSettings.js:36
+#: src/components/selectors/Basic/Footer/FooterSettings.js:36
 #: src/components/selectors/Basic/Socials/SocialSetting.js:39
 #: src/components/selectors/Basic/Socials_v2/SocialSetting.js:44
 #: src/components/selectors/General/Divider/DividerSettings.js:22
-#: src/components/selectors/General/Row/ColumnSettings.js:31
+#: src/components/selectors/General/Row_v2/ColumnSettings.js:31
 msgid "Justify"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/Basic/Socials_v2/SocialActionCard.js:23
 msgid "Please write a valid URL"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/Basic/Socials_v2/SocialActionCard.js:93
 msgid "Select an Icon"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
-#: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:54
+#: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:55
 #: src/components/selectors/Basic/Socials_v2/SocialActionCard.js:96
 msgid "URL"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/Basic/Socials_v2/SocialActionCard.js:97
 msgid "Add new"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/Basic/Socials_v2/index.js:48
 msgid "No icon selected"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/Basic/Socials_v2/SocialSetting.js:37
 msgid "Icon Style"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
-#: src/components/selectors/General/Row/EmptyContent.js:5
+#: src/components/selectors/General/Row_v2/EmptyContent.js:5
 msgid "No content here-Drag content from widgets"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
-#: src/components/editor/WidgetsContainer/basicToolBox.js:71
-#: src/components/selectors/Basic/Container/index.js:75
+#: src/components/editor/WidgetsContainer/basicToolBox.js:72
+#: src/components/selectors/Basic/Container_v2/index.js:103
 #: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:32
 msgid "Container"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
-#: src/components/selectors/Basic/Container/ContainerSettings.js:32
-#: src/components/selectors/Basic/Footer/FooterSettings.js:30
+#: src/components/selectors/Basic/Container_v2/ContainerSettings.js:32
+#: src/components/selectors/Basic/Footer/FooterSettings.js:32
 #: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:34
-#: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:55
-#: src/components/selectors/General/Row/ColumnSettings.js:27
-#: src/components/selectors/General/Row/RowSettings.js:26
+#: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:57
+#: src/components/selectors/General/Row_v2/ColumnSettings.js:27
 msgid "Flex Direction"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
-#: src/components/selectors/Basic/Container/ContainerSettings.js:38
+#: src/components/selectors/Basic/Container_v2/ContainerSettings.js:38
 msgid "Radius"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/Basic/Timer/index.js:123
 msgid "Timer"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/Basic/List/index.js:41
 msgid "List"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
-#: src/components/editor/WidgetsContainer/basicToolBox.js:83
-#: src/components/selectors/Basic/ImageBox/index.js:138
+#: src/components/editor/WidgetsContainer/basicToolBox.js:84
+#: src/components/selectors/Basic/ImageBox/index.js:189
 msgid "Image Box"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:31
 msgid "Description"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:33
 msgid "Container Background"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:36
 msgid "Row Reverse"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:38
 msgid "Column Reverse"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
-#: src/components/editor/WidgetsContainer/basicToolBox.js:103
+#: src/components/editor/WidgetsContainer/basicToolBox.js:104
 #: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:42
 msgid "Upload Image"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:51
 msgid "Description Color"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
-#: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:53
-msgid "Add Image URL"
+#: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:54
+msgid "External Source"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
-#: src/components/selectors/Basic/Footer/FooterSettings.js:31
 #: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:56
+msgid "Image URL"
+msgstr ""
+
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
+#: dist/app.js:195
+#: src/components/selectors/Basic/Footer/FooterSettings.js:33
+#: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:58
 msgid "Reverse Direction"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
-#: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:58
+#: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:59
+msgid "Horizontal Align"
+msgstr ""
+
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
+#: dist/app.js:195
+#: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:60
+msgid "Vertical Align"
+msgstr ""
+
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
+#: dist/app.js:195
+#: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:61
 msgid "Enable Height & Width"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
-#: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:61
-msgid "Enable Button"
+#: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:64
+msgid "Show Button"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/Basic/HtmlCodeEditor/HtmlCodeEditorSettings.js:12
 #: src/components/selectors/Basic/HtmlCodeEditor/index.js:62
 msgid "Insert HTML Code"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/Basic/HtmlCodeEditor/HtmlCodeEditorSettings.js:10
 #: src/components/selectors/Basic/HtmlCodeEditor/index.js:98
 msgid "HTML Code"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
-#: src/components/editor/WidgetsContainer/basicToolBox.js:140
-#: src/components/selectors/Basic/Footer/index.js:96
+#: src/components/editor/WidgetsContainer/basicToolBox.js:141
+#: src/components/selectors/Basic/Footer/index.js:91
 #: src/components/selectors/Others/AccountReg/AccountRegSettings.js:23
 #: src/components/selectors/Others/NewUserRegWP/NewUserRegSettings.js:34
 #: src/components/selectors/Others/PasswordReset/PasswordResetSettings.js:24
@@ -2375,39 +2405,39 @@ msgstr ""
 msgid "Footer"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
-#: src/components/selectors/Basic/Footer/FooterSettings.js:24
+#: src/components/selectors/Basic/Footer/FooterSettings.js:26
 msgid "Company Name"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
-#: src/components/selectors/Basic/Footer/FooterSettings.js:27
+#: src/components/selectors/Basic/Footer/FooterSettings.js:29
 msgid "Copyright Text"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
-#: src/components/selectors/Basic/Footer/FooterSettings.js:38
+#: src/components/selectors/Basic/Footer/FooterSettings.js:40
 msgid "Company"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
-#: src/components/selectors/Basic/Footer/FooterSettings.js:41
+#: src/components/selectors/Basic/Footer/FooterSettings.js:43
 msgid "Copyright"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
-#: src/components/editor/WidgetsContainer/basicToolBox.js:128
+#: src/components/editor/WidgetsContainer/basicToolBox.js:129
 #: src/components/editor/WidgetsContainer/generalToolBox.js:23
 #: src/components/selectors/General/Divider/index.js:36
 msgid "Divider"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/General/Divider/DividerSettings.js:14
 #: src/components/selectors/General/Space/SpaceSettings.js:11
@@ -2415,41 +2445,47 @@ msgstr ""
 msgid "Dimension"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/General/Divider/DividerSettings.js:20
 #: src/components/selectors/General/Space/SpaceSettings.js:12
 msgid "Height"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
-#: src/components/editor/WidgetsContainer/basicToolBox.js:134
+#: src/components/editor/WidgetsContainer/basicToolBox.js:135
 #: src/components/editor/WidgetsContainer/generalToolBox.js:29
 #: src/components/selectors/General/Space/index.js:23
 msgid "Space"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
-#: src/components/selectors/General/Row/index.js:15
+#: src/components/selectors/General/Row_v2/index.js:16
 msgid "No column here-Add column from setting"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
-#: src/components/selectors/General/Row/RowSettings.js:20
+#: src/components/selectors/General/Row_v2/RowSettings.js:20
 msgid "Add Column"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
+#: dist/app.js:195
+#: src/components/selectors/General/Row_v2/RowSettings.js:26
+msgid "Direction"
+msgstr ""
+
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/WidgetsContainer/wooCommerceToolBox.js:21
 #: src/components/selectors/WoCommerce/ShippingAddress/index.js:112
 msgid "Shipping Address"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/Others/BackOrder/BackOrderSettings.js:27
 #: src/components/selectors/Others/LowStock/LowStockSettings.js:27
@@ -2460,220 +2496,220 @@ msgstr ""
 msgid "Info"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/WidgetsContainer/wooCommerceToolBox.js:27
 #: src/components/selectors/WoCommerce/BillingAddress/index.js:113
 msgid "Billing Address"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
-#: src/components/selectors/WoCommerce/BillingShippingCombine/index.js:198
+#: src/components/selectors/WoCommerce/BillingShippingCombine/index.js:173
 msgid "Billing & Shipping Address"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/WoCommerce/BillingShippingCombine/BillingShippingSettings.js:19
 msgid "Billing Title"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/WoCommerce/BillingShippingCombine/BillingShippingSettings.js:20
 msgid "Shipping Title"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:28
 #: src/components/selectors/WoCommerce/OrderItem/style/Style2Settings.js:17
 msgid "Header"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/WoCommerce/OrderItem/style/Style2Settings.js:21
 msgid "Products"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/WoCommerce/OrderItem/style/Style2Settings.js:22
 msgid "Enable Separator"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/WoCommerce/OrderItem/style/Style2Settings.js:23
 msgid "Separator Style"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/WoCommerce/OrderItem/style/Style2Settings.js:24
 msgid "Separator Width"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/WoCommerce/OrderItem/style/Style2Settings.js:25
 msgid "Separator Color"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/WoCommerce/OrderItem/style/Style2Settings.js:26
 msgid "Product Item"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/WoCommerce/OrderItem/style/Style2Settings.js:28
 msgid "SubTitle"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:38
 #: src/components/selectors/WoCommerce/OrderItem/style/Style2Settings.js:30
 msgid "Price"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/WoCommerce/OrderItem/style/Style2Settings.js:31
 msgid "Billing Info"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/WoCommerce/OrderItem/style/Style2Settings.js:33
 msgid "Width (%)"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/WoCommerce/OrderItem/style/Style2Settings.js:34
 msgid "Gap (px)"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/WoCommerce/OrderItem/style/Style2Settings.js:35
 msgid "Billing Info Item"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/WoCommerce/OrderItem/style/Style2Settings.js:36
 msgid "Billing Info Title"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/WoCommerce/OrderItem/style/Style2Settings.js:37
 msgid "Billing Info Value"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/WoCommerce/OrderItem/style/Style2Settings.js:38
 msgid "Billing Info Total Title"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:29
 msgid "Order Item Style"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:30
 msgid "Style 1"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:31
 msgid "Style 2"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:32
 msgid "Style 3"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:33
 msgid "Enable Header"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:34
 msgid "Show Date"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:35
 msgid "Show Time"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:36
 msgid "Product"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:39
 msgid "Subtotal"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:41
 msgid "Note"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:42
 msgid "Order"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:43
 msgid "Order Summary"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:44
 msgid "Shipping"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:46
 msgid "Order Fully Refunded"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:47
 msgid "Partially Refunded Amount"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/Others/AccountReg/AccountRegSettings.js:25
 #: src/components/selectors/Others/BackOrder/BackOrderSettings.js:26
@@ -2688,13 +2724,13 @@ msgstr ""
 msgid "Text Color"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/WoCommerce/OrderItemDownload/index.js:80
 msgid "Order Item Download"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/Others/AccountReg/AccountRegSettings.js:19
 #: src/components/selectors/Others/NewUserRegWP/NewUserRegSettings.js:36
@@ -2704,231 +2740,231 @@ msgstr ""
 msgid "Greetings"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/WoCommerce/CustomerNote/CustomerNoteSettings.js:23
 msgid "Customer Note Style"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/WidgetsContainer/wooCommerceToolBox.js:57
 #: src/components/selectors/Others/AccountReg/index.js:73
 msgid "Customer Register"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/Others/AccountReg/AccountRegSettings.js:21
 msgid "Visit Site Link"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/Others/AccountReg/AccountRegSettings.js:22
 msgid "New Password Link"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/Others/AccountReg/AccountRegSettings.js:29
 msgid "Customer Register Style"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/WidgetsContainer/wooCommerceToolBox.js:63
 #: src/components/selectors/Others/PasswordReset/index.js:66
 msgid "Password Reset"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/Others/PasswordReset/PasswordResetSettings.js:25
 #: src/components/selectors/Others/ResetPasswordWP/ResetPasswordWPSetting.js:23
 msgid "Password Reset Style"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/Others/PasswordReset/PasswordResetSettings.js:31
 #: src/components/selectors/Others/ResetPasswordWP/ResetPasswordWPSetting.js:29
 msgid "For this reason"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/Others/NewUserRegWP/index.js:69
 msgid "User Register"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/Others/NewUserRegWP/NewUserRegSettings.js:25
 msgid "Additional Field"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/Others/NewUserRegWP/NewUserRegSettings.js:32
 msgid "Additional Style"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
-#: dist/app.js:195
-#: src/components/selectors/Others/BackOrder/index.js:18
-#: src/components/selectors/Others/LowStock/index.js:18
-#: src/components/selectors/Others/NoStock/index.js:19
-msgid "Product id"
-msgstr ""
-
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/Others/BackOrder/index.js:19
 #: src/components/selectors/Others/LowStock/index.js:19
-#: src/components/selectors/Others/NoStock/index.js:20
-msgid "Product name"
+#: src/components/selectors/Others/NoStock/index.js:21
+msgid "Product id"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/Others/BackOrder/index.js:20
 #: src/components/selectors/Others/LowStock/index.js:20
-#: src/components/selectors/Others/NoStock/index.js:21
-msgid "Product status"
+#: src/components/selectors/Others/NoStock/index.js:22
+msgid "Product name"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/Others/BackOrder/index.js:21
 #: src/components/selectors/Others/LowStock/index.js:21
-#: src/components/selectors/Others/NoStock/index.js:22
-msgid "Product price"
+#: src/components/selectors/Others/NoStock/index.js:23
+msgid "Product status"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/Others/BackOrder/index.js:22
 #: src/components/selectors/Others/LowStock/index.js:22
-#: src/components/selectors/Others/NoStock/index.js:23
-msgid "Product quantity"
+#: src/components/selectors/Others/NoStock/index.js:24
+msgid "Product price"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/Others/BackOrder/index.js:23
 #: src/components/selectors/Others/LowStock/index.js:23
-#: src/components/selectors/Others/NoStock/index.js:24
-msgid "Product description"
+#: src/components/selectors/Others/NoStock/index.js:25
+msgid "Product quantity"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/selectors/Others/BackOrder/index.js:24
 #: src/components/selectors/Others/LowStock/index.js:24
-#: src/components/selectors/Others/NoStock/index.js:25
+#: src/components/selectors/Others/NoStock/index.js:26
+msgid "Product description"
+msgstr ""
+
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
+#: dist/app.js:195
+#: src/components/selectors/Others/BackOrder/index.js:25
+#: src/components/selectors/Others/LowStock/index.js:25
+#: src/components/selectors/Others/NoStock/index.js:27
 msgid "Back order status"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
-#: src/components/selectors/Others/LowStock/index.js:25
-#: src/components/selectors/Others/NoStock/index.js:26
+#: src/components/selectors/Others/LowStock/index.js:26
+#: src/components/selectors/Others/NoStock/index.js:28
 msgid "Low stock amount"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/WidgetsContainer/othersToolBox.js:19
 #: src/components/selectors/Others/ResetPasswordWP/index.js:66
 msgid "WP Reset Password"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/WidgetsContainer/basicToolBox.js:50
 msgid "Column Section"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
-#: src/components/editor/WidgetsContainer/basicToolBox.js:65
+#: src/components/editor/WidgetsContainer/basicToolBox.js:66
 msgid "HTML"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/WidgetsContainer/wooCommerceToolBox.js:33
 msgid "Billing Shipping Address"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/WidgetsContainer/wooCommerceToolBox.js:39
 msgid "Order Item"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/WidgetsContainer/othersToolBox.js:13
 msgid "New User Register"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/WidgetsContainer/index.js:15
 msgid "WordPress"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/WidgetsContainer/index.js:143
 msgid "Search Widget..."
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/Viewport/EditorSidebar/TemplateList.js:149
 msgid "Do you want to replace your template?"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/Viewport/EditorSidebar/GlobalSettings.js:107
 msgid "Email Pre-Header"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/Viewport/EditorSidebar/GlobalSettings.js:108
 msgid "Email Settings"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/Viewport/EditorSidebar/GlobalSettings.js:109
 msgid "Body Style"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/Viewport/EditorSidebar/index.js:29
 msgid "Elements"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/Viewport/EditorSidebar/index.js:30
 msgid "Templates"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/Viewport/EditorSidebar/index.js:111
 msgid "EmailKit Build Custom Templates"
 msgstr ""
 
-#: build/static/chunks/pages/index-efb44af04b6c33e3985c.js:1
+#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
 #: dist/app.js:195
 #: src/components/editor/Viewport/Navigator/index.js:11
 msgid "Navigator"

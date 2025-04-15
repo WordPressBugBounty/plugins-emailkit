@@ -38,6 +38,16 @@ class Promotional{
 
         if( \EmailKit\Promotional\Util::get_settings( 'emailkit_user_consent_for_banner', 'yes' ) == 'yes' ){
 
+
+            /**
+			 * MetForm get free templates promotional class initialization
+			 *
+			 */
+			if( !did_action('metform/after_load') && did_action('elementor/loaded') && class_exists('\EmailKit\Promotional\MetformPromoBanner\MetformPromoBanner') ) {
+	
+                new \EmailKit\Promotional\MetformPromoBanner\MetformPromoBanner();
+			}
+
             /**
              * Show WPMET stories widget in the dashboard
              */
@@ -70,12 +80,12 @@ class Promotional{
              * Ask for Ratings 
              */            
             Rating::instance('emailkit')                    # @plugin_slug
-            ->set_message('<strong>Loving the EmailKit email-building experience? 😀 </strong> </br> 
-            Share your feedback, like a 5-star review, and motivate us to take EmailKit to the next level! 💯')
+            ->set_message('Creating custom emails with a no-code solution - <strong>EmailKit?</strong> 📩 </br> 
+            We would love to hear your thoughts! Share a <strong>5-star</strong> review to keep us motivated. 🙌')
             ->set_plugin_logo('https://ps.w.org/emailkit/assets/icon-128x128.png')       # @plugin_logo_url
             ->set_plugin('EmailKit', 'https://wpmet.com/wordpress.org/rating/emailkit')   # @plugin_name  @plugin_url
             ->set_rating_url('https://wordpress.org/support/plugin/emailkit/reviews/#new-post')
-            ->set_support_url('https://help.wpmet.com/')
+            ->set_support_url('https://wpmet.com/support-ticket')
             ->set_allowed_screens('edit-emailkit')                                 # @set_allowed_screen
             ->set_allowed_screens('edit-emailkit')                                  # @set_allowed_screen
             ->set_allowed_screens('emailkit_page_emailkit_get_help')                      # @set_allowed_screen
@@ -227,7 +237,7 @@ class Promotional{
             ->set_plugin_row_meta('Facebook Community', 'https://wpmet.com/fb-group', ['target' => '_blank'])
             ->set_plugin_row_meta('Rate the plugin ★★★★★', 'https://wordpress.org/support/plugin/emailkit/reviews/#new-post', ['target' => '_blank'])
             ->set_plugin_action_link('Settings', admin_url() . 'admin.php?page=emailkit-menu-settings')
-            ->set_plugin_action_link($is_pro_active, 'https://wpmet.com/plugin/emailkit', ['target' => '_blank', 'style' => 'color: #FCB214; font-weight: bold;'])
+            ->set_plugin_action_link($is_pro_active, 'https://wpmet.com/plugin/emailkit/pricing/', ['target' => '_blank', 'style' => 'color: #FCB214; font-weight: bold;'])
             ->call();
             
             if( ! $this->already_onboarded_other() ){

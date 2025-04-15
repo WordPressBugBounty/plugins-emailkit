@@ -86,15 +86,15 @@ class FailedOrder
 					if (strpos($meta->key, 'pa_') === 0) {
 					// Standard product attribute
 					$formatted_name = ucwords(wc_attribute_label(str_replace('pa_', '', $meta->key), $product));
-					$formatted_value = ucwords(strtolower($meta->value)); // Capitalize the value
+					$formatted_value = is_string($meta->value) ? ucwords(strtolower($meta->value)) : ''; // Capitalize the value
 
 					// Add the attribute to the list with HTML markup
 					$attributes[] = esc_html($formatted_name) . ': ' . esc_html($formatted_value);
 
 					} else {
 						
-					$formatted_name = ucwords(str_replace('_', ' ', strtolower($meta->key)));
-					$formatted_value = ucwords(strtolower($meta->value)); 
+					$formatted_name = is_string($meta->key) ? ucwords(str_replace('_', ' ', strtolower($meta->key))) : '';
+					$formatted_value = is_string($meta->value) ? ucwords(strtolower($meta->value)) : ''; 
 
 					// Add the custom meta to the list with HTML markup
 					$attributes[] = esc_html($formatted_name) . ':' . esc_html($formatted_value);
@@ -134,7 +134,7 @@ class FailedOrder
 
 			$pre_header_template = get_post_meta($query->posts[0]->ID, 'emailkit_email_preheader', true);
 			$pre_header = str_replace(array_keys(Utils::transform_details_keys($details)), array_values(Utils::transform_details_keys($details)), $pre_header_template);
-			$pre_header = !empty($pre_header) ? $pre_header : esc_html__("Filed Order ", "emailkit");
+			$pre_header = !empty($pre_header) ? $pre_header : esc_html__("Failed Order ", "emailkit");
 			$subject_template = get_post_meta($query->posts[0]->ID, 'emailkit_email_subject', true);
      		$subject = str_replace(array_keys(Utils::transform_details_keys($details)), array_values(Utils::transform_details_keys($details)), $subject_template);
 			$blog_name = get_option('blogname');

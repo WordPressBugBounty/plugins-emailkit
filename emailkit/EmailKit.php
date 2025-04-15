@@ -6,7 +6,7 @@
  * Description: EmailKit is the most-complete drag-and-drop Email template builder.
  * Author: wpmet
  * Author URI: https://wpmet.com
- * Version: 1.5.8
+ * Version: 1.5.9
  * Text Domain: emailkit
  * License:  GPLv3
  * License URI: https://www.gnu.org/licenses/gpl-3.0.txt
@@ -39,7 +39,7 @@ final class EmailKit
         register_activation_hook(__FILE__, [$this, 'activate']);
         register_deactivation_hook(__FILE__, [$this,'deactivate_emailkit']);
 
-        add_action('plugins_loaded', [$this, 'init_plugin']);
+        add_action('plugins_loaded', [$this, 'init_plugin'], 112);
         add_action( 'admin_enqueue_scripts',[$this, 'emailkit_global_assets'] );
     }
 
@@ -68,7 +68,7 @@ final class EmailKit
      */
     public function define_constants()
     {
-        define('EMAILKIT_VERSION', '1.5.8');
+        define('EMAILKIT_VERSION', '1.5.9');
         define('EMAILKIT_TEXTDOMAIN', 'emailkit');
         define('EMAILKIT_FILE', __FILE__);
         define('EMAILKIT_PATH', __DIR__);
