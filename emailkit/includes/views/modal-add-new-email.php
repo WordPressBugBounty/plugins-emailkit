@@ -31,6 +31,7 @@
                 $email_types = [
                     'wordpress' => __('WordPress Email', 'emailkit'),
                     'woocommerce' => __('WooCommerce email', 'emailkit'),
+                    'metform' => __('Metform Email', 'emailkit'),
                     'saved-templates' => __('Saved Templates', 'emailkit'),
                 ];
                 ?>
@@ -100,9 +101,9 @@
                                     </svg>
                                 </div>
                                 <div class="emailkit-pro-alert-msg-content">
-                                    <h1>Oops! Upgrade to Pro to Use Your Saved Templates.</h1>
-                                    <p>Don't worry, we have your template safe with us. Subscribe to Pro package to continue using your saved templates!</p>
-                                    <a href="#" class="emailkit-pro-alert-msg-btn">Upgrade to Pro</a>
+                                    <h1 class="emailkit-pro-msg-title">You’re One Step Away!</h1>
+                                    <p class="emailkit-pro-msg-content">Upgrade to Pro and get all the premium features!</p>
+                                    <a href="https://wpmet.com/plugin/emailkit/pricing/" target="_blank" class="emailkit-pro-alert-msg-btn">Upgrade to Pro</a>
                                 </div>
                             </div>
 

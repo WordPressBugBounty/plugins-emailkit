@@ -23,6 +23,7 @@ class EmailLists {
     const WP_NEW_REGISTER = "new_register";
     const WP_RESET_PASSWORD = "reset_account";
     const PARTIAL_REFUND = "partial_refund";
+    const METFORM = "metform";
     
     
     /**
@@ -75,6 +76,61 @@ class EmailLists {
         return $list;
     }
 
+    public static function metform_email($template_type = '') {
+        $list = ['Select Template' => esc_html__('Select Form', 'emailkit')];
+
+        $metform_forms = get_posts([
+            'post_type'      => 'metform-form',
+            'post_status'    => 'publish',
+            'numberposts'    => -1,
+            'orderby'        => 'title',
+            'order'          => 'ASC',
+        ]);
+        
+        // Free: Check for templates
+        $templates = get_posts([
+            'post_type'      => 'emailkit',
+            'meta_query'     => [['key' => 'emailkit_template_type', 'value' => 'metform_form_', 'compare' => 'LIKE']],
+            'posts_per_page' => 1,
+            'fields'         => 'ids',
+            'orderby'        => 'ID',
+            'order'          => 'ASC'
+        ]);
+
+        if (defined('EMAILKITPRO_VERSION') || class_exists('EmailKitPro')) {
+            // Pro: Show all forms
+            foreach ($metform_forms as $form) {
+                $list['metform_form_' . $form->ID] = esc_html__('Form: ', 'emailkit') . $form->post_title;
+            }
+        } else {
+            if (empty($templates)) {
+                // No templates: Show all forms
+                foreach ($metform_forms as $form) {
+                    $list['metform_form_' . $form->ID] = esc_html__('Form: ', 'emailkit') . $form->post_title;
+                }
+            } else {
+                // Templates exist: Show only forms with templates
+                $form_ids = [];
+                foreach ($templates as $template_id) {
+                    $form_id = get_post_meta($template_id, 'emailkit_form_id', true) ?: 
+                            (preg_match('/metform_form_(\d+)/', get_post_meta($template_id, 'emailkit_template_type', true), $matches) ? $matches[1] : 0);
+                    if ($form_id) $form_ids[] = (int) $form_id;
+                }
+                foreach ($metform_forms as $form) {
+                    if (in_array($form->ID, $form_ids)) {
+                        $list['metform_form_' . $form->ID] = esc_html__('Form: ', 'emailkit') . $form->post_title;
+                    }
+                }
+            }
+        }
+
+        if( !class_exists( 'EmailKitPro' ) && is_array($metform_forms) && count($metform_forms) > 1 && !empty($templates)) {
+
+            $list['more-forms'] = esc_html__( 'More Forms...', 'emailkit' );
+        }
+
+        return $template_type ? ($list[$template_type] ?? '') : $list;
+    }
 
     /**
      * Get saved templates from database

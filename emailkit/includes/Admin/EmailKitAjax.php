@@ -84,6 +84,7 @@ class EmailKitAjax {
             'woocommerce' => EmailLists::woocommerce_email(),
             'wordpress' => EmailLists::wordpress_email(),
             'saved-templates' => EmailLists::saved_templates(),
+            'metform' => EmailLists::metform_email(),
         ];
 
         return $type_list[ $type ] ?? [];

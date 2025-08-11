@@ -41,22 +41,21 @@ jQuery(document).ready(function($) {
                         });
 
 
-                        let currInput = $(self).find('.change-status-btn');
-                        let isTemplateActive = $(`.${template_type}`).not(currInput);
-
-                        isTemplateActive.each(function(index, item) {
-                            if ($(item).is(":checked")) {
-                                $(item).prop("checked", false);
-                            }
-
-                            let enableStatus = $(item).closest('.column-content-container').find('.emailkit-admin-template-switch-active');
-                            let disableStatus = $(item).closest('.column-content-container').find('.emailkit-admin-template-switch-inactive');
-
-                            if (enableStatus) {
-                                enableStatus.removeClass('emailkit-slider-active')
-                                disableStatus.addClass('emailkit-slider-active')
-                            }
-                        })
+                        if (template_type !== 'metform') {
+                            let currInput = $(self).find('.change-status-btn');
+                            let isTemplateActive = $(`.${template_type}`).not(currInput);
+                            isTemplateActive.each(function(index, item) {
+                                if ($(item).is(":checked")) {
+                                    $(item).prop("checked", false);
+                                }
+                                let enableStatus = $(item).closest('.column-content-container').find('.emailkit-admin-template-switch-active');
+                                let disableStatus = $(item).closest('.column-content-container').find('.emailkit-admin-template-switch-inactive');
+                                if (enableStatus) {
+                                    enableStatus.removeClass('emailkit-slider-active');
+                                    disableStatus.addClass('emailkit-slider-active');
+                                }
+                            });
+                        }
 
                     } else if (response?.status_text == 'Inactive') {
 

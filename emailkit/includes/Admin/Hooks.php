@@ -96,20 +96,24 @@ class Hooks
         $status    = get_post_meta($post_id, 'emailkit_template_status', true);
 
         switch ($col) {
-            case 'type':
-                echo esc_html(
-                    $col === 'type'
-                        ? (
-                            isset(EmailLists::woocommerce_email()[$type])
-                                ? EmailLists::woocommerce_email()[$type]
-                                : (
-                                    isset(EmailLists::wordpress_email()[$type])
-                                        ? EmailLists::wordpress_email()[$type]
-                                        : $type
-                                )
-                        )
-                        : ''
-                );
+        case 'type':
+            if ($col === 'type') {
+                // Check for MetForm type first (starts with 'metform_form_' or equals METFORM constant)
+                if (strpos($type, 'metform_form_') === 0 || $type === EmailLists::METFORM) {
+                    echo esc_html__('Confirmation Mail To User', 'emailkit');
+                }
+                // Then check WooCommerce
+                elseif (isset(EmailLists::woocommerce_email()[$type])) {
+                    echo esc_html(EmailLists::woocommerce_email()[$type]);
+                }
+                // Then check WordPress
+                elseif (isset(EmailLists::wordpress_email()[$type])) {
+                    echo esc_html(EmailLists::wordpress_email()[$type]);
+                }
+                else {
+                    echo esc_html($type);
+                }
+            }
             break;
 
             case 'status':

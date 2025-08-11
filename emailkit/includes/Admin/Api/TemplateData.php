@@ -53,6 +53,7 @@ class TemplateData
         $subject = !empty($request->get_param( 'emailkit_template_title' ))? trim($request->get_param( 'emailkit_template_title' )) : null;
 
         $post_id = empty($req->postIdField) ? '' : $req->postIdField;
+         $form_id = $request->get_param('form_id') ?? '';
 
         if (empty($post_id)) {
             $subject = ($request->get_param('emailkit_template_title') !== null) ? trim($request->get_param('emailkit_template_title')) : '';
@@ -70,6 +71,7 @@ class TemplateData
                     'emailkit_email_subject'            => $req->subject??'',
                     'emailkit_email_preheader'          => $req->preheader??'',
                     'emailkit_template_initial_content_object' => $template,
+                    'emailkit_form_id' => $form_id,
                 )
             );
             

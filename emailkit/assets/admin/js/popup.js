@@ -342,6 +342,8 @@ jQuery(document).ready(function ($) {
         if(dropdownEmailType == 'saved-templates'){
 
             if(!emailkit_pro_status){
+                jQuery('.emailkit-pro-msg-title').text('Almost There!');
+                jQuery('.emailkit-pro-msg-content').text('We’ve kept your template safe. Go Pro and keep creating!');
                 jQuery('.emailkit-pro-alert-msg-wrapper').show();
                 jQuery('.emailkit-blank-template').hide();
 
@@ -381,6 +383,22 @@ jQuery(document).ready(function ($) {
      * @return {void} 
      */
     function emailkitTemplateFilter(dropdownTemplateType, emailType) {
+
+        if( emailType == 'metform' && dropdownTemplateType == 'more-forms'){
+            jQuery('.emailkit-blank-template').hide();
+            jQuery('.emailkit-edit-template-btn').prop('disabled',true);
+            jQuery('.emailkit-pro-msg-title').text('Only One Step Away!');
+            jQuery('.emailkit-pro-msg-content').text('Your MetForm user confirmation email templates are waiting for you. Upgrade and start creating!');
+            jQuery('.emailkit-pro-alert-msg-wrapper').show();
+            jQuery('.emailkit-pro-alert-msg-wrapper').css('height', 'fit-content');
+        }else if( emailType != 'saved-templates' && dropdownTemplateType != 'more-forms' ){
+            jQuery('.emailkit-blank-template').show();
+            jQuery('.emailkit-edit-template-btn').prop('disabled',false);
+            jQuery('.emailkit-pro-alert-msg-wrapper').hide();
+            jQuery('.emailkit-pro-alert-msg-wrapper').css('height', 'unset');
+        }
+        
+
         jQuery('.emailkit-template-loader-wrapper').show();
         jQuery('.emailkit-add-new-form-model-contents').css('overflow-y', 'hidden');
         

@@ -67,10 +67,12 @@ class UpdateData
 
 			),
 		);
+
+		$template_type = get_post_meta($post_id, 'emailkit_template_type', true);
 		
 		if('active' == trim($request->get_param('emailkit_template_status'))){
 
-			$this->deactivateTemplateTypes(get_post_meta($post_id,'emailkit_template_type', true));
+			$this->deactivateTemplateTypes($template_type);
 		}
 
 		$post_id = wp_update_post($data);

@@ -37,6 +37,13 @@ class Admin
       new Admin\Hooks();
       new Admin\MetaBox();
       new Admin\EmailKitEditor\EmailKitEditorInit();
+  
+    $metform_version = class_exists( '\MetForm\Plugin' ) ? \MetForm\Plugin::instance()->version() : '0.0.0';
+    
+    if ( did_action( 'metform/after_load' ) && version_compare( $metform_version, '4.0.0', '>=' ) ) {
+
+      new Admin\EmailSettings\MetformEmailSettings();
+    }
       
       return true;
     }
@@ -110,6 +117,7 @@ class Admin
         new Admin\Api\TemplateStatus();
         new Admin\Api\OrderItem();
         new Admin\Api\TemplateTypesData();
+        new Admin\Api\CheckForm();
        
         return true;
      

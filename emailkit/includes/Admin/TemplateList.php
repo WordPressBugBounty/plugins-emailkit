@@ -34,6 +34,7 @@ Class TemplateList{
             self::get_partial_refund_template(),
             self::get_wp_new_register_template(),
             self::get_wp_reset_password_template(),
+            self::metform_email_template(),
 
         );
 
@@ -571,6 +572,36 @@ Class TemplateList{
             
         ];
     }
+
+    public static function metform_email_template() {
+    $templates = [];
+    $metform_forms = get_posts([
+        'post_type' => 'metform-form',
+        'post_status' => 'publish',
+        'numberposts' => -1,
+        'orderby' => 'title',
+        'order' => 'ASC',
+    ]);
+
+    // 3. Create a template entry for each form with consistent "Confirmation Mail To User" title
+    foreach ($metform_forms as $form) {
+        $form_id = $form->ID;
+        $form_key = 'metform_form_' . $form_id;
+        
+        $templates[$form_key] = [
+            'id' => $form_id,
+            'package' => 'free',
+            'mail_type' => 'metform',
+            'title' => $form_key,
+            'template_title' => esc_html__('Confirmation Mail To User', 'emailkit'),
+            'preview-thumb' => self::EMAILKIT_URL_TEMAPLTE_URL . 'templates/metform/1/preview-thumb.svg',
+            'demo-url' => get_permalink($form_id),
+            'file' => self::EMAILKIT_URL_TEMAPLTE_DIR . 'templates/metform/1/content.json'
+        ];
+    }
+
+    return $templates;
+}
 
 
 

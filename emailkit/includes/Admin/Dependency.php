@@ -72,6 +72,17 @@ class Dependency {
                     'url' => ('plugins.php?plugin=woocommerce'),
                 ]
             ],
+            'metform' => [
+                'status' => (file_exists(WP_PLUGIN_DIR.'/metform/metform.php') ? (is_plugin_active('metform/metform.php') == false ? self::INACTIVE : self::ACTIVE) : self::NEED_INSTALL),
+                'install' => [
+                    'label' => esc_html__('Install Metform', 'emailkit'),
+                    'url' => self_admin_url('plugin-install.php?s=metform&tab=search&type=term'),
+                ],
+                'active' => [
+                    'label' => esc_html__('Activate Metform', 'emailkit'),
+                    'url' => ('plugins.php?plugin=metform'),
+                ]
+            ],
         ];
 
         return $dependency_list[$dependency] ?? [];

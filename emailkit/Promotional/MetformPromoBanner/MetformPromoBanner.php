@@ -60,7 +60,7 @@ if (!class_exists('\EmailKit\Promotional\MetformPromoBanner\MetformPromoBanner')
       </div>
 						</abbr>
 					</span>
-					<div class="metform-install-activate-btn">Try free Templates</div>
+					<div class="metform-install-activate-btn">Try Free Templates</div>
 					
 				</div>
 			</div>';
