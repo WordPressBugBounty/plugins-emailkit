@@ -94,7 +94,7 @@ class MetformEmailSettings
                 <span class="emailkit-upgrade-text">
                     Get <strong>EmailKit Pro</strong> - the drag-and-drop builder to <br> customize your confirmation emails.
                 </span>
-                <a class="upgrade-button" target="_blank" href="https://wpmet.com/plugin/metform/pricing/">
+                <a class="upgrade-button" target="_blank" href="https://wpmet.com/plugin/emailkit/pricing/">
                     <span><svg xmlns="http://www.w3.org/2000/svg" width="13" height="14" viewBox="0 0 13 14" fill="none">
                             <path d="M10.6 6.3999H2.2C1.53726 6.3999 1 6.93716 1 7.5999V11.7999C1 12.4626 1.53726 12.9999 2.2 12.9999H10.6C11.2627 12.9999 11.8 12.4626 11.8 11.7999V7.5999C11.8 6.93716 11.2627 6.3999 10.6 6.3999Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                             <path d="M3.40015 6.4V4C3.40015 3.20435 3.71622 2.44129 4.27883 1.87868C4.84144 1.31607 5.6045 1 6.40015 1C7.1958 1 7.95886 1.31607 8.52147 1.87868C9.08408 2.44129 9.40015 3.20435 9.40015 4V6.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />

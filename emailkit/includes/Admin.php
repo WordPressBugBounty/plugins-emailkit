@@ -37,12 +37,14 @@ class Admin
       new Admin\Hooks();
       new Admin\MetaBox();
       new Admin\EmailKitEditor\EmailKitEditorInit();
+      new \EmailKit\Promotional\Onboard\Classes\Ajax();
   
     $metform_version = class_exists( '\MetForm\Plugin' ) ? \MetForm\Plugin::instance()->version() : '0.0.0';
     
     if ( did_action( 'metform/after_load' ) && version_compare( $metform_version, '4.0.0', '>=' ) ) {
 
       new Admin\EmailSettings\MetformEmailSettings();
+      new Admin\EmailSettings\MetformShortcodes();
     }
       
       return true;
@@ -108,10 +110,7 @@ class Admin
 
         new Admin\Api\TemplateData();
         new Admin\Api\FetchData();
-        new Admin\Api\DeleteData();
         new Admin\Api\UpdateData();
-        new Admin\Api\UploadImage();
-        new Admin\Api\DeleteImage();
         new Admin\Api\TestEmail();
         new Admin\Api\ShortCodeData();
         new Admin\Api\TemplateStatus();

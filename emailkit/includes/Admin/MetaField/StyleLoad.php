@@ -101,16 +101,41 @@ class StyleLoad
 		// Handle `wp_footer`
 		add_action('wp_footer', 'wp_print_footer_scripts', 20);
 		add_action('wp_footer', 'wp_auth_check_html', 30); */
-        
+
+		// Entry theme style conflict with emailkit
+		if ( isset($_GET['action']) && $_GET['action'] == 'emailkit-builder' && get_template() == 'entry' ) {
+			add_action( 'wp_print_styles', function() {
+				wp_dequeue_style('bootstrap');
+				wp_dequeue_style('swg-css');
+			}, 100);
+		}
 
 		// Hello Elementor theme style conflict with emailkit
-		
 			if ( get_template() == 'hello-elementor' ) {
-
 				wp_dequeue_style('hello-elementor');
+				
+			} 
+
+			// Flatsome theme style conflict with emailkit
+			else if(isset($_GET['action']) && $_GET['action'] == 'emailkit-builder' && get_template() == 'flatsome' ) {
+
+				add_action( 'wp_print_styles', function() {
+					wp_dequeue_style('flatsome-main');
+					
+				});
+
+				?>
+				<style>
+				.mobile-sidebar,
+				.no-scrollbar,
+				.mfp-hide {
+					display: none !important;
+				}
+				</style>
+				<?php
 			}
-		
-		
+
+		$copy_paste_enabled = \EmailKit\Promotional\Util::get_settings('emailkit_enable_copy_paste', 'no');
 		$_nonce = wp_create_nonce('wp_rest');
 		$post_id = isset($_GET['post']) ? sanitize_text_field(wp_unslash($_GET['post'])) : ''; //phpcs:ignore WordPress.Security.NonceVerification -- Nonce can't be added in CPT edit page URL
 		$is_emailkit_pro_active = is_plugin_active('emailkit-pro/emailkit-pro.php');
@@ -132,6 +157,7 @@ class StyleLoad
 			'isWoocommreceActivate' => is_plugin_active('woocommerce/woocommerce.php') ? 'active' : 'inactive',
 			'isShippingZoneAvailable' => $is_shipping_zone_available ? 'active' : 'inactive',
 			'iconBaseUrl' => self::EMAILKIT_ICON_BASE_URL,
+			'copyPasteEnabled' => ($is_emailkit_pro_active && $copy_paste_enabled == 'yes') ? true : false,
         ];
 
 		

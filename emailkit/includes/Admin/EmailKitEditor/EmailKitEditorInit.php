@@ -42,6 +42,16 @@ class EmailKitEditorInit
     
     public function add_editor_template()
     {
+
+        if(is_plugin_active('uafrica-shipping/uafrica-shipping.php') || ( get_template() == 'entry' )){
+         // Check if WooCommerce is active and initialize session if needed
+            if (class_exists('WooCommerce') && function_exists('WC')) {
+                if (is_null(WC()->session) && !headers_sent()) {
+                    WC()->session = new \WC_Session_Handler();
+                    WC()->session->init();
+                }
+            }
+        }
         ?>
         <!DOCTYPE html>
         <html>

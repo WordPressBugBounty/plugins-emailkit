@@ -12,6 +12,7 @@ class Ajax {
 
 	public function __construct() {
 		add_action( 'wp_ajax_emailkit_admin_action', [ $this, 'emailkit_admin_action' ] );
+		add_action( 'wp_ajax_emailkit_copy_paste_action', ['\EmailKit\Promotional\Util', 'emailkit_copy_paste_action'] );
 		$this->utils = Util::instance();
 	}
 

@@ -2,9 +2,9 @@
 
 Contributors: Ataurr, XpeedStudio
 Tags: Email Template, WordPress Email Builder, WordPress email customizer, WooCommerce email customizer, WooCommerce email template customizer, Email Customizer
-Tested up to: 6.8
+Tested up to: 6.9
 Requires at least: 5.0
-Stable tag: 1.6.0
+Stable tag: 1.6.2
 Requires PHP: 7.4
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -19,7 +19,7 @@ We believe in an effortless and intuitive user experience, that’s why **[Email
 
 Your custom transactional templates for different stages of orders placed on your WooCommerce site will increase customer loyalty. These include **new order templates, orders in progress, canceled and returned products, product stock updates, customer invoices,** etc.  
 
-On the design front, you have **26+ email builder elements** to create stylish and engaging custom WooCommerce email templates. Such as Shipping Address, Billing Address, Order Item, and Custom Note. Besides, basic ones like Heading, Text, Image, Container, Column, Spacer, Divider Button, Video, and social icons are bundled with EmailKit. Plus, elements for Account Registration and Password Reset are available too.
+On the design front, you have **25+ email builder elements** to create stylish and engaging custom WooCommerce email templates. Such as Shipping Address, Billing Address, Order Item, and Custom Note. Besides, basic ones like Heading, Text, Image, Container, Column, Spacer, Divider Button, Video, and social icons are bundled with EmailKit. Plus, elements for Account Registration and Password Reset are available too.
 
 Overall, EmailKit empowers you to create a cohesive and branded communication experience with your customers, enhancing engagement and fostering a professional image for your online store.
 
@@ -72,7 +72,7 @@ With EmailKit you can design **17 different types of email for different stages 
 
 ### WooCommerce Templates
 
-1. **New Order:** Greet the customers with a captivating WooCommerce customized email. When users place a new order in your WooCommerce store, they will receive this email.
+1. **New Order:** Greet your customers with captivating WooCommerce emails! Send beautifully customized messages that make every order feel special.
 
 2. **Customer Invoice:** Email to send the invoice to the customers when they complete their payment.
 
@@ -81,29 +81,30 @@ With EmailKit you can design **17 different types of email for different stages 
 4. **Completed Order:** WooCommerce sends when the order is completed. Design a template for WooCommerce completed order emails.
 
 5. **Cancelled Order:** Send emails on the cancellation of orders. Create a canceled order WooCommerce email template with EmailKit.
+6. **Failed Order Admin:** Our email designer offers this WooCommerce email template that notifies the store administrator whenever a customer’s order fails to be processed or delivered.
 
-6. **Failed Order:** With EmailKit, create Failed Order WooCommerce email template and inform the customers when the order has failed to be delivered.
+7. **Failed Order Customer :** With the WordPress email builder, you can also create Failed Order WooCommerce email template and inform the customers when the order has failed to be delivered.
 
-7. **Order on Hold:** Create a customize WooCommerce email template for order on hold Wocommerce email to inform the customers if their order is postponed temporarily.
+8. **Order on Hold:** Create a customize WooCommerce email template for order on hold Wocommerce email to inform the customers if their order is postponed temporarily.
 
-8. **Refunded Order:** Design custom order email WooCommerce template when you send a refund for an order on your WooCommerce store.
+9. **Refunded Order:** Design custom order email WooCommerce template when you send a refund for an order on your WooCommerce store.
 
-9. **Customer Note:** Send a note to the customer to send additional information. Use the Customer Note email template to send the note.
+10. **Customer Note:** Send a note to the customer to send additional information. Use the Customer Note email template to send the note.
 
-10. **Low Stock:** An alert email when an item on the cart is low on stock! Design low-stock WooCommerce email template.
+11. **Low Stock:** An alert email when an item on the cart is low on stock! Design low-stock WooCommerce email template.
 
-11. **No Stock:** An alert email when an item runs out of stock! Design a no-stock WooCommerce email template.
+12. **No Stock:** An alert email when an item runs out of stock! Design a no-stock WooCommerce email template.
 
-12. **New Account:** Send an email when a new user completes registration on your WooCommerce site.
+13. **New Account:** Send an email when a new user completes registration on your WooCommerce site.
 
-13. **Reset Password:** Reset Password email template, an email sent when a user forgets the password and wants to set it.
+14. **Reset Password:** Reset Password email template, an email sent when a user forgets the password and wants to set it.
 
-14. **Product on Back Order:** Customize WooCommerce order emails to be sent when users add an out-of-stock product to their wishlist.
+15. **Product on Back Order:** Customize WooCommerce order emails to be sent when users add an out-of-stock product to their wishlist.
 
-15. **Partial Refund:** This email template is sent when a store owner issues a partial refund due to an insufficient quantity of items or other tax-related reasons.
+16. **Partial Refund:** This email template is sent when a store owner issues a partial refund due to an insufficient quantity of items or other tax-related reasons.
 
 ## EMAILKIT ELEMENTS:
-EmailKit - email customizer for WooCommerce, comes with **26+** drag-and-drop elements that help you enhance your customer experience and increase conversions.
+EmailKit - email customizer for WooCommerce, comes with **25+** drag-and-drop elements that help you enhance your customer experience and increase conversions.
 
 ### WooCommerce Elements
 🔸 Shipping Address  
@@ -181,6 +182,16 @@ RoxSlider - It is a powerful tool for slider creation. You can design stunning s
 Visit [Wpmet](https://wpmet.com/) to learn more about how to get the best of WordPress with [Tutorials, Tips & Tricks](https://wpmet.com/blog)!
 
 == Changelog ==
+
+Version 1.6.2 -	14/12/2025
+Fixed: Conflict issue with entry theme.
+Fixed: Resolved an authenticated (Author+) path traversal issue that could allow arbitrary file access.
+
+Version 1.6.1 -	05/10/2025
+Added: Metform shortcode support for confirmation email.
+Improved: Copy paste feature.
+Fixed: Conflict issue with Bob Go smart shipping solution for WooCommerce and flatsome theme.
+Fixed: Vulnerability that could allow arbitrary content deletion through the API.
 
 Version 1.6.0 -	11/08/2025
 Added: Metform integration - Confirmation email edit with emailkit option.

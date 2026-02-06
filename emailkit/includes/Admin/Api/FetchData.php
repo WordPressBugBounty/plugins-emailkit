@@ -35,7 +35,7 @@ class FetchData
             ];
         }
 
-        if (!is_user_logged_in() || !current_user_can('publish_posts')) {
+        if (!is_user_logged_in() || !current_user_can('manage_options')) {
             return [
                 'status'    => 'fail',
                 'message'   => [ __('Access denied.', 'emailkit') ]

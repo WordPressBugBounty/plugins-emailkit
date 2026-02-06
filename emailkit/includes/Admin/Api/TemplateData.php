@@ -31,7 +31,7 @@ class TemplateData
             ];
         }
 
-        if (!is_user_logged_in() || !current_user_can( 'publish_posts' )) {
+        if (!is_user_logged_in() || !current_user_can( 'manage_options' )) {
             return [
                 'status'    => 'fail',
                 'message'   => ['Access denied.']

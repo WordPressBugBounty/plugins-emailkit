@@ -256,9 +256,11 @@ class Promotional{
                     if(isset($_GET['emailkit-onboard-steps']) && $_GET['emailkit-onboard-steps'] == 'loaded' && isset($_GET['emailkit-onboard-steps-nonce'])  && wp_verify_nonce(sanitize_text_field(wp_unslash($_GET['emailkit-onboard-steps-nonce'])),'emailkit-onboard-steps-action')) {
                         wp_enqueue_style( 'emailkit-steps-css-steps' ); // needed when onboardning
                         Onboard::instance()->views();
+                        return; // Exit early during onboarding to prevent showing ProConsent form
                     }
                 }
 
+                // Only show ProConsent form when not in onboarding mode
                 (new \EmailKit\Promotional\ProConsent())->get_consent_form();
             }
         );

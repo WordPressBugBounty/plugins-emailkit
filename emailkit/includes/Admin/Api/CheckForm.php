@@ -40,7 +40,7 @@ class CheckForm
             ];
         }
 
-        if (!is_user_logged_in() || !current_user_can('publish_posts')) {
+        if (!is_user_logged_in() || !current_user_can('manage_options')) {
             return [
                 'status' => 'fail',
                 'message' => [__('Access denied.', 'emailkit')]
@@ -161,23 +161,34 @@ class CheckForm
         $html = '';
         if (!empty($request->get_param('emailkit-editor-template')) && trim($request->get_param('emailkit-editor-template')) !== '') {
             $template_path = $request->get_param('emailkit-editor-template');
-            $template = file_exists($template_path) ? file_get_contents($template_path) : '';
-            $html_path = str_replace("content.json", "content.html", $template_path);
-            $html = file_exists($html_path) ? file_get_contents($html_path) : '';
+            $allowed_base_path = wp_upload_dir()['basedir'] . '/emailkit/templates/';
+            $real_path = realpath($template_path);
+            if ($real_path === false || strpos($real_path, realpath($allowed_base_path)) !== 0) {
+                return new WP_REST_Response(['success' => false, 'message' => __('Invalid template path', 'emailkit')], 400);
+            }
+
+            $template = file_exists($real_path) ? file_get_contents($real_path) : '';
+            $html_path = str_replace("content.json", "content.html", $real_path);
+            
+            // Validate HTML path as well
+            $real_html_path = realpath($html_path);
+            if ($real_html_path !== false && strpos($real_html_path, realpath($allowed_base_path)) === 0) {
+                $html = file_exists($real_html_path) ? file_get_contents($real_html_path) : '';
+            }
         }
 
         // Create new emailkit post
         $post_id = wp_insert_post([
-            'post_title' => $template_title,
+            'post_title' => sanitize_text_field($template_title),
             'post_type' => 'emailkit',
             'post_status' => 'publish',
             'meta_input' => [
-                'emailkit_template_type' => $template_type,
-                'emailkit_form_id' => $form_id,
+                'emailkit_template_type' => sanitize_text_field($template_type),
+                'emailkit_form_id' => absint($form_id),
                 'emailkit_template_status' => 'active',
-                'emailkit_template_content_html' => $html,
+                'emailkit_template_content_html' => wp_kses_post($html),
                 'emailkit_template_content_object' => $template,
-                'emailkit_email_type' => $request->get_param('emailkit_email_type'),
+                'emailkit_email_type' => sanitize_text_field($request->get_param('emailkit_email_type')),
             ]
         ]);
 
