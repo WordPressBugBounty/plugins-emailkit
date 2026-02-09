@@ -154,6 +154,13 @@ class EmailKitAjax {
             return false;
         }
 
+        // check user capability
+        if( ! current_user_can('manage_options') ) {
+
+            wp_send_json_error( esc_html__( 'Insufficient permissions', 'emailkit' ), 403 );
+            exit;
+        }
+
         $ID = isset( $_POST[ 'id' ] ) ? sanitize_text_field( wp_unslash( $_POST[ 'id' ] ) ) : null;
         $new_title = isset( $_POST[ 'title' ] ) ? sanitize_text_field( wp_unslash( $_POST[ 'title' ] ) ) : '';
         $data = [];
