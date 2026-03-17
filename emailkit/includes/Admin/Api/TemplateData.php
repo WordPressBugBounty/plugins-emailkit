@@ -45,9 +45,26 @@ class TemplateData
     
 
        
-        if(!empty($request->get_param( 'emailkit-editor-template' ) && trim($request->get_param( 'emailkit-editor-template' )) !== '')){
-            $template = file_get_contents($request->get_param( 'emailkit-editor-template' ))??'';
-            $html = file_get_contents(str_replace( "content.json", "content.html", $request->get_param( 'emailkit-editor-template' )))??'';
+        if (!empty($request->get_param('emailkit-editor-template')) && trim($request->get_param('emailkit-editor-template')) !== '') {
+            $template_path = $request->get_param('emailkit-editor-template');
+            $allowed_base_path = wp_upload_dir()['basedir'] . '/emailkit/templates/';
+            $real_path = realpath($template_path);
+            if ($real_path === false || strpos($real_path, realpath($allowed_base_path)) !== 0) {
+                return [
+                    'status'    => 'fail',
+                    'message'   => [__('Invalid template path', 'emailkit')]
+                ];
+            }
+
+            $template = file_exists($real_path) ? file_get_contents($real_path) : '';
+            $html_path = str_replace("content.json", "content.html", $real_path);
+            
+            // Validate HTML path as well
+            $real_html_path = realpath($html_path);
+            if ($real_html_path !== false && strpos($real_html_path, realpath($allowed_base_path)) === 0) {
+                
+                $html = file_exists($real_html_path) ? file_get_contents($real_html_path) : '';
+            }
         }
 
         $subject = !empty($request->get_param( 'emailkit_template_title' ))? trim($request->get_param( 'emailkit_template_title' )) : null;
