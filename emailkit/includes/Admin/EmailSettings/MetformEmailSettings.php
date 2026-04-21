@@ -53,7 +53,7 @@ class MetformEmailSettings
         $template_type = '';
 
         // Check for existing template with form-specific type
-        $post_id = $this->get_emailkit_post_id($mf_template_type, $form_id);
+        $post_id = $this->get_emailkit_post_id($form_id, $mf_template_type);
 
         // If no form-specific template exists, check for generic metform template
         if (null === $post_id) {

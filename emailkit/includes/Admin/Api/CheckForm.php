@@ -161,9 +161,33 @@ class CheckForm
         $html = '';
         if (!empty($request->get_param('emailkit-editor-template')) && trim($request->get_param('emailkit-editor-template')) !== '') {
             $template_path = $request->get_param('emailkit-editor-template');
-            $allowed_base_path = wp_upload_dir()['basedir'] . '/emailkit/templates/';
             $real_path = realpath($template_path);
-            if ($real_path === false || strpos($real_path, realpath($allowed_base_path)) !== 0) {
+            $allowed_base_paths = [
+                wp_upload_dir()['basedir'] . '/emailkit/templates/',
+                EMAILKIT_DIR . 'includes/templates/',
+            ];
+
+            $real_allowed_base_paths = [];
+            foreach ($allowed_base_paths as $allowed_base_path) {
+                $real_allowed_base_path = realpath($allowed_base_path);
+                if ($real_allowed_base_path !== false) {
+                    $real_allowed_base_paths[] = $real_allowed_base_path;
+                }
+            }
+
+            if ($real_path === false || empty($real_allowed_base_paths)) {
+                return new WP_REST_Response(['success' => false, 'message' => __('Invalid template path', 'emailkit')], 400);
+            }
+
+            $is_allowed_path = false;
+            foreach ($real_allowed_base_paths as $real_allowed_base_path) {
+                if (strpos($real_path, $real_allowed_base_path) === 0) {
+                    $is_allowed_path = true;
+                    break;
+                }
+            }
+
+            if (!$is_allowed_path) {
                 return new WP_REST_Response(['success' => false, 'message' => __('Invalid template path', 'emailkit')], 400);
             }
 
@@ -172,8 +196,13 @@ class CheckForm
             
             // Validate HTML path as well
             $real_html_path = realpath($html_path);
-            if ($real_html_path !== false && strpos($real_html_path, realpath($allowed_base_path)) === 0) {
-                $html = file_exists($real_html_path) ? file_get_contents($real_html_path) : '';
+            if ($real_html_path !== false) {
+                foreach ($real_allowed_base_paths as $real_allowed_base_path) {
+                    if (strpos($real_html_path, $real_allowed_base_path) === 0) {
+                        $html = file_exists($real_html_path) ? file_get_contents($real_html_path) : '';
+                        break;
+                    }
+                }
             }
         }
 
