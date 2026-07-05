@@ -1,7 +1,9 @@
 <?php 
 
 namespace EmailKit\Admin\Api;
+
 use EmailKit\Admin\TemplateList;
+use EmailKit\Admin\Emails\Helpers\Utils;
 
 defined('ABSPATH') || exit;
 
@@ -83,6 +85,7 @@ class TemplateTypesData {
             // Continue processing templates with a valid file path
             if (!empty($matching_template['file'])) {
                 $json_content = file_get_contents($matching_template['file']);
+                $json_content = Utils::normalize_template_asset_urls($json_content);
                 $template_string = stripslashes($json_content);
                 $template_object = json_decode($template_string, true);
         
@@ -109,4 +112,5 @@ class TemplateTypesData {
         ];
 
     }
+
 }

@@ -304,8 +304,16 @@ class Utils
                     // Duplicate the row for each replacement
                     foreach ($replacements as $replacement) {
                         // Replace placeholders in the duplicated row
-                        $placeholders = ["{{product_name}}", "{{quantity}}", "{{total}}", "{{product_price}}", "{{product_image_url}}", "{{product_sku}}", "{{product_attributes}}","{{related_products}}"];
-                        $rows .= str_replace($placeholders, $replacement, $originalRow);
+                        $placeholders = ["{{product_name}}", "{{quantity}}", "{{total}}", "{{product_price}}", "{{product_image_url}}", "{{product_sku}}", "{{product_attributes}}", "{{purchase_note}}"];
+                        $newRow = str_replace($placeholders, $replacement, $originalRow);
+                        
+                        // If purchase note is empty, remove the purchase_note_wrapper
+                        if (empty($replacement[7])) {
+                            $newRow = preg_replace('/<p[^>]*class="purchase_note_wrapper"[^>]*>.*?<\/p>/s', '', $newRow);
+                            $newRow = preg_replace('/<div[^>]*class="purchase_note_wrapper"[^>]*>.*?<\/div>/s', '', $newRow);
+                        }
+                        
+                        $rows .= $newRow;
                     }
                 }
     
@@ -471,5 +479,44 @@ class Utils
         ];
 
         return $details;
+    }
+
+
+    /**
+     * Convert bundled template image paths to the current site's absolute plugin URLs.
+     */
+    public static function normalize_template_asset_urls($content)
+    {
+        if (!is_string($content) || $content === '') {
+            return $content;
+        }
+
+        $site_base_url = trailingslashit(home_url());
+        $emailkit_pro_url = $site_base_url . 'wp-content/plugins/emailkit-pro/';
+
+        if (!function_exists('is_plugin_active')) {
+            require_once ABSPATH . 'wp-admin/includes/plugin.php';
+        }
+
+        $is_emailkit_pro_active = is_plugin_active('emailkit-pro/emailkit-pro.php');
+
+        if ($is_emailkit_pro_active) {
+
+            return str_replace(
+                [
+                    'https://demo.wpmet.com/emailkit/wp-content/plugins/emailkit-pro/',
+                    'http://demo.wpmet.com/emailkit/wp-content/plugins/emailkit-pro/',
+                    '/wp-content/plugins/emailkit-pro/',
+                ],
+                [
+                    $emailkit_pro_url,
+                    $emailkit_pro_url,
+                    $emailkit_pro_url,
+                ],
+                $content
+            );
+        }
+
+        return $content;
     }
 }

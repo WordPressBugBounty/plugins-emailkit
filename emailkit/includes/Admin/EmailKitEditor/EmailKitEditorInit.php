@@ -62,7 +62,18 @@ class EmailKitEditorInit
         <meta name="next-head-count" content="2" />
         </head>
 
-        <body class="<?php body_class(['post-'.get_the_ID()]); ?>">
+        <body class="<?php
+            // Temporarily remove all body_class filters so third-party plugins that call
+            // admin-only functions (e.g. get_current_screen) cannot cause fatal errors
+            // in this custom editor context. WordPress core classes are still applied.
+            global $wp_filter;
+            $saved_body_class_filter = isset( $wp_filter['body_class'] ) ? clone $wp_filter['body_class'] : null;
+            remove_all_filters( 'body_class' );
+            body_class( [ 'post-' . get_the_ID() ] );
+            if ( $saved_body_class_filter !== null ) {
+                $wp_filter['body_class'] = $saved_body_class_filter;
+            }
+        ?>">
 
         <?php 
             require_once EMAILKIT_PATH . '/dist/editor.php'; 

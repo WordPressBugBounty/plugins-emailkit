@@ -2,6 +2,8 @@
 
 namespace EmailKit\Admin\Api;
 
+use EmailKit\Admin\Emails\Helpers\Utils;
+
 defined('ABSPATH') || exit;
 class TemplateData
 {
@@ -57,6 +59,7 @@ class TemplateData
             }
 
             $template = file_exists($real_path) ? file_get_contents($real_path) : '';
+            $template = Utils::normalize_template_asset_urls($template);
             $html_path = str_replace("content.json", "content.html", $real_path);
             
             // Validate HTML path as well
@@ -64,6 +67,7 @@ class TemplateData
             if ($real_html_path !== false && strpos($real_html_path, realpath($allowed_base_path)) === 0) {
                 
                 $html = file_exists($real_html_path) ? file_get_contents($real_html_path) : '';
+                $html = Utils::normalize_template_asset_urls($html);
             }
         }
 
@@ -141,4 +145,5 @@ class TemplateData
             }
         }
     }
+
 }

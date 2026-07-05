@@ -81,6 +81,10 @@ class OrderItem {
                         $product_image_url = wc_placeholder_img_src();
                     }
 
+                    // Get purchase note
+                    $purchase_note = $product->get_purchase_note();
+                    $purchase_note = !empty($purchase_note) ? wp_kses_post($purchase_note) : '';
+
                     $attributes = [];
                     $meta_data = $item->get_meta_data();
 
@@ -190,6 +194,7 @@ class OrderItem {
                     "product_price" => wc_price($product_price),
                     "product_sku" => $product_sku,
                     "product_attributes" => $product_attributes,
+                    "purchase_note" => $purchase_note,
                     "quantity" => $item_qty,
                 ];
 

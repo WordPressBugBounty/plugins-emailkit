@@ -75,6 +75,11 @@ class CompletedOrder
 			  $product_image_url = $product_image_id ? wp_get_attachment_url($product_image_id) : wc_placeholder_img_src();
 
 			  $product_sku = $product->get_sku();
+			  
+			  // Get purchase note
+			  $purchase_note = $product->get_purchase_note();
+			  $purchase_note = !empty($purchase_note) ? wp_kses_post($purchase_note) : '';
+			  
 			  $attributes = [];
 			  $meta_data = $item->get_meta_data();
 
@@ -102,7 +107,7 @@ class CompletedOrder
 				$formatted_attributes = !empty($attributes) ? implode(', ', $attributes) : '';
 		
 
-				$replacements[] = [$product_name, $item_qty, $formatted_item_total, $formatted_product_price, $product_image_url, $product_sku, $formatted_attributes];
+				$replacements[] = [$product_name, $item_qty, $formatted_item_total, $formatted_product_price, $product_image_url, $product_sku, $formatted_attributes, $purchase_note];
 	  
 			}
 

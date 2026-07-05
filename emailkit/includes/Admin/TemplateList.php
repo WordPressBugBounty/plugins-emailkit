@@ -32,6 +32,7 @@ Class TemplateList{
             self::get_no_stock_template(),
             self::get_back_order_template(),
             self::get_partial_refund_template(),
+            self::get_payment_gateway_template(),
             self::get_wp_new_register_template(),
             self::get_wp_reset_password_template(),
             self::metform_email_template(),
@@ -479,6 +480,22 @@ Class TemplateList{
             
         ];
 
+    }
+
+    public static function get_payment_gateway_template(){
+
+        return [
+            'template-40' => [
+                'id'             => 39,
+                'package'        => 'free',
+                'mail_type'      => 'woocommerce',
+                'title'          => EmailLists::PAYMENT_GATEWAY_ENABLED,
+                'template_title' => EmailLists::woocommerce_email(EmailLists::PAYMENT_GATEWAY_ENABLED),
+                'preview-thumb'  => self::EMAILKIT_URL_TEMAPLTE_URL . 'templates/payment-gateway/preview-thumb.svg',
+                'demo-url'       => 'https://wpmet.com/',
+                'file'           => self::EMAILKIT_URL_TEMAPLTE_DIR . 'templates/payment-gateway/content.json',
+            ],
+        ];
     }
 
     public static function get_wp_new_register_template(){

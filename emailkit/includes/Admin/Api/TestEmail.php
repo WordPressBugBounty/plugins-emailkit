@@ -52,12 +52,38 @@ class TestEmail {
 			'Content-Type: text/html; charset=UTF-8',
 		];
 
-        $sent = wp_mail($to, $subject, $message, $headers);
-       
-        if(!$sent){
-            $error_message = error_get_last();
-            $error_message = str_contains($error_message['message'] ?? '', 'Failed to connect to mailserver')? __( 'Failed to connect to mailserver', 'emailkit' ) : __( 'Failed to send the test email.', 'emailkit' );
-       }
+        $mail_error = null;
+        add_action( 'wp_mail_failed', function( \WP_Error $wp_error ) use ( &$mail_error ) {
+            $mail_error = $wp_error;
+        } );
+
+        $sent = wp_mail( $to, $subject, $message, $headers );
+
+        if ( ! $sent ) {
+            $error_message = __( 'Failed to send the test email. Please configure an SMTP plugin.', 'emailkit' );
+
+            if ( $mail_error instanceof \WP_Error ) {
+                $raw = $mail_error->get_error_message();
+
+                $error_map = [
+                    'Could not instantiate mail function'   => __( 'Mail server is not configured on this server. Please use an SMTP plugin.', 'emailkit' ),
+                    'SMTP connect() failed'                 => __( 'Failed to connect to the SMTP server. Please check your SMTP settings.', 'emailkit' ),
+                    'Failed to connect to mailserver'       => __( 'Failed to connect to the mail server. Please check your SMTP host and port.', 'emailkit' ),
+                    'Could not connect to SMTP host'        => __( 'Could not connect to the SMTP host. Please verify your SMTP settings.', 'emailkit' ),
+                    'SMTP Error: Could not authenticate'    => __( 'SMTP authentication failed. Please check your username and password.', 'emailkit' ),
+                    'Invalid address'                       => __( 'The recipient email address is invalid. Please enter a valid email.', 'emailkit' ),
+                    'Connection refused'                    => __( 'Connection to the mail server was refused. Please check your SMTP host and port.', 'emailkit' ),
+                    'Connection timed out'                  => __( 'Connection to the mail server timed out. Please check your SMTP host and port.', 'emailkit' ),
+                ];
+
+                foreach ( $error_map as $keyword => $friendly_message ) {
+                    if ( str_contains( $raw, $keyword ) ) {
+                        $error_message = $friendly_message;
+                        break;
+                    }
+                }
+            }
+        }
         
 
         if ($sent) {

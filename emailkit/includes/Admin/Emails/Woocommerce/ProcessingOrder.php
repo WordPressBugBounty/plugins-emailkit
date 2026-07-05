@@ -80,8 +80,13 @@ class ProcessingOrder
 				$product_image_url = $product_image_id ? wp_get_attachment_url($product_image_id) : wc_placeholder_img_src();
 
 				$product_sku = $product->get_sku();
-				$attributes = [];
-				$meta_data = $item->get_meta_data();
+			
+			// Get purchase note
+			$purchase_note = $product->get_purchase_note();
+			$purchase_note = !empty($purchase_note) ? wp_kses_post($purchase_note) : '';
+			
+			$attributes = [];
+			$meta_data = $item->get_meta_data();
 
 				foreach ($meta_data as $meta) {
 					// Check for product attribute (pa_ is the prefix for standard attributes)
@@ -107,14 +112,12 @@ class ProcessingOrder
 				$formatted_attributes = !empty($attributes) ? implode(', ', $attributes) : '';
 
 				
-				$replacements[] = [$product_name, $item_qty, $formatted_item_total, $formatted_product_price, $product_image_url, $product_sku, $formatted_attributes];
+			$replacements[] = [$product_name, $item_qty, $formatted_item_total, $formatted_product_price, $product_image_url, $product_sku, $formatted_attributes, $purchase_note];
 
-			}
-
+		}
 			$html = \EmailKit\Admin\Emails\Helpers\Utils::order_items_replace($html, $replacements);
 
 			$order = wc_get_order($order_id);
-
 			// Order details array for email
 			$details = $details = Utils::woocommerce_order_email_contents($order);
 

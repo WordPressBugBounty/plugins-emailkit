@@ -82,6 +82,7 @@ class Admin
         new Admin\Emails\Woocommerce\LowStock();
         new Admin\Emails\Woocommerce\NoStock();
         new Admin\Emails\Woocommerce\PartialRefund();
+        new Admin\Emails\Woocommerce\PaymentGatewayEnabled();
         new Admin\EmailSettings\WcEmailSettings();
         
         return true;

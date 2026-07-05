@@ -67,6 +67,17 @@ class ShortCodeData {
 
        if(is_plugin_active('woocommerce/woocommerce.php')) {
 
+            // Payment gateway shortcodes
+            $payment_gateways = WC()->payment_gateways()->get_available_payment_gateways();
+            $first_gateway = !empty($payment_gateways) ? reset($payment_gateways) : null;
+            $admin_email     = get_option('admin_email');
+            $admin_user      = get_user_by('email', $admin_email);
+            $short_codes[] = ['key' => 'gateway_title', 'value' => $first_gateway ? $first_gateway->get_method_title() : __('Check Payments', 'emailkit')];
+            $short_codes[] = ['key' => 'gateway_settings_url', 'value' => $first_gateway ? esc_url(admin_url('admin.php?page=wc-settings&tab=checkout&section=' . $first_gateway->id)) : esc_url(admin_url('admin.php?page=wc-settings&tab=checkout'))];
+            $short_codes[] = ['key' => 'username', 'value' => $admin_user ? $admin_user->user_login : $admin_email];
+            $short_codes[] = ['key' => 'admin_email', 'value' => $admin_email];
+
+
 
             $orders = wc_get_orders([
                 'limit' => 1,
@@ -207,8 +218,9 @@ class ShortCodeData {
             ['key' => 'display_name', 'value' => $display_name],
             ['key' => 'wp_user_email', 'value' => $user_email],
             ['key' => 'app_name', 'value' => $app_name],
-
-
+            ['key' => 'gateway_title', 'value' => 'Check Payments'],
+            ['key' => 'gateway_settings_url', 'value' => admin_url('admin.php?page=wc-settings&tab=checkout&section=cheque')],
+            ['key' => 'username', 'value' => 'admin'],
         ];
 
         return [

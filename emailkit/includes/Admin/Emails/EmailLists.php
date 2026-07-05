@@ -23,6 +23,7 @@ class EmailLists {
     const WP_NEW_REGISTER = "new_register";
     const WP_RESET_PASSWORD = "reset_account";
     const PARTIAL_REFUND = "partial_refund";
+    const PAYMENT_GATEWAY_ENABLED = "admin_payment_gateway_enabled";
     const METFORM = "metform";
     
     
@@ -49,6 +50,7 @@ class EmailLists {
             self::CUSTOMER_NOTE                       =>  esc_html__('Customer Note', 'emailkit'),
             self::NEW_ACCOUNT                         =>  esc_html__('New Account', 'emailkit'),
             self::RESET_PASSWORD                      =>  esc_html__('Reset Password', 'emailkit'),
+            self::PAYMENT_GATEWAY_ENABLED             =>  esc_html__('Payment Gateway Enabled', 'emailkit'),
         ];
         
         if($template_type){
