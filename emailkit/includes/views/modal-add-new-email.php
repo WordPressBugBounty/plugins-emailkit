@@ -64,31 +64,31 @@
                 </div>
                 <div>
                     <div class="emailkit-template-alert-msg emailkit-select-template-type-msg">
-                        <p>Please select a template.</p>
+                        <p><?php esc_html_e('Please select a template.', 'emailkit'); ?></p>
                     </div>
                     <ul class="emailkit-templates-list" style="position: relative;overflow-y: auto;height: 300px; overflow-x: hidden;">
-                    <p class="emailkit-template-delete-success-notification" style="color: green; margin: auto; display: none;">Template Deleted Successfully.</p>
+                    <p class="emailkit-template-delete-success-notification" style="color: green; margin: auto; display: none;"><?php esc_html_e('Template Deleted Successfully.', 'emailkit'); ?></p>
                         <div class="emailkit-template-loader-wrapper">
                             <div class="emailkit-template-loader"></div>
                         </div>
                         <div class="emailkit-saved-template-alert-msg emailkit-template-alert-msg emailkit-saved-template-info">
                             <div class="emailkit-template-alert-msg-wrap">
                                 <p><span class="emailkit-saved-template-name"></span></p>
-                                <button class="emailkit-saved-template-delete"><span style="display: inline-block; width: 14px; height: 15px"><svg  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21q.512.078 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48 48 0 0 0-3.478-.397m-12 .562q.51-.089 1.022-.165m0 0a48 48 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a52 52 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a49 49 0 0 0-7.5 0"/></svg></span>Delete this template</button>
+                                <button class="emailkit-saved-template-delete"><span style="display: inline-block; width: 14px; height: 15px"><svg  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21q.512.078 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48 48 0 0 0-3.478-.397m-12 .562q.51-.089 1.022-.165m0 0a48 48 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a52 52 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a49 49 0 0 0-7.5 0"/></svg></span><?php esc_html_e('Delete this template', 'emailkit'); ?></button>
 
                                 <div class="emailkit-template-delete-popover">
                                     <div class="emailkit-template-delete-popover-heading">
-                                        <header>Do you want to delete?</header>
+                                        <header><?php esc_html_e('Do you want to delete?', 'emailkit'); ?></header>
                                     </div>
                                     <div class="emailkit-template-delete-btns">
-                                        <button class="emailkit-template-delete-btn emailkit-template-delete-btn-confirm">Yes</button>
-                                        <button class="emailkit-template-delete-btn emailkit-template-delete-btn-cancel">No</button>
+                                        <button class="emailkit-template-delete-btn emailkit-template-delete-btn-confirm"><?php esc_html_e('Yes', 'emailkit'); ?></button>
+                                        <button class="emailkit-template-delete-btn emailkit-template-delete-btn-cancel"><?php esc_html_e('No', 'emailkit'); ?></button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="emailkit-template-alert-msg emailkit-template-not-available">
-                            <p>No saved templates available.</p>
+                            <p><?php esc_html_e('No saved templates available.', 'emailkit'); ?></p>
                         </div>
 
                         <div class="emailkit-pro-alert-msg-wrapper">
@@ -101,9 +101,9 @@
                                     </svg>
                                 </div>
                                 <div class="emailkit-pro-alert-msg-content">
-                                    <h1 class="emailkit-pro-msg-title">You’re One Step Away!</h1>
-                                    <p class="emailkit-pro-msg-content">Upgrade to Pro and get all the premium features!</p>
-                                    <a href="https://wpmet.com/plugin/emailkit/pricing/" target="_blank" class="emailkit-pro-alert-msg-btn">Upgrade to Pro</a>
+                                    <h1 class="emailkit-pro-msg-title"><?php esc_html_e('You’re One Step Away!', 'emailkit'); ?></h1>
+                                    <p class="emailkit-pro-msg-content"><?php esc_html_e('Upgrade to Pro and get all the premium features!', 'emailkit'); ?></p>
+                                    <a href="https://wpmet.com/plugin/emailkit/pricing/" target="_blank" class="emailkit-pro-alert-msg-btn"><?php esc_html_e('Upgrade to Pro', 'emailkit'); ?></a>
                                 </div>
                             </div>
 

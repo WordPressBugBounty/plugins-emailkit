@@ -1,23 +1,23 @@
-# Copyright (C) 2025 wpmet
+# Copyright (C) 2026 wpmet
 # This file is distributed under the GPLv3.
 msgid ""
 msgstr ""
-"Project-Id-Version: EmailKit 1.5.8\n"
+"Project-Id-Version: EmailKit 1.6.7\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/emailkit\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-02-05T06:43:26+01:00\n"
+"POT-Creation-Date: 2026-07-21T12:43:49+02:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.10.0\n"
+"X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: emailkit\n"
 
 #. Plugin Name of the plugin
 #: EmailKit.php
-#: includes/Admin.php:122
-#: includes/Admin.php:123
+#: includes/Admin.php:134
+#: includes/Admin.php:135
 #: Promotional/Onboard/views/onboard-steps/step-05.php:13
 msgid "EmailKit"
 msgstr ""
@@ -42,59 +42,66 @@ msgstr ""
 msgid "https://wpmet.com"
 msgstr ""
 
-#: includes/Admin.php:136
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
+#: includes/Admin.php:148
+#: Promotional/Promotional.php:242
 #: src/components/editor/Viewport/EditorSidebar/index.js:31
 msgid "Settings"
 msgstr ""
 
-#: includes/Admin/Api/DeleteData.php:29
-#: includes/Admin/Api/DeleteImage.php:32
+#: includes/Admin/Api/CheckForm.php:57
+#: includes/Admin/Api/CheckForm.php:149
+#: includes/Admin/Api/CheckForm.php:289
+#: includes/Admin/Api/CheckForm.php:330
 #: includes/Admin/Api/FetchData.php:34
 #: includes/Admin/Api/OrderItem.php:30
 #: includes/Admin/Api/ShortCodeData.php:38
 #: includes/Admin/Api/TemplateStatus.php:25
-#: includes/Admin/Api/TemplateTypesData.php:31
+#: includes/Admin/Api/TemplateTypesData.php:33
 #: includes/Admin/Api/TestEmail.php:28
 #: includes/Admin/Api/UpdateData.php:35
-#: includes/Admin/Api/UploadImage.php:29
 msgid "Nonce mismatch."
 msgstr ""
 
-#: includes/Admin/Api/DeleteData.php:36
-#: includes/Admin/Api/DeleteImage.php:39
+#: includes/Admin/Api/CheckForm.php:64
+#: includes/Admin/Api/CheckForm.php:156
+#: includes/Admin/Api/CheckForm.php:293
+#: includes/Admin/Api/CheckForm.php:334
 #: includes/Admin/Api/FetchData.php:41
 #: includes/Admin/Api/OrderItem.php:37
-#: includes/Admin/Api/TemplateTypesData.php:38
+#: includes/Admin/Api/TemplateTypesData.php:40
 #: includes/Admin/Api/TestEmail.php:35
 #: includes/Admin/Api/UpdateData.php:43
-#: includes/Admin/Api/UploadImage.php:36
 msgid "Access denied."
 msgstr ""
 
-#: includes/Admin/Api/DeleteData.php:48
-msgid "Post Data not deleted "
+#: includes/Admin/Api/CheckForm.php:161
+#: Promotional/Promotional.php:139
+msgid "MetForm"
 msgstr ""
 
-#: includes/Admin/Api/DeleteData.php:56
-msgid "Post data deleted successfully."
+#: includes/Admin/Api/CheckForm.php:170
+msgid "A template already exists for this form."
 msgstr ""
 
-#: includes/Admin/Api/DeleteImage.php:48
-msgid "Attachment ID is missing."
+#: includes/Admin/Api/CheckForm.php:197
+#: includes/Admin/Api/CheckForm.php:209
+#: includes/Admin/Api/CheckForm.php:359
+#: includes/Admin/Api/TemplateData.php:57
+msgid "Invalid template path"
 msgstr ""
 
-#: includes/Admin/Api/DeleteImage.php:57
-msgid "Invalid attachment ID."
+#: includes/Admin/Api/CheckForm.php:245
+#: includes/Admin/Api/CheckForm.php:385
+msgid "Failed to create template"
 msgstr ""
 
-#: includes/Admin/Api/DeleteImage.php:69
-msgid "Image deleted successfully."
+#: includes/Admin/Api/CheckForm.php:339
+#: Promotional/Promotional.php:153
+msgid "PopupKit"
 msgstr ""
 
-#: includes/Admin/Api/DeleteImage.php:74
-msgid "Failed to delete image."
+#: includes/Admin/Api/CheckForm.php:346
+msgid "A template already exists for this popup."
 msgstr ""
 
 #: includes/Admin/Api/FetchData.php:85
@@ -102,27 +109,31 @@ msgid "Email list has been fetched successfully."
 msgstr ""
 
 #: includes/Admin/Api/OrderItem.php:49
-#: includes/Admin/Api/OrderItem.php:208
+#: includes/Admin/Api/OrderItem.php:213
 msgid "No processing orders found or no items in the last order."
 msgstr ""
 
-#: includes/Admin/Api/OrderItem.php:201
+#: includes/Admin/Api/OrderItem.php:206
 msgid "Last order item retrieved successfully."
 msgstr ""
 
-#: includes/Admin/Api/ShortCodeData.php:107
+#: includes/Admin/Api/ShortCodeData.php:75
+msgid "Check Payments"
+msgstr ""
+
+#: includes/Admin/Api/ShortCodeData.php:118
 msgid "Happy to order"
 msgstr ""
 
-#: includes/Admin/Api/ShortCodeData.php:142
+#: includes/Admin/Api/ShortCodeData.php:153
 msgid "WooCommerce order data retrieved successfully."
 msgstr ""
 
-#: includes/Admin/Api/ShortCodeData.php:217
+#: includes/Admin/Api/ShortCodeData.php:229
 msgid "No WooCommerce orders found. Returning demo data."
 msgstr ""
 
-#: includes/Admin/Api/TemplateData.php:81
+#: includes/Admin/Api/TemplateData.php:104
 msgid "Post created successfully."
 msgstr ""
 
@@ -138,11 +149,11 @@ msgstr ""
 msgid "Template status updated successfully."
 msgstr ""
 
-#: includes/Admin/Api/TemplateTypesData.php:60
+#: includes/Admin/Api/TemplateTypesData.php:62
 msgid "No templates found for the provided template type."
 msgstr ""
 
-#: includes/Admin/Api/TemplateTypesData.php:107
+#: includes/Admin/Api/TemplateTypesData.php:110
 msgid "Template files retrieved successfully."
 msgstr ""
 
@@ -150,29 +161,49 @@ msgstr ""
 msgid "This is a test email."
 msgstr ""
 
-#: includes/Admin/Api/TestEmail.php:59
-msgid "Failed to connect to mailserver"
+#: includes/Admin/Api/TestEmail.php:63
+msgid "Failed to send the test email. Please configure an SMTP plugin."
 msgstr ""
 
-#: includes/Admin/Api/TestEmail.php:59
-msgid "Failed to send the test email."
+#: includes/Admin/Api/TestEmail.php:69
+msgid "Mail server is not configured on this server. Please use an SMTP plugin."
 msgstr ""
 
-#: includes/Admin/Api/TestEmail.php:66
+#: includes/Admin/Api/TestEmail.php:70
+msgid "Failed to connect to the SMTP server. Please check your SMTP settings."
+msgstr ""
+
+#: includes/Admin/Api/TestEmail.php:71
+msgid "Failed to connect to the mail server. Please check your SMTP host and port."
+msgstr ""
+
+#: includes/Admin/Api/TestEmail.php:72
+msgid "Could not connect to the SMTP host. Please verify your SMTP settings."
+msgstr ""
+
+#: includes/Admin/Api/TestEmail.php:73
+msgid "SMTP authentication failed. Please check your username and password."
+msgstr ""
+
+#: includes/Admin/Api/TestEmail.php:74
+msgid "The recipient email address is invalid. Please enter a valid email."
+msgstr ""
+
+#: includes/Admin/Api/TestEmail.php:75
+msgid "Connection to the mail server was refused. Please check your SMTP host and port."
+msgstr ""
+
+#: includes/Admin/Api/TestEmail.php:76
+msgid "Connection to the mail server timed out. Please check your SMTP host and port."
+msgstr ""
+
+#: includes/Admin/Api/TestEmail.php:92
 msgid "Test email sent successfully."
 msgstr ""
 
-#: includes/Admin/Api/UpdateData.php:82
-#: includes/Admin/Api/UpdateData.php:93
+#: includes/Admin/Api/UpdateData.php:84
+#: includes/Admin/Api/UpdateData.php:95
 msgid "Post updated successfully."
-msgstr ""
-
-#: includes/Admin/Api/UploadImage.php:65
-msgid "Image uploaded successfully."
-msgstr ""
-
-#: includes/Admin/Api/UploadImage.php:70
-msgid "No file uploaded."
 msgstr ""
 
 #: includes/Admin/CPT.php:44
@@ -276,97 +307,141 @@ msgstr ""
 msgid "Activate WooCommerce"
 msgstr ""
 
-#: includes/Admin/EmailKitAjax.php:108
-#: includes/Admin/EmailKitAjax.php:176
+#: includes/Admin/Dependency.php:78
+msgid "Install Metform"
+msgstr ""
+
+#: includes/Admin/Dependency.php:82
+msgid "Activate Metform"
+msgstr ""
+
+#: includes/Admin/Dependency.php:89
+msgid "Install PopupKit"
+msgstr ""
+
+#: includes/Admin/Dependency.php:93
+msgid "Activate PopupKit"
+msgstr ""
+
+#: includes/Admin/EmailKitAjax.php:110
+#: includes/Admin/EmailKitAjax.php:185
 msgid "Failed to get template"
 msgstr ""
 
-#: includes/Admin/Emails/EmailLists.php:34
-#: includes/Admin/Emails/EmailLists.php:66
-msgid "Select Template"
-msgstr ""
-
-#: includes/Admin/Emails/EmailLists.php:35
-msgid "New Order"
-msgstr ""
-
-#: includes/Admin/Emails/EmailLists.php:36
-msgid "Cancelled order"
+#: includes/Admin/EmailKitAjax.php:161
+msgid "Insufficient permissions"
 msgstr ""
 
 #: includes/Admin/Emails/EmailLists.php:37
-msgid "Failed Order - Admin"
+#: includes/Admin/Emails/EmailLists.php:70
+msgid "Select Template"
 msgstr ""
 
 #: includes/Admin/Emails/EmailLists.php:38
-msgid "Failed Order - Customer"
+msgid "New Order"
 msgstr ""
 
 #: includes/Admin/Emails/EmailLists.php:39
-msgid "Order On Hold"
+msgid "Cancelled order"
 msgstr ""
 
 #: includes/Admin/Emails/EmailLists.php:40
-msgid "Processing Order"
+msgid "Failed Order - Admin"
 msgstr ""
 
 #: includes/Admin/Emails/EmailLists.php:41
-msgid "Completed Order"
+msgid "Failed Order - Customer"
 msgstr ""
 
 #: includes/Admin/Emails/EmailLists.php:42
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/WidgetsContainer/wooCommerceToolBox.js:85
-#: src/components/selectors/Others/LowStock/index.js:108
-msgid "Low Stock"
+msgid "Order On Hold"
 msgstr ""
 
 #: includes/Admin/Emails/EmailLists.php:43
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/WidgetsContainer/wooCommerceToolBox.js:77
-#: src/components/selectors/Others/NoStock/index.js:110
-msgid "No Stock"
+msgid "Processing Order"
 msgstr ""
 
 #: includes/Admin/Emails/EmailLists.php:44
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/WidgetsContainer/wooCommerceToolBox.js:69
-#: src/components/selectors/Others/BackOrder/index.js:106
-msgid "Back Order"
+msgid "Completed Order"
 msgstr ""
 
 #: includes/Admin/Emails/EmailLists.php:45
-msgid "Refunded Order"
+#: src/components/editor/WidgetsContainer/wooCommerceToolBox.js:86
+#: src/components/selectors/Others/LowStock/index.js:112
+msgid "Low Stock"
 msgstr ""
 
 #: includes/Admin/Emails/EmailLists.php:46
-msgid "Partial Refund"
+#: src/components/editor/WidgetsContainer/wooCommerceToolBox.js:78
+#: src/components/selectors/Others/NoStock/index.js:114
+msgid "No Stock"
 msgstr ""
 
 #: includes/Admin/Emails/EmailLists.php:47
-msgid "Customer Invoice "
+#: src/components/editor/WidgetsContainer/wooCommerceToolBox.js:70
+#: src/components/selectors/Others/BackOrder/index.js:110
+msgid "Back Order"
 msgstr ""
 
 #: includes/Admin/Emails/EmailLists.php:48
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/WidgetsContainer/wooCommerceToolBox.js:51
+msgid "Refunded Order"
+msgstr ""
+
+#: includes/Admin/Emails/EmailLists.php:49
+msgid "Partial Refund"
+msgstr ""
+
+#: includes/Admin/Emails/EmailLists.php:50
+msgid "Customer Invoice "
+msgstr ""
+
+#: includes/Admin/Emails/EmailLists.php:51
+#: src/components/editor/WidgetsContainer/wooCommerceToolBox.js:52
 #: src/components/selectors/WoCommerce/CustomerNote/index.js:68
 #: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:60
 msgid "Customer Note"
 msgstr ""
 
-#: includes/Admin/Emails/EmailLists.php:49
-#: includes/Admin/Emails/EmailLists.php:67
+#: includes/Admin/Emails/EmailLists.php:52
+#: includes/Admin/Emails/EmailLists.php:71
 msgid "New Account"
 msgstr ""
 
-#: includes/Admin/Emails/EmailLists.php:50
-#: includes/Admin/Emails/EmailLists.php:68
+#: includes/Admin/Emails/EmailLists.php:53
+#: includes/Admin/Emails/EmailLists.php:72
 msgid "Reset Password"
+msgstr ""
+
+#: includes/Admin/Emails/EmailLists.php:54
+msgid "Payment Gateway Enabled"
+msgstr ""
+
+#: includes/Admin/Emails/EmailLists.php:83
+msgid "Select Form"
+msgstr ""
+
+#: includes/Admin/Emails/EmailLists.php:106
+#: includes/Admin/Emails/EmailLists.php:112
+#: includes/Admin/Emails/EmailLists.php:124
+msgid "Form: "
+msgstr ""
+
+#: includes/Admin/Emails/EmailLists.php:132
+msgid "More Forms..."
+msgstr ""
+
+#: includes/Admin/Emails/EmailLists.php:139
+msgid "Select Popup"
+msgstr ""
+
+#: includes/Admin/Emails/EmailLists.php:162
+#: includes/Admin/Emails/EmailLists.php:168
+#: includes/Admin/Emails/EmailLists.php:180
+msgid "Popup: "
+msgstr ""
+
+#: includes/Admin/Emails/EmailLists.php:187
+msgid "More Popups..."
 msgstr ""
 
 #: includes/Admin/Emails/Helpers/Notice/Notice.php:190
@@ -385,9 +460,9 @@ msgstr ""
 msgid "Cancelled Order"
 msgstr ""
 
-#: includes/Admin/Emails/Woocommerce/CompletedOrder.php:136
+#: includes/Admin/Emails/Woocommerce/CompletedOrder.php:141
 #: includes/Admin/Emails/Woocommerce/OrderOnHold.php:143
-#: includes/Admin/Emails/Woocommerce/ProcessingOrder.php:142
+#: includes/Admin/Emails/Woocommerce/ProcessingOrder.php:145
 #: includes/Admin/Emails/Woocommerce/ResetPassword.php:92
 msgid "Hi "
 msgstr ""
@@ -477,7 +552,11 @@ msgstr ""
 msgid "has been  Partially refunded"
 msgstr ""
 
-#: includes/Admin/Emails/Woocommerce/ProcessingOrder.php:139
+#: includes/Admin/Emails/Woocommerce/PaymentGatewayEnabled.php:87
+msgid "Payment gateway enabled"
+msgstr ""
+
+#: includes/Admin/Emails/Woocommerce/ProcessingOrder.php:142
 msgid "Thank you for your order. We appreciate your business!"
 msgstr ""
 
@@ -513,8 +592,17 @@ msgstr ""
 msgid "Password Reset Request for "
 msgstr ""
 
+#: includes/Admin/EmailSettings/MetformEmailSettings.php:113
+#: includes/Admin/EmailSettings/MetformEmailSettings.php:140
 #: includes/Admin/EmailSettings/WcEmailSettings.php:72
 msgid "Edit With Emailkit"
+msgstr ""
+
+#: includes/Admin/EmailSettings/MetformEmailSettings.php:208
+#: includes/Admin/EmailSettings/MetformEmailSettings.php:220
+#: includes/Admin/Hooks.php:103
+#: includes/Admin/TemplateList.php:614
+msgid "Confirmation Mail To User"
 msgstr ""
 
 #: includes/Admin/Hooks.php:32
@@ -537,10 +625,61 @@ msgstr ""
 msgid "Author"
 msgstr ""
 
+#: includes/Admin/Hooks.php:107
+#: includes/Admin/TemplateList.php:643
+msgid "Popup Submission Mail"
+msgstr ""
+
+#: includes/Admin/MetaBox.php:23
+msgid "New Order - WC"
+msgstr ""
+
+#: includes/Admin/MetaBox.php:24
+msgid "Cancelled order - WC"
+msgstr ""
+
+#: includes/Admin/MetaBox.php:25
+msgid "Failed Order - WC"
+msgstr ""
+
+#: includes/Admin/MetaBox.php:26
+msgid "Order On Hold - WC"
+msgstr ""
+
+#: includes/Admin/MetaBox.php:27
+msgid "Processing Order - WC"
+msgstr ""
+
+#: includes/Admin/MetaBox.php:28
+msgid "Completed Order - WC"
+msgstr ""
+
+#: includes/Admin/MetaBox.php:29
+msgid "Refunded Order - WC"
+msgstr ""
+
+#: includes/Admin/MetaBox.php:30
+msgid "Customer Invoice - WC"
+msgstr ""
+
+#: includes/Admin/MetaBox.php:31
+msgid "Customer Note - WC"
+msgstr ""
+
+#: includes/Admin/MetaBox.php:32
+msgid "Reset Password - WC"
+msgstr ""
+
+#: includes/Admin/MetaBox.php:33
+msgid "New Account - WC"
+msgstr ""
+
+#: includes/Admin/MetaBox.php:43
+msgid "Email Details"
+msgstr ""
+
 #: includes/Admin/MetaBox.php:57
 #: includes/views/modal-add-new-email.php:22
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
 #: src/components/editor/Viewport/EditorSidebar/GlobalSettings.js:106
 msgid "Email Subject"
 msgstr ""
@@ -565,12 +704,21 @@ msgstr ""
 msgid "Status(Active/Inactive):"
 msgstr ""
 
-#: includes/Admin/TemplateList.php:583
+#: includes/Admin/MetaBox.php:94
+#: src/components/editor/Viewport/Header.js:549
+msgid "Active"
+msgstr ""
+
+#: includes/Admin/MetaBox.php:94
+msgid "Inactive"
+msgstr ""
+
+#: includes/Admin/TemplateList.php:660
 #: includes/views/modal-add-new-email.php:32
 msgid "WordPress Email"
 msgstr ""
 
-#: includes/Admin/TemplateList.php:592
+#: includes/Admin/TemplateList.php:669
 msgid "Woocommerce email"
 msgstr ""
 
@@ -579,8 +727,6 @@ msgid "Create New Email"
 msgstr ""
 
 #: includes/views/modal-add-new-email.php:24
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
 #: src/libs/common/EmailKitModalContent/SaveAsTemplateModalContent.js:39
 msgid "Enter template name"
 msgstr ""
@@ -590,30 +736,76 @@ msgid "WooCommerce email"
 msgstr ""
 
 #: includes/views/modal-add-new-email.php:34
+msgid "Metform Email"
+msgstr ""
+
+#: includes/views/modal-add-new-email.php:35
+msgid "PopupKit Email"
+msgstr ""
+
+#: includes/views/modal-add-new-email.php:36
 msgid "Saved Templates"
 msgstr ""
 
-#: includes/views/modal-add-new-email.php:41
+#: includes/views/modal-add-new-email.php:43
 msgid "Select email type"
 msgstr ""
 
-#: includes/views/modal-add-new-email.php:53
+#: includes/views/modal-add-new-email.php:55
 msgid "Select template type"
 msgstr ""
 
-#: includes/views/modal-add-new-email.php:114
-#: includes/views/modal-add-new-email.php:117
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/Viewport/Header.js:563
+#: includes/views/modal-add-new-email.php:68
+msgid "Please select a template."
+msgstr ""
+
+#: includes/views/modal-add-new-email.php:71
+msgid "Template Deleted Successfully."
+msgstr ""
+
+#: includes/views/modal-add-new-email.php:78
+msgid "Delete this template"
+msgstr ""
+
+#: includes/views/modal-add-new-email.php:82
+msgid "Do you want to delete?"
+msgstr ""
+
+#: includes/views/modal-add-new-email.php:85
+msgid "Yes"
+msgstr ""
+
+#: includes/views/modal-add-new-email.php:86
+msgid "No"
+msgstr ""
+
+#: includes/views/modal-add-new-email.php:92
+msgid "No saved templates available."
+msgstr ""
+
+#: includes/views/modal-add-new-email.php:105
+msgid "You’re One Step Away!"
+msgstr ""
+
+#: includes/views/modal-add-new-email.php:106
+msgid "Upgrade to Pro and get all the premium features!"
+msgstr ""
+
+#: includes/views/modal-add-new-email.php:107
+msgid "Upgrade to Pro"
+msgstr ""
+
+#: includes/views/modal-add-new-email.php:116
+#: includes/views/modal-add-new-email.php:119
+#: src/components/editor/Viewport/Header.js:566
 msgid "Blank Template"
 msgstr ""
 
-#: includes/views/modal-add-new-email.php:119
+#: includes/views/modal-add-new-email.php:121
 msgid "Create From Scratch"
 msgstr ""
 
-#: includes/views/modal-add-new-email.php:131
+#: includes/views/modal-add-new-email.php:133
 #: includes/views/modal-editor.php:42
 msgid "Edit with EmailKit"
 msgstr ""
@@ -734,6 +926,10 @@ msgstr ""
 msgid "Sign Up and Join a Thriving Community of Top Marketers, Developers, and Creators! ✨"
 msgstr ""
 
+#: Promotional/Onboard/views/onboard-steps/step-02.php:9
+msgid "Enter your email address"
+msgstr ""
+
 #: Promotional/Onboard/views/onboard-steps/step-02.php:11
 msgid "Submit Your Best Email."
 msgstr ""
@@ -755,6 +951,7 @@ msgid "These are absolute FREE to use."
 msgstr ""
 
 #: Promotional/Onboard/views/onboard-steps/step-03.php:19
+#: Promotional/Promotional.php:167
 msgid "GetGenie"
 msgstr ""
 
@@ -854,725 +1051,285 @@ msgstr ""
 msgid "Congratulations!"
 msgstr ""
 
-#: Promotional/ProAwareness/ProAwareness.php:157
-#: Promotional/ProAwareness/ProAwareness.php:172
+#: Promotional/Onboard/views/onboard-steps/step-06.php:4
+msgid "Start Giving Your Emails an"
+msgstr ""
+
+#: Promotional/Onboard/views/onboard-steps/step-06.php:4
+msgid "EmailKit Glow Up!"
+msgstr ""
+
+#: Promotional/ProAwareness/ProAwareness.php:34
+msgid "Support Center"
+msgstr ""
+
+#: Promotional/ProAwareness/ProAwareness.php:35
+msgid "Our experienced support team is ready to resolve your issues any time."
+msgstr ""
+
+#: Promotional/ProAwareness/ProAwareness.php:36
+msgid "Get Help"
+msgstr ""
+
+#: Promotional/ProAwareness/ProAwareness.php:147
+msgid "Upgrade To Premium"
+msgstr ""
+
+#: Promotional/ProAwareness/ProAwareness.php:163
+#: Promotional/ProAwareness/ProAwareness.php:178
 msgid "Default Title"
 msgstr ""
 
-#: Promotional/ProConsent.php:46
+#: Promotional/ProAwareness/ProAwareness.php:228
+msgid "Thumbnail"
+msgstr ""
+
+#: Promotional/ProConsent.php:339
 msgid "Success! Your action was completed."
 msgstr ""
 
-#: Promotional/ProConsent.php:50
+#: Promotional/ProConsent.php:343
 msgid "Show update & fix related important messages, essential tutorials and promotional images on WP Dashboard"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/libs/common/EmailKitModal.js:15
-#: src/libs/common/EmailKitModalContent/ModalContent.js:50
-msgid "Cancel"
+#: Promotional/ProConsent.php:352
+msgid "Enable Copy Paste"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/libs/common/EmailKitModal.js:16
-msgid "Ok"
+#: Promotional/Promotional.php:104
+msgid "Our Plugins"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/WidgetsContainer/index.js:65
-#: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:62
-#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:9
-msgid "General"
+#: Promotional/Promotional.php:105
+msgid "Get More out of Your WordPress Website!"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:11
-msgid "Site Url"
+#: Promotional/Promotional.php:106
+msgid "Revamp your website with other top plugins from us. And guess what, they're absolutely free!"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:12
-msgid "User Name"
+#: Promotional/Promotional.php:111
+msgid "ElementsKit Elementor addons"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:13
-msgid "User Email"
+#: Promotional/Promotional.php:114
+msgid "All-in-one Elementor addon trusted by 1 Million+ users, makes your website builder process easier with ultimate freedom."
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:14
-msgid "User Login"
+#: Promotional/Promotional.php:118
+msgid "GutenKit"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:15
-msgid "Site Name"
+#: Promotional/Promotional.php:121
+msgid "Gutenberg blocks, patterns, and templates that extend the page-building experience using the WordPress block editor."
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:16
-msgid "Display Name"
+#: Promotional/Promotional.php:125
+msgid "Rox Dynamic CPT Fields"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:17
-msgid "Current User Email"
+#: Promotional/Promotional.php:128
+msgid "Build custom post types, fields, taxonomies, and dynamic frontend layouts for WordPress, with zero coding and full AI-generated schema."
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:18
-msgid "App Name"
+#: Promotional/Promotional.php:132
+msgid "Rox Appointment Booking"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/WidgetsContainer/index.js:22
-#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:24
-msgid "WooCommerce"
+#: Promotional/Promotional.php:135
+msgid "Manage bookings, agents, payments, and calendars from one dashboard! A complete appointment and scheduling solution for WordPress."
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:26
-msgid "Order Id"
+#: Promotional/Promotional.php:142
+msgid "Drag & drop form builder for Elementor to create contact forms, multi-step forms, and more — smoother, faster, and better!"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:27
-msgid "Order Number"
+#: Promotional/Promotional.php:146
+msgid "Shopengine"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:28
-msgid "Order Status"
+#: Promotional/Promotional.php:149
+msgid "Complete WooCommerce solution for Elementor to fully customize any pages including cart, checkout, shop page, and so on."
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:29
-msgid "Billing Name"
+#: Promotional/Promotional.php:156
+msgid "Design popups that convert, right in your WordPress dashboard."
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:37
-#: src/components/selectors/WoCommerce/OrderItem/style/Style2Settings.js:29
-#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:30
-msgid "Quantity"
+#: Promotional/Promotional.php:160
+msgid "TableKit"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:31
-msgid "Order Currency"
+#: Promotional/Promotional.php:163
+msgid "Fully Customizable. Multi-Media Integration. Synch Any Data Files. All Within Block Editor."
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:32
-msgid "Shipping Total"
+#: Promotional/Promotional.php:170
+msgid "Your personal AI assistant for content and SEO. Write content that ranks on Google with NLP keywords and SERP analysis data."
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:33
-msgid "Order Subtotal"
+#: Promotional/Promotional.php:174
+msgid "WP Social"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:34
-msgid "Shipping Tax Total"
+#: Promotional/Promotional.php:177
+msgid "Add social share, login, and engagement counter — unified solution for all social media with tons of different styles for your website."
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:35
-msgid "Order Date"
+#: Promotional/Promotional.php:181
+msgid "Blocks for ShopEngine"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:36
-msgid "Shipping Method"
+#: Promotional/Promotional.php:184
+msgid "All in one WooCommerce solution for Gutenberg! Build your WooCommerce pages in a block editor with full customization."
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:45
-#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:37
-msgid "Payment Method"
+#: Promotional/Promotional.php:195
+msgid "Go Premium"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:40
-#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:38
-msgid "Total"
+#: Promotional/Promotional.php:209
+msgid "Join the Community"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:39
-msgid "Billing First Name"
+#: Promotional/Promotional.php:211
+msgid "Join our Facebook group to get 20% discount coupon on premium products. Follow us to get more exciting offers."
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:40
-msgid "Billing Last name"
+#: Promotional/Promotional.php:216
+msgid "Video Tutorials"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:41
-msgid "billing_company"
+#: Promotional/Promotional.php:218
+msgid "Learn the step by step process for developing your site easily from video tutorials."
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:42
-msgid "Billing Address 1"
+#: Promotional/Promotional.php:222
+msgid "Request a feature"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:43
-msgid "Billing Address 2"
+#: Promotional/Promotional.php:224
+msgid "Have any special feature in mind? Let us know through the feature request."
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:44
-msgid "Billing City"
+#: Promotional/Promotional.php:228
+#: Promotional/Promotional.php:239
+msgid "Documentation"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:45
-msgid "Billing State"
+#: Promotional/Promotional.php:230
+msgid "Detailed documentation to help you understand the functionality of each feature."
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:46
-msgid "Billing Postcode"
+#: Promotional/Promotional.php:234
+msgid "Public Roadmap"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:47
-msgid "Billing Country"
+#: Promotional/Promotional.php:236
+msgid "Check our upcoming new features, detailed development stories and tasks"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:48
-msgid "Billing Email"
+#: Promotional/Promotional.php:240
+msgid "Facebook Community"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:49
-msgid "Billing Phone Number"
+#: Promotional/Promotional.php:241
+msgid "Rate the plugin ★★★★★"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:50
-msgid "Shipping First Name"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:51
-msgid "Shipping Last Name"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:52
-msgid "Shipping Company"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:53
-msgid "Shipping Phone Number"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:54
-msgid "Shipping Address 1"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:55
-msgid "Shipping Address 2"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:56
-msgid "Shipping City"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:57
-msgid "Shipping State"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:58
-msgid "Shipping Postcode"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:59
-msgid "Shipping Country"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:61
-msgid "Product Name"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/Viewport/Header.js:553
-#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:142
-msgid "Shortcodes"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/RenderNode.js:174
-#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:143
-msgid "Copy"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:144
-msgid "Copied"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:145
-msgid "No shortcode data found in this section"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/libs/common/EmailKitModalContent/ModalContent.js:38
-msgid "Email address for test."
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/libs/common/EmailKitModalContent/ModalContent.js:39
-msgid "Your alterations will not be saved."
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/libs/common/EmailKitModalContent/ModalContent.js:40
-msgid "Sending"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/libs/common/EmailKitModalContent/ModalContent.js:41
-msgid "Send Email"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/Viewport/Header.js:556
-#: src/libs/common/EmailKitModalContent/ModalContent.js:46
-msgid "Reset"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/libs/common/EmailKitModalContent/ModalContent.js:47
-msgid "Leave"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/libs/common/EmailKitModalContent/ModalContent.js:48
-msgid "Resetting"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/libs/common/EmailKitModalContent/ModalContent.js:49
-msgid "Replace"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/libs/common/EmailKitModalContent/SaveAsTemplateModalContent.js:33
-msgid "Library"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/libs/common/EmailKitModalContent/SaveAsTemplateModalContent.js:34
-msgid "Save Your Email to Library"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/libs/common/EmailKitModalContent/SaveAsTemplateModalContent.js:35
-msgid "Learn more about EmailKit Library"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/libs/common/EmailKitModalContent/SaveAsTemplateModalContent.js:36
-msgid "Click Here"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/Viewport/Header.js:557
-#: src/libs/common/EmailKitModalContent/SaveAsTemplateModalContent.js:37
-msgid "Saving"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/Viewport/Header.js:550
-#: src/libs/common/EmailKitModalContent/SaveAsTemplateModalContent.js:38
-msgid "Save"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/libs/common/EmailKitModalContent/ProModalContent.js:20
-msgid "Use Premium Features"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/libs/common/EmailKitModalContent/ProModalContent.js:21
-msgid "Design a custom email template that matches your brand"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/libs/common/EmailKitModalContent/ProModalContent.js:22
-msgid "Upgrade Now"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/RenderNode.js:173
+#: src/components/editor/RenderNode.js:186
 msgid "Delete"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/RenderNode.js:175
+#: src/components/editor/RenderNode.js:187
+#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:153
+msgid "Copy"
+msgstr ""
+
+#: src/components/editor/RenderNode.js:188
 msgid "Move"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/Viewport/Header.js:88
-#: src/components/editor/Viewport/Header.js:149
-msgid "Successfully saved"
+#: src/components/editor/RenderNode.js:189
+msgid "Duplicate"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/Viewport/Header.js:89
-#: src/components/editor/Viewport/Header.js:150
-msgid "Failed to save"
+#: src/components/editor/RenderNode.js:190
+msgid "Copied successfully"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/Viewport/Header.js:546
-msgid "Active"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/Viewport/Header.js:549
-msgid "Preview"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/Viewport/Header.js:551
-msgid "Undo"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/Viewport/Header.js:552
-msgid "Redo"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/Viewport/Header.js:554
-msgid "Test Email"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/Viewport/Header.js:555
-msgid "Save as Templates"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/Viewport/Header.js:558
-msgid "Activate customized template"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/Viewport/Header.js:559
-msgid "Send Test Email"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/Viewport/Header.js:560
-msgid "Are you certain you wish to exit?"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/Viewport/Header.js:561
-msgid "Back to Dashboard"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/Viewport/Header.js:562
-msgid "Do you want to reset your template?"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/Viewport/Header.js:564
-msgid "View Pages"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/Viewport/Header.js:517
-msgid "Your template has been reset!"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/Viewport/Header.js:518
-msgid "Something went wrong!"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/Viewport/Sidebar/index.js:39
-msgid "Customize"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/Viewport/Sidebar/index.js:40
-msgid "Layers"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/Toolbar/Spacing/SpacingItem.js:15
-msgid "Top"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/Toolbar/Spacing/SpacingItem.js:16
-msgid "Right"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/Toolbar/Spacing/SpacingItem.js:17
-msgid "Bottom"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/Toolbar/Spacing/SpacingItem.js:18
-msgid "Left"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/CanvasContainer/index.js:36
-#: src/components/selectors/Others/AccountReg/AccountRegSettings.js:20
-#: src/components/selectors/Others/NewUserRegWP/NewUserRegSettings.js:33
-#: src/components/selectors/Others/PasswordReset/PasswordResetSettings.js:22
-#: src/components/selectors/Others/ResetPasswordWP/ResetPasswordWPSetting.js:20
-#: src/components/selectors/WoCommerce/CustomerNote/CustomerNoteSettings.js:21
-#: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:56
-msgid "Body"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Basic/Container_v2/ContainerSettings.js:26
-#: src/components/selectors/Basic/EmailHeading/EmailHeadingSettings.js:34
-#: src/components/selectors/CanvasContainer/CanvasContainerSettings.js:12
-#: src/components/selectors/General/Divider/DividerSettings.js:15
-#: src/components/selectors/General/Row_v2/ColumnSettings.js:21
-#: src/components/selectors/General/Row_v2/RowSettings.js:23
-#: src/components/selectors/General/Space/SpaceSettings.js:13
-#: src/components/selectors/Others/NewUserRegWP/NewUserRegSettings.js:26
-#: src/components/selectors/Others/ResetPasswordWP/ResetPasswordWPSetting.js:35
-msgid "Appearance"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Basic/Button/ButtonSettings.js:33
-#: src/components/selectors/Basic/Container_v2/ContainerSettings.js:28
-#: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:43
-#: src/components/selectors/Basic/ImageUpload/ImageUploadSettings.js:26
-#: src/components/selectors/Basic/Socials_v2/SocialActionCard.js:95
-#: src/components/selectors/CanvasContainer/CanvasContainerSettings.js:13
-#: src/components/selectors/General/Divider/DividerSettings.js:17
-#: src/components/selectors/General/Row_v2/ColumnSettings.js:22
-#: src/components/selectors/General/Row_v2/RowSettings.js:24
-#: src/components/selectors/General/Space/SpaceSettings.js:14
-msgid "Background"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Basic/Button/ButtonSettings.js:36
-#: src/components/selectors/Basic/Container_v2/ContainerSettings.js:31
-#: src/components/selectors/Basic/EmailHeading/EmailHeadingSettings.js:32
-#: src/components/selectors/Basic/Footer/FooterSettings.js:39
-#: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:40
-#: src/components/selectors/Basic/ImageUpload/ImageUploadSettings.js:38
-#: src/components/selectors/Basic/Socials_v2/SocialSetting.js:45
-#: src/components/selectors/Basic/SubTitle/SubTitleSettings.js:31
-#: src/components/selectors/Basic/Text/TextSettings.js:25
-#: src/components/selectors/Basic/VideoBlock/VideoBlockSettings.js:24
-#: src/components/selectors/CanvasContainer/CanvasContainerSettings.js:14
-#: src/components/selectors/CanvasContainer/CanvasContainerSettings.js:17
-#: src/components/selectors/General/Row_v2/ColumnSettings.js:25
-#: src/components/selectors/General/Row_v2/RowSettings.js:31
-#: src/components/selectors/Others/AccountReg/AccountRegSettings.js:27
-#: src/components/selectors/Others/BackOrder/BackOrderSettings.js:25
-#: src/components/selectors/Others/LowStock/LowStockSettings.js:26
-#: src/components/selectors/Others/NewUserRegWP/NewUserRegSettings.js:31
-#: src/components/selectors/Others/NoStock/NoStockSettings.js:26
-#: src/components/selectors/Others/PasswordReset/PasswordResetSettings.js:29
-#: src/components/selectors/Others/ResetPasswordWP/ResetPasswordWPSetting.js:27
-#: src/components/selectors/Others/ResetPasswordWP/ResetPasswordWPSetting.js:40
-#: src/components/selectors/WoCommerce/BillingAddress/BillingAddressSettings.js:24
-#: src/components/selectors/WoCommerce/BillingShippingCombine/BillingShippingSettings.js:24
-#: src/components/selectors/WoCommerce/CustomerNote/CustomerNoteSettings.js:27
-#: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:51
-#: src/components/selectors/WoCommerce/OrderItem/style/Style2Settings.js:20
-#: src/components/selectors/WoCommerce/ShippingAddress/ShippingAddressSettings.js:23
-#: src/components/selectors/WoCommerce/ShippingAddress/ShippingAddressSettings.js:26
-msgid "Padding"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/WidgetsContainer/basicToolBox.js:38
-#: src/components/selectors/Basic/Button/ButtonSettings.js:38
-#: src/components/selectors/Basic/Text/index.js:69
-#: src/components/selectors/Basic/Text/TextSettings.js:21
-#: src/components/selectors/CanvasContainer/CanvasContainerSettings.js:15
-msgid "Text"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Basic/Container_v2/ContainerSettings.js:27
-#: src/components/selectors/Basic/EmailHeading/EmailHeadingSettings.js:33
-#: src/components/selectors/Basic/ImageUpload/ImageUploadSettings.js:28
-#: src/components/selectors/Basic/Socials/SocialSetting.js:34
-#: src/components/selectors/CanvasContainer/CanvasContainerSettings.js:16
-#: src/components/selectors/General/Divider/DividerSettings.js:16
-#: src/components/selectors/General/Row_v2/ColumnSettings.js:23
-#: src/components/selectors/General/Row_v2/RowSettings.js:29
-#: src/components/selectors/Others/NewUserRegWP/NewUserRegSettings.js:29
-#: src/components/selectors/Others/ResetPasswordWP/ResetPasswordWPSetting.js:38
-msgid "Spacing"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
 #: src/components/editor/Toolbar/BorderControl/index.js:31
 msgid "Border Type"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
 #: src/components/editor/Toolbar/BorderControl/index.js:32
-#: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:57
+#: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:59
 msgid "Border Color"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
 #: src/components/editor/Toolbar/BorderControl/index.js:33
 msgid "Border Width"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
 #: src/components/editor/Toolbar/BorderControl/index.js:34
+#: src/components/selectors/Basic/Container/ContainerSettings.js:37
 #: src/components/selectors/Basic/Container_v2/ContainerSettings.js:40
 #: src/components/selectors/Basic/ImageUpload/ImageUploadSettings.js:31
 #: src/components/selectors/Basic/VideoBlock/VideoBlockSettings.js:30
 msgid "Border Radius"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/Toolbar/Typography/index.js:25
-#: src/components/selectors/Basic/Container_v2/ContainerSettings.js:25
-#: src/components/selectors/Basic/EmailHeading/EmailHeadingSettings.js:25
-#: src/components/selectors/Others/NewUserRegWP/NewUserRegSettings.js:19
-msgid "Typography"
+#: src/components/editor/Toolbar/BoxShadow/index.js:29
+msgid "Box Shadow"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
+#: src/components/editor/Toolbar/BoxShadow/index.js:30
+#: src/components/selectors/Basic/Button/ButtonSettings.js:34
+#: src/components/selectors/Basic/Footer/FooterSettings.js:41
+#: src/components/selectors/Basic/Socials_v2/SocialActionCard.js:94
+#: src/components/selectors/Basic/SubTitle/SubTitleSettings.js:25
+#: src/components/selectors/Others/BackOrder/BackOrderSettings.js:21
+#: src/components/selectors/Others/LowStock/LowStockSettings.js:22
+#: src/components/selectors/Others/NoStock/NoStockSettings.js:22
+#: src/components/selectors/WoCommerce/BillingAddress/BillingAddressSettings.js:28
+#: src/components/selectors/WoCommerce/BillingShippingCombine/BillingShippingSettings.js:28
+#: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:52
+#: src/components/selectors/WoCommerce/OrderItem/style/Style2Settings.js:19
+#: src/components/selectors/WoCommerce/ShippingAddress/ShippingAddressSettings.js:28
+msgid "Color"
+msgstr ""
+
+#: src/components/editor/Toolbar/Dimension/index.js:10
+msgid "width"
+msgstr ""
+
+#: src/components/editor/Toolbar/Dimension/index.js:11
+msgid "height"
+msgstr ""
+
+#. translators: %s: allowed file type, e.g. "image" or "video"
+#: src/components/editor/Toolbar/FileUpload/index.js:107
+#, js-format
+msgid "Only %s can be uploaded here."
+msgstr ""
+
+#: src/components/editor/Toolbar/FileUpload/index.js:154
+msgid "Uploading..."
+msgstr ""
+
+#: src/components/editor/Toolbar/FileUpload/index.js:155
+msgid "No file chosen"
+msgstr ""
+
+#: src/components/editor/Toolbar/FileUpload/index.js:156
+msgid "Choose file"
+msgstr ""
+
+#: src/components/editor/Toolbar/FileUpload/index.js:157
+msgid "Are you sure want to delete this file?"
+msgstr ""
+
+#: src/components/editor/Toolbar/FontFamily/index.js:19
 #: src/components/editor/Toolbar/Typography/index.js:26
 #: src/components/selectors/Basic/Container_v2/ContainerSettings.js:41
 #: src/components/selectors/Basic/EmailHeading/EmailHeadingSettings.js:26
@@ -1584,19 +1341,77 @@ msgstr ""
 msgid "Font Family"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
+#: src/components/editor/Toolbar/IconPicker/index.js:20
+#: src/components/selectors/Basic/Socials_v2/SocialActionCard.js:99
+msgid "Select Icon"
+msgstr ""
+
+#: src/components/editor/Toolbar/IconPicker/index.js:21
+msgid "Remove Icon"
+msgstr ""
+
+#: src/components/editor/Toolbar/IconPicker/index.js:22
+msgid "Icon Picker"
+msgstr ""
+
+#: src/components/editor/Toolbar/IconPicker/index.js:105
+msgid "Search Icon"
+msgstr ""
+
+#: src/components/editor/Toolbar/IconPicker/UtilsComponents/IconsList.js:11
+msgid "Insert"
+msgstr ""
+
+#: src/components/editor/Toolbar/IconPicker/UtilsComponents/IconsList.js:12
+msgid "No icons match your search."
+msgstr ""
+
+#: src/components/editor/Toolbar/Spacing/SpacingItem.js:15
+#: src/components/selectors/Basic/List/ListSettings.js:24
+msgid "Top"
+msgstr ""
+
+#: src/components/editor/Toolbar/Spacing/SpacingItem.js:16
+#: src/components/selectors/Basic/List/ListSettings.js:18
+msgid "Right"
+msgstr ""
+
+#: src/components/editor/Toolbar/Spacing/SpacingItem.js:17
+#: src/components/selectors/Basic/List/ListSettings.js:25
+msgid "Bottom"
+msgstr ""
+
+#: src/components/editor/Toolbar/Spacing/SpacingItem.js:18
+#: src/components/selectors/Basic/List/ListSettings.js:16
+msgid "Left"
+msgstr ""
+
+#: src/components/editor/Toolbar/Spacing/SpacingItem.js:62
+msgid "Link values together"
+msgstr ""
+
+#: src/components/editor/Toolbar/TabControl/index.js:44
+msgid "Widget settings tabs"
+msgstr ""
+
+#: src/components/editor/Toolbar/Typography/index.js:25
+#: src/components/selectors/Basic/Container_v2/ContainerSettings.js:25
+#: src/components/selectors/Basic/EmailHeading/EmailHeadingSettings.js:25
+#: src/components/selectors/Basic/List/ListSettings.js:13
+#: src/components/selectors/Others/NewUserRegWP/NewUserRegSettings.js:19
+msgid "Typography"
+msgstr ""
+
 #: src/components/editor/Toolbar/Typography/index.js:27
 #: src/components/selectors/Basic/EmailHeading/EmailHeadingSettings.js:27
 #: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:47
+#: src/components/selectors/Basic/List/ListSettings.js:14
 #: src/components/selectors/Basic/Text/TextSettings.js:28
 #: src/components/selectors/Others/NewUserRegWP/NewUserRegSettings.js:21
 #: src/components/selectors/Others/ResetPasswordWP/ResetPasswordWPSetting.js:31
 msgid "Font Size"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
 #: src/components/editor/Toolbar/Typography/index.js:28
 #: src/components/selectors/Basic/EmailHeading/EmailHeadingSettings.js:28
 #: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:48
@@ -1606,8 +1421,6 @@ msgstr ""
 msgid "Font Weight"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
 #: src/components/editor/Toolbar/Typography/index.js:29
 #: src/components/selectors/Basic/EmailHeading/EmailHeadingSettings.js:30
 #: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:50
@@ -1617,20 +1430,148 @@ msgstr ""
 msgid "Transform"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
 #: src/components/editor/Toolbar/Typography/index.js:30
 msgid "Line Height"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
 #: src/components/editor/Toolbar/Typography/index.js:31
 msgid "Font Style"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
+#: src/components/editor/Viewport/EditorSidebar/GlobalSettings.js:107
+msgid "Email Pre-Header"
+msgstr ""
+
+#: src/components/editor/Viewport/EditorSidebar/GlobalSettings.js:108
+msgid "Email Settings"
+msgstr ""
+
+#: src/components/editor/Viewport/EditorSidebar/GlobalSettings.js:109
+msgid "Body Style"
+msgstr ""
+
+#: src/components/editor/Viewport/EditorSidebar/index.js:29
+msgid "Elements"
+msgstr ""
+
+#: src/components/editor/Viewport/EditorSidebar/index.js:30
+msgid "Templates"
+msgstr ""
+
+#: src/components/editor/Viewport/EditorSidebar/index.js:111
+msgid "EmailKit Build Custom Templates"
+msgstr ""
+
+#: src/components/editor/Viewport/EditorSidebar/TemplateList.js:110
+msgid "Successfully deleted"
+msgstr ""
+
+#: src/components/editor/Viewport/EditorSidebar/TemplateList.js:114
+msgid "Failed to delete"
+msgstr ""
+
+#: src/components/editor/Viewport/EditorSidebar/TemplateList.js:149
+msgid "Do you want to replace your template?"
+msgstr ""
+
+#: src/components/editor/Viewport/Header.js:88
+#: src/components/editor/Viewport/Header.js:149
+msgid "Successfully saved"
+msgstr ""
+
+#: src/components/editor/Viewport/Header.js:89
+#: src/components/editor/Viewport/Header.js:150
+msgid "Failed to save"
+msgstr ""
+
+#: src/components/editor/Viewport/Header.js:520
+msgid "Your template has been reset!"
+msgstr ""
+
+#: src/components/editor/Viewport/Header.js:521
+msgid "Something went wrong!"
+msgstr ""
+
+#: src/components/editor/Viewport/Header.js:552
+msgid "Preview"
+msgstr ""
+
+#: src/components/editor/Viewport/Header.js:553
+#: src/libs/common/EmailKitModalContent/SaveAsTemplateModalContent.js:38
+msgid "Save"
+msgstr ""
+
+#: src/components/editor/Viewport/Header.js:554
+msgid "Undo"
+msgstr ""
+
+#: src/components/editor/Viewport/Header.js:555
+msgid "Redo"
+msgstr ""
+
+#: src/components/editor/Viewport/Header.js:556
+#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:152
+msgid "Shortcodes"
+msgstr ""
+
+#: src/components/editor/Viewport/Header.js:557
+msgid "Test Email"
+msgstr ""
+
+#: src/components/editor/Viewport/Header.js:558
+msgid "Save as Templates"
+msgstr ""
+
+#: src/components/editor/Viewport/Header.js:559
+#: src/libs/common/EmailKitModalContent/ModalContent.js:46
+msgid "Reset"
+msgstr ""
+
+#: src/components/editor/Viewport/Header.js:560
+#: src/libs/common/EmailKitModalContent/SaveAsTemplateModalContent.js:37
+msgid "Saving"
+msgstr ""
+
+#: src/components/editor/Viewport/Header.js:561
+msgid "Activate customized template"
+msgstr ""
+
+#: src/components/editor/Viewport/Header.js:562
+msgid "Send Test Email"
+msgstr ""
+
+#: src/components/editor/Viewport/Header.js:563
+msgid "Are you certain you wish to exit?"
+msgstr ""
+
+#: src/components/editor/Viewport/Header.js:564
+msgid "Back to Dashboard"
+msgstr ""
+
+#: src/components/editor/Viewport/Header.js:565
+msgid "Do you want to reset your template?"
+msgstr ""
+
+#: src/components/editor/Viewport/Header.js:567
+msgid "View Pages"
+msgstr ""
+
+#: src/components/editor/Viewport/Header.js:675
+msgid "Responsive preview device tabs"
+msgstr ""
+
+#: src/components/editor/Viewport/Navigator/index.js:11
+msgid "Navigator"
+msgstr ""
+
+#: src/components/editor/Viewport/Sidebar/index.js:39
+msgid "Customize"
+msgstr ""
+
+#: src/components/editor/Viewport/Sidebar/index.js:40
+msgid "Layers"
+msgstr ""
+
 #: src/components/editor/WidgetsContainer/basicToolBox.js:26
 #: src/components/selectors/Basic/EmailHeading/EmailHeadingSettings.js:23
 #: src/components/selectors/Basic/EmailHeading/index.js:85
@@ -1638,8 +1579,158 @@ msgstr ""
 msgid "Heading"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
+#: src/components/editor/WidgetsContainer/basicToolBox.js:32
+#: src/components/selectors/Basic/SubTitle/index.js:78
+#: src/components/selectors/Basic/SubTitle/SubTitleSettings.js:22
+msgid "Sub Title"
+msgstr ""
+
+#: src/components/editor/WidgetsContainer/basicToolBox.js:38
+#: src/components/selectors/Basic/Button/ButtonSettings.js:38
+#: src/components/selectors/Basic/List/ListSettings.js:27
+#: src/components/selectors/Basic/Text/index.js:69
+#: src/components/selectors/Basic/Text/TextSettings.js:21
+#: src/components/selectors/CanvasContainer/CanvasContainerSettings.js:15
+msgid "Text"
+msgstr ""
+
+#: src/components/editor/WidgetsContainer/basicToolBox.js:44
+#: src/components/selectors/Basic/Button/ButtonSettings.js:30
+#: src/components/selectors/Basic/Button/index.js:80
+#: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:63
+msgid "Button"
+msgstr ""
+
+#: src/components/editor/WidgetsContainer/basicToolBox.js:50
+msgid "Column Section"
+msgstr ""
+
+#: src/components/editor/WidgetsContainer/basicToolBox.js:60
+#: src/components/selectors/Basic/VideoBlock/index.js:88
+msgid "Video"
+msgstr ""
+
+#: src/components/editor/WidgetsContainer/basicToolBox.js:66
+msgid "HTML"
+msgstr ""
+
+#: src/components/editor/WidgetsContainer/basicToolBox.js:72
+#: src/components/selectors/Basic/Container_v2/index.js:103
+#: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:32
+msgid "Container"
+msgstr ""
+
+#: src/components/editor/WidgetsContainer/basicToolBox.js:78
+#: src/components/selectors/Basic/Socials/index.js:103
+#: src/components/selectors/Basic/Socials_v2/index.js:93
+msgid "Social Icons"
+msgstr ""
+
+#: src/components/editor/WidgetsContainer/basicToolBox.js:84
+#: src/components/selectors/Basic/ImageBox/index.js:189
+msgid "Image Box"
+msgstr ""
+
+#: src/components/editor/WidgetsContainer/basicToolBox.js:104
+#: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:42
+msgid "Upload Image"
+msgstr ""
+
+#: src/components/editor/WidgetsContainer/basicToolBox.js:129
+#: src/components/editor/WidgetsContainer/generalToolBox.js:23
+#: src/components/selectors/General/Divider/index.js:36
+msgid "Divider"
+msgstr ""
+
+#: src/components/editor/WidgetsContainer/basicToolBox.js:135
+#: src/components/editor/WidgetsContainer/generalToolBox.js:29
+#: src/components/selectors/General/Space/index.js:23
+msgid "Space"
+msgstr ""
+
+#: src/components/editor/WidgetsContainer/basicToolBox.js:141
+#: src/components/selectors/Basic/Footer/index.js:91
+#: src/components/selectors/Others/AccountReg/AccountRegSettings.js:23
+#: src/components/selectors/Others/NewUserRegWP/NewUserRegSettings.js:34
+#: src/components/selectors/Others/PasswordReset/PasswordResetSettings.js:24
+#: src/components/selectors/Others/ResetPasswordWP/ResetPasswordWPSetting.js:22
+#: src/components/selectors/WoCommerce/CustomerNote/CustomerNoteSettings.js:22
+#: src/components/selectors/WoCommerce/OrderItem/style/Style2Settings.js:32
+msgid "Footer"
+msgstr ""
+
+#: src/components/editor/WidgetsContainer/index.js:15
+msgid "WordPress"
+msgstr ""
+
+#: src/components/editor/WidgetsContainer/index.js:22
+#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:24
+msgid "WooCommerce"
+msgstr ""
+
+#: src/components/editor/WidgetsContainer/index.js:65
+#: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:62
+#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:9
+msgid "General"
+msgstr ""
+
+#: src/components/editor/WidgetsContainer/index.js:143
+msgid "Search Widget..."
+msgstr ""
+
+#: src/components/editor/WidgetsContainer/index.js:159
+msgid "No search match."
+msgstr ""
+
+#: src/components/editor/WidgetsContainer/othersToolBox.js:13
+msgid "New User Register"
+msgstr ""
+
+#: src/components/editor/WidgetsContainer/othersToolBox.js:19
+#: src/components/selectors/Others/ResetPasswordWP/index.js:66
+msgid "WP Reset Password"
+msgstr ""
+
+#: src/components/editor/WidgetsContainer/wooCommerceToolBox.js:22
+#: src/components/selectors/WoCommerce/ShippingAddress/index.js:112
+msgid "Shipping Address"
+msgstr ""
+
+#: src/components/editor/WidgetsContainer/wooCommerceToolBox.js:28
+#: src/components/selectors/WoCommerce/BillingAddress/index.js:113
+msgid "Billing Address"
+msgstr ""
+
+#: src/components/editor/WidgetsContainer/wooCommerceToolBox.js:34
+msgid "Billing Shipping Address"
+msgstr ""
+
+#: src/components/editor/WidgetsContainer/wooCommerceToolBox.js:40
+msgid "Order Item"
+msgstr ""
+
+#: src/components/editor/WidgetsContainer/wooCommerceToolBox.js:58
+#: src/components/selectors/Others/AccountReg/index.js:73
+msgid "Customer Register"
+msgstr ""
+
+#: src/components/editor/WidgetsContainer/wooCommerceToolBox.js:64
+#: src/components/selectors/Others/PasswordReset/index.js:66
+msgid "Password Reset"
+msgstr ""
+
+#: src/components/editor/WidgetsContainer/wooCommerceToolBox.js:94
+#: src/components/selectors/Others/PaymentGateway/index.js:82
+#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:66
+msgid "Payment Gateway"
+msgstr ""
+
+#: src/components/selectors/Basic/BackgroundImage/index.js:56
+#: src/components/selectors/Basic/Container/ContainerSettings.js:25
+#: src/components/selectors/Basic/Container_v2/ContainerSettings.js:29
+msgid "Background Image"
+msgstr ""
+
 #: src/components/selectors/Basic/Button/ButtonSettings.js:28
 #: src/components/selectors/Basic/EmailHeading/EmailHeadingSettings.js:22
 #: src/components/selectors/Basic/Footer/FooterSettings.js:24
@@ -1655,6 +1746,7 @@ msgstr ""
 #: src/components/selectors/Others/NewUserRegWP/NewUserRegSettings.js:37
 #: src/components/selectors/Others/NoStock/NoStockSettings.js:18
 #: src/components/selectors/Others/PasswordReset/PasswordResetSettings.js:20
+#: src/components/selectors/Others/PaymentGateway/PaymentGatewaySettings.js:15
 #: src/components/selectors/Others/ResetPasswordWP/ResetPasswordWPSetting.js:18
 #: src/components/selectors/WoCommerce/BillingAddress/BillingAddressSettings.js:18
 #: src/components/selectors/WoCommerce/BillingShippingCombine/BillingShippingSettings.js:17
@@ -1663,14 +1755,276 @@ msgstr ""
 msgid "Content"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
+#: src/components/selectors/Basic/Button/ButtonSettings.js:29
+#: src/components/selectors/Basic/EmailHeading/EmailHeadingSettings.js:39
+#: src/components/selectors/Basic/Footer/FooterSettings.js:28
+#: src/components/selectors/Basic/ImageUpload/ImageUploadSettings.js:35
+#: src/components/selectors/Others/PasswordReset/PasswordResetSettings.js:23
+#: src/components/selectors/Others/ResetPasswordWP/ResetPasswordWPSetting.js:21
+msgid "Link"
+msgstr ""
+
+#: src/components/selectors/Basic/Button/ButtonSettings.js:31
+msgid "Full"
+msgstr ""
+
+#: src/components/selectors/Basic/Button/ButtonSettings.js:32
+#: src/components/selectors/Basic/Button/ButtonSettings.js:42
+msgid "Outline"
+msgstr ""
+
+#: src/components/selectors/Basic/Button/ButtonSettings.js:33
+#: src/components/selectors/Basic/Container/ContainerSettings.js:24
+#: src/components/selectors/Basic/Container_v2/ContainerSettings.js:28
+#: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:43
+#: src/components/selectors/Basic/ImageUpload/ImageUploadSettings.js:26
+#: src/components/selectors/Basic/Socials_v2/SocialActionCard.js:95
+#: src/components/selectors/CanvasContainer/CanvasContainerSettings.js:13
+#: src/components/selectors/General/Columns/ColumnSettings.js:36
+#: src/components/selectors/General/Divider/DividerSettings.js:17
+#: src/components/selectors/General/Row/ColumnSettings.js:22
+#: src/components/selectors/General/Row/RowSettings.js:23
+#: src/components/selectors/General/Row_v2/ColumnSettings.js:22
+#: src/components/selectors/General/Row_v2/RowSettings.js:24
+#: src/components/selectors/General/Space/SpaceSettings.js:14
+msgid "Background"
+msgstr ""
+
+#: src/components/selectors/Basic/Button/ButtonSettings.js:35
+#: src/components/selectors/Basic/Container/ContainerSettings.js:27
+#: src/components/selectors/Basic/Container_v2/ContainerSettings.js:30
+#: src/components/selectors/Basic/EmailHeading/EmailHeadingSettings.js:31
+#: src/components/selectors/Basic/Footer/FooterSettings.js:38
+#: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:39
+#: src/components/selectors/Basic/ImageUpload/ImageUploadSettings.js:30
+#: src/components/selectors/Basic/List/ListSettings.js:23
+#: src/components/selectors/Basic/SubTitle/SubTitleSettings.js:32
+#: src/components/selectors/Basic/Text/TextSettings.js:24
+#: src/components/selectors/Basic/VideoBlock/VideoBlockSettings.js:29
+#: src/components/selectors/General/Columns/ColumnSettings.js:38
+#: src/components/selectors/General/Divider/DividerSettings.js:18
+#: src/components/selectors/General/Row/ColumnSettings.js:24
+#: src/components/selectors/General/Row/RowSettings.js:28
+#: src/components/selectors/General/Row_v2/ColumnSettings.js:24
+#: src/components/selectors/General/Row_v2/RowSettings.js:30
+#: src/components/selectors/Others/AccountReg/AccountRegSettings.js:28
+#: src/components/selectors/Others/BackOrder/BackOrderSettings.js:24
+#: src/components/selectors/Others/LowStock/LowStockSettings.js:25
+#: src/components/selectors/Others/NewUserRegWP/NewUserRegSettings.js:30
+#: src/components/selectors/Others/NoStock/NoStockSettings.js:25
+#: src/components/selectors/Others/PasswordReset/PasswordResetSettings.js:30
+#: src/components/selectors/Others/PaymentGateway/PaymentGatewaySettings.js:28
+#: src/components/selectors/Others/ResetPasswordWP/ResetPasswordWPSetting.js:28
+#: src/components/selectors/Others/ResetPasswordWP/ResetPasswordWPSetting.js:39
+#: src/components/selectors/WoCommerce/BillingAddress/BillingAddressSettings.js:23
+#: src/components/selectors/WoCommerce/BillingShippingCombine/BillingShippingSettings.js:23
+#: src/components/selectors/WoCommerce/CustomerNote/CustomerNoteSettings.js:28
+#: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:54
+#: src/components/selectors/WoCommerce/ShippingAddress/ShippingAddressSettings.js:22
+#: src/components/selectors/WoCommerce/ShippingAddress/ShippingAddressSettings.js:25
+msgid "Margin"
+msgstr ""
+
+#: src/components/selectors/Basic/Button/ButtonSettings.js:36
+#: src/components/selectors/Basic/Container/ContainerSettings.js:28
+#: src/components/selectors/Basic/Container_v2/ContainerSettings.js:31
+#: src/components/selectors/Basic/EmailHeading/EmailHeadingSettings.js:32
+#: src/components/selectors/Basic/Footer/FooterSettings.js:39
+#: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:40
+#: src/components/selectors/Basic/ImageUpload/ImageUploadSettings.js:38
+#: src/components/selectors/Basic/Socials_v2/SocialSetting.js:45
+#: src/components/selectors/Basic/SubTitle/SubTitleSettings.js:31
+#: src/components/selectors/Basic/Text/TextSettings.js:25
+#: src/components/selectors/Basic/VideoBlock/VideoBlockSettings.js:24
+#: src/components/selectors/CanvasContainer/CanvasContainerSettings.js:14
+#: src/components/selectors/CanvasContainer/CanvasContainerSettings.js:17
+#: src/components/selectors/General/Columns/ColumnSettings.js:39
+#: src/components/selectors/General/Row/ColumnSettings.js:25
+#: src/components/selectors/General/Row/RowSettings.js:29
+#: src/components/selectors/General/Row_v2/ColumnSettings.js:25
+#: src/components/selectors/General/Row_v2/RowSettings.js:31
+#: src/components/selectors/Others/AccountReg/AccountRegSettings.js:27
+#: src/components/selectors/Others/BackOrder/BackOrderSettings.js:25
+#: src/components/selectors/Others/LowStock/LowStockSettings.js:26
+#: src/components/selectors/Others/NewUserRegWP/NewUserRegSettings.js:31
+#: src/components/selectors/Others/NoStock/NoStockSettings.js:26
+#: src/components/selectors/Others/PasswordReset/PasswordResetSettings.js:29
+#: src/components/selectors/Others/PaymentGateway/PaymentGatewaySettings.js:27
+#: src/components/selectors/Others/ResetPasswordWP/ResetPasswordWPSetting.js:27
+#: src/components/selectors/Others/ResetPasswordWP/ResetPasswordWPSetting.js:40
+#: src/components/selectors/WoCommerce/BillingAddress/BillingAddressSettings.js:24
+#: src/components/selectors/WoCommerce/BillingShippingCombine/BillingShippingSettings.js:24
+#: src/components/selectors/WoCommerce/CustomerNote/CustomerNoteSettings.js:27
+#: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:53
+#: src/components/selectors/WoCommerce/OrderItem/style/Style2Settings.js:20
+#: src/components/selectors/WoCommerce/ShippingAddress/ShippingAddressSettings.js:23
+#: src/components/selectors/WoCommerce/ShippingAddress/ShippingAddressSettings.js:26
+msgid "Padding"
+msgstr ""
+
+#: src/components/selectors/Basic/Button/ButtonSettings.js:37
+#: src/components/selectors/Basic/Container/ContainerSettings.js:29
+#: src/components/selectors/Basic/Container_v2/ContainerSettings.js:37
+#: src/components/selectors/Basic/ImageUpload/ImageUploadSettings.js:27
+#: src/components/selectors/Basic/Socials/SocialSetting.js:35
+#: src/components/selectors/Basic/Socials_v2/SocialSetting.js:40
+#: src/components/selectors/General/Columns/ColumnSettings.js:40
+#: src/components/selectors/General/Divider/DividerSettings.js:21
+#: src/components/selectors/General/Row/ColumnSettings.js:26
+#: src/components/selectors/General/Row/RowSettings.js:24
+#: src/components/selectors/General/Row_v2/ColumnSettings.js:26
+#: src/components/selectors/General/Row_v2/RowSettings.js:25
+msgid "Alignment"
+msgstr ""
+
+#: src/components/selectors/Basic/Button/ButtonSettings.js:39
+msgid "Border"
+msgstr ""
+
+#: src/components/selectors/Basic/Button/ButtonSettings.js:40
+msgid "Use Width"
+msgstr ""
+
+#: src/components/selectors/Basic/Button/ButtonSettings.js:41
+msgid "Fill"
+msgstr ""
+
+#: src/components/selectors/Basic/Button/ButtonSettings.js:43
+#: src/components/selectors/General/Divider/DividerSettings.js:19
+msgid "Width"
+msgstr ""
+
+#: src/components/selectors/Basic/Container/ContainerSettings.js:23
+#: src/components/selectors/Basic/Container_v2/ContainerSettings.js:26
+#: src/components/selectors/Basic/EmailHeading/EmailHeadingSettings.js:34
+#: src/components/selectors/Basic/List/ListSettings.js:26
+#: src/components/selectors/CanvasContainer/CanvasContainerSettings.js:12
+#: src/components/selectors/General/Columns/ColumnSettings.js:35
+#: src/components/selectors/General/Divider/DividerSettings.js:15
+#: src/components/selectors/General/Row/ColumnSettings.js:21
+#: src/components/selectors/General/Row/RowSettings.js:22
+#: src/components/selectors/General/Row_v2/ColumnSettings.js:21
+#: src/components/selectors/General/Row_v2/RowSettings.js:23
+#: src/components/selectors/General/Space/SpaceSettings.js:13
+#: src/components/selectors/Others/NewUserRegWP/NewUserRegSettings.js:26
+#: src/components/selectors/Others/ResetPasswordWP/ResetPasswordWPSetting.js:35
+msgid "Appearance"
+msgstr ""
+
+#: src/components/selectors/Basic/Container/ContainerSettings.js:26
+#: src/components/selectors/Basic/Container_v2/ContainerSettings.js:27
+#: src/components/selectors/Basic/EmailHeading/EmailHeadingSettings.js:33
+#: src/components/selectors/Basic/ImageUpload/ImageUploadSettings.js:28
+#: src/components/selectors/Basic/Socials/SocialSetting.js:34
+#: src/components/selectors/CanvasContainer/CanvasContainerSettings.js:16
+#: src/components/selectors/General/Columns/ColumnSettings.js:37
+#: src/components/selectors/General/Divider/DividerSettings.js:16
+#: src/components/selectors/General/Row/ColumnSettings.js:23
+#: src/components/selectors/General/Row/RowSettings.js:27
+#: src/components/selectors/General/Row_v2/ColumnSettings.js:23
+#: src/components/selectors/General/Row_v2/RowSettings.js:29
+#: src/components/selectors/Others/NewUserRegWP/NewUserRegSettings.js:29
+#: src/components/selectors/Others/ResetPasswordWP/ResetPasswordWPSetting.js:38
+msgid "Spacing"
+msgstr ""
+
+#: src/components/selectors/Basic/Container/ContainerSettings.js:30
+#: src/components/selectors/Basic/Container_v2/ContainerSettings.js:32
+#: src/components/selectors/Basic/Footer/FooterSettings.js:32
+#: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:34
+#: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:57
+#: src/components/selectors/General/Columns/ColumnSettings.js:41
+#: src/components/selectors/General/Row/ColumnSettings.js:27
+#: src/components/selectors/General/Row/RowSettings.js:25
+#: src/components/selectors/General/Row_v2/ColumnSettings.js:27
+msgid "Flex Direction"
+msgstr ""
+
+#: src/components/selectors/Basic/Container/ContainerSettings.js:31
+#: src/components/selectors/Basic/Container_v2/ContainerSettings.js:33
+#: src/components/selectors/Basic/Footer/FooterSettings.js:34
+#: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:35
+#: src/components/selectors/Basic/Socials/SocialSetting.js:36
+#: src/components/selectors/Basic/Socials_v2/SocialSetting.js:41
+#: src/components/selectors/General/Columns/ColumnSettings.js:42
+#: src/components/selectors/General/Row/ColumnSettings.js:28
+#: src/components/selectors/General/Row/RowSettings.js:26
+#: src/components/selectors/General/Row_v2/ColumnSettings.js:28
+#: src/components/selectors/General/Row_v2/index.js:73
+#: src/components/selectors/General/Row_v2/RowSettings.js:27
+msgid "Row"
+msgstr ""
+
+#: src/components/selectors/Basic/Container/ContainerSettings.js:32
+#: src/components/selectors/Basic/Container_v2/ContainerSettings.js:34
+#: src/components/selectors/Basic/Footer/FooterSettings.js:35
+#: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:37
+#: src/components/selectors/Basic/Socials/SocialSetting.js:37
+#: src/components/selectors/Basic/Socials_v2/SocialSetting.js:42
+#: src/components/selectors/General/Columns/ColumnSettings.js:43
+#: src/components/selectors/General/Columns/index.js:90
+#: src/components/selectors/General/Row/ColumnSettings.js:29
+#: src/components/selectors/General/Row/RowSettings.js:20
+#: src/components/selectors/General/Row_v2/ColumnSettings.js:29
+#: src/components/selectors/General/Row_v2/RowSettings.js:21
+#: src/components/selectors/General/Row_v2/RowSettings.js:28
+#: src/components/selectors/General/Row_v2/SingleColumn.js:49
+msgid "Column"
+msgstr ""
+
+#: src/components/selectors/Basic/Container/ContainerSettings.js:33
+#: src/components/selectors/Basic/Container_v2/ContainerSettings.js:36
+#: src/components/selectors/Basic/Footer/FooterSettings.js:36
+#: src/components/selectors/Basic/Socials/SocialSetting.js:39
+#: src/components/selectors/Basic/Socials_v2/SocialSetting.js:44
+#: src/components/selectors/General/Columns/ColumnSettings.js:45
+#: src/components/selectors/General/Divider/DividerSettings.js:22
+#: src/components/selectors/General/Row/ColumnSettings.js:31
+#: src/components/selectors/General/Row_v2/ColumnSettings.js:31
+msgid "Justify"
+msgstr ""
+
+#: src/components/selectors/Basic/Container/ContainerSettings.js:34
+#: src/components/selectors/Basic/Container_v2/ContainerSettings.js:35
+#: src/components/selectors/Basic/Footer/FooterSettings.js:37
+#: src/components/selectors/Basic/List/ListSettings.js:15
+#: src/components/selectors/Basic/Socials/SocialSetting.js:38
+#: src/components/selectors/Basic/Socials_v2/SocialSetting.js:43
+#: src/components/selectors/General/Columns/ColumnSettings.js:44
+#: src/components/selectors/General/Row/ColumnSettings.js:30
+#: src/components/selectors/General/Row_v2/ColumnSettings.js:30
+msgid "Align"
+msgstr ""
+
+#: src/components/selectors/Basic/Container/ContainerSettings.js:35
+#: src/components/selectors/Basic/Container_v2/ContainerSettings.js:42
+#: src/components/selectors/Basic/Footer/FooterSettings.js:25
+#: src/components/selectors/Basic/Socials_v2/SocialSetting.js:39
+#: src/components/selectors/Basic/SubTitle/SubTitleSettings.js:30
+#: src/components/selectors/General/Row/RowSettings.js:30
+#: src/components/selectors/General/Row_v2/RowSettings.js:32
+msgid "Space Between"
+msgstr ""
+
+#: src/components/selectors/Basic/Container/ContainerSettings.js:36
+#: src/components/selectors/Basic/Container_v2/ContainerSettings.js:39
+#: src/components/selectors/Basic/EmailHeading/EmailHeadingSettings.js:37
+#: src/components/selectors/Basic/ImageUpload/ImageUploadSettings.js:29
+#: src/components/selectors/General/Columns/ColumnSettings.js:46
+#: src/components/selectors/General/Row/ColumnSettings.js:32
+#: src/components/selectors/General/Row_v2/ColumnSettings.js:32
+#: src/components/selectors/Others/ResetPasswordWP/ResetPasswordWPSetting.js:41
+msgid "Border Style"
+msgstr ""
+
+#: src/components/selectors/Basic/Container_v2/ContainerSettings.js:38
+msgid "Radius"
+msgstr ""
+
 #: src/components/selectors/Basic/EmailHeading/EmailHeadingSettings.js:24
 msgid "This is heading"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
 #: src/components/selectors/Basic/EmailHeading/EmailHeadingSettings.js:29
 #: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:49
 #: src/components/selectors/Basic/SubTitle/SubTitleSettings.js:27
@@ -1681,49 +2035,17 @@ msgstr ""
 #: src/components/selectors/Others/NewUserRegWP/NewUserRegSettings.js:23
 #: src/components/selectors/Others/NoStock/NoStockSettings.js:23
 #: src/components/selectors/Others/PasswordReset/PasswordResetSettings.js:28
+#: src/components/selectors/Others/PaymentGateway/PaymentGatewaySettings.js:26
 #: src/components/selectors/Others/ResetPasswordWP/ResetPasswordWPSetting.js:26
 #: src/components/selectors/Others/ResetPasswordWP/ResetPasswordWPSetting.js:33
 #: src/components/selectors/WoCommerce/BillingAddress/BillingAddressSettings.js:22
 #: src/components/selectors/WoCommerce/BillingShippingCombine/BillingShippingSettings.js:22
 #: src/components/selectors/WoCommerce/CustomerNote/CustomerNoteSettings.js:26
-#: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:55
+#: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:57
 #: src/components/selectors/WoCommerce/ShippingAddress/ShippingAddressSettings.js:21
 msgid "Text Align"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Basic/Button/ButtonSettings.js:35
-#: src/components/selectors/Basic/Container_v2/ContainerSettings.js:30
-#: src/components/selectors/Basic/EmailHeading/EmailHeadingSettings.js:31
-#: src/components/selectors/Basic/Footer/FooterSettings.js:38
-#: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:39
-#: src/components/selectors/Basic/ImageUpload/ImageUploadSettings.js:30
-#: src/components/selectors/Basic/SubTitle/SubTitleSettings.js:32
-#: src/components/selectors/Basic/Text/TextSettings.js:24
-#: src/components/selectors/Basic/VideoBlock/VideoBlockSettings.js:29
-#: src/components/selectors/General/Divider/DividerSettings.js:18
-#: src/components/selectors/General/Row_v2/ColumnSettings.js:24
-#: src/components/selectors/General/Row_v2/RowSettings.js:30
-#: src/components/selectors/Others/AccountReg/AccountRegSettings.js:28
-#: src/components/selectors/Others/BackOrder/BackOrderSettings.js:24
-#: src/components/selectors/Others/LowStock/LowStockSettings.js:25
-#: src/components/selectors/Others/NewUserRegWP/NewUserRegSettings.js:30
-#: src/components/selectors/Others/NoStock/NoStockSettings.js:25
-#: src/components/selectors/Others/PasswordReset/PasswordResetSettings.js:30
-#: src/components/selectors/Others/ResetPasswordWP/ResetPasswordWPSetting.js:28
-#: src/components/selectors/Others/ResetPasswordWP/ResetPasswordWPSetting.js:39
-#: src/components/selectors/WoCommerce/BillingAddress/BillingAddressSettings.js:23
-#: src/components/selectors/WoCommerce/BillingShippingCombine/BillingShippingSettings.js:23
-#: src/components/selectors/WoCommerce/CustomerNote/CustomerNoteSettings.js:28
-#: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:52
-#: src/components/selectors/WoCommerce/ShippingAddress/ShippingAddressSettings.js:22
-#: src/components/selectors/WoCommerce/ShippingAddress/ShippingAddressSettings.js:25
-msgid "Margin"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
 #: src/components/selectors/Basic/EmailHeading/EmailHeadingSettings.js:35
 #: src/components/selectors/Basic/Footer/FooterSettings.js:31
 #: src/components/selectors/Basic/Footer/FooterSettings.js:42
@@ -1736,19 +2058,18 @@ msgstr ""
 #: src/components/selectors/Others/NewUserRegWP/NewUserRegSettings.js:27
 #: src/components/selectors/Others/NoStock/NoStockSettings.js:21
 #: src/components/selectors/Others/PasswordReset/PasswordResetSettings.js:26
+#: src/components/selectors/Others/PaymentGateway/PaymentGatewaySettings.js:23
 #: src/components/selectors/Others/ResetPasswordWP/ResetPasswordWPSetting.js:24
 #: src/components/selectors/Others/ResetPasswordWP/ResetPasswordWPSetting.js:36
 #: src/components/selectors/WoCommerce/BillingAddress/BillingAddressSettings.js:21
 #: src/components/selectors/WoCommerce/BillingShippingCombine/BillingShippingSettings.js:21
 #: src/components/selectors/WoCommerce/CustomerNote/CustomerNoteSettings.js:25
-#: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:49
+#: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:51
 #: src/components/selectors/WoCommerce/OrderItem/style/Style2Settings.js:18
 #: src/components/selectors/WoCommerce/ShippingAddress/ShippingAddressSettings.js:20
 msgid "Background Color"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
 #: src/components/selectors/Basic/EmailHeading/EmailHeadingSettings.js:36
 #: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:45
 #: src/components/selectors/Basic/SubTitle/SubTitleSettings.js:28
@@ -1762,72 +2083,19 @@ msgstr ""
 msgid "Title Color"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Basic/Container_v2/ContainerSettings.js:39
-#: src/components/selectors/Basic/EmailHeading/EmailHeadingSettings.js:37
-#: src/components/selectors/Basic/ImageUpload/ImageUploadSettings.js:29
-#: src/components/selectors/General/Row_v2/ColumnSettings.js:32
-#: src/components/selectors/Others/ResetPasswordWP/ResetPasswordWPSetting.js:41
-msgid "Border Style"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
 #: src/components/selectors/Basic/EmailHeading/EmailHeadingSettings.js:38
 #: src/components/selectors/Basic/Footer/FooterSettings.js:27
 msgid "Add Link"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Basic/Button/ButtonSettings.js:29
-#: src/components/selectors/Basic/EmailHeading/EmailHeadingSettings.js:39
-#: src/components/selectors/Basic/Footer/FooterSettings.js:28
-#: src/components/selectors/Basic/ImageUpload/ImageUploadSettings.js:35
-#: src/components/selectors/Others/PasswordReset/PasswordResetSettings.js:23
-#: src/components/selectors/Others/ResetPasswordWP/ResetPasswordWPSetting.js:21
-msgid "Link"
+#: src/components/selectors/Basic/Footer/FooterSettings.js:26
+msgid "Company Name"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/Toolbar/Dimension/index.js:10
-msgid "width"
+#: src/components/selectors/Basic/Footer/FooterSettings.js:29
+msgid "Copyright Text"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/Toolbar/Dimension/index.js:11
-msgid "height"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/WidgetsContainer/basicToolBox.js:32
-#: src/components/selectors/Basic/SubTitle/index.js:78
-#: src/components/selectors/Basic/SubTitle/SubTitleSettings.js:22
-msgid "Sub Title"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:44
-#: src/components/selectors/Basic/SubTitle/SubTitleSettings.js:20
-#: src/components/selectors/Others/BackOrder/BackOrderSettings.js:18
-#: src/components/selectors/Others/LowStock/LowStockSettings.js:19
-#: src/components/selectors/Others/NoStock/NoStockSettings.js:19
-#: src/components/selectors/WoCommerce/BillingAddress/BillingAddressSettings.js:19
-#: src/components/selectors/WoCommerce/BillingAddress/BillingAddressSettings.js:25
-#: src/components/selectors/WoCommerce/BillingShippingCombine/BillingShippingSettings.js:25
-#: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:53
-#: src/components/selectors/WoCommerce/OrderItem/style/Style2Settings.js:27
-#: src/components/selectors/WoCommerce/ShippingAddress/ShippingAddressSettings.js:18
-msgid "Title"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
 #: src/components/selectors/Basic/Footer/FooterSettings.js:30
 #: src/components/selectors/Basic/ImageUpload/ImageUploadSettings.js:40
 #: src/components/selectors/Basic/SubTitle/SubTitleSettings.js:23
@@ -1837,656 +2105,362 @@ msgstr ""
 #: src/components/selectors/Others/NoStock/NoStockSettings.js:20
 #: src/components/selectors/WoCommerce/BillingAddress/BillingAddressSettings.js:20
 #: src/components/selectors/WoCommerce/BillingShippingCombine/BillingShippingSettings.js:18
-#: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:48
+#: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:50
 #: src/components/selectors/WoCommerce/ShippingAddress/ShippingAddressSettings.js:19
 msgid "Wrapper"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Basic/Button/ButtonSettings.js:34
-#: src/components/selectors/Basic/Footer/FooterSettings.js:41
-#: src/components/selectors/Basic/Socials_v2/SocialActionCard.js:94
-#: src/components/selectors/Basic/SubTitle/SubTitleSettings.js:25
-#: src/components/selectors/Others/BackOrder/BackOrderSettings.js:21
-#: src/components/selectors/Others/LowStock/LowStockSettings.js:22
-#: src/components/selectors/Others/NoStock/NoStockSettings.js:22
-#: src/components/selectors/WoCommerce/BillingAddress/BillingAddressSettings.js:28
-#: src/components/selectors/WoCommerce/BillingShippingCombine/BillingShippingSettings.js:28
-#: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:50
-#: src/components/selectors/WoCommerce/OrderItem/style/Style2Settings.js:19
-#: src/components/selectors/WoCommerce/ShippingAddress/ShippingAddressSettings.js:28
-msgid "Color"
+#: src/components/selectors/Basic/Footer/FooterSettings.js:33
+#: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:58
+msgid "Reverse Direction"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Basic/SubTitle/SubTitleSettings.js:29
-msgid "SubTitle Color"
+#: src/components/selectors/Basic/Footer/FooterSettings.js:40
+msgid "Company"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Basic/Container_v2/ContainerSettings.js:42
-#: src/components/selectors/Basic/Footer/FooterSettings.js:25
-#: src/components/selectors/Basic/Socials_v2/SocialSetting.js:39
-#: src/components/selectors/Basic/SubTitle/SubTitleSettings.js:30
-#: src/components/selectors/General/Row_v2/RowSettings.js:32
-msgid "Space Between"
+#: src/components/selectors/Basic/Footer/FooterSettings.js:43
+msgid "Copyright"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/Toolbar/FileUpload/index.js:153
-msgid "Uploading..."
+#: src/components/selectors/Basic/HtmlCodeEditor/HtmlCodeEditorSettings.js:10
+#: src/components/selectors/Basic/HtmlCodeEditor/index.js:98
+msgid "HTML Code"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/Toolbar/FileUpload/index.js:154
-msgid "No file chosen"
+#: src/components/selectors/Basic/HtmlCodeEditor/HtmlCodeEditorSettings.js:12
+#: src/components/selectors/Basic/HtmlCodeEditor/index.js:62
+msgid "Insert HTML Code"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/Toolbar/FileUpload/index.js:155
-msgid "Choose file"
+#: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:31
+msgid "Description"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/Toolbar/FileUpload/index.js:156
-msgid "Are you sure want to delete this file?"
+#: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:33
+msgid "Container Background"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Basic/ImageUpload/ImageUploadSettings.js:25
-#: src/components/selectors/Basic/ImageUpload/index.js:89
-msgid "Image Upload"
+#: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:36
+msgid "Row Reverse"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Basic/ImageUpload/ImageUploadSettings.js:23
-#: src/components/selectors/Basic/Socials/SocialSetting.js:32
-#: src/components/selectors/General/Row_v2/RowSettings.js:22
-#: src/components/selectors/Others/ResetPasswordWP/ResetPasswordWPSetting.js:42
-msgid "Dimensions"
+#: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:38
+msgid "Column Reverse"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Basic/ImageUpload/ImageUploadSettings.js:24
-#: src/components/selectors/Basic/VideoBlock/VideoBlockSettings.js:31
-msgid "External URL"
+#: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:41
+#: src/components/selectors/Basic/VideoBlock/VideoBlockSettings.js:27
+msgid "Upload"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Basic/Button/ButtonSettings.js:37
-#: src/components/selectors/Basic/Container_v2/ContainerSettings.js:37
-#: src/components/selectors/Basic/ImageUpload/ImageUploadSettings.js:27
-#: src/components/selectors/Basic/Socials/SocialSetting.js:35
-#: src/components/selectors/Basic/Socials_v2/SocialSetting.js:40
-#: src/components/selectors/General/Divider/DividerSettings.js:21
-#: src/components/selectors/General/Row_v2/ColumnSettings.js:26
-#: src/components/selectors/General/Row_v2/RowSettings.js:25
-msgid "Alignment"
+#: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:44
+#: src/components/selectors/Basic/SubTitle/SubTitleSettings.js:20
+#: src/components/selectors/Others/BackOrder/BackOrderSettings.js:18
+#: src/components/selectors/Others/LowStock/LowStockSettings.js:19
+#: src/components/selectors/Others/NoStock/NoStockSettings.js:19
+#: src/components/selectors/WoCommerce/BillingAddress/BillingAddressSettings.js:19
+#: src/components/selectors/WoCommerce/BillingAddress/BillingAddressSettings.js:25
+#: src/components/selectors/WoCommerce/BillingShippingCombine/BillingShippingSettings.js:25
+#: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:55
+#: src/components/selectors/WoCommerce/OrderItem/style/Style2Settings.js:27
+#: src/components/selectors/WoCommerce/ShippingAddress/ShippingAddressSettings.js:18
+msgid "Title"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Basic/ImageUpload/ImageUploadSettings.js:33
-msgid "Select Image"
+#: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:51
+msgid "Description Color"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
+#: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:52
+#: src/components/selectors/Basic/ImageUpload/ImageUploadSettings.js:39
+msgid "Image"
+msgstr ""
+
 #: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:53
 #: src/components/selectors/Basic/ImageUpload/ImageUploadSettings.js:34
 #: src/components/selectors/Basic/Socials_v2/SocialActionCard.js:100
 msgid "Redirect URL"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Basic/ImageUpload/ImageUploadSettings.js:36
-msgid "Alt Text"
+#: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:54
+msgid "External Source"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Basic/ImageUpload/ImageUploadSettings.js:37
-#: src/components/selectors/WoCommerce/OrderItem/style/Style2Settings.js:39
-msgid "Style"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:52
-#: src/components/selectors/Basic/ImageUpload/ImageUploadSettings.js:39
-msgid "Image"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Basic/BackgroundImage/index.js:56
-#: src/components/selectors/Basic/Container_v2/ContainerSettings.js:29
-msgid "Background Image"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/Toolbar/IconPicker/UtilsComponents/IconsList.js:11
-msgid "Insert"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/Toolbar/IconPicker/index.js:20
-#: src/components/selectors/Basic/Socials_v2/SocialActionCard.js:99
-msgid "Select Icon"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/Toolbar/IconPicker/index.js:21
-msgid "Remove Icon"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/Toolbar/IconPicker/index.js:22
-msgid "Icon Picker"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/WidgetsContainer/basicToolBox.js:60
-#: src/components/selectors/Basic/VideoBlock/index.js:88
-msgid "Video"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Basic/VideoBlock/VideoBlockSettings.js:25
-msgid "Video URL"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Basic/VideoBlock/VideoBlockSettings.js:26
-msgid "Video Style"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:41
-#: src/components/selectors/Basic/VideoBlock/VideoBlockSettings.js:27
-msgid "Upload"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Basic/VideoBlock/VideoBlockSettings.js:28
-msgid "Video Thumbnail"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Basic/VideoBlock/VideoBlockSettings.js:32
-msgid "Upload Video"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Basic/VideoBlock/VideoBlockSettings.js:33
-msgid "Icon"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Basic/VideoBlock/VideoBlockSettings.js:34
-msgid "Size"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Basic/VideoBlock/VideoBlockSettings.js:35
-msgid "Play Icon"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/Toolbar/BoxShadow/index.js:29
-msgid "Box Shadow"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/WidgetsContainer/basicToolBox.js:44
-#: src/components/selectors/Basic/Button/ButtonSettings.js:30
-#: src/components/selectors/Basic/Button/index.js:80
-#: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:63
-msgid "Button"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Basic/Button/ButtonSettings.js:31
-msgid "Full"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Basic/Button/ButtonSettings.js:32
-#: src/components/selectors/Basic/Button/ButtonSettings.js:42
-msgid "Outline"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Basic/Button/ButtonSettings.js:39
-msgid "Border"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Basic/Button/ButtonSettings.js:40
-msgid "Use Width"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Basic/Button/ButtonSettings.js:41
-msgid "Fill"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Basic/Button/ButtonSettings.js:43
-#: src/components/selectors/General/Divider/DividerSettings.js:19
-msgid "Width"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Basic/Socials/index.js:12
-#: src/components/selectors/Basic/Socials_v2/SocialActionCard.js:98
-msgid "Facebook"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Basic/Socials/index.js:19
-msgid "Twitter"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Basic/Socials/index.js:25
-msgid "Whats App"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Basic/Socials/index.js:32
-msgid "YouTube"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Basic/Socials/index.js:40
-msgid "Instagram"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/WidgetsContainer/basicToolBox.js:78
-#: src/components/selectors/Basic/Socials/index.js:103
-#: src/components/selectors/Basic/Socials_v2/index.js:93
-msgid "Social Icons"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Basic/Socials/SocialSetting.js:31
-#: src/components/selectors/Basic/Socials_v2/SocialSetting.js:36
-msgid "Icons"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Basic/Socials/SocialSetting.js:33
-#: src/components/selectors/Basic/Socials_v2/SocialSetting.js:38
-msgid "Icon Size"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Basic/Container_v2/ContainerSettings.js:33
-#: src/components/selectors/Basic/Footer/FooterSettings.js:34
-#: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:35
-#: src/components/selectors/Basic/Socials/SocialSetting.js:36
-#: src/components/selectors/Basic/Socials_v2/SocialSetting.js:41
-#: src/components/selectors/General/Row_v2/ColumnSettings.js:28
-#: src/components/selectors/General/Row_v2/index.js:73
-#: src/components/selectors/General/Row_v2/RowSettings.js:27
-msgid "Row"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Basic/Container_v2/ContainerSettings.js:34
-#: src/components/selectors/Basic/Footer/FooterSettings.js:35
-#: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:37
-#: src/components/selectors/Basic/Socials/SocialSetting.js:37
-#: src/components/selectors/Basic/Socials_v2/SocialSetting.js:42
-#: src/components/selectors/General/Columns/index.js:90
-#: src/components/selectors/General/Row_v2/ColumnSettings.js:29
-#: src/components/selectors/General/Row_v2/RowSettings.js:21
-#: src/components/selectors/General/Row_v2/RowSettings.js:28
-#: src/components/selectors/General/Row_v2/SingleColumn.js:49
-msgid "Column"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Basic/Container_v2/ContainerSettings.js:35
-#: src/components/selectors/Basic/Footer/FooterSettings.js:37
-#: src/components/selectors/Basic/Socials/SocialSetting.js:38
-#: src/components/selectors/Basic/Socials_v2/SocialSetting.js:43
-#: src/components/selectors/General/Row_v2/ColumnSettings.js:30
-msgid "Align"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Basic/Container_v2/ContainerSettings.js:36
-#: src/components/selectors/Basic/Footer/FooterSettings.js:36
-#: src/components/selectors/Basic/Socials/SocialSetting.js:39
-#: src/components/selectors/Basic/Socials_v2/SocialSetting.js:44
-#: src/components/selectors/General/Divider/DividerSettings.js:22
-#: src/components/selectors/General/Row_v2/ColumnSettings.js:31
-msgid "Justify"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Basic/Socials_v2/SocialActionCard.js:23
-msgid "Please write a valid URL"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Basic/Socials_v2/SocialActionCard.js:93
-msgid "Select an Icon"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
 #: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:55
 #: src/components/selectors/Basic/Socials_v2/SocialActionCard.js:96
 msgid "URL"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Basic/Socials_v2/SocialActionCard.js:97
-msgid "Add new"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Basic/Socials_v2/index.js:48
-msgid "No icon selected"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Basic/Socials_v2/SocialSetting.js:37
-msgid "Icon Style"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/General/Row_v2/EmptyContent.js:5
-msgid "No content here-Drag content from widgets"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/WidgetsContainer/basicToolBox.js:72
-#: src/components/selectors/Basic/Container_v2/index.js:103
-#: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:32
-msgid "Container"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Basic/Container_v2/ContainerSettings.js:32
-#: src/components/selectors/Basic/Footer/FooterSettings.js:32
-#: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:34
-#: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:57
-#: src/components/selectors/General/Row_v2/ColumnSettings.js:27
-msgid "Flex Direction"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Basic/Container_v2/ContainerSettings.js:38
-msgid "Radius"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Basic/Timer/index.js:123
-msgid "Timer"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Basic/List/index.js:41
-msgid "List"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/WidgetsContainer/basicToolBox.js:84
-#: src/components/selectors/Basic/ImageBox/index.js:189
-msgid "Image Box"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:31
-msgid "Description"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:33
-msgid "Container Background"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:36
-msgid "Row Reverse"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:38
-msgid "Column Reverse"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/WidgetsContainer/basicToolBox.js:104
-#: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:42
-msgid "Upload Image"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:51
-msgid "Description Color"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:54
-msgid "External Source"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
 #: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:56
 msgid "Image URL"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Basic/Footer/FooterSettings.js:33
-#: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:58
-msgid "Reverse Direction"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
 #: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:59
 msgid "Horizontal Align"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
 #: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:60
 msgid "Vertical Align"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
 #: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:61
 msgid "Enable Height & Width"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
 #: src/components/selectors/Basic/ImageBox/ImageBoxSettings.js:64
 msgid "Show Button"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Basic/HtmlCodeEditor/HtmlCodeEditorSettings.js:12
-#: src/components/selectors/Basic/HtmlCodeEditor/index.js:62
-msgid "Insert HTML Code"
+#: src/components/selectors/Basic/ImageUpload/ImageUploadSettings.js:23
+#: src/components/selectors/Basic/Socials/SocialSetting.js:32
+#: src/components/selectors/General/Row/RowSettings.js:21
+#: src/components/selectors/General/Row_v2/RowSettings.js:22
+#: src/components/selectors/Others/ResetPasswordWP/ResetPasswordWPSetting.js:42
+msgid "Dimensions"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Basic/HtmlCodeEditor/HtmlCodeEditorSettings.js:10
-#: src/components/selectors/Basic/HtmlCodeEditor/index.js:98
-msgid "HTML Code"
+#: src/components/selectors/Basic/ImageUpload/ImageUploadSettings.js:24
+#: src/components/selectors/Basic/VideoBlock/VideoBlockSettings.js:31
+msgid "External URL"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/WidgetsContainer/basicToolBox.js:141
-#: src/components/selectors/Basic/Footer/index.js:91
-#: src/components/selectors/Others/AccountReg/AccountRegSettings.js:23
-#: src/components/selectors/Others/NewUserRegWP/NewUserRegSettings.js:34
-#: src/components/selectors/Others/PasswordReset/PasswordResetSettings.js:24
-#: src/components/selectors/Others/ResetPasswordWP/ResetPasswordWPSetting.js:22
-#: src/components/selectors/WoCommerce/CustomerNote/CustomerNoteSettings.js:22
-#: src/components/selectors/WoCommerce/OrderItem/style/Style2Settings.js:32
-msgid "Footer"
+#: src/components/selectors/Basic/ImageUpload/ImageUploadSettings.js:25
+#: src/components/selectors/Basic/ImageUpload/index.js:89
+msgid "Image Upload"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Basic/Footer/FooterSettings.js:26
-msgid "Company Name"
+#: src/components/selectors/Basic/ImageUpload/ImageUploadSettings.js:33
+msgid "Select Image"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Basic/Footer/FooterSettings.js:29
-msgid "Copyright Text"
+#: src/components/selectors/Basic/ImageUpload/ImageUploadSettings.js:36
+msgid "Alt Text"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Basic/Footer/FooterSettings.js:40
-msgid "Company"
+#: src/components/selectors/Basic/ImageUpload/ImageUploadSettings.js:37
+#: src/components/selectors/Others/PaymentGateway/PaymentGatewaySettings.js:16
+#: src/components/selectors/WoCommerce/OrderItem/style/Style2Settings.js:39
+msgid "Style"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Basic/Footer/FooterSettings.js:43
-msgid "Copyright"
+#: src/components/selectors/Basic/List/index.js:41
+msgid "List"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/WidgetsContainer/basicToolBox.js:129
-#: src/components/editor/WidgetsContainer/generalToolBox.js:23
-#: src/components/selectors/General/Divider/index.js:36
-msgid "Divider"
+#: src/components/selectors/Basic/List/ListSettings.js:11
+msgid "List Style"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
+#: src/components/selectors/Basic/List/ListSettings.js:12
+msgid "List Style Type"
+msgstr ""
+
+#: src/components/selectors/Basic/List/ListSettings.js:17
+msgid "Center"
+msgstr ""
+
+#: src/components/selectors/Basic/List/ListSettings.js:19
+msgid "Weight"
+msgstr ""
+
+#: src/components/selectors/Basic/List/ListSettings.js:20
+msgid "Regular"
+msgstr ""
+
+#: src/components/selectors/Basic/List/ListSettings.js:21
+msgid "Medium"
+msgstr ""
+
+#: src/components/selectors/Basic/List/ListSettings.js:22
+msgid "Bold"
+msgstr ""
+
+#: src/components/selectors/Basic/List/ListSettings.js:28
+msgid "Shadow"
+msgstr ""
+
+#: src/components/selectors/Basic/Socials/index.js:12
+#: src/components/selectors/Basic/Socials_v2/SocialActionCard.js:98
+msgid "Facebook"
+msgstr ""
+
+#: src/components/selectors/Basic/Socials/index.js:19
+msgid "Twitter"
+msgstr ""
+
+#: src/components/selectors/Basic/Socials/index.js:25
+msgid "Whats App"
+msgstr ""
+
+#: src/components/selectors/Basic/Socials/index.js:32
+msgid "YouTube"
+msgstr ""
+
+#: src/components/selectors/Basic/Socials/index.js:40
+msgid "Instagram"
+msgstr ""
+
+#: src/components/selectors/Basic/Socials/index.js:94
+#: src/components/selectors/Basic/Socials_v2/index.js:48
+msgid "No icon selected"
+msgstr ""
+
+#: src/components/selectors/Basic/Socials/SocialSetting.js:31
+#: src/components/selectors/Basic/Socials_v2/SocialSetting.js:36
+msgid "Icons"
+msgstr ""
+
+#: src/components/selectors/Basic/Socials/SocialSetting.js:33
+#: src/components/selectors/Basic/Socials_v2/SocialSetting.js:38
+msgid "Icon Size"
+msgstr ""
+
+#: src/components/selectors/Basic/Socials_v2/SocialActionCard.js:23
+msgid "Please write a valid URL"
+msgstr ""
+
+#: src/components/selectors/Basic/Socials_v2/SocialActionCard.js:93
+msgid "Select an Icon"
+msgstr ""
+
+#: src/components/selectors/Basic/Socials_v2/SocialActionCard.js:97
+msgid "Add new"
+msgstr ""
+
+#: src/components/selectors/Basic/Socials_v2/SocialSetting.js:37
+msgid "Icon Style"
+msgstr ""
+
+#: src/components/selectors/Basic/SubTitle/SubTitleSettings.js:29
+msgid "SubTitle Color"
+msgstr ""
+
+#: src/components/selectors/Basic/Timer/index.js:123
+msgid "Timer"
+msgstr ""
+
+#: src/components/selectors/Basic/VideoBlock/index.js:67
+msgid "Play"
+msgstr ""
+
+#: src/components/selectors/Basic/VideoBlock/VideoBlockSettings.js:25
+msgid "Video URL"
+msgstr ""
+
+#: src/components/selectors/Basic/VideoBlock/VideoBlockSettings.js:26
+msgid "Video Style"
+msgstr ""
+
+#: src/components/selectors/Basic/VideoBlock/VideoBlockSettings.js:28
+msgid "Video Thumbnail"
+msgstr ""
+
+#: src/components/selectors/Basic/VideoBlock/VideoBlockSettings.js:32
+msgid "Upload Video"
+msgstr ""
+
+#: src/components/selectors/Basic/VideoBlock/VideoBlockSettings.js:33
+msgid "Icon"
+msgstr ""
+
+#: src/components/selectors/Basic/VideoBlock/VideoBlockSettings.js:34
+msgid "Size"
+msgstr ""
+
+#: src/components/selectors/Basic/VideoBlock/VideoBlockSettings.js:35
+msgid "Play Icon"
+msgstr ""
+
+#: src/components/selectors/CanvasContainer/index.js:116
+#: src/components/selectors/CanvasContainer/index.js:120
+#: src/components/selectors/CanvasContainer/index.js:149
+msgid "Invalid Widget Data."
+msgstr ""
+
+#: src/components/selectors/CanvasContainer/index.js:178
+#: src/components/selectors/Others/AccountReg/AccountRegSettings.js:20
+#: src/components/selectors/Others/NewUserRegWP/NewUserRegSettings.js:33
+#: src/components/selectors/Others/PasswordReset/PasswordResetSettings.js:22
+#: src/components/selectors/Others/ResetPasswordWP/ResetPasswordWPSetting.js:20
+#: src/components/selectors/WoCommerce/CustomerNote/CustomerNoteSettings.js:21
+#: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:58
+msgid "Body"
+msgstr ""
+
+#: src/components/selectors/General/Columns/ColumnNoContent.js:19
+msgid "No content here."
+msgstr ""
+
+#: src/components/selectors/General/Columns/ColumnNoContent.js:19
+msgid "Drag content from left."
+msgstr ""
+
 #: src/components/selectors/General/Divider/DividerSettings.js:14
 #: src/components/selectors/General/Space/SpaceSettings.js:11
 #: src/components/selectors/Others/NewUserRegWP/NewUserRegSettings.js:18
 msgid "Dimension"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
 #: src/components/selectors/General/Divider/DividerSettings.js:20
 #: src/components/selectors/General/Space/SpaceSettings.js:12
 msgid "Height"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/WidgetsContainer/basicToolBox.js:135
-#: src/components/editor/WidgetsContainer/generalToolBox.js:29
-#: src/components/selectors/General/Space/index.js:23
-msgid "Space"
+#: src/components/selectors/General/Row/EmptyContent.js:4
+#: src/components/selectors/General/Row_v2/EmptyContent.js:5
+msgid "No content here-Drag content from widgets"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
+#: src/components/selectors/General/Row/index.js:33
 #: src/components/selectors/General/Row_v2/index.js:16
 msgid "No column here-Add column from setting"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
+#: src/components/selectors/General/Row/RowSettings.js:19
 #: src/components/selectors/General/Row_v2/RowSettings.js:20
 msgid "Add Column"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
 #: src/components/selectors/General/Row_v2/RowSettings.js:26
 msgid "Direction"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/WidgetsContainer/wooCommerceToolBox.js:21
-#: src/components/selectors/WoCommerce/ShippingAddress/index.js:112
-msgid "Shipping Address"
+#: src/components/selectors/Others/AccountReg/AccountRegSettings.js:19
+#: src/components/selectors/Others/NewUserRegWP/NewUserRegSettings.js:36
+#: src/components/selectors/Others/PasswordReset/PasswordResetSettings.js:21
+#: src/components/selectors/Others/PaymentGateway/PaymentGatewaySettings.js:17
+#: src/components/selectors/Others/ResetPasswordWP/ResetPasswordWPSetting.js:19
+#: src/components/selectors/WoCommerce/CustomerNote/CustomerNoteSettings.js:20
+msgid "Greetings"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
+#: src/components/selectors/Others/AccountReg/AccountRegSettings.js:21
+msgid "Visit Site Link"
+msgstr ""
+
+#: src/components/selectors/Others/AccountReg/AccountRegSettings.js:22
+msgid "New Password Link"
+msgstr ""
+
+#: src/components/selectors/Others/AccountReg/AccountRegSettings.js:25
+#: src/components/selectors/Others/BackOrder/BackOrderSettings.js:26
+#: src/components/selectors/Others/NewUserRegWP/NewUserRegSettings.js:28
+#: src/components/selectors/Others/NewUserRegWP/NewUserRegSettings.js:35
+#: src/components/selectors/Others/NoStock/NoStockSettings.js:28
+#: src/components/selectors/Others/PasswordReset/PasswordResetSettings.js:27
+#: src/components/selectors/Others/PaymentGateway/PaymentGatewaySettings.js:24
+#: src/components/selectors/Others/ResetPasswordWP/ResetPasswordWPSetting.js:25
+#: src/components/selectors/Others/ResetPasswordWP/ResetPasswordWPSetting.js:37
+#: src/components/selectors/WoCommerce/CustomerNote/CustomerNoteSettings.js:24
+#: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:56
+msgid "Text Color"
+msgstr ""
+
+#: src/components/selectors/Others/AccountReg/AccountRegSettings.js:29
+msgid "Customer Register Style"
+msgstr ""
+
 #: src/components/selectors/Others/BackOrder/BackOrderSettings.js:27
 #: src/components/selectors/Others/LowStock/LowStockSettings.js:27
 #: src/components/selectors/Others/NoStock/NoStockSettings.js:27
@@ -2496,476 +2470,585 @@ msgstr ""
 msgid "Info"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/WidgetsContainer/wooCommerceToolBox.js:27
-#: src/components/selectors/WoCommerce/BillingAddress/index.js:113
-msgid "Billing Address"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/WoCommerce/BillingShippingCombine/index.js:173
-msgid "Billing & Shipping Address"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/WoCommerce/BillingShippingCombine/BillingShippingSettings.js:19
-msgid "Billing Title"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/WoCommerce/BillingShippingCombine/BillingShippingSettings.js:20
-msgid "Shipping Title"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:28
-#: src/components/selectors/WoCommerce/OrderItem/style/Style2Settings.js:17
-msgid "Header"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/WoCommerce/OrderItem/style/Style2Settings.js:21
-msgid "Products"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/WoCommerce/OrderItem/style/Style2Settings.js:22
-msgid "Enable Separator"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/WoCommerce/OrderItem/style/Style2Settings.js:23
-msgid "Separator Style"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/WoCommerce/OrderItem/style/Style2Settings.js:24
-msgid "Separator Width"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/WoCommerce/OrderItem/style/Style2Settings.js:25
-msgid "Separator Color"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/WoCommerce/OrderItem/style/Style2Settings.js:26
-msgid "Product Item"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/WoCommerce/OrderItem/style/Style2Settings.js:28
-msgid "SubTitle"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:38
-#: src/components/selectors/WoCommerce/OrderItem/style/Style2Settings.js:30
-msgid "Price"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/WoCommerce/OrderItem/style/Style2Settings.js:31
-msgid "Billing Info"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/WoCommerce/OrderItem/style/Style2Settings.js:33
-msgid "Width (%)"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/WoCommerce/OrderItem/style/Style2Settings.js:34
-msgid "Gap (px)"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/WoCommerce/OrderItem/style/Style2Settings.js:35
-msgid "Billing Info Item"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/WoCommerce/OrderItem/style/Style2Settings.js:36
-msgid "Billing Info Title"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/WoCommerce/OrderItem/style/Style2Settings.js:37
-msgid "Billing Info Value"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/WoCommerce/OrderItem/style/Style2Settings.js:38
-msgid "Billing Info Total Title"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:29
-msgid "Order Item Style"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:30
-msgid "Style 1"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:31
-msgid "Style 2"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:32
-msgid "Style 3"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:33
-msgid "Enable Header"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:34
-msgid "Show Date"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:35
-msgid "Show Time"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:36
-msgid "Product"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:39
-msgid "Subtotal"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:41
-msgid "Note"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:42
-msgid "Order"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:43
-msgid "Order Summary"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:44
-msgid "Shipping"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:46
-msgid "Order Fully Refunded"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:47
-msgid "Partially Refunded Amount"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Others/AccountReg/AccountRegSettings.js:25
-#: src/components/selectors/Others/BackOrder/BackOrderSettings.js:26
-#: src/components/selectors/Others/NewUserRegWP/NewUserRegSettings.js:28
-#: src/components/selectors/Others/NewUserRegWP/NewUserRegSettings.js:35
-#: src/components/selectors/Others/NoStock/NoStockSettings.js:28
-#: src/components/selectors/Others/PasswordReset/PasswordResetSettings.js:27
-#: src/components/selectors/Others/ResetPasswordWP/ResetPasswordWPSetting.js:25
-#: src/components/selectors/Others/ResetPasswordWP/ResetPasswordWPSetting.js:37
-#: src/components/selectors/WoCommerce/CustomerNote/CustomerNoteSettings.js:24
-#: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:54
-msgid "Text Color"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/WoCommerce/OrderItemDownload/index.js:80
-msgid "Order Item Download"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Others/AccountReg/AccountRegSettings.js:19
-#: src/components/selectors/Others/NewUserRegWP/NewUserRegSettings.js:36
-#: src/components/selectors/Others/PasswordReset/PasswordResetSettings.js:21
-#: src/components/selectors/Others/ResetPasswordWP/ResetPasswordWPSetting.js:19
-#: src/components/selectors/WoCommerce/CustomerNote/CustomerNoteSettings.js:20
-msgid "Greetings"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/WoCommerce/CustomerNote/CustomerNoteSettings.js:23
-msgid "Customer Note Style"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/WidgetsContainer/wooCommerceToolBox.js:57
-#: src/components/selectors/Others/AccountReg/index.js:73
-msgid "Customer Register"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Others/AccountReg/AccountRegSettings.js:21
-msgid "Visit Site Link"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Others/AccountReg/AccountRegSettings.js:22
-msgid "New Password Link"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Others/AccountReg/AccountRegSettings.js:29
-msgid "Customer Register Style"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/WidgetsContainer/wooCommerceToolBox.js:63
-#: src/components/selectors/Others/PasswordReset/index.js:66
-msgid "Password Reset"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Others/PasswordReset/PasswordResetSettings.js:25
-#: src/components/selectors/Others/ResetPasswordWP/ResetPasswordWPSetting.js:23
-msgid "Password Reset Style"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Others/PasswordReset/PasswordResetSettings.js:31
-#: src/components/selectors/Others/ResetPasswordWP/ResetPasswordWPSetting.js:29
-msgid "For this reason"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Others/NewUserRegWP/index.js:69
-msgid "User Register"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Others/NewUserRegWP/NewUserRegSettings.js:25
-msgid "Additional Field"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/selectors/Others/NewUserRegWP/NewUserRegSettings.js:32
-msgid "Additional Style"
-msgstr ""
-
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
 #: src/components/selectors/Others/BackOrder/index.js:19
 #: src/components/selectors/Others/LowStock/index.js:19
 #: src/components/selectors/Others/NoStock/index.js:21
 msgid "Product id"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
 #: src/components/selectors/Others/BackOrder/index.js:20
 #: src/components/selectors/Others/LowStock/index.js:20
 #: src/components/selectors/Others/NoStock/index.js:22
 msgid "Product name"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
 #: src/components/selectors/Others/BackOrder/index.js:21
 #: src/components/selectors/Others/LowStock/index.js:21
 #: src/components/selectors/Others/NoStock/index.js:23
 msgid "Product status"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
 #: src/components/selectors/Others/BackOrder/index.js:22
 #: src/components/selectors/Others/LowStock/index.js:22
 #: src/components/selectors/Others/NoStock/index.js:24
 msgid "Product price"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
 #: src/components/selectors/Others/BackOrder/index.js:23
 #: src/components/selectors/Others/LowStock/index.js:23
 #: src/components/selectors/Others/NoStock/index.js:25
 msgid "Product quantity"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
 #: src/components/selectors/Others/BackOrder/index.js:24
 #: src/components/selectors/Others/LowStock/index.js:24
 #: src/components/selectors/Others/NoStock/index.js:26
 msgid "Product description"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
 #: src/components/selectors/Others/BackOrder/index.js:25
 #: src/components/selectors/Others/LowStock/index.js:25
 #: src/components/selectors/Others/NoStock/index.js:27
 msgid "Back order status"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
+#: src/components/selectors/Others/BackOrder/index.js:26
+msgid "Benie with Logo"
+msgstr ""
+
+#: src/components/selectors/Others/BackOrder/index.js:27
+msgid "On Backorder"
+msgstr ""
+
+#: src/components/selectors/Others/BackOrder/index.js:28
+#: src/components/selectors/Others/NoStock/index.js:31
+msgid "This is a simple product."
+msgstr ""
+
+#: src/components/selectors/Others/BackOrder/index.js:29
+#: src/components/selectors/Others/LowStock/index.js:30
+#: src/components/selectors/Others/NoStock/index.js:32
+msgid "Notify"
+msgstr ""
+
 #: src/components/selectors/Others/LowStock/index.js:26
 #: src/components/selectors/Others/NoStock/index.js:28
 msgid "Low stock amount"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/WidgetsContainer/othersToolBox.js:19
-#: src/components/selectors/Others/ResetPasswordWP/index.js:66
-msgid "WP Reset Password"
+#: src/components/selectors/Others/LowStock/index.js:27
+msgid "V-Neck T-Shirt"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/WidgetsContainer/basicToolBox.js:50
-msgid "Column Section"
+#: src/components/selectors/Others/LowStock/index.js:28
+msgid "In Stock"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/WidgetsContainer/basicToolBox.js:66
-msgid "HTML"
+#: src/components/selectors/Others/LowStock/index.js:29
+msgid "This is a simple product"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/WidgetsContainer/wooCommerceToolBox.js:33
-msgid "Billing Shipping Address"
+#: src/components/selectors/Others/NewUserRegWP/index.js:50
+msgid "User Email :"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/WidgetsContainer/wooCommerceToolBox.js:39
-msgid "Order Item"
+#: src/components/selectors/Others/NewUserRegWP/index.js:56
+msgid "Click and Reset"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/WidgetsContainer/othersToolBox.js:13
-msgid "New User Register"
+#: src/components/selectors/Others/NewUserRegWP/index.js:69
+msgid "User Register"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/WidgetsContainer/index.js:15
-msgid "WordPress"
+#: src/components/selectors/Others/NewUserRegWP/NewUserRegSettings.js:25
+msgid "Additional Field"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/WidgetsContainer/index.js:143
-msgid "Search Widget..."
+#: src/components/selectors/Others/NewUserRegWP/NewUserRegSettings.js:32
+msgid "Additional Style"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/Viewport/EditorSidebar/TemplateList.js:149
-msgid "Do you want to replace your template?"
+#: src/components/selectors/Others/NoStock/index.js:29
+msgid "Benie"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/Viewport/EditorSidebar/GlobalSettings.js:107
-msgid "Email Pre-Header"
+#: src/components/selectors/Others/NoStock/index.js:30
+msgid "Out of Stock"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/Viewport/EditorSidebar/GlobalSettings.js:108
-msgid "Email Settings"
+#: src/components/selectors/Others/PasswordReset/PasswordResetSettings.js:25
+#: src/components/selectors/Others/ResetPasswordWP/ResetPasswordWPSetting.js:23
+msgid "Password Reset Style"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/Viewport/EditorSidebar/GlobalSettings.js:109
-msgid "Body Style"
+#: src/components/selectors/Others/PasswordReset/PasswordResetSettings.js:31
+#: src/components/selectors/Others/ResetPasswordWP/ResetPasswordWPSetting.js:29
+msgid "For this reason"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/Viewport/EditorSidebar/index.js:29
-msgid "Elements"
+#: src/components/selectors/Others/PaymentGateway/PaymentGatewaySettings.js:18
+msgid "Body Text"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/Viewport/EditorSidebar/index.js:30
-msgid "Templates"
+#: src/components/selectors/Others/PaymentGateway/PaymentGatewaySettings.js:19
+msgid "Info Text"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/Viewport/EditorSidebar/index.js:111
-msgid "EmailKit Build Custom Templates"
+#: src/components/selectors/Others/PaymentGateway/PaymentGatewaySettings.js:20
+msgid "Link Text"
 msgstr ""
 
-#: build/static/chunks/pages/index-3b91fa4fe478dcd42cd5.js:1
-#: dist/app.js:195
-#: src/components/editor/Viewport/Navigator/index.js:11
-msgid "Navigator"
+#: src/components/selectors/Others/PaymentGateway/PaymentGatewaySettings.js:21
+msgid "Footer Text"
+msgstr ""
+
+#: src/components/selectors/Others/PaymentGateway/PaymentGatewaySettings.js:22
+msgid "Payment Gateway Style"
+msgstr ""
+
+#: src/components/selectors/Others/PaymentGateway/PaymentGatewaySettings.js:25
+msgid "Link Color"
+msgstr ""
+
+#: src/components/selectors/Others/ResetPasswordWP/index.js:54
+msgid "Click here to reset your password."
+msgstr ""
+
+#: src/components/selectors/WoCommerce/BillingShippingCombine/BillingShippingSettings.js:19
+msgid "Billing Title"
+msgstr ""
+
+#: src/components/selectors/WoCommerce/BillingShippingCombine/BillingShippingSettings.js:20
+msgid "Shipping Title"
+msgstr ""
+
+#: src/components/selectors/WoCommerce/BillingShippingCombine/index.js:173
+msgid "Billing & Shipping Address"
+msgstr ""
+
+#: src/components/selectors/WoCommerce/CustomerNote/CustomerNoteSettings.js:23
+msgid "Customer Note Style"
+msgstr ""
+
+#: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:28
+#: src/components/selectors/WoCommerce/OrderItem/style/Style2Settings.js:17
+msgid "Header"
+msgstr ""
+
+#: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:29
+msgid "Order Item Style"
+msgstr ""
+
+#: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:30
+msgid "Style 1"
+msgstr ""
+
+#: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:31
+msgid "Style 2"
+msgstr ""
+
+#: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:32
+msgid "Style 3"
+msgstr ""
+
+#: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:33
+msgid "Enable Header"
+msgstr ""
+
+#: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:34
+msgid "Show Date"
+msgstr ""
+
+#: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:35
+msgid "Show Time"
+msgstr ""
+
+#: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:36
+msgid "Product"
+msgstr ""
+
+#: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:37
+#: src/components/selectors/WoCommerce/OrderItem/style/Style2Settings.js:29
+#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:30
+msgid "Quantity"
+msgstr ""
+
+#: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:38
+#: src/components/selectors/WoCommerce/OrderItem/style/Style2Settings.js:30
+msgid "Price"
+msgstr ""
+
+#: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:39
+msgid "Show Purchase Note"
+msgstr ""
+
+#: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:40
+msgid "Purchase Note"
+msgstr ""
+
+#: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:41
+msgid "Subtotal"
+msgstr ""
+
+#: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:42
+#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:38
+msgid "Total"
+msgstr ""
+
+#: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:43
+msgid "Note"
+msgstr ""
+
+#: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:44
+msgid "Order"
+msgstr ""
+
+#: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:45
+msgid "Order Summary"
+msgstr ""
+
+#: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:46
+msgid "Shipping"
+msgstr ""
+
+#: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:47
+#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:37
+msgid "Payment Method"
+msgstr ""
+
+#: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:48
+msgid "Order Fully Refunded"
+msgstr ""
+
+#: src/components/selectors/WoCommerce/OrderItem/OrderItemSettings.js:49
+msgid "Partially Refunded Amount"
+msgstr ""
+
+#: src/components/selectors/WoCommerce/OrderItem/style/Style2Settings.js:21
+msgid "Products"
+msgstr ""
+
+#: src/components/selectors/WoCommerce/OrderItem/style/Style2Settings.js:22
+msgid "Enable Separator"
+msgstr ""
+
+#: src/components/selectors/WoCommerce/OrderItem/style/Style2Settings.js:23
+msgid "Separator Style"
+msgstr ""
+
+#: src/components/selectors/WoCommerce/OrderItem/style/Style2Settings.js:24
+msgid "Separator Width"
+msgstr ""
+
+#: src/components/selectors/WoCommerce/OrderItem/style/Style2Settings.js:25
+msgid "Separator Color"
+msgstr ""
+
+#: src/components/selectors/WoCommerce/OrderItem/style/Style2Settings.js:26
+msgid "Product Item"
+msgstr ""
+
+#: src/components/selectors/WoCommerce/OrderItem/style/Style2Settings.js:28
+msgid "SubTitle"
+msgstr ""
+
+#: src/components/selectors/WoCommerce/OrderItem/style/Style2Settings.js:31
+msgid "Billing Info"
+msgstr ""
+
+#: src/components/selectors/WoCommerce/OrderItem/style/Style2Settings.js:33
+msgid "Width (%)"
+msgstr ""
+
+#: src/components/selectors/WoCommerce/OrderItem/style/Style2Settings.js:34
+msgid "Gap (px)"
+msgstr ""
+
+#: src/components/selectors/WoCommerce/OrderItem/style/Style2Settings.js:35
+msgid "Billing Info Item"
+msgstr ""
+
+#: src/components/selectors/WoCommerce/OrderItem/style/Style2Settings.js:36
+msgid "Billing Info Title"
+msgstr ""
+
+#: src/components/selectors/WoCommerce/OrderItem/style/Style2Settings.js:37
+msgid "Billing Info Value"
+msgstr ""
+
+#: src/components/selectors/WoCommerce/OrderItem/style/Style2Settings.js:38
+msgid "Billing Info Total Title"
+msgstr ""
+
+#: src/components/selectors/WoCommerce/OrderItemDownload/index.js:57
+msgid "Downloadable Product"
+msgstr ""
+
+#: src/components/selectors/WoCommerce/OrderItemDownload/index.js:63
+msgid "Download.doc"
+msgstr ""
+
+#: src/components/selectors/WoCommerce/OrderItemDownload/index.js:80
+msgid "Order Item Download"
+msgstr ""
+
+#: src/libs/common/EmailKitModal.js:15
+#: src/libs/common/EmailKitModalContent/ModalContent.js:50
+msgid "Cancel"
+msgstr ""
+
+#: src/libs/common/EmailKitModal.js:16
+msgid "Ok"
+msgstr ""
+
+#: src/libs/common/EmailKitModalContent/ModalContent.js:38
+msgid "Email address for test."
+msgstr ""
+
+#: src/libs/common/EmailKitModalContent/ModalContent.js:39
+msgid "Your alterations will not be saved."
+msgstr ""
+
+#: src/libs/common/EmailKitModalContent/ModalContent.js:40
+msgid "Sending"
+msgstr ""
+
+#: src/libs/common/EmailKitModalContent/ModalContent.js:41
+msgid "Send Email"
+msgstr ""
+
+#: src/libs/common/EmailKitModalContent/ModalContent.js:47
+msgid "Leave"
+msgstr ""
+
+#: src/libs/common/EmailKitModalContent/ModalContent.js:48
+msgid "Resetting"
+msgstr ""
+
+#: src/libs/common/EmailKitModalContent/ModalContent.js:49
+msgid "Replace"
+msgstr ""
+
+#: src/libs/common/EmailKitModalContent/ProModalContent.js:20
+msgid "Use Premium Features"
+msgstr ""
+
+#: src/libs/common/EmailKitModalContent/ProModalContent.js:21
+msgid "Design a custom email template that matches your brand"
+msgstr ""
+
+#: src/libs/common/EmailKitModalContent/ProModalContent.js:22
+msgid "Upgrade Now"
+msgstr ""
+
+#: src/libs/common/EmailKitModalContent/SaveAsTemplateModalContent.js:33
+msgid "Library"
+msgstr ""
+
+#: src/libs/common/EmailKitModalContent/SaveAsTemplateModalContent.js:34
+msgid "Save Your Email to Library"
+msgstr ""
+
+#: src/libs/common/EmailKitModalContent/SaveAsTemplateModalContent.js:35
+msgid "Learn more about EmailKit Library"
+msgstr ""
+
+#: src/libs/common/EmailKitModalContent/SaveAsTemplateModalContent.js:36
+msgid "Click Here"
+msgstr ""
+
+#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:11
+msgid "Site Url"
+msgstr ""
+
+#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:12
+msgid "User Name"
+msgstr ""
+
+#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:13
+msgid "User Email"
+msgstr ""
+
+#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:14
+msgid "User Login"
+msgstr ""
+
+#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:15
+msgid "Site Name"
+msgstr ""
+
+#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:16
+msgid "Display Name"
+msgstr ""
+
+#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:17
+msgid "Current User Email"
+msgstr ""
+
+#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:18
+msgid "App Name"
+msgstr ""
+
+#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:26
+msgid "Order Id"
+msgstr ""
+
+#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:27
+msgid "Order Number"
+msgstr ""
+
+#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:28
+msgid "Order Status"
+msgstr ""
+
+#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:29
+msgid "Billing Name"
+msgstr ""
+
+#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:31
+msgid "Order Currency"
+msgstr ""
+
+#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:32
+msgid "Shipping Total"
+msgstr ""
+
+#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:33
+msgid "Order Subtotal"
+msgstr ""
+
+#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:34
+msgid "Shipping Tax Total"
+msgstr ""
+
+#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:35
+msgid "Order Date"
+msgstr ""
+
+#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:36
+msgid "Shipping Method"
+msgstr ""
+
+#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:39
+msgid "Billing First Name"
+msgstr ""
+
+#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:40
+msgid "Billing Last name"
+msgstr ""
+
+#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:41
+msgid "billing_company"
+msgstr ""
+
+#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:42
+msgid "Billing Address 1"
+msgstr ""
+
+#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:43
+msgid "Billing Address 2"
+msgstr ""
+
+#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:44
+msgid "Billing City"
+msgstr ""
+
+#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:45
+msgid "Billing State"
+msgstr ""
+
+#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:46
+msgid "Billing Postcode"
+msgstr ""
+
+#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:47
+msgid "Billing Country"
+msgstr ""
+
+#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:48
+msgid "Billing Email"
+msgstr ""
+
+#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:49
+msgid "Billing Phone Number"
+msgstr ""
+
+#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:50
+msgid "Shipping First Name"
+msgstr ""
+
+#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:51
+msgid "Shipping Last Name"
+msgstr ""
+
+#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:52
+msgid "Shipping Company"
+msgstr ""
+
+#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:53
+msgid "Shipping Phone Number"
+msgstr ""
+
+#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:54
+msgid "Shipping Address 1"
+msgstr ""
+
+#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:55
+msgid "Shipping Address 2"
+msgstr ""
+
+#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:56
+msgid "Shipping City"
+msgstr ""
+
+#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:57
+msgid "Shipping State"
+msgstr ""
+
+#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:58
+msgid "Shipping Postcode"
+msgstr ""
+
+#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:59
+msgid "Shipping Country"
+msgstr ""
+
+#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:61
+msgid "Product Name"
+msgstr ""
+
+#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:68
+msgid "Gateway Title"
+msgstr ""
+
+#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:69
+msgid "Gateway Settings URL"
+msgstr ""
+
+#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:70
+msgid "Admin Username"
+msgstr ""
+
+#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:71
+msgid "Admin Email"
+msgstr ""
+
+#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:154
+msgid "Copied"
+msgstr ""
+
+#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:155
+msgid "No shortcode data found in this section"
+msgstr ""
+
+#: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:156
+msgid "Search..."
+msgstr ""
+
+#: src/libs/common/InputAction.js:21
+msgid "Please enter a valid URL"
+msgstr ""
+
+#: src/libs/common/InputAction.js:39
+msgid "Enter Link"
 msgstr ""

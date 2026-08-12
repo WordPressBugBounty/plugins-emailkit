@@ -4,7 +4,7 @@ Contributors: Ataurr, XpeedStudio
 Tags: Email Template, WordPress Email Builder, WordPress email customizer, WooCommerce email customizer, WooCommerce email template customizer, Email Customizer
 Tested up to: 7.0
 Requires at least: 6.0
-Stable tag: 1.6.7
+Stable tag: 1.6.8
 Requires PHP: 7.4
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -182,11 +182,13 @@ RoxSlider - It is a powerful tool for slider creation. You can design stunning s
 Visit [Wpmet](https://wpmet.com/) to learn more about how to get the best of WordPress with [Tutorials, Tips & Tricks](https://wpmet.com/blog)!
 
 == Changelog ==
+Version 1.6.8 -	09/08/2026
+Fixed: Hard-coded, non-translatable strings.
 
 Version 1.6.7 -	05/07/2026
 Added: Product purchase notes support in the Order Item widget for Processing and Completed orders.
-Added: New template type for woocommerce payment gateway enable notification.
-Fixed: Conflict issue with Tutor-lms plugin.
+Added: New template type for WooCommerce payment gateway to enable notification.
+Fixed: Conflict issue with Tutor LMS plugin.
 
 Version 1.6.6 -	20/04/2026
 Fixed: Arbitrary file read issue via emailkit-editor-template REST parameter (Author+ users).

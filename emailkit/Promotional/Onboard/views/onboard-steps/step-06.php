@@ -1,7 +1,7 @@
 <div class="emailkit-onboard-main-header">
     <img class="emailkit-onboard-main-header--thumb" src="<?php echo esc_url(self::get_url()); ?>assets/images/congrats-shape.png" alt="">
     <h1 class="emailkit-onboard-main-header--title"><strong><?php echo esc_html__('Congratulations!', 'emailkit'); ?></strong></h1>
-    <p class="emailkit-onboard-main-header--description">Start Giving Your Emails an <strong>EmailKit Glow Up!</strong> ✨</p>
+    <p class="emailkit-onboard-main-header--description"><?php echo esc_html__('Start Giving Your Emails an', 'emailkit'); ?> <strong><?php echo esc_html__('EmailKit Glow Up!', 'emailkit'); ?></strong> ✨</p>
     <button class="emailkit-onboard-btn emailkit-admin-settings-form-submit" type="submit"><div class="emailkit-spinner"></div> <?php echo esc_html__('Save Changes', 'emailkit'); ?></button>
 </div>
 <div class="emailkit-onboard-shapes">

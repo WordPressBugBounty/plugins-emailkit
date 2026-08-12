@@ -16,19 +16,25 @@ if(!class_exists('\Wpmet\Libs\ProAwareness')) :
 		private $parent_menu_slug;
 		private $menu_slug = '_get_help';
 		private $default_grid_link  = 'https://wpmet.com/support-ticket';
-		private $default_grid_title = 'Support Center';
+		private $default_grid_title = '';
 		private $default_grid_thumbnail = '';
-		private $default_grid_desc  = 'Our experienced support team is ready to resolve your issues any time.';
+		private $default_grid_desc  = '';
 		private $pro_link_conf      = [];
 
 		private $grids = [];
 		private $action_links = [];
 		private $row_meta_links = [];
-		private $parent_menu_text = 'Get Help';
+		private $parent_menu_text = '';
 		private $products = [];
 
 
 		protected $script_version = '1.2.0';
+
+		public function __construct() {
+			$this->default_grid_title = __('Support Center', 'emailkit');
+			$this->default_grid_desc  = __('Our experienced support team is ready to resolve your issues any time.', 'emailkit');
+			$this->parent_menu_text   = __('Get Help', 'emailkit');
+		}
 
 		/**
 		 * Get version of this script
@@ -138,7 +144,7 @@ if(!class_exists('\Wpmet\Libs\ProAwareness')) :
 
 			$this->pro_link_conf[] = [
 				'url'        => $url,
-				'anchor'     => empty($conf['anchor']) ? '<span style="color: #FCB214;" class="pro_aware pro">Upgrade To Premium</span>' : $conf['anchor'],
+				'anchor'     => empty($conf['anchor']) ? '<span style="color: #FCB214;" class="pro_aware pro">' . esc_html__('Upgrade To Premium', 'emailkit') . '</span>' : $conf['anchor'],
 				'permission' => empty($conf['permission']) ? 'manage_options' : $conf['permission'],
 			];
 
@@ -219,7 +225,7 @@ if(!class_exists('\Wpmet\Libs\ProAwareness')) :
                                    class="wpmet_pro_a_wrapper" title="<?php echo esc_attr($grid['title']); ?>"
                                    title="<?php echo esc_attr($grid['title']); ?>">
                                     <div class="wpmet_pro_a_thumb">
-                                        <img src="<?php echo esc_attr($grid['thumbnail']); ?>" alt="Thumbnail">
+                                        <img src="<?php echo esc_attr($grid['thumbnail']); ?>" alt="<?php echo esc_attr__('Thumbnail', 'emailkit'); ?>">
                                     </div>
                                     <!-- // thumbnail -->
 

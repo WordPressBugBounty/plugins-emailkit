@@ -6,7 +6,7 @@
         </div>
         <div class="emailkit-onboard-signup">
             <label for="signup"><i class="icon xs-onboard-mail"></i></label>
-            <input name="settings[newsletter_email]" id="signup" type="email" placeholder="Enter your email address">
+            <input name="settings[newsletter_email]" id="signup" type="email" placeholder="<?php echo esc_attr__('Enter your email address', 'emailkit'); ?>">
         </div>
         <p class="emailkit-onboard-signup--helptext"><?php echo esc_html__('Submit Your Best Email.', 'emailkit'); ?> <span><?php echo esc_html__('(We Never Spam)', 'emailkit'); ?></span></p>
     </div>

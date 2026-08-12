@@ -20,17 +20,17 @@ class MetaBox
     {
         $this->template_types = [
 
-            "New Order"                         =>  'New Order - WC ',
-            "Cancelled order"                   => 'Cancelled order  - WC ',
-            "Failed Order"                      => 'Failed Order  - WC ',
-            "Order On Hold"                     =>  'Order On Hold - WC ',
-            "Processing Order"                  =>  'Processing Order - WC ',
-            "Completed Order"                   =>  'Completed Order - WC ',
-            "Refunded Order"                    =>  'Refunded Order - WC ',
-            "Customer Invoice"                  =>  'Customer Invoice - WC ',
-            "Customer Note"                     =>  'Customer Note - WC ',
-            "Reset Password"                    =>  'Reset Password - WC ',
-            "New Account"                       =>  'New Account - WC ',
+            "New Order"                         =>  __('New Order - WC', 'emailkit'),
+            "Cancelled order"                   =>  __('Cancelled order - WC', 'emailkit'),
+            "Failed Order"                      =>  __('Failed Order - WC', 'emailkit'),
+            "Order On Hold"                     =>  __('Order On Hold - WC', 'emailkit'),
+            "Processing Order"                  =>  __('Processing Order - WC', 'emailkit'),
+            "Completed Order"                   =>  __('Completed Order - WC', 'emailkit'),
+            "Refunded Order"                    =>  __('Refunded Order - WC', 'emailkit'),
+            "Customer Invoice"                  =>  __('Customer Invoice - WC', 'emailkit'),
+            "Customer Note"                     =>  __('Customer Note - WC', 'emailkit'),
+            "Reset Password"                    =>  __('Reset Password - WC', 'emailkit'),
+            "New Account"                       =>  __('New Account - WC', 'emailkit'),
         ];
 
         add_action('add_meta_boxes', [$this, 'add']);
@@ -40,7 +40,7 @@ class MetaBox
     public function add()
     {
 
-        add_meta_box("metaBox_id", "Email Details", [$this, 'emailTemplate'], ["emailkit"], "advanced", "high", null);
+        add_meta_box("metaBox_id", __('Email Details', 'emailkit'), [$this, 'emailTemplate'], ["emailkit"], "advanced", "high", null);
     }
 
     /**
@@ -91,7 +91,7 @@ class MetaBox
                 <?php
                 $status = esc_html(get_post_meta($object->ID, "emailkit_template_status", 'Active'));
                 $checked_on = $status == 'Active' ? "checked" : "";
-                $toggle_label = $status == 'Active' ? "Active" : "Inactive";
+                $toggle_label = $status == 'Active' ? __('Active', 'emailkit') : __('Inactive', 'emailkit');
                 $status_value = $status == 'Active' ? "active" : "inactive";
                 ?>
 
