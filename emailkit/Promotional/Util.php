@@ -68,12 +68,12 @@ class Util{
 	public static function emailkit_copy_paste_action() {
 		// Check for nonce security
 		if (!isset($_POST['nonce']) || ! wp_verify_nonce( sanitize_key(wp_unslash($_POST['nonce'])), 'ajax-nonce' ) ) {
-			wp_send_json_error(['message' => 'Security check failed']);
+			wp_send_json_error(['message' => esc_html__( 'Security check failed', 'emailkit' )]);
 			exit;
 		}
 
 		if ( ! current_user_can( 'manage_options' ) ) {
-			wp_send_json_error(['message' => 'Insufficient permissions']);
+			wp_send_json_error(['message' => esc_html__( 'Insufficient permissions', 'emailkit' )]);
 			exit;
 		}
 
@@ -81,7 +81,7 @@ class Util{
 		$is_pro_active = is_plugin_active('emailkit-pro/emailkit-pro.php');
 		
 		if (!$is_pro_active) {
-			wp_send_json_error(['message' => 'EmailKit Pro is required for copy-paste feature']);
+			wp_send_json_error(['message' => esc_html__( 'EmailKit Pro is required for copy-paste feature', 'emailkit' )]);
 			exit;
 		}
 
@@ -90,7 +90,7 @@ class Util{
 		
 		// Validate value
 		if (!in_array($copy_paste_value, ['yes', 'no'])) {
-			wp_send_json_error(['message' => 'Invalid value provided']);
+			wp_send_json_error(['message' => esc_html__( 'Invalid value provided', 'emailkit' )]);
 			exit;
 		}
 
@@ -99,11 +99,11 @@ class Util{
 
 		if ($status) {
 			wp_send_json_success([
-				'message' => 'Copy-paste setting updated successfully',
+				'message' => esc_html__( 'Copy-paste setting updated successfully', 'emailkit' ),
 				'value' => $copy_paste_value
 			]);
 		} else {
-			wp_send_json_error(['message' => 'Failed to save setting']);
+			wp_send_json_error(['message' => esc_html__( 'Failed to save setting', 'emailkit' )]);
 		}
 		exit;
 	}

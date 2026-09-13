@@ -138,7 +138,12 @@ class CompletedOrder
 			$pre_header = !empty($pre_header) ? $pre_header : esc_html__(sprintf( 'order #%1$s is  completed', $order_id ), "emailkit");
 			$subject_template = get_post_meta($query->posts[0]->ID, 'emailkit_email_subject', true);
       		$subject = str_replace(array_keys(Utils::transform_details_keys($details)), array_values(Utils::transform_details_keys($details)), $subject_template);
-			$subject = !empty($subject) ? $subject . ' - ' . $pre_header : esc_html__("Hi ", "emailkit") . esc_attr($order->get_billing_first_name() . " " . $order->get_billing_last_name()) . ", " . esc_attr("Your order #$order_id is now complete") . ' - ' . $pre_header;
+			$subject = !empty($subject) ? $subject . ' - ' . $pre_header : sprintf(
+				/* translators: 1: customer full name, 2: order ID. */
+				esc_html__( 'Hi %1$s, Your order #%2$s is now complete', 'emailkit' ),
+				esc_attr($order->get_billing_first_name() . " " . $order->get_billing_last_name()),
+				esc_attr($order_id)
+			) . ' - ' . $pre_header;
 
 			$headers = [
 				'From: ' . $email . "\r\n",

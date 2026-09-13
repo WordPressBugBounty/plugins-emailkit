@@ -160,7 +160,12 @@ class PartialRefund
             $pre_header = !empty($pre_header) ? $pre_header : esc_html__("partially refunded", 'emailkit');
             $subject_template = get_post_meta($query->posts[0]->ID, 'emailkit_email_subject', true);
             $subject = str_replace(array_keys(Utils::transform_details_keys($details)), array_values(Utils::transform_details_keys($details)), $subject_template);
-			$subject = !empty($subject) ? $subject . ' - ' . $pre_header : esc_attr($order->get_billing_first_name() . " " . $order->get_billing_last_name()) . ", Your order#" . esc_attr($order_id) . " " . esc_html__("has been  Partially refunded", 'emailkit') . " - " . $pre_header;
+			$subject = !empty($subject) ? $subject . ' - ' . $pre_header : sprintf(
+				/* translators: 1: customer full name, 2: order ID. */
+				esc_html__( '%1$s, Your order#%2$s has been Partially refunded', 'emailkit' ),
+				esc_attr($order->get_billing_first_name() . " " . $order->get_billing_last_name()),
+				esc_attr($order_id)
+			) . " - " . $pre_header;
 
 			$headers = [
 				'From: ' . $email . "\r\n",

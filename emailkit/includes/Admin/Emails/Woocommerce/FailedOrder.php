@@ -139,7 +139,12 @@ class FailedOrder
      		$subject = str_replace(array_keys(Utils::transform_details_keys($details)), array_values(Utils::transform_details_keys($details)), $subject_template);
 			$blog_name = get_option('blogname');
 			$blog_name = '[' . trim($blog_name, '[]') . ']';
-			$subject =  !empty($subject) ? $subject . ' - ' . $pre_header : $blog_name .':'. 'Order#'. $order_id. esc_html__(" has been failed.", "emailkit"). ' - ' . $pre_header;
+			$subject =  !empty($subject) ? $subject . ' - ' . $pre_header : sprintf(
+				/* translators: 1: site name wrapped in square brackets, 2: order ID. */
+				esc_html__( '%1$s:Order#%2$s has been failed.', 'emailkit' ),
+				$blog_name,
+				esc_attr($order_id)
+			). ' - ' . $pre_header;
 
 
 			$headers = [

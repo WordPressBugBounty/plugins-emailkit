@@ -46,6 +46,10 @@ class Admin
       new Admin\EmailSettings\MetformEmailSettings();
       new Admin\EmailSettings\MetformShortcodes();
     }
+
+    if ( defined( 'POPUP_BUILDER_BLOCK_PLUGIN_VERSION' ) ) {
+      new Admin\EmailSettings\PopupkitEmailSettings();
+    }
       
       return true;
     }
@@ -148,7 +152,7 @@ class Admin
       public function register_settings_contents__settings(){
         ?>
         <div class="wrap">
-          <h1 class="wp-heading-inline"> EmailKit Settings </h1>
+          <h1 class="wp-heading-inline"> <?php esc_html_e( 'EmailKit Settings', 'emailkit' ); ?> </h1>
             <?php   do_action('emailkit-settings');  ?>
           <div class="clear"></div>
         </div>

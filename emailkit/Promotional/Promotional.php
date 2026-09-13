@@ -24,14 +24,15 @@ class Promotional{
             ->set_dismiss( 'global', ( 3600 * 24 * 300 ) )                                          # @global/user @time_period
             ->set_type( 'warning' )                                                                 # @notice_type
             ->set_html(
-                    '
-                    <div class="ekit-go-pro-notice">
-                        <strong>Thank you for using EmailKit.</strong> To get more amazing
-                        features and the outstanding pro ready-made templates, please get the
-                        <a style="color: #FCB214;" target="_blank"
-                        href="https://wpmet.com/emailkit-pricing">Premium Version</a>.
-                    </div>
-                '
+                    sprintf(
+                        '<div class="ekit-go-pro-notice"><strong>%1$s</strong> %2$s</div>',
+                        esc_html__( 'Thank you for using EmailKit.', 'emailkit' ),
+                        sprintf(
+                            /* translators: %s: "Premium Version" link to the EmailKit pricing page. */
+                            esc_html__( 'To get more amazing features and the outstanding pro ready-made templates, please get the %s.', 'emailkit' ),
+                            '<a style="color: #FCB214;" target="_blank" href="' . esc_url( 'https://wpmet.com/emailkit-pricing' ) . '">' . esc_html__( 'Premium Version', 'emailkit' ) . '</a>'
+                        )
+                    )
                 )                                                                                     # @notice_massage_html
             ->call();
         }
@@ -80,8 +81,17 @@ class Promotional{
              * Ask for Ratings 
              */            
             Rating::instance('emailkit')                    # @plugin_slug
-            ->set_message('Creating custom emails with a no-code solution - <strong>EmailKit?</strong> 📩 </br>
-            We would love to hear your thoughts! Share a <strong>5-star</strong> review to keep us motivated. 🙌')
+            ->set_message(
+                sprintf(
+                    /* translators: %s: EmailKit plugin name, wrapped in a <strong> tag. */
+                    esc_html__( 'Creating custom emails with a no-code solution - %s? 📩', 'emailkit' ),
+                    '<strong>EmailKit</strong>'
+                ) . ' </br> ' . sprintf(
+                    /* translators: %s: "5-star", wrapped in a <strong> tag. */
+                    esc_html__( 'We would love to hear your thoughts! Share a %s review to keep us motivated. 🙌', 'emailkit' ),
+                    '<strong>' . esc_html__( '5-star', 'emailkit' ) . '</strong>'
+                )
+            )
             ->set_plugin_logo('https://ps.w.org/emailkit/assets/icon-128x128.png')       # @plugin_logo_url
             ->set_plugin('EmailKit', 'https://wpmet.com/wordpress.org/rating/emailkit')   # @plugin_name  @plugin_url
             ->set_rating_url('https://wordpress.org/support/plugin/emailkit/reviews/#new-post')

@@ -25,6 +25,7 @@ class EmailLists {
     const PARTIAL_REFUND = "partial_refund";
     const PAYMENT_GATEWAY_ENABLED = "admin_payment_gateway_enabled";
     const METFORM = "metform";
+    const POPUPKIT = "popupkit";
     
     
     /**
@@ -92,7 +93,7 @@ class EmailLists {
         // Free: Check for templates
         $templates = get_posts([
             'post_type'      => 'emailkit',
-            'meta_query'     => [['key' => 'emailkit_template_type', 'value' => 'metform_form_', 'compare' => 'LIKE']],
+            'meta_query'     => [['key' => ' ', 'value' => 'metform_form_', 'compare' => 'LIKE']],
             'posts_per_page' => 1,
             'fields'         => 'ids',
             'orderby'        => 'ID',
@@ -133,6 +134,62 @@ class EmailLists {
 
         return $template_type ? ($list[$template_type] ?? '') : $list;
     }
+
+    public static function popupkit_email($template_type = '') {
+        $list = ['Select Template' => esc_html__('Select Popup', 'emailkit')];
+
+        $popupkit_popups = get_posts([
+            'post_type'      => 'popupkit-campaigns',
+            'post_status'    => 'publish',
+            'numberposts'    => -1,
+            'orderby'        => 'title',
+            'order'          => 'ASC',
+        ]);
+
+        // Free: Check for existing templates linked to popupkit
+        $templates = get_posts([
+            'post_type'      => 'emailkit',
+            'meta_query'     => [['key' => 'emailkit_template_type', 'value' => 'popupkit_popup_', 'compare' => 'LIKE']],
+            'posts_per_page' => 1,
+            'fields'         => 'ids',
+            'orderby'        => 'ID',
+            'order'          => 'ASC'
+        ]);
+
+        if (defined('EMAILKITPRO_VERSION') || class_exists('EmailKitPro')) {
+            // Pro: Show all popups
+            foreach ($popupkit_popups as $popup) {
+                $list['popupkit_popup_' . $popup->ID] = esc_html__('Popup: ', 'emailkit') . $popup->post_title;
+            }
+        } else {
+            if (empty($templates)) {
+                // No templates: Show all popups
+                foreach ($popupkit_popups as $popup) {
+                    $list['popupkit_popup_' . $popup->ID] = esc_html__('Popup: ', 'emailkit') . $popup->post_title;
+                }
+            } else {
+                // Templates exist: Show only popups that already have a template
+                $popup_ids = [];
+                foreach ($templates as $template_id) {
+                    $popup_id = get_post_meta($template_id, 'emailkit_popup_id', true) ?:
+                        (preg_match('/popupkit_popup_(\d+)/', get_post_meta($template_id, 'emailkit_template_type', true), $matches) ? $matches[1] : 0);
+                    if ($popup_id) $popup_ids[] = (int) $popup_id;
+                }
+                foreach ($popupkit_popups as $popup) {
+                    if (in_array($popup->ID, $popup_ids)) {
+                        $list['popupkit_popup_' . $popup->ID] = esc_html__('Popup: ', 'emailkit') . $popup->post_title;
+                    }
+                }
+            }
+        }
+
+        if (!class_exists('EmailKitPro') && is_array($popupkit_popups) && count($popupkit_popups) > 1 && !empty($templates)) {
+            $list['more-popups'] = esc_html__('More Popups...', 'emailkit');
+        }
+
+        return $template_type ? ($list[$template_type] ?? '') : $list;
+    }
+
 
     /**
      * Get saved templates from database

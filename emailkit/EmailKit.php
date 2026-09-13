@@ -6,7 +6,7 @@
  * Description: EmailKit is the most-complete drag-and-drop Email template builder.
  * Author: wpmet
  * Author URI: https://wpmet.com
- * Version: 1.6.8
+ * Version: 1.6.9
  * Text Domain: emailkit
  * License:  GPLv3
  * License URI: https://www.gnu.org/licenses/gpl-3.0.txt
@@ -40,6 +40,8 @@ final class EmailKit
         register_deactivation_hook(__FILE__, [$this,'deactivate_emailkit']);
 
         add_action('plugins_loaded', [$this, 'init_plugin'], 112);
+        add_action('init', [$this, 'load_textdomain'], 0);
+        add_action('init', [$this, 'init_promotional'], 10);
         add_action( 'admin_enqueue_scripts',[$this, 'emailkit_global_assets'] );
     }
 
@@ -68,7 +70,7 @@ final class EmailKit
      */
     public function define_constants()
     {
-        define('EMAILKIT_VERSION', '1.6.8');
+        define('EMAILKIT_VERSION', '1.6.9');
         define('EMAILKIT_TEXTDOMAIN', 'emailkit');
         define('EMAILKIT_FILE', __FILE__);
         define('EMAILKIT_PATH', __DIR__);
@@ -91,9 +93,31 @@ final class EmailKit
         do_action('emailkit/before_loaded');
 
         new EmailKit\Admin();
-        (new EmailKit\Promotional\Promotional())->init();
 
         do_action('emailkit/after_loaded');
+    }
+
+    /**
+     * Load the plugin translations
+     *
+     * @return void
+     */
+    public function load_textdomain()
+    {
+        load_plugin_textdomain('emailkit', false, dirname(plugin_basename(EMAILKIT_FILE)) . '/languages');
+    }
+
+    /**
+     * Initialize the promotional classes
+     *
+     * Runs on `init` because these classes translate strings while booting,
+     * and translations must not be loaded before `init`.
+     *
+     * @return void
+     */
+    public function init_promotional()
+    {
+        (new EmailKit\Promotional\Promotional())->init();
     }
 
     public function emailkit_global_assets()

@@ -52,7 +52,7 @@ class UpdateData
 		if (!$post_id || !get_post($post_id) || get_post_type($post_id) !== 'emailkit') {
 			return [
 				'status'    => 'fail',
-				'message'   => ['Invalid post ID.']
+				'message'   => [esc_html__( 'Invalid post ID.', 'emailkit' )]
 			];
 		}
 

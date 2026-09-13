@@ -347,7 +347,7 @@ class ProConsent{
         <!-- Copy-paste switch only -->
         <div class="emailkit-copy-paste-section<?php echo  esc_attr(!$is_pro_active) ? ' disabled' : ''; ?>">
             <?php if ($show_pro_badge): ?>
-                <span class="emailkit-pro-badge">PRO</span>
+                <span class="emailkit-pro-badge"><?php esc_html_e( 'PRO', 'emailkit' ); ?></span>
             <?php endif; ?>
             <span style="flex: 1; margin-right: 16px;"><?php esc_html_e('Enable Copy Paste', 'emailkit'); ?></span>
             <label class="emailkit-switch-modern<?php echo esc_attr(!$is_pro_active) ? ' disabled' : ''; ?>">
@@ -366,9 +366,15 @@ class ProConsent{
                 <div class="emailkit-pro-modal-icon">
                     <i style="font-style: normal; font-weight: bold;">i</i>
                 </div>
-                <h2 class="emailkit-pro-modal-title">Go Premium</h2>
+                <h2 class="emailkit-pro-modal-title"><?php esc_html_e( 'Go Premium', 'emailkit' ); ?></h2>
                 <p class="emailkit-pro-modal-text">
-                    Purchase our <a href="<?php echo esc_url($buy_pro_url); ?>" target="_blank" class="emailkit-pro-modal-link">pro version</a> to unlock these premium features!
+                    <?php
+                    printf(
+                        /* translators: %s: "pro version" link to the EmailKit pricing page. */
+                        esc_html__( 'Purchase our %s to unlock these premium features!', 'emailkit' ),
+                        '<a href="' . esc_url( $buy_pro_url ) . '" target="_blank" class="emailkit-pro-modal-link">' . esc_html__( 'pro version', 'emailkit' ) . '</a>'
+                    );
+                    ?>
                 </p>
             </div>
         </div>

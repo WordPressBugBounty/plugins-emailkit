@@ -29,14 +29,14 @@ class TemplateData
         if (!wp_verify_nonce($request->get_header( 'X-WP-Nonce' ), 'wp_rest')) {
             return [
                 'status'    => 'fail',
-                'message'   => ['Nonce mismatch.']
+                'message'   => [esc_html__( 'Nonce mismatch.', 'emailkit' )]
             ];
         }
 
         if (!is_user_logged_in() || !current_user_can( 'manage_options' )) {
             return [
                 'status'    => 'fail',
-                'message'   => ['Access denied.']
+                'message'   => [esc_html__( 'Access denied.', 'emailkit' )]
             ];
         }
         $template = '';
@@ -82,7 +82,7 @@ class TemplateData
                 'post_type'   => 'emailkit',
                 'post_status' => 'publish',
                 'post_author' => get_current_user_id(),
-                'post_title' =>  $subject !== '' ?  $subject : "New Template ".uniqid(),
+                'post_title' =>  $subject !== '' ?  $subject : esc_html__( 'New Template', 'emailkit' ) . ' ' . uniqid(),
                 'meta_input'  => array(
                     'emailkit_template_content_html'    => $html,
                     'emailkit_template_content_object'  => $template,

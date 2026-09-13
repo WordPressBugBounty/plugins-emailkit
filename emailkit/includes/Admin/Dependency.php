@@ -83,6 +83,17 @@ class Dependency {
                     'url' => ('plugins.php?plugin=metform'),
                 ]
             ],
+            'popupkit' => [
+                'status' => (file_exists(WP_PLUGIN_DIR.'/popup-builder-block/popup-builder-block.php') ? (is_plugin_active('popup-builder-block/popup-builder-block.php') == false ? self::INACTIVE : self::ACTIVE) : self::NEED_INSTALL),
+                'install' => [
+                    'label' => esc_html__('Install PopupKit', 'emailkit'),
+                    'url' => self_admin_url('plugin-install.php?s=popupkit&tab=search&type=term'),
+                ],
+                'active' => [
+                    'label' => esc_html__('Activate PopupKit', 'emailkit'),
+                    'url' => ('plugins.php?plugin=popup-builder-block'),
+                ]
+            ],
         ];
 
         return $dependency_list[$dependency] ?? [];

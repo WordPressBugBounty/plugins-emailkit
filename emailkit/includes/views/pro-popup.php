@@ -11,10 +11,10 @@
         <div class="emailkit-admin-pro-content">
             <div class="emailkit-admin-pro-logo"><img src="<?php echo esc_url(EMAILKIT_URL . 'assets/admin/img/logo.svg'); ?>" alt=""></div>
             <div class="emailkit-admin-pro-header">
-                <h1 class="emailkit-admin-pro-header-text">Customize Premium Template</h1>
+                <h1 class="emailkit-admin-pro-header-text"><?php esc_html_e( 'Customize Premium Template', 'emailkit' ); ?></h1>
             </div>
-            <p class="emailkit-admin-pro-subtext">Design a custom email template that matches your brand</p>
-            <button id="buyProBtn">Upgrade Now <span><svg width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <p class="emailkit-admin-pro-subtext"><?php esc_html_e( 'Design a custom email template that matches your brand', 'emailkit' ); ?></p>
+            <button id="buyProBtn"><?php esc_html_e( 'Upgrade Now', 'emailkit' ); ?> <span><svg width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M10.0012 1L15 6.25L10.0012 11.5" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
                         <path d="M1 6.25H14.86" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>

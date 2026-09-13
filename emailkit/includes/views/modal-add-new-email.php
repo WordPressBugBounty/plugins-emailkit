@@ -32,6 +32,7 @@
                     'wordpress' => __('WordPress Email', 'emailkit'),
                     'woocommerce' => __('WooCommerce email', 'emailkit'),
                     'metform' => __('Metform Email', 'emailkit'),
+                    'popupkit' => __('PopupKit Email', 'emailkit'),
                     'saved-templates' => __('Saved Templates', 'emailkit'),
                 ];
                 ?>

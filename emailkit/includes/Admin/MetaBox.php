@@ -18,23 +18,39 @@ class MetaBox
 
     public function __construct()
     {
-        $this->template_types = [
-
-            "New Order"                         =>  __('New Order - WC', 'emailkit'),
-            "Cancelled order"                   =>  __('Cancelled order - WC', 'emailkit'),
-            "Failed Order"                      =>  __('Failed Order - WC', 'emailkit'),
-            "Order On Hold"                     =>  __('Order On Hold - WC', 'emailkit'),
-            "Processing Order"                  =>  __('Processing Order - WC', 'emailkit'),
-            "Completed Order"                   =>  __('Completed Order - WC', 'emailkit'),
-            "Refunded Order"                    =>  __('Refunded Order - WC', 'emailkit'),
-            "Customer Invoice"                  =>  __('Customer Invoice - WC', 'emailkit'),
-            "Customer Note"                     =>  __('Customer Note - WC', 'emailkit'),
-            "Reset Password"                    =>  __('Reset Password - WC', 'emailkit'),
-            "New Account"                       =>  __('New Account - WC', 'emailkit'),
-        ];
-
         add_action('add_meta_boxes', [$this, 'add']);
         add_action('save_post', [$this, 'save']);
+    }
+
+    /**
+     * Get the translated template type labels.
+     *
+     * Built on demand because this class is instantiated on `plugins_loaded`,
+     * and translation functions must not run before `init`.
+     *
+     * @return array
+     */
+    public function get_template_types()
+    {
+        if (empty($this->template_types)) {
+
+            $this->template_types = [
+
+                "New Order"                         =>  __('New Order - WC', 'emailkit'),
+                "Cancelled order"                   =>  __('Cancelled order - WC', 'emailkit'),
+                "Failed Order"                      =>  __('Failed Order - WC', 'emailkit'),
+                "Order On Hold"                     =>  __('Order On Hold - WC', 'emailkit'),
+                "Processing Order"                  =>  __('Processing Order - WC', 'emailkit'),
+                "Completed Order"                   =>  __('Completed Order - WC', 'emailkit'),
+                "Refunded Order"                    =>  __('Refunded Order - WC', 'emailkit'),
+                "Customer Invoice"                  =>  __('Customer Invoice - WC', 'emailkit'),
+                "Customer Note"                     =>  __('Customer Note - WC', 'emailkit'),
+                "Reset Password"                    =>  __('Reset Password - WC', 'emailkit'),
+                "New Account"                       =>  __('New Account - WC', 'emailkit'),
+            ];
+        }
+
+        return $this->template_types;
     }
 
     public function add()
@@ -65,7 +81,7 @@ class MetaBox
                 <option value=""><?php esc_html_e('Select Template Types', 'emailkit'); ?></option>
                 <?php
 
-                foreach ($this->template_types as $key => $template_type) {
+                foreach ($this->get_template_types() as $key => $template_type) {
                 ?>
                     <option value="<?php echo esc_attr($key); ?>" <?php echo esc_html($key == get_post_meta($object->ID, "emailkit_template_type", true) ? 'selected' : ''); ?>>
                         <?php echo esc_attr($template_type); ?> </option>
@@ -296,7 +312,8 @@ class MetaBox
         }
 
         $emailkit_template_type = isset($_POST['emailkit_template_type']) ? sanitize_text_field(wp_unslash($_POST['emailkit_template_type'])) : '';
-        if (isset($_POST['emailkit_template_type']) && isset($this->template_types[$emailkit_template_type])) {
+        $template_types         = $this->get_template_types();
+        if (isset($_POST['emailkit_template_type']) && isset($template_types[$emailkit_template_type])) {
 
             update_post_meta($post_id, 'emailkit_template_type', $emailkit_template_type);
         }

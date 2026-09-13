@@ -33,17 +33,34 @@ class InvoiceOrder
 
 		$this->db_query_class = new WP_Query($args);
 
+		// Only take over WooCommerce's "Customer invoice / Order details" email when an
+		// EmailKit template for it is actually active. Otherwise WooCommerce must be left
+		// untouched, so that "Send order details to customer" keeps working on its own.
 		if (isset($this->db_query_class->posts[0])) {
-			add_action('woocommerce_email', [$this, 'remove_woocommerce_emails']);
+			add_action('woocommerce_before_resend_order_emails', [$this, 'maybe_send_invoice_email'], 10, 2);
 		}
-
-		add_filter('woocommerce_email_recipient_customer_invoice', [$this, 'invoiceEmail'], 10, 2);
 	}
 
-	public function remove_woocommerce_emails($email_class)
+	/**
+	 * Fires from both of WooCommerce's invoice trigger paths:
+	 *  - classic order screen: WC_Meta_Box_Order_Actions::save() ('send_order_details')
+	 *  - new order screen:     OrderActionsRestController::send_order_details()
+	 *
+	 * @param \WC_Order $order
+	 * @param string    $email_to_send
+	 */
+	public function maybe_send_invoice_email($order, $email_to_send = '')
 	{
 
-		remove_action('woocommerce_email_recipient_customer_invoice', array($email_class->emails['WC_Email_Customer_Invoice'], 'trigger'));
+		if ('customer_invoice' !== $email_to_send || !is_a($order, 'WC_Order')) {
+			return;
+		}
+
+		// Suppress WooCommerce's own copy for this request only, so the customer does not
+		// receive both. Scoped to this send, never registered globally.
+		add_filter('woocommerce_email_recipient_customer_invoice', '__return_empty_string', 999);
+
+		$this->invoiceEmail($order->get_id(), $order);
 	}
 
 	public function invoiceEmail($order_id, $order)
@@ -51,7 +68,7 @@ class InvoiceOrder
 
 		$query = $this->db_query_class;
 		$email = get_option('admin_email');
-		if (isset($query->posts[0])) {
+		if (isset($query->posts[0]) && is_a($order, 'WC_Order')) {
 			$html  = get_post_meta($query->posts[0]->ID, 'emailkit_template_content_html', true);
 
 			$replacements = [];
@@ -110,8 +127,6 @@ class InvoiceOrder
 
 			// Order details array for email
 			$details = Utils::woocommerce_order_email_contents($order);
-			
-			$details ["{{order_id}}"] = $order_id;
 
 			$message  = str_replace(array_keys($details), array_values($details), apply_filters('emailkit_shortcode_filter', $html));
 

@@ -102,6 +102,10 @@ class Hooks
                 if (strpos($type, 'metform_form_') === 0 || $type === EmailLists::METFORM) {
                     echo esc_html__('Confirmation Mail To User', 'emailkit');
                 }
+                // Check for PopupKit type
+                elseif (strpos($type, 'popupkit_popup_') === 0 || $type === EmailLists::POPUPKIT) {
+                    echo esc_html__('Popup Submission Mail', 'emailkit');
+                }
                 // Then check WooCommerce
                 elseif (isset(EmailLists::woocommerce_email()[$type])) {
                     echo esc_html(EmailLists::woocommerce_email()[$type]);
@@ -124,7 +128,7 @@ class Hooks
                     if (!empty($status)) {
                         ?>
                         <div class="emailkit-admin-template-switch">
-                            <div class="emailkit-admin-template-switch-inactive">Active</div>
+                            <div class="emailkit-admin-template-switch-inactive"><?php esc_html_e( 'Active', 'emailkit' ); ?></div>
                             <div class="emailkit-admin-template-switch-main">
                             <div class="switch-container">
                             <label class="switch" for="emailkit-template-status-switch-<?php echo esc_attr($post_id) ?>">

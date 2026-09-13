@@ -29,6 +29,24 @@ class CheckForm
                     return current_user_can('edit_posts');
                 },
             ]);
+
+            // Check if PopupKit template exists
+            register_rest_route('emailkit/v1', 'check-popup-template', [
+                'methods' => 'GET',
+                'callback' => [$this, 'check_popup_template'],
+                'permission_callback' => function () {
+                    return current_user_can('edit_posts');
+                },
+            ]);
+
+            // Create new PopupKit template
+            register_rest_route('emailkit/v1', 'create-popup-template', [
+                'methods' => 'POST',
+                'callback' => [$this, 'create_popup_template'],
+                'permission_callback' => function () {
+                    return current_user_can('edit_posts');
+                },
+            ]);
         });
     }
 
@@ -260,6 +278,159 @@ class CheckForm
             ],
             'posts_per_page' => 1,
             'fields' => 'ids'
+        ];
+
+        $existing = get_posts($args);
+        return !empty($existing) ? $existing[0] : false;
+    }
+
+    public function check_popup_template($request) {
+        if (!wp_verify_nonce($request->get_header('X-WP-Nonce'), 'wp_rest')) {
+            return ['status' => 'fail', 'message' => [__('Nonce mismatch.', 'emailkit')]];
+        }
+
+        if (!is_user_logged_in() || !current_user_can('edit_posts')) {
+            return ['status' => 'fail', 'message' => [__('Access denied.', 'emailkit')]];
+        }
+
+        $popup_id      = absint($request->get_param('popup_id'));
+        $template_type = 'popupkit_popup_' . $popup_id;
+
+        $args = [
+            'post_type'      => 'emailkit',
+            'meta_query'     => [[
+                'key'     => 'emailkit_template_type',
+                'value'   => $template_type,
+                'compare' => '='
+            ]],
+            'posts_per_page' => 1,
+            'fields'         => 'ids'
+        ];
+
+        $existing = get_posts($args);
+
+        if (!empty($existing)) {
+            return new WP_REST_Response([
+                'success' => true,
+                'data'    => [
+                    'exists'      => true,
+                    'builder_url' => admin_url("post.php?post={$existing[0]}&action=emailkit-builder")
+                ]
+            ], 200);
+        }
+
+        return new WP_REST_Response([
+            'success' => true,
+            'data'    => ['exists' => false]
+        ], 200);
+    }
+
+    public function create_popup_template($request) {
+        if (!wp_verify_nonce($request->get_header('X-WP-Nonce'), 'wp_rest')) {
+            return ['status' => 'fail', 'message' => [__('Nonce mismatch.', 'emailkit')]];
+        }
+
+        if (!is_user_logged_in() || !current_user_can('publish_posts')) {
+            return ['status' => 'fail', 'message' => [__('Access denied.', 'emailkit')]];
+        }
+
+        $popup_id       = absint($request->get_param('popup_id'));
+        $template_type  = 'popupkit_popup_' . $popup_id;
+        $template_title = sanitize_text_field($request->get_param('template_title') ?? __('PopupKit', 'emailkit'));
+
+        // Prevent duplicate templates
+        $existing = $this->get_existing_popup_template($popup_id);
+        if ($existing) {
+            return new WP_REST_Response([
+                'success' => false,
+                'message' => __('A template already exists for this popup.', 'emailkit'),
+                'data'    => ['builder_url' => admin_url("post.php?post={$existing}&action=emailkit-builder")]
+            ], 400);
+        }
+
+        // Optionally load a starter template file
+        $template = '';
+        $html     = '';
+        if (!empty($request->get_param('emailkit-editor-template')) && trim($request->get_param('emailkit-editor-template')) !== '') {
+            $template_path = $request->get_param('emailkit-editor-template');
+            $real_path     = realpath($template_path);
+
+            if ($real_path === false || !$this->is_allowed_template_path($real_path)) {
+                return new WP_REST_Response(['success' => false, 'message' => __('Invalid template path', 'emailkit')], 400);
+            }
+
+            $template  = file_exists($real_path) ? file_get_contents($real_path) : '';
+            $html_path = str_replace('content.json', 'content.html', $real_path);
+            $real_html = realpath($html_path);
+            if ($real_html !== false && $this->is_allowed_template_path($real_html)) {
+                $html = file_exists($real_html) ? file_get_contents($real_html) : '';
+            }
+        }
+
+        $post_id = wp_insert_post([
+            'post_title'  => $template_title,
+            'post_type'   => 'emailkit',
+            'post_status' => 'publish',
+            'meta_input'  => [
+                'emailkit_template_type'          => $template_type,
+                'emailkit_popup_id'               => $popup_id,
+                'emailkit_template_status'        => 'active',
+                'emailkit_template_content_html'  => wp_kses_post($html),
+                'emailkit_template_content_object'=> $template,
+                'emailkit_email_type'             => sanitize_text_field($request->get_param('emailkit_email_type') ?? 'popupkit'),
+            ]
+        ]);
+
+        if (is_wp_error($post_id)) {
+            return new WP_REST_Response(['success' => false, 'message' => __('Failed to create template', 'emailkit')], 400);
+        }
+
+        return new WP_REST_Response([
+            'success' => true,
+            'data'    => [
+                'builder_url' => admin_url("post.php?post={$post_id}&action=emailkit-builder"),
+                'post_id'     => $post_id
+            ]
+        ], 200);
+    }
+
+    /**
+     * Whether a resolved (realpath'd) file sits inside a directory we ship templates from.
+     *
+     * Starter templates registered by TemplateList live in the plugin directory,
+     * user-imported ones in the uploads directory.
+     *
+     * @param string $real_path Already passed through realpath().
+     * @return bool
+     */
+    private function is_allowed_template_path($real_path) {
+        $allowed_base_paths = [
+            wp_upload_dir()['basedir'] . '/emailkit/templates/',
+            EMAILKIT_DIR . 'includes/templates/',
+        ];
+
+        foreach ($allowed_base_paths as $allowed_base_path) {
+            $real_base = realpath($allowed_base_path);
+            if ($real_base !== false && strpos($real_path, $real_base) === 0) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    private function get_existing_popup_template($popup_id) {
+        $template_type = 'popupkit_popup_' . absint($popup_id);
+
+        $args = [
+            'post_type'      => 'emailkit',
+            'meta_query'     => [[
+                'key'     => 'emailkit_template_type',
+                'value'   => $template_type,
+                'compare' => '='
+            ]],
+            'posts_per_page' => 1,
+            'fields'         => 'ids'
         ];
 
         $existing = get_posts($args);

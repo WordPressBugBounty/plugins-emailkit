@@ -2,22 +2,22 @@
 # This file is distributed under the GPLv3.
 msgid ""
 msgstr ""
-"Project-Id-Version: EmailKit 1.6.7\n"
+"Project-Id-Version: EmailKit 1.6.8\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/emailkit\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-07-21T12:43:49+02:00\n"
+"POT-Creation-Date: 2026-08-16T08:51:03+02:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: emailkit\n"
 
 #. Plugin Name of the plugin
 #: EmailKit.php
-#: includes/Admin.php:134
-#: includes/Admin.php:135
+#: includes/Admin.php:130
+#: includes/Admin.php:131
 #: Promotional/Onboard/views/onboard-steps/step-05.php:13
 msgid "EmailKit"
 msgstr ""
@@ -42,19 +42,22 @@ msgstr ""
 msgid "https://wpmet.com"
 msgstr ""
 
-#: includes/Admin.php:148
-#: Promotional/Promotional.php:242
+#: includes/Admin.php:144
+#: Promotional/Promotional.php:252
 #: src/components/editor/Viewport/EditorSidebar/index.js:31
 msgid "Settings"
 msgstr ""
 
-#: includes/Admin/Api/CheckForm.php:57
-#: includes/Admin/Api/CheckForm.php:149
-#: includes/Admin/Api/CheckForm.php:289
-#: includes/Admin/Api/CheckForm.php:330
+#: includes/Admin.php:151
+msgid "EmailKit Settings"
+msgstr ""
+
+#: includes/Admin/Api/CheckForm.php:39
+#: includes/Admin/Api/CheckForm.php:131
 #: includes/Admin/Api/FetchData.php:34
 #: includes/Admin/Api/OrderItem.php:30
 #: includes/Admin/Api/ShortCodeData.php:38
+#: includes/Admin/Api/TemplateData.php:32
 #: includes/Admin/Api/TemplateStatus.php:25
 #: includes/Admin/Api/TemplateTypesData.php:33
 #: includes/Admin/Api/TestEmail.php:28
@@ -62,46 +65,35 @@ msgstr ""
 msgid "Nonce mismatch."
 msgstr ""
 
-#: includes/Admin/Api/CheckForm.php:64
-#: includes/Admin/Api/CheckForm.php:156
-#: includes/Admin/Api/CheckForm.php:293
-#: includes/Admin/Api/CheckForm.php:334
+#: includes/Admin/Api/CheckForm.php:46
+#: includes/Admin/Api/CheckForm.php:138
 #: includes/Admin/Api/FetchData.php:41
 #: includes/Admin/Api/OrderItem.php:37
+#: includes/Admin/Api/ShortCodeData.php:45
+#: includes/Admin/Api/TemplateData.php:39
 #: includes/Admin/Api/TemplateTypesData.php:40
 #: includes/Admin/Api/TestEmail.php:35
 #: includes/Admin/Api/UpdateData.php:43
 msgid "Access denied."
 msgstr ""
 
-#: includes/Admin/Api/CheckForm.php:161
-#: Promotional/Promotional.php:139
+#: includes/Admin/Api/CheckForm.php:143
+#: Promotional/Promotional.php:149
 msgid "MetForm"
 msgstr ""
 
-#: includes/Admin/Api/CheckForm.php:170
+#: includes/Admin/Api/CheckForm.php:152
 msgid "A template already exists for this form."
 msgstr ""
 
-#: includes/Admin/Api/CheckForm.php:197
-#: includes/Admin/Api/CheckForm.php:209
-#: includes/Admin/Api/CheckForm.php:359
+#: includes/Admin/Api/CheckForm.php:179
+#: includes/Admin/Api/CheckForm.php:191
 #: includes/Admin/Api/TemplateData.php:57
 msgid "Invalid template path"
 msgstr ""
 
-#: includes/Admin/Api/CheckForm.php:245
-#: includes/Admin/Api/CheckForm.php:385
+#: includes/Admin/Api/CheckForm.php:227
 msgid "Failed to create template"
-msgstr ""
-
-#: includes/Admin/Api/CheckForm.php:339
-#: Promotional/Promotional.php:153
-msgid "PopupKit"
-msgstr ""
-
-#: includes/Admin/Api/CheckForm.php:346
-msgid "A template already exists for this popup."
 msgstr ""
 
 #: includes/Admin/Api/FetchData.php:85
@@ -131,6 +123,10 @@ msgstr ""
 
 #: includes/Admin/Api/ShortCodeData.php:229
 msgid "No WooCommerce orders found. Returning demo data."
+msgstr ""
+
+#: includes/Admin/Api/TemplateData.php:85
+msgid "New Template"
 msgstr ""
 
 #: includes/Admin/Api/TemplateData.php:104
@@ -199,6 +195,10 @@ msgstr ""
 
 #: includes/Admin/Api/TestEmail.php:92
 msgid "Test email sent successfully."
+msgstr ""
+
+#: includes/Admin/Api/UpdateData.php:55
+msgid "Invalid post ID."
 msgstr ""
 
 #: includes/Admin/Api/UpdateData.php:84
@@ -315,133 +315,126 @@ msgstr ""
 msgid "Activate Metform"
 msgstr ""
 
-#: includes/Admin/Dependency.php:89
-msgid "Install PopupKit"
-msgstr ""
-
-#: includes/Admin/Dependency.php:93
-msgid "Activate PopupKit"
-msgstr ""
-
-#: includes/Admin/EmailKitAjax.php:110
-#: includes/Admin/EmailKitAjax.php:185
+#: includes/Admin/EmailKitAjax.php:109
+#: includes/Admin/EmailKitAjax.php:184
 msgid "Failed to get template"
 msgstr ""
 
-#: includes/Admin/EmailKitAjax.php:161
+#: includes/Admin/EmailKitAjax.php:160
+#: Promotional/Util.php:76
 msgid "Insufficient permissions"
 msgstr ""
 
-#: includes/Admin/Emails/EmailLists.php:37
-#: includes/Admin/Emails/EmailLists.php:70
+#. translators: 1: dependency action label, e.g. "Install WooCommerce". 2: "Check here" link to the plugin page.
+#: includes/Admin/EmailKitEditor/EmailKitEditorInit.php:37
+#, php-format
+msgid "Need to %1$s %2$s"
+msgstr ""
+
+#: includes/Admin/EmailKitEditor/EmailKitEditorInit.php:39
+msgid "Check here"
+msgstr ""
+
+#: includes/Admin/EmailKitEditor/EmailKitEditorInit.php:41
+msgid "Need to activate plugin"
+msgstr ""
+
+#: includes/Admin/Emails/EmailLists.php:36
+#: includes/Admin/Emails/EmailLists.php:69
 msgid "Select Template"
 msgstr ""
 
-#: includes/Admin/Emails/EmailLists.php:38
+#: includes/Admin/Emails/EmailLists.php:37
 msgid "New Order"
 msgstr ""
 
-#: includes/Admin/Emails/EmailLists.php:39
+#: includes/Admin/Emails/EmailLists.php:38
 msgid "Cancelled order"
 msgstr ""
 
-#: includes/Admin/Emails/EmailLists.php:40
+#: includes/Admin/Emails/EmailLists.php:39
 msgid "Failed Order - Admin"
 msgstr ""
 
-#: includes/Admin/Emails/EmailLists.php:41
+#: includes/Admin/Emails/EmailLists.php:40
 msgid "Failed Order - Customer"
 msgstr ""
 
-#: includes/Admin/Emails/EmailLists.php:42
+#: includes/Admin/Emails/EmailLists.php:41
 msgid "Order On Hold"
 msgstr ""
 
-#: includes/Admin/Emails/EmailLists.php:43
+#: includes/Admin/Emails/EmailLists.php:42
 msgid "Processing Order"
 msgstr ""
 
-#: includes/Admin/Emails/EmailLists.php:44
+#: includes/Admin/Emails/EmailLists.php:43
 msgid "Completed Order"
 msgstr ""
 
-#: includes/Admin/Emails/EmailLists.php:45
+#: includes/Admin/Emails/EmailLists.php:44
 #: src/components/editor/WidgetsContainer/wooCommerceToolBox.js:86
 #: src/components/selectors/Others/LowStock/index.js:112
 msgid "Low Stock"
 msgstr ""
 
-#: includes/Admin/Emails/EmailLists.php:46
+#: includes/Admin/Emails/EmailLists.php:45
 #: src/components/editor/WidgetsContainer/wooCommerceToolBox.js:78
 #: src/components/selectors/Others/NoStock/index.js:114
 msgid "No Stock"
 msgstr ""
 
-#: includes/Admin/Emails/EmailLists.php:47
+#: includes/Admin/Emails/EmailLists.php:46
 #: src/components/editor/WidgetsContainer/wooCommerceToolBox.js:70
 #: src/components/selectors/Others/BackOrder/index.js:110
 msgid "Back Order"
 msgstr ""
 
-#: includes/Admin/Emails/EmailLists.php:48
+#: includes/Admin/Emails/EmailLists.php:47
 msgid "Refunded Order"
 msgstr ""
 
-#: includes/Admin/Emails/EmailLists.php:49
+#: includes/Admin/Emails/EmailLists.php:48
 msgid "Partial Refund"
 msgstr ""
 
-#: includes/Admin/Emails/EmailLists.php:50
+#: includes/Admin/Emails/EmailLists.php:49
 msgid "Customer Invoice "
 msgstr ""
 
-#: includes/Admin/Emails/EmailLists.php:51
+#: includes/Admin/Emails/EmailLists.php:50
 #: src/components/editor/WidgetsContainer/wooCommerceToolBox.js:52
 #: src/components/selectors/WoCommerce/CustomerNote/index.js:68
 #: src/libs/common/EmailKitModalContent/ShortCodeModalContent.js:60
 msgid "Customer Note"
 msgstr ""
 
-#: includes/Admin/Emails/EmailLists.php:52
-#: includes/Admin/Emails/EmailLists.php:71
+#: includes/Admin/Emails/EmailLists.php:51
+#: includes/Admin/Emails/EmailLists.php:70
 msgid "New Account"
 msgstr ""
 
-#: includes/Admin/Emails/EmailLists.php:53
-#: includes/Admin/Emails/EmailLists.php:72
+#: includes/Admin/Emails/EmailLists.php:52
+#: includes/Admin/Emails/EmailLists.php:71
 msgid "Reset Password"
 msgstr ""
 
-#: includes/Admin/Emails/EmailLists.php:54
+#: includes/Admin/Emails/EmailLists.php:53
 msgid "Payment Gateway Enabled"
 msgstr ""
 
-#: includes/Admin/Emails/EmailLists.php:83
+#: includes/Admin/Emails/EmailLists.php:82
 msgid "Select Form"
 msgstr ""
 
-#: includes/Admin/Emails/EmailLists.php:106
-#: includes/Admin/Emails/EmailLists.php:112
-#: includes/Admin/Emails/EmailLists.php:124
+#: includes/Admin/Emails/EmailLists.php:105
+#: includes/Admin/Emails/EmailLists.php:111
+#: includes/Admin/Emails/EmailLists.php:123
 msgid "Form: "
 msgstr ""
 
-#: includes/Admin/Emails/EmailLists.php:132
+#: includes/Admin/Emails/EmailLists.php:131
 msgid "More Forms..."
-msgstr ""
-
-#: includes/Admin/Emails/EmailLists.php:139
-msgid "Select Popup"
-msgstr ""
-
-#: includes/Admin/Emails/EmailLists.php:162
-#: includes/Admin/Emails/EmailLists.php:168
-#: includes/Admin/Emails/EmailLists.php:180
-msgid "Popup: "
-msgstr ""
-
-#: includes/Admin/Emails/EmailLists.php:187
-msgid "More Popups..."
 msgstr ""
 
 #: includes/Admin/Emails/Helpers/Notice/Notice.php:190
@@ -460,11 +453,16 @@ msgstr ""
 msgid "Cancelled Order"
 msgstr ""
 
-#: includes/Admin/Emails/Woocommerce/CompletedOrder.php:141
-#: includes/Admin/Emails/Woocommerce/OrderOnHold.php:143
-#: includes/Admin/Emails/Woocommerce/ProcessingOrder.php:145
-#: includes/Admin/Emails/Woocommerce/ResetPassword.php:92
-msgid "Hi "
+#. translators: 1: customer full name, 2: order ID, 3: site name.
+#: includes/Admin/Emails/Woocommerce/CancelledOrder.php:138
+#, php-format
+msgid "%1$s, Your Order has been cancelled order.#%2$s - on %3$s"
+msgstr ""
+
+#. translators: 1: customer full name, 2: order ID.
+#: includes/Admin/Emails/Woocommerce/CompletedOrder.php:143
+#, php-format
+msgid "Hi %1$s, Your order #%2$s is now complete"
 msgstr ""
 
 #: includes/Admin/Emails/Woocommerce/CustomerNote.php:157
@@ -484,8 +482,10 @@ msgstr ""
 msgid "Failed Order "
 msgstr ""
 
-#: includes/Admin/Emails/Woocommerce/FailedOrder.php:142
-msgid " has been failed."
+#. translators: 1: site name wrapped in square brackets, 2: order ID.
+#: includes/Admin/Emails/Woocommerce/FailedOrder.php:144
+#, php-format
+msgid "%1$s:Order#%2$s has been failed."
 msgstr ""
 
 #: includes/Admin/Emails/Woocommerce/FailedOrderCustomer.php:132
@@ -496,11 +496,11 @@ msgstr ""
 msgid "your order has been failed. order# "
 msgstr ""
 
-#: includes/Admin/Emails/Woocommerce/InvoiceOrder.php:134
+#: includes/Admin/Emails/Woocommerce/InvoiceOrder.php:149
 msgid "product details"
 msgstr ""
 
-#: includes/Admin/Emails/Woocommerce/InvoiceOrder.php:137
+#: includes/Admin/Emails/Woocommerce/InvoiceOrder.php:152
 msgid "Here is your product invoice"
 msgstr ""
 
@@ -544,12 +544,21 @@ msgstr ""
 msgid "order has been received!"
 msgstr ""
 
+#. translators: 1: customer full name, 2: order ID.
+#: includes/Admin/Emails/Woocommerce/OrderOnHold.php:145
+#: includes/Admin/Emails/Woocommerce/ProcessingOrder.php:147
+#, php-format
+msgid "Hi %1$s, Your order #%2$s has been received!"
+msgstr ""
+
 #: includes/Admin/Emails/Woocommerce/PartialRefund.php:160
 msgid "partially refunded"
 msgstr ""
 
-#: includes/Admin/Emails/Woocommerce/PartialRefund.php:163
-msgid "has been  Partially refunded"
+#. translators: 1: customer full name, 2: order ID.
+#: includes/Admin/Emails/Woocommerce/PartialRefund.php:165
+#, php-format
+msgid "%1$s, Your order#%2$s has been Partially refunded"
 msgstr ""
 
 #: includes/Admin/Emails/Woocommerce/PaymentGatewayEnabled.php:87
@@ -564,12 +573,18 @@ msgstr ""
 msgid "Order has been refunded"
 msgstr ""
 
-#: includes/Admin/Emails/Woocommerce/RefundOrder.php:155
-msgid " has been  refunded"
+#. translators: 1: customer full name, 2: order ID.
+#: includes/Admin/Emails/Woocommerce/RefundOrder.php:157
+#, php-format
+msgid "%1$s, Your order#%2$s has been refunded"
 msgstr ""
 
 #: includes/Admin/Emails/Woocommerce/ResetPassword.php:89
 msgid "password reset requested"
+msgstr ""
+
+#: includes/Admin/Emails/Woocommerce/ResetPassword.php:92
+msgid "Hi "
 msgstr ""
 
 #: includes/Admin/Emails/Woocommerce/ResetPassword.php:92
@@ -592,16 +607,35 @@ msgstr ""
 msgid "Password Reset Request for "
 msgstr ""
 
-#: includes/Admin/EmailSettings/MetformEmailSettings.php:113
-#: includes/Admin/EmailSettings/MetformEmailSettings.php:140
+#. translators: %s: "EmailKit Pro" product name, wrapped in a <strong> tag.
+#: includes/Admin/EmailSettings/MetformEmailSettings.php:98
+#, php-format
+msgid "Get %s - the drag-and-drop builder to customize your confirmation emails."
+msgstr ""
+
+#: includes/Admin/EmailSettings/MetformEmailSettings.php:99
+msgid "EmailKit Pro"
+msgstr ""
+
+#: includes/Admin/EmailSettings/MetformEmailSettings.php:108
+#: includes/views/modal-add-new-email.php:106
+msgid "Upgrade to Pro"
+msgstr ""
+
+#: includes/Admin/EmailSettings/MetformEmailSettings.php:119
+#: includes/Admin/EmailSettings/MetformEmailSettings.php:146
 #: includes/Admin/EmailSettings/WcEmailSettings.php:72
 msgid "Edit With Emailkit"
 msgstr ""
 
-#: includes/Admin/EmailSettings/MetformEmailSettings.php:208
-#: includes/Admin/EmailSettings/MetformEmailSettings.php:220
+#: includes/Admin/EmailSettings/MetformEmailSettings.php:156
+msgid "Customize your form confirmation email with EmailKit's drag and drop builder."
+msgstr ""
+
+#: includes/Admin/EmailSettings/MetformEmailSettings.php:214
+#: includes/Admin/EmailSettings/MetformEmailSettings.php:226
 #: includes/Admin/Hooks.php:103
-#: includes/Admin/TemplateList.php:614
+#: includes/Admin/TemplateList.php:613
 msgid "Confirmation Mail To User"
 msgstr ""
 
@@ -625,9 +659,10 @@ msgstr ""
 msgid "Author"
 msgstr ""
 
-#: includes/Admin/Hooks.php:107
-#: includes/Admin/TemplateList.php:643
-msgid "Popup Submission Mail"
+#: includes/Admin/Hooks.php:127
+#: includes/Admin/MetaBox.php:94
+#: src/components/editor/Viewport/Header.js:549
+msgid "Active"
 msgstr ""
 
 #: includes/Admin/MetaBox.php:23
@@ -705,20 +740,15 @@ msgid "Status(Active/Inactive):"
 msgstr ""
 
 #: includes/Admin/MetaBox.php:94
-#: src/components/editor/Viewport/Header.js:549
-msgid "Active"
-msgstr ""
-
-#: includes/Admin/MetaBox.php:94
 msgid "Inactive"
 msgstr ""
 
-#: includes/Admin/TemplateList.php:660
+#: includes/Admin/TemplateList.php:631
 #: includes/views/modal-add-new-email.php:32
 msgid "WordPress Email"
 msgstr ""
 
-#: includes/Admin/TemplateList.php:669
+#: includes/Admin/TemplateList.php:640
 msgid "Woocommerce email"
 msgstr ""
 
@@ -740,72 +770,64 @@ msgid "Metform Email"
 msgstr ""
 
 #: includes/views/modal-add-new-email.php:35
-msgid "PopupKit Email"
-msgstr ""
-
-#: includes/views/modal-add-new-email.php:36
 msgid "Saved Templates"
 msgstr ""
 
-#: includes/views/modal-add-new-email.php:43
+#: includes/views/modal-add-new-email.php:42
 msgid "Select email type"
 msgstr ""
 
-#: includes/views/modal-add-new-email.php:55
+#: includes/views/modal-add-new-email.php:54
 msgid "Select template type"
 msgstr ""
 
-#: includes/views/modal-add-new-email.php:68
+#: includes/views/modal-add-new-email.php:67
 msgid "Please select a template."
 msgstr ""
 
-#: includes/views/modal-add-new-email.php:71
+#: includes/views/modal-add-new-email.php:70
 msgid "Template Deleted Successfully."
 msgstr ""
 
-#: includes/views/modal-add-new-email.php:78
+#: includes/views/modal-add-new-email.php:77
 msgid "Delete this template"
 msgstr ""
 
-#: includes/views/modal-add-new-email.php:82
+#: includes/views/modal-add-new-email.php:81
 msgid "Do you want to delete?"
 msgstr ""
 
-#: includes/views/modal-add-new-email.php:85
+#: includes/views/modal-add-new-email.php:84
 msgid "Yes"
 msgstr ""
 
-#: includes/views/modal-add-new-email.php:86
+#: includes/views/modal-add-new-email.php:85
 msgid "No"
 msgstr ""
 
-#: includes/views/modal-add-new-email.php:92
+#: includes/views/modal-add-new-email.php:91
 msgid "No saved templates available."
 msgstr ""
 
-#: includes/views/modal-add-new-email.php:105
+#: includes/views/modal-add-new-email.php:104
 msgid "You’re One Step Away!"
 msgstr ""
 
-#: includes/views/modal-add-new-email.php:106
+#: includes/views/modal-add-new-email.php:105
 msgid "Upgrade to Pro and get all the premium features!"
 msgstr ""
 
-#: includes/views/modal-add-new-email.php:107
-msgid "Upgrade to Pro"
-msgstr ""
-
-#: includes/views/modal-add-new-email.php:116
-#: includes/views/modal-add-new-email.php:119
+#: includes/views/modal-add-new-email.php:115
+#: includes/views/modal-add-new-email.php:118
 #: src/components/editor/Viewport/Header.js:566
 msgid "Blank Template"
 msgstr ""
 
-#: includes/views/modal-add-new-email.php:121
+#: includes/views/modal-add-new-email.php:120
 msgid "Create From Scratch"
 msgstr ""
 
-#: includes/views/modal-add-new-email.php:133
+#: includes/views/modal-add-new-email.php:132
 #: includes/views/modal-editor.php:42
 msgid "Edit with EmailKit"
 msgstr ""
@@ -833,6 +855,20 @@ msgstr ""
 
 #: includes/views/modal-form-template-item.php:37
 msgid "Demo"
+msgstr ""
+
+#: includes/views/pro-popup.php:14
+msgid "Customize Premium Template"
+msgstr ""
+
+#: includes/views/pro-popup.php:16
+#: src/libs/common/EmailKitModalContent/ProModalContent.js:21
+msgid "Design a custom email template that matches your brand"
+msgstr ""
+
+#: includes/views/pro-popup.php:17
+#: src/libs/common/EmailKitModalContent/ProModalContent.js:22
+msgid "Upgrade Now"
 msgstr ""
 
 #: Promotional/Onboard/Classes/PluginStatus.php:57
@@ -951,7 +987,7 @@ msgid "These are absolute FREE to use."
 msgstr ""
 
 #: Promotional/Onboard/views/onboard-steps/step-03.php:19
-#: Promotional/Promotional.php:167
+#: Promotional/Promotional.php:177
 msgid "GetGenie"
 msgstr ""
 
@@ -1008,6 +1044,7 @@ msgid "40% Discount"
 msgstr ""
 
 #: Promotional/Onboard/views/onboard-steps/step-05.php:13
+#: Promotional/ProConsent.php:350
 msgid "PRO"
 msgstr ""
 
@@ -1096,145 +1133,210 @@ msgstr ""
 msgid "Enable Copy Paste"
 msgstr ""
 
-#: Promotional/Promotional.php:104
-msgid "Our Plugins"
-msgstr ""
-
-#: Promotional/Promotional.php:105
-msgid "Get More out of Your WordPress Website!"
-msgstr ""
-
-#: Promotional/Promotional.php:106
-msgid "Revamp your website with other top plugins from us. And guess what, they're absolutely free!"
-msgstr ""
-
-#: Promotional/Promotional.php:111
-msgid "ElementsKit Elementor addons"
-msgstr ""
-
-#: Promotional/Promotional.php:114
-msgid "All-in-one Elementor addon trusted by 1 Million+ users, makes your website builder process easier with ultimate freedom."
-msgstr ""
-
-#: Promotional/Promotional.php:118
-msgid "GutenKit"
-msgstr ""
-
-#: Promotional/Promotional.php:121
-msgid "Gutenberg blocks, patterns, and templates that extend the page-building experience using the WordPress block editor."
-msgstr ""
-
-#: Promotional/Promotional.php:125
-msgid "Rox Dynamic CPT Fields"
-msgstr ""
-
-#: Promotional/Promotional.php:128
-msgid "Build custom post types, fields, taxonomies, and dynamic frontend layouts for WordPress, with zero coding and full AI-generated schema."
-msgstr ""
-
-#: Promotional/Promotional.php:132
-msgid "Rox Appointment Booking"
-msgstr ""
-
-#: Promotional/Promotional.php:135
-msgid "Manage bookings, agents, payments, and calendars from one dashboard! A complete appointment and scheduling solution for WordPress."
-msgstr ""
-
-#: Promotional/Promotional.php:142
-msgid "Drag & drop form builder for Elementor to create contact forms, multi-step forms, and more — smoother, faster, and better!"
-msgstr ""
-
-#: Promotional/Promotional.php:146
-msgid "Shopengine"
-msgstr ""
-
-#: Promotional/Promotional.php:149
-msgid "Complete WooCommerce solution for Elementor to fully customize any pages including cart, checkout, shop page, and so on."
-msgstr ""
-
-#: Promotional/Promotional.php:156
-msgid "Design popups that convert, right in your WordPress dashboard."
-msgstr ""
-
-#: Promotional/Promotional.php:160
-msgid "TableKit"
-msgstr ""
-
-#: Promotional/Promotional.php:163
-msgid "Fully Customizable. Multi-Media Integration. Synch Any Data Files. All Within Block Editor."
-msgstr ""
-
-#: Promotional/Promotional.php:170
-msgid "Your personal AI assistant for content and SEO. Write content that ranks on Google with NLP keywords and SERP analysis data."
-msgstr ""
-
-#: Promotional/Promotional.php:174
-msgid "WP Social"
-msgstr ""
-
-#: Promotional/Promotional.php:177
-msgid "Add social share, login, and engagement counter — unified solution for all social media with tons of different styles for your website."
-msgstr ""
-
-#: Promotional/Promotional.php:181
-msgid "Blocks for ShopEngine"
-msgstr ""
-
-#: Promotional/Promotional.php:184
-msgid "All in one WooCommerce solution for Gutenberg! Build your WooCommerce pages in a block editor with full customization."
-msgstr ""
-
-#: Promotional/Promotional.php:195
+#: Promotional/ProConsent.php:369
+#: Promotional/Promotional.php:205
 msgid "Go Premium"
 msgstr ""
 
-#: Promotional/Promotional.php:209
+#. translators: %s: "pro version" link to the EmailKit pricing page.
+#: Promotional/ProConsent.php:374
+#, php-format
+msgid "Purchase our %s to unlock these premium features!"
+msgstr ""
+
+#: Promotional/ProConsent.php:375
+msgid "pro version"
+msgstr ""
+
+#: Promotional/Promotional.php:29
+msgid "Thank you for using EmailKit."
+msgstr ""
+
+#. translators: %s: "Premium Version" link to the EmailKit pricing page.
+#: Promotional/Promotional.php:32
+#, php-format
+msgid "To get more amazing features and the outstanding pro ready-made templates, please get the %s."
+msgstr ""
+
+#: Promotional/Promotional.php:33
+msgid "Premium Version"
+msgstr ""
+
+#. translators: %s: EmailKit plugin name, wrapped in a <strong> tag.
+#: Promotional/Promotional.php:87
+#, php-format
+msgid "Creating custom emails with a no-code solution - %s? 📩"
+msgstr ""
+
+#. translators: %s: "5-star", wrapped in a <strong> tag.
+#: Promotional/Promotional.php:91
+#, php-format
+msgid "We would love to hear your thoughts! Share a %s review to keep us motivated. 🙌"
+msgstr ""
+
+#: Promotional/Promotional.php:92
+msgid "5-star"
+msgstr ""
+
+#: Promotional/Promotional.php:114
+msgid "Our Plugins"
+msgstr ""
+
+#: Promotional/Promotional.php:115
+msgid "Get More out of Your WordPress Website!"
+msgstr ""
+
+#: Promotional/Promotional.php:116
+msgid "Revamp your website with other top plugins from us. And guess what, they're absolutely free!"
+msgstr ""
+
+#: Promotional/Promotional.php:121
+msgid "ElementsKit Elementor addons"
+msgstr ""
+
+#: Promotional/Promotional.php:124
+msgid "All-in-one Elementor addon trusted by 1 Million+ users, makes your website builder process easier with ultimate freedom."
+msgstr ""
+
+#: Promotional/Promotional.php:128
+msgid "GutenKit"
+msgstr ""
+
+#: Promotional/Promotional.php:131
+msgid "Gutenberg blocks, patterns, and templates that extend the page-building experience using the WordPress block editor."
+msgstr ""
+
+#: Promotional/Promotional.php:135
+msgid "Rox Dynamic CPT Fields"
+msgstr ""
+
+#: Promotional/Promotional.php:138
+msgid "Build custom post types, fields, taxonomies, and dynamic frontend layouts for WordPress, with zero coding and full AI-generated schema."
+msgstr ""
+
+#: Promotional/Promotional.php:142
+msgid "Rox Appointment Booking"
+msgstr ""
+
+#: Promotional/Promotional.php:145
+msgid "Manage bookings, agents, payments, and calendars from one dashboard! A complete appointment and scheduling solution for WordPress."
+msgstr ""
+
+#: Promotional/Promotional.php:152
+msgid "Drag & drop form builder for Elementor to create contact forms, multi-step forms, and more — smoother, faster, and better!"
+msgstr ""
+
+#: Promotional/Promotional.php:156
+msgid "Shopengine"
+msgstr ""
+
+#: Promotional/Promotional.php:159
+msgid "Complete WooCommerce solution for Elementor to fully customize any pages including cart, checkout, shop page, and so on."
+msgstr ""
+
+#: Promotional/Promotional.php:163
+msgid "PopupKit"
+msgstr ""
+
+#: Promotional/Promotional.php:166
+msgid "Design popups that convert, right in your WordPress dashboard."
+msgstr ""
+
+#: Promotional/Promotional.php:170
+msgid "TableKit"
+msgstr ""
+
+#: Promotional/Promotional.php:173
+msgid "Fully Customizable. Multi-Media Integration. Synch Any Data Files. All Within Block Editor."
+msgstr ""
+
+#: Promotional/Promotional.php:180
+msgid "Your personal AI assistant for content and SEO. Write content that ranks on Google with NLP keywords and SERP analysis data."
+msgstr ""
+
+#: Promotional/Promotional.php:184
+msgid "WP Social"
+msgstr ""
+
+#: Promotional/Promotional.php:187
+msgid "Add social share, login, and engagement counter — unified solution for all social media with tons of different styles for your website."
+msgstr ""
+
+#: Promotional/Promotional.php:191
+msgid "Blocks for ShopEngine"
+msgstr ""
+
+#: Promotional/Promotional.php:194
+msgid "All in one WooCommerce solution for Gutenberg! Build your WooCommerce pages in a block editor with full customization."
+msgstr ""
+
+#: Promotional/Promotional.php:219
 msgid "Join the Community"
 msgstr ""
 
-#: Promotional/Promotional.php:211
+#: Promotional/Promotional.php:221
 msgid "Join our Facebook group to get 20% discount coupon on premium products. Follow us to get more exciting offers."
 msgstr ""
 
-#: Promotional/Promotional.php:216
+#: Promotional/Promotional.php:226
 msgid "Video Tutorials"
 msgstr ""
 
-#: Promotional/Promotional.php:218
+#: Promotional/Promotional.php:228
 msgid "Learn the step by step process for developing your site easily from video tutorials."
 msgstr ""
 
-#: Promotional/Promotional.php:222
+#: Promotional/Promotional.php:232
 msgid "Request a feature"
 msgstr ""
 
-#: Promotional/Promotional.php:224
+#: Promotional/Promotional.php:234
 msgid "Have any special feature in mind? Let us know through the feature request."
 msgstr ""
 
-#: Promotional/Promotional.php:228
-#: Promotional/Promotional.php:239
+#: Promotional/Promotional.php:238
+#: Promotional/Promotional.php:249
 msgid "Documentation"
 msgstr ""
 
-#: Promotional/Promotional.php:230
+#: Promotional/Promotional.php:240
 msgid "Detailed documentation to help you understand the functionality of each feature."
 msgstr ""
 
-#: Promotional/Promotional.php:234
+#: Promotional/Promotional.php:244
 msgid "Public Roadmap"
 msgstr ""
 
-#: Promotional/Promotional.php:236
+#: Promotional/Promotional.php:246
 msgid "Check our upcoming new features, detailed development stories and tasks"
 msgstr ""
 
-#: Promotional/Promotional.php:240
+#: Promotional/Promotional.php:250
 msgid "Facebook Community"
 msgstr ""
 
-#: Promotional/Promotional.php:241
+#: Promotional/Promotional.php:251
 msgid "Rate the plugin ★★★★★"
+msgstr ""
+
+#: Promotional/Util.php:71
+msgid "Security check failed"
+msgstr ""
+
+#: Promotional/Util.php:84
+msgid "EmailKit Pro is required for copy-paste feature"
+msgstr ""
+
+#: Promotional/Util.php:93
+msgid "Invalid value provided"
+msgstr ""
+
+#: Promotional/Util.php:102
+msgid "Copy-paste setting updated successfully"
+msgstr ""
+
+#: Promotional/Util.php:106
+msgid "Failed to save setting"
 msgstr ""
 
 #: src/components/editor/RenderNode.js:186
@@ -2831,14 +2933,6 @@ msgstr ""
 
 #: src/libs/common/EmailKitModalContent/ProModalContent.js:20
 msgid "Use Premium Features"
-msgstr ""
-
-#: src/libs/common/EmailKitModalContent/ProModalContent.js:21
-msgid "Design a custom email template that matches your brand"
-msgstr ""
-
-#: src/libs/common/EmailKitModalContent/ProModalContent.js:22
-msgid "Upgrade Now"
 msgstr ""
 
 #: src/libs/common/EmailKitModalContent/SaveAsTemplateModalContent.js:33

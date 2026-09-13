@@ -133,7 +133,13 @@ class CancelledOrder
 			$pre_header = !empty($pre_header) ? $pre_header : esc_html__("Cancelled Order", 'emailkit');
 			$subject_template = get_post_meta($query->posts[0]->ID, 'emailkit_email_subject', true);
       		$subject = str_replace(array_keys(Utils::transform_details_keys($details)), array_values(Utils::transform_details_keys($details)), $subject_template);
-			$subject = !empty($subject) ? $subject . ' - ' . $pre_header : esc_attr($order->get_billing_first_name() . " " . $order->get_billing_last_name()) . ", " . esc_attr("Your Order has been cancelled order.#$order_id - " . "on"." " . get_bloginfo('name')) . ' - '. $pre_header;
+			$subject = !empty($subject) ? $subject . ' - ' . $pre_header : sprintf(
+				/* translators: 1: customer full name, 2: order ID, 3: site name. */
+				esc_html__( '%1$s, Your Order has been cancelled order.#%2$s - on %3$s', 'emailkit' ),
+				esc_attr($order->get_billing_first_name() . " " . $order->get_billing_last_name()),
+				esc_attr($order_id),
+				esc_attr(get_bloginfo('name'))
+			) . ' - '. $pre_header;
 			
 
 

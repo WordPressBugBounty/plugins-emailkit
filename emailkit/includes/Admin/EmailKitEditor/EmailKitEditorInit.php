@@ -31,7 +31,15 @@ class EmailKitEditorInit
             $dep = \EmailKit\Admin\Dependency::check(get_post_meta($post_id,'emailkit_email_type', true));
           
             if(true !== $dep){
-                wp_die("Need to " . esc_html($dep['label']??'') . "<a href='" . esc_url($dep['url']??'') . "'>  Check here </a>", 'Need to activate plugin');
+                wp_die(
+                    sprintf(
+                        /* translators: 1: dependency action label, e.g. "Install WooCommerce". 2: "Check here" link to the plugin page. */
+                        esc_html__( 'Need to %1$s %2$s', 'emailkit' ),
+                        esc_html( $dep['label'] ?? '' ),
+                        "<a href='" . esc_url( $dep['url'] ?? '' ) . "'>" . esc_html__( 'Check here', 'emailkit' ) . "</a>"
+                    ),
+                    esc_html__( 'Need to activate plugin', 'emailkit' )
+                );
             }
         });
 

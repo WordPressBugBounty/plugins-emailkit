@@ -36,6 +36,7 @@ Class TemplateList{
             self::get_wp_new_register_template(),
             self::get_wp_reset_password_template(),
             self::metform_email_template(),
+            self::popupkit_email_template(),
 
         );
 
@@ -620,6 +621,34 @@ Class TemplateList{
     return $templates;
 }
 
+    public static function popupkit_email_template() {
+        $templates = [];
+        $popupkit_forms = get_posts([
+            'post_type' => 'popupkit-campaigns',
+            'post_status' => 'publish',
+            'numberposts' => -1,
+            'orderby' => 'title',
+            'order' => 'ASC',
+        ]);
+
+        foreach ($popupkit_forms as $form) {
+            $form_id  = $form->ID;
+            $form_key = 'popupkit_popup_' . $form_id;
+
+            $templates[$form_key] = [
+                'id'             => $form_id,
+                'package'        => 'free',
+                'mail_type'      => 'popupkit',
+                'title'          => $form_key,
+                'template_title' => esc_html__('Popup Submission Mail', 'emailkit'),
+                'preview-thumb'  => self::EMAILKIT_URL_TEMAPLTE_URL . 'templates/popupkit/1/preview-thumb.svg',
+                'demo-url'       => get_permalink($form_id),
+                'file'           => self::EMAILKIT_URL_TEMAPLTE_DIR . 'templates/popupkit/1/content.json',
+            ];
+        }
+
+        return $templates;
+    }
 
 
 
